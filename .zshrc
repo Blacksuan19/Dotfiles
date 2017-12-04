@@ -1,11 +1,14 @@
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 export EDITOR=/usr/bin/nano
 export PATH=$HOME/bin:$PATH
 export PATH=${PATH}:/home/dark-emperor/.gem/ruby/2.4.0/bin
+source /home/dark-emperor/.zsh/command-time.plugin.zsh
+source /home/dark-emperor/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /home/dark-emperor/.zsh/up/up.plugin.zsh
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+ZSH_COMMAND_TIME_ECHO=1
 eval $(thefuck --alias)
 #Functions.
 
@@ -41,11 +44,7 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
 #custom sources.
-source /home/dark-emperor/.zsh/command-time.plugin.zsh
-source /home/dark-emperor/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source /home/dark-emperor/.zsh/up/up.plugin.zsh
-ZSH_COMMAND_TIME_MIN_SECONDS=3
-ZSH_COMMAND_TIME_ECHO=1
+
 #aliases.
 alias remove="sudo pacman -Rs"
 alias install="packer -S"
@@ -70,14 +69,14 @@ alias vdir="run_vdir"
 alias st="/opt/sublime_text_3/sublime"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
-alias dots="sh ~/.dot.sh"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
 hash -d disk="/run/media/dark-emperor/Dark-Files"
 hash -d viv="/opt/vivaldi-snapshot/resources/vivaldi/style"
 hash -d stuff="/run/media/dark-emperor/Dark-Files/stuff"
-
+hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
+hash -d dots="/home/dark-emperor/.dotfiles"
 #systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
