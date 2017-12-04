@@ -4,9 +4,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 export EDITOR=/usr/bin/nano
+export PATH=$HOME/bin:$PATH
 export PATH=${PATH}:/home/dark-emperor/.gem/ruby/2.4.0/bin
 eval $(thefuck --alias)
-
 #Functions.
 
 #Directory colors.
@@ -40,6 +40,12 @@ sudo-command-line() {
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
+#custom sources.
+source /home/dark-emperor/.zsh/command-time.plugin.zsh
+source /home/dark-emperor/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /home/dark-emperor/.zsh/up/up.plugin.zsh
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+ZSH_COMMAND_TIME_ECHO=1
 #aliases.
 alias remove="sudo pacman -Rs"
 alias install="packer -S"
@@ -57,13 +63,14 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias inxi="sudo inxi -Fm"
-alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/stuff/scripts/custom.sh"
+alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/stuff/Others/custom.sh"
 alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"
-alias st="subl3"
+alias st="/opt/sublime_text_3/sublime"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
+alias dots="sh ~/.dot.sh"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
