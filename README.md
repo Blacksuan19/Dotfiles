@@ -1,21 +1,22 @@
 # Dotfiles
 
-**personal configuration for zsh, prezto, termite and tmux and also a custom vivaldi CSS**
+**personal configuration for zsh, prezto, termite and tmux and also a custom Vivaldi CSS**
 
-**requrements:**
+**requirements:**
 - \*NIX system 
-- zsh
-- tmux
-- vivaldi
-- oh-my-tmux
+- [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+- [prezto](https://github.com/sorin-ionescu/prezto)
+- [tmux](https://github.com/tmux/tmux)
+- [oh-my-tmux](https://github.com/gpakosz/.tmux)
+- [vivaldi](https://vivaldi.net)
 
 **Installation:**
-- 'git clone https://github.com/Madkita/Dotfiles'
+- git clone https://github.com/Madkita/Dotfiles
 - copy termite config to .config/termite
-- source agnoster theme in your .zshrc (if you dont want to use my .zshrc)
+- source agnoster theme in your .zshrc (if you don't want to use my .zshrc)
 - copy the custom.css file to /opt/vivaldi(-snapshot)/resources/vivaldi/style
 - excuse the command 'sudo sed -i '1s/^/@import "custom.css";/' common.css' (in vivaldi/style directory)
-- copy .tmux.conf and .tmux.conf.local and .zshrc and .zpreztorc and .zprezto folder  to your $HOME direcotry (your files will be overwritten!!)
+- copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc and .zprezto folder  to your $HOME directory (your files will be overwritten!!)
 
 
 
