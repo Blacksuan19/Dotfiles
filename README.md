@@ -21,4 +21,7 @@
 - copy the Fatty folder to $HOME/.conky
 
 
+
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot_20171204_134757.png)
+
+## conky
