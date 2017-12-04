@@ -1,0 +1,59 @@
+# By Jesse_Avalos , See me on Eye Candy Linux_  on Google +
+background yes
+use_xft yes
+xftfont Roboto:size=9
+xftalpha 0.8
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+stippled_borders 0
+border_margin 5
+border_width 1
+default_color 000000
+default_shade_color 000000
+default_outline_color 000000
+minimum_size 100 100
+maximum_width 800
+gap_x 20
+gap_y 10
+alignment top_left
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+short_units yes
+text_buffer_size 2048
+use_spacer none
+override_utf8_locale yes
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont TheNautiGal:bold:size=10
+override_utf8_locale yes
+lua_load time.lua
+
+# Color scheme #
+default_color white
+color1 black 
+color2 white
+color3 white
+#1103816
+
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+${offset 85}${voffset 100}${font Ailerons:size=11}${lua Hour}X ${lua Minute}
+${offset 105}${voffset 3}${font Steelworks Vintage Demo:size=55}${time %a}${color2}
+${offset 95}${voffset -40}${font Ailerons:size=12}${time %d of %B %Y}
+
+
+
