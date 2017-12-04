@@ -1,7 +1,6 @@
 # Dotfiles
 
-**personal configuration for zsh, prezto, termite and tmux
-and also a custom vivaldi CSS **
+**personal configuration for zsh, prezto, termite and tmux and also a custom vivaldi CSS**
 
 - to try out just clone the repo to your $HOME directory 
 - for vivaldi: copy the custom.css file to /opt/vivaldi(-snapshot)resources/vivaldi/style
