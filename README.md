@@ -1,6 +1,6 @@
 # Dotfiles
 
-**personal configuration for zsh, prezto, termite and tmux and also a custom Vivaldi CSS**
+**personal configuration for zsh, prezto, termite, tmux and conky and also a custom Vivaldi CSS**
 
 **requirements:**
 - \*NIX system 
