@@ -78,3 +78,7 @@ hash -d stuff="/run/media/dark-emperor/Dark-Files/stuff"
 hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
 hash -d dots="/home/dark-emperor/.dotfiles"
 
+#arguments.
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+ZSH_COMMAND_TIME_ECHO=1
+eval $(thefuck --alias)
