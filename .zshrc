@@ -8,7 +8,4 @@ source /home/dark-emperor/.zsh/command-time.plugin.zsh
 source /home/dark-emperor/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /home/dark-emperor/.zsh/up/up.plugin.zsh
 source /home/dark-emperor/.zsh/config.zsh
-ZSH_COMMAND_TIME_MIN_SECONDS=3
-ZSH_COMMAND_TIME_ECHO=1
-eval $(thefuck --alias)
 
