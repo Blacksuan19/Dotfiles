@@ -29,6 +29,7 @@ run_dir() {
 run_vdir() {
     vdir-i --color=auto -w $(tput cols) "$@"
 }
+
 # double press Esc to add sudo.
 sudo-command-line() {
     [[ -z $BUFFER ]] && zle up-history
@@ -46,6 +47,7 @@ sudo-command-line() {
 }
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
+
 #aliases.
 alias remove="sudo pacman -Rs"
 alias install="packer -S"
