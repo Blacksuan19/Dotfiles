@@ -22,7 +22,7 @@
 
 
 
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot_20171204_134757.png)
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
 
 ## conky
 
