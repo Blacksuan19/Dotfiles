@@ -1,15 +1,17 @@
 # Dotfiles
 
-**personal configuration for zsh, prezto, termite, tmux and conky and also a custom Vivaldi CSS**
+**personal configuration for zsh, prezto, termite, tmux, neofetch and conky and also a custom Vivaldi CSS**
 
-**requirements:**
+**Requirements:**
 - \*NIX system 
-- [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [prezto](https://github.com/sorin-ionescu/prezto)
-- [tmux](https://github.com/tmux/tmux)
-- [oh-my-tmux](https://github.com/gpakosz/.tmux)
-- [vivaldi](https://vivaldi.net)
-- [conky](https://github.com/brndnmtthws/conky) 
+- [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+- [Powerline Fonts](https://github.com/powerline/fonts)
+- [Prezto](https://github.com/sorin-ionescu/prezto)
+- [Tmux](https://github.com/tmux/tmux)
+- [Oh-my-tmux](https://github.com/gpakosz/.tmux)
+- [Neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation)
+- [Vivaldi](https://vivaldi.net)
+- [Conky](https://github.com/brndnmtthws/conky) 
 
 **Installation:**
 - git clone https://github.com/Madkita/Dotfiles
@@ -23,6 +25,8 @@
 
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
+
+
 
 ## conky
 
