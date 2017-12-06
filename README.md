@@ -16,10 +16,11 @@
 **Installation:**
 - git clone https://github.com/Madkita/Dotfiles
 - copy termite config to .config/termite
+- copy neofetch config to ~/.config/neofetch/
 - source agnoster theme in your .zshrc (if you don't want to use my .zshrc)
 - copy the custom.css file to /opt/vivaldi(-snapshot)/resources/vivaldi/style
 - excuse the command 'sudo sed -i '1s/^/@import "custom.css";/' common.css' (in vivaldi/style directory)
-- copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc and .zprezto folder  to your $HOME directory (your files will be overwritten!!)
+- copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc to your $HOME directory (your existing files will be overwritten!!)
 - copy the Fatty folder to $HOME/.conky
 
 
