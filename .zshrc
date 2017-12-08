@@ -1,6 +1,6 @@
 #only sourcing here!!
-
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source /home/dark-emperor/.zprezto/init.zsh
+#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 export EDITOR=/usr/bin/nano
 export PATH=$HOME/bin:$PATH
 export PATH=${PATH}:/home/dark-emperor/.gem/ruby/2.4.0/bin
