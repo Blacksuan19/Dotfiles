@@ -66,9 +66,12 @@ alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/stuff/Others/custom.
 alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"
-alias st="/opt/sublime_text_3/sublime"
+alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
+alias lock="sh ~/.lock.sh"
+alias lsc="sh ~/.lock.sh -l"
+alias orphan="octopi-cachecleaner"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
