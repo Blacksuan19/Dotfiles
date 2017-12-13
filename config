@@ -10,7 +10,6 @@ foreground = #839496
 foreground_bold = #eee8d5
 background = #002b36
 cursor = #93a1a1
-# colors from color0 to color254 can be set
 color0 = #002b36
 color1 = #dc322f
 color2 = #859900
