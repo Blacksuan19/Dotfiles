@@ -71,7 +71,7 @@ alias tk= "tmux kill-server"
 alias zsh="exec zsh"
 alias lock="sh ~/.lock.sh"
 alias lsc="sh ~/.lock.sh -l"
-alias orphan="octopi-cachecleaner"
+alias cleanc="octopi-cachecleaner"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
