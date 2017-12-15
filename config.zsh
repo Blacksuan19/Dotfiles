@@ -69,8 +69,6 @@ alias vdir="run_vdir"
 alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
-alias lock="sh ~/.lock.sh"
-alias lsc="sh ~/.lock.sh -l"
 alias cleanc="octopi-cachecleaner"
 
 #Directory hashes.
