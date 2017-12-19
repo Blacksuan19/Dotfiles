@@ -63,7 +63,7 @@ tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
-tmux_conf_theme_pane_border='#444444'                   # gray
+tmux_conf_theme_pane_border='#839491'                   # gray
 tmux_conf_theme_pane_active_border='#00afff'            # light blue
 
 # pane indicator colours
