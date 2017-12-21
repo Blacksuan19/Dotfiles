@@ -79,6 +79,7 @@ hash -d viv="/opt/vivaldi-snapshot/resources/vivaldi/style"
 hash -d stuff="/run/media/dark-emperor/Dark-Files/stuff"
 hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
 hash -d dots="/home/dark-emperor/.dotfiles"
+hash -d scripts="/run/media/dark-emperor/Dark-Files/stuff/Others/Scripts/git"
 
 #arguments.
 ZSH_COMMAND_TIME_MIN_SECONDS=3
