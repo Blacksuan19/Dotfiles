@@ -70,6 +70,7 @@ alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
 alias cleanc="sudo octopi-cachecleaner"
+alias sysinfo="clear && sh ~stuff/Others/Scripts/sysinfo.sh"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
