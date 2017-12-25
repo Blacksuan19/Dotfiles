@@ -1,3 +1,8 @@
+#arguments.
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+ZSH_COMMAND_TIME_ECHO=1
+eval $(thefuck --alias)
+
 #systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
@@ -61,7 +66,6 @@ alias neofetch="clear && neofetch"
 alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
-alias inxi="sudo inxi -Fm"
 alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/stuff/Others/custom.sh"
 alias ls="run_ls"
 alias dir="run_dir"
@@ -70,7 +74,7 @@ alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
 alias cleanc="sudo octopi-cachecleaner"
-alias sysinfo="clear && sh ~stuff/Others/Scripts/sysinfo.sh"
+alias sysinfo="sh /run/media/dark-emperor/Dark-Files/stuff/Others/Git/Scripts/sysinfo.sh"
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
@@ -79,9 +83,5 @@ hash -d viv="/opt/vivaldi-snapshot/resources/vivaldi/style"
 hash -d stuff="/run/media/dark-emperor/Dark-Files/stuff"
 hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
 hash -d dots="/home/dark-emperor/.dotfiles"
-hash -d scripts="/run/media/dark-emperor/Dark-Files/stuff/Others/Scripts/git"
+hash -d git="/run/media/dark-emperor/Dark-Files/stuff/Others/Git"
 
-#arguments.
-ZSH_COMMAND_TIME_MIN_SECONDS=3
-ZSH_COMMAND_TIME_ECHO=1
-eval $(thefuck --alias)
