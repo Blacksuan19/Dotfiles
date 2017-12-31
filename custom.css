@@ -1,6 +1,5 @@
 /* vivaldi css */
 
-
 /*hide trash icon*/
 #tabs-container .toggle-trash {
 	display: none !important;
@@ -36,6 +35,25 @@ button.vivaldi {
 	display: none !important;
 }
 
+/*hide reload button*/
+button.button-toolbar.reload {
+	display: none;
+}
+
+/*hide back and foreword buttons*/
+.button-toolbar.back {
+	display: none !important;
+}
+
+.button-toolbar.forward {
+	display: none !important;
+}
+
+/*hide drop down menu button*/
+.button-addressfield.input-dropdown {
+	display: none !important;
+}
+
 /*Remove border around favicon(tab icon) and and shadow*/
 .tab-header .favicon {
 	box-shadow: none !important;
@@ -50,24 +68,28 @@ button.vivaldi {
 	color: var(--colorAccentFg);
 }
 
+/*hide address filed shadow*/
 .addressfield.focused, .searchfield.focused {
 	border: none;
 	box-shadow: none !important;
 	border-radius: 0;
 }
 
+/*custom font for address bar*/
 input.url {
 	background-color: var(--colorAccentBg);
 	font-family: 'HalveticaNeue [MACR]' !important;
 	font-weight: 100 !important;
 }
 
+/*custom font for search panel*/
 .urlSearch {
 	font-family: 'HalveticaNeue [MACR]';
 	font-weight: 200;
 	background-color: var(--colorAccentBgDark) !important;
 }
 
+/*hide progress bar*/
 .pageload.progress-done {
 	opacity: 0 !important;
 	transition: all 2s;
