@@ -73,7 +73,7 @@ alias vdir="run_vdir"
 alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
-alias cleanc="sudo octopi-cachecleaner"
+alias cleanc="octopi-cachecleaner"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
 
 
