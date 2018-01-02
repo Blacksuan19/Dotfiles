@@ -78,13 +78,13 @@ button.button-toolbar.reload {
 /*custom font for address bar*/
 input.url {
 	background-color: var(--colorAccentBg);
-	font-family: 'HalveticaNeue [MACR]' !important;
+	font-family: 'San Francisco Display' !important;
 	font-weight: 100 !important;
 }
 
 /*custom font for search panel*/
 .urlSearch {
-	font-family: 'HalveticaNeue [MACR]';
+	font-family: 'San Francisco Display';
 	font-weight: 200;
 	background-color: var(--colorAccentBgDark) !important;
 }
@@ -113,7 +113,7 @@ section.filter-typedhistory>label {
 }
 
 section.filter-typedhistory>.omni-clickable>span {
-	font-family: 'HalveticaNeue [MACR]';
+	font-family: 'San Francisco Display';
 	font-weight: 100;
 }
 
