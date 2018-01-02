@@ -75,6 +75,7 @@ alias tk= "tmux kill-server"
 alias zsh="exec zsh"
 alias cleanc="octopi-cachecleaner"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
+alias pinfo="pacman -Qi "
 
 
 #Directory hashes.
