@@ -77,6 +77,16 @@ alias cleanc="octopi-cachecleaner"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
 alias pinfo="pacman -Qi "
 
+#spotify aliases.
+alias spn="sp next"
+alias spv="sp prev"
+alias spp="sp play"
+alias spc="sp current"
+alias spf="sp feh"
+alias sph="sp help"
+
+
+
 
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
