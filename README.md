@@ -23,13 +23,16 @@
 - copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc to your $HOME directory (your existing files will be overwritten!!)
 - copy the Fatty folder to $HOME/.conky
 
+**Scripts:**
+scripts are available on a separate repo [here](http://github.com/madkita/Scripts)
 
 
+**Screenshots:**
+
+##### terminal:
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
 
-
-
-## conky
+##### conky:
 
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
