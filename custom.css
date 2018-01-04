@@ -89,12 +89,19 @@ input.url {
 	background-color: var(--colorAccentBgDark) !important;
 }
 
+/*custom font for the drop down menu*/
+section.filter-typedhistory>.omni-clickable>span {
+	font-family: 'San Francisco Display';
+	font-weight: 100;
+}
+
 /*hide progress bar*/
 .pageload.progress-done {
 	opacity: 0 !important;
 	transition: all 2s;
 }
 
+/*set some colors to the accent color*/
 .button-addressfield.bookmark svg .bookmark-outline {
 	fill: var(--colorAccentFg);
 }
@@ -110,11 +117,6 @@ section.filter-typedhistory {
 
 section.filter-typedhistory>label {
 	color: var(--colorAccentFg);
-}
-
-section.filter-typedhistory>.omni-clickable>span {
-	font-family: 'San Francisco Display';
-	font-weight: 100;
 }
 
 /* loading fav icon*/
