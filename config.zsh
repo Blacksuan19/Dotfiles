@@ -85,9 +85,6 @@ alias spc="sp current"
 alias spf="sp feh"
 alias sph="sp help"
 
-
-
-
 #Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
 hash -d disk="/run/media/dark-emperor/Dark-Files"
