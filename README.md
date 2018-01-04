@@ -2,7 +2,7 @@
 
 **personal configuration for zsh, prezto, termite, tmux, neofetch and conky and also a custom Vivaldi CSS**
 
-**Requirements:**
+## **Requirements:**
 - \*NIX system 
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Powerline Fonts](https://github.com/powerline/fonts)
@@ -13,7 +13,7 @@
 - [Vivaldi](https://vivaldi.net)
 - [Conky](https://github.com/brndnmtthws/conky) 
 
-**Installation:**
+## **Installation:**
 - git clone https://github.com/Madkita/Dotfiles
 - copy termite config to .config/termite
 - copy neofetch config to ~/.config/neofetch/
@@ -26,12 +26,12 @@
 scripts are available on a separate repo [here](http://github.com/madkita/Scripts)
 
 
-**Screenshots:**
+## **Screenshots:**
 
-##### terminal:
+#### terminal:
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
 
-##### conky:
+#### conky:
 
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
