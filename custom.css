@@ -40,11 +40,13 @@ button.button-toolbar.reload {
 	display: none;
 }
 
-/*hide back and foreword buttons*/
-.button-toolbar.back {
-	display: none !important;
-}
+/*hide back button*/
 
+/*.button-toolbar.back {
+	display: none !important;
+}*/
+
+/*hide foreword button*/
 .button-toolbar.forward {
 	display: none !important;
 }
