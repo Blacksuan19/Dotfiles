@@ -2,7 +2,6 @@
 ZSH_COMMAND_TIME_MIN_SECONDS=3
 ZSH_COMMAND_TIME_ECHO=1
 eval $(thefuck --alias)
-
 #systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
@@ -20,20 +19,6 @@ for c in $sudo_commands; do; alias sc-$c="sudo systemctl $c"; done
 alias sc-enable-now="sc-enable --now"
 alias sc-disable-now="sc-disable --now"
 alias sc-mask-now="sc-mask --now"
-
-#Directory colors.
-LS_COLORS=$(ls_colors_generator)
-run_ls() {
-    ls-i --color=auto -w $(tput cols) "$@"
-}
-
-run_dir() {
-    dir-i --color=auto -w $(tput cols) "$@"
-}
-
-run_vdir() {
-    vdir-i --color=auto -w $(tput cols) "$@"
-}
 
 # double press Esc to add sudo.
 sudo-command-line() {
@@ -57,8 +42,8 @@ bindkey "\e\e" sudo-command-line
 alias remove="sudo pacman -Rs"
 alias install="packer -S"
 alias update="packer -Syu"
-alias shell="killall plasmashell && kstart plasmashell"
-alias plank="killall plank && kstart plank && exit"
+alias shell="killall plasmashell && kstart5 plasmashell"
+alias plank="killall plank && kstart5 plank && exit"
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
@@ -67,9 +52,8 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Scripts/custom.sh"
-alias ls="run_ls"
-alias dir="run_dir"
-alias vdir="run_vdir"
+alias ls="colorls"
+alias l="colorls -a"
 alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
@@ -94,4 +78,3 @@ hash -d Stuff="/run/media/dark-emperor/Dark-Files/Stuff"
 hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
 hash -d dots="/home/dark-emperor/.dotfiles"
 hash -d git="/run/media/dark-emperor/Dark-Files/Stuff/Others/Git"
-
