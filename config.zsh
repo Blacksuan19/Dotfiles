@@ -2,6 +2,7 @@
 ZSH_COMMAND_TIME_MIN_SECONDS=3
 ZSH_COMMAND_TIME_ECHO=1
 eval $(thefuck --alias)
+
 #systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
