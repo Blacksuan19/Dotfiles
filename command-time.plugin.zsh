@@ -18,7 +18,7 @@ _command_time_precmd() {
 
 zsh_command_time() {
   if [ -n "$ZSH_COMMAND_TIME" ]; then
-  	notify-send --icon="utilities-terminal" "command finished" "running command finished in $ZSH_COMMAND_TIME seconds"
+  	notify-send --icon="utilities-terminal" "Command Finished" "Running Command Finished In $ZSH_COMMAND_TIME Seconds"
   fi
 }
 
