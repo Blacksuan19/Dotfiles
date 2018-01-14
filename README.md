@@ -18,6 +18,7 @@
 - copy termite config to .config/termite
 - copy neofetch config to ~/.config/neofetch/
 - source agnoster theme in your .zshrc (if you don't want to use my .zshrc)
+- source command-time.config.zsh in your zshrc (if you dont want to use mine)
 - copy the custom.css file to /opt/vivaldi(-snapshot)/resources/vivaldi/style
 - excuse the command `sudo sed -i '1s/^/@import "custom.css";/' common.css` (in vivaldi/style directory)
 - copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc to your $HOME directory (your existing files will be overwritten!!)
