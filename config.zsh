@@ -70,6 +70,7 @@ alias spp="sp play"
 alias spc="sp current"
 alias spf="sp feh"
 alias sph="sp help"
+alias spm="sp metadata"
 
 # git aliases.
 alias gs="git status"
