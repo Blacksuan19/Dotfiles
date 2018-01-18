@@ -1,7 +1,6 @@
 #arguments.
 ZSH_COMMAND_TIME_MIN_SECONDS=5
 ZSH_COMMAND_TIME_ECHO=1
-eval $(thefuck --alias)
 
 #systemd aliases.
  user_commands=(
@@ -60,7 +59,7 @@ alias tk= "tmux kill-server"
 alias zsh="exec zsh"
 alias cleanc="octopi-cachecleaner"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
-alias pinfo="pacman -Qs "
+alias pinfo="pacman -Qi "
 alias open="xdg-open"
 
 #spotify aliases.
