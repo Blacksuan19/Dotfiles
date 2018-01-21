@@ -70,8 +70,17 @@ alias spc="sp current"
 alias spf="sp feh"
 alias sph="sp help"
 alias spm="sp metadata"
+alias spl="sp lyrics"
 
-# git aliases.
+#translator aliases.
+alias en="trans " # to english
+alias enf="en -d -pager more -i" # translate a file to english
+alias es="trans -t es" # to spanish.
+alias ara="trans -t ar" # to arabic.
+alias ts="trans -shell" # intractive ahell.
+alias lyct="lyc | en -d -pager more" #translate playing aong lyrics to english.
+
+#git aliases.
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add -A"
