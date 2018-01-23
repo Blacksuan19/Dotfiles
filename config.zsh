@@ -61,6 +61,7 @@ alias cleanc="octopi-cachecleaner"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
 alias pinfo="pacman -Qi "
 alias open="xdg-open"
+alias term="termite &" #nedded sometimes.
 
 #spotify aliases.
 alias spn="sp next"
