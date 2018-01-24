@@ -79,7 +79,7 @@ alias enf="en -d -pager more -i" # translate a file to english
 alias es="trans -t es" # to spanish.
 alias ara="trans -t ar" # to arabic.
 alias ts="trans -shell" # intractive ahell.
-alias lyct="lyc | en -d -pager more" #translate playing aong lyrics to english.
+alias lyct="lyc | en -d -no-auto -pager more" #translate playing aong lyrics to english.
 
 #git aliases.
 alias gs="git status"
