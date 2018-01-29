@@ -40,10 +40,10 @@ bindkey "\e\e" sudo-command-line
 
 #aliases.
 alias remove="sudo pacman -Rs"
-alias install="packer -S"
-alias update="packer -Syu"
+alias install="pacaur -S"
+alias update="pacaur -Syu"
 alias shell="killall plasmashell && kstart5 plasmashell"
-alias plank="killall plank && kstart5 plank && exit"
+alias latte="killall latte-dock && kstart5 latte-dock && exit"
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
