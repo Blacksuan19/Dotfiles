@@ -1,6 +1,9 @@
 #arguments.
 ZSH_COMMAND_TIME_MIN_SECONDS=5
 ZSH_COMMAND_TIME_ECHO=1
+eval $(dircolors -b $HOME/.dircolors) # just for colors in completions.
+LS_COLORS=$(ls_colors_generator) # ls icons.
+
 
 #systemd aliases.
  user_commands=(
@@ -19,6 +22,19 @@ for c in $sudo_commands; do; alias sc-$c="sudo systemctl $c"; done
 alias sc-enable-now="sc-enable --now"
 alias sc-disable-now="sc-disable --now"
 alias sc-mask-now="sc-mask --now"
+
+# ls functions.
+run_ls() {
+	ls-i --color=auto -w $(tput cols) "$@"
+}
+
+run_dir() {
+	dir-i --color=auto -w $(tput cols) "$@"
+}
+
+run_vdir() {
+	vdir-i --color=auto -w $(tput cols) "$@"
+}
 
 # double press Esc to add sudo.
 sudo-command-line() {
@@ -52,8 +68,9 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias css="cd ~viv && sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Scripts/custom.sh"
-alias ls="colorls"
-alias l="colorls -a"
+alias ls="run_ls"
+alias dir="run_dir"
+alias vdir="run_vdir"
 alias st="$exec /opt/sublime_text_3/sublime_text"
 alias tk= "tmux kill-server"
 alias zsh="exec zsh"
