@@ -56,8 +56,8 @@ bindkey "\e\e" sudo-command-line
 
 #aliases.
 alias remove="sudo pacman -Rs"
-alias install="pacaur -S"
-alias update="pacaur -Syu"
+alias install="sudo pacaur -S"
+alias update="sudo pacaur -Syu"
 alias shell="killall plasmashell && kstart5 plasmashell"
 alias latte="killall latte-dock && kstart5 latte-dock"
 alias free="free -h"
