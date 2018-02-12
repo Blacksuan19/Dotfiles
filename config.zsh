@@ -54,18 +54,12 @@ sudo-command-line() {
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
-#aliases.
-alias remove="sudo pacman -Rs"
-alias install="pacaur -S"
-alias pfind="pacaur -Ss "
-alias update="pacaur -Syu"
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
+# various aliases.
 alias shell="killall plasmashell && kstart5 plasmashell"
 alias latte="killall latte-dock && kstart5 latte-dock"
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
-alias neofetch="clear && neofetch"
 alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
@@ -74,13 +68,19 @@ alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"
 alias st="$exec /opt/sublime_text_3/sublime_text"
-alias tk= "tmux kill-server"
 alias zsh="exec zsh"
-alias cleanc="sudo pacman -Scc"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
-alias pinfo="pacman -Qi "
 alias open="xdg-open"
 alias term="termite &" #nedded sometimes.
+
+#packages aliases.
+alias remove="sudo pacman -Rs"
+alias install="pacaur -S"
+alias update="pacaur -Syu"
+alias pfind="pacaur -Ss " # find a package in the repo's or AUR.
+alias pinfo="pacman -Qi " # get info of an installed package.
+alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
+alias cleanc="sudo pacman -Scc" # clean cached packages files.
 
 #spotify aliases.
 alias spn="sp next"
@@ -92,7 +92,7 @@ alias sph="sp help"
 alias spm="sp metadata"
 alias spl="sp lyrics"
 
-#translator aliases.
+#translator script aliases.
 alias en="trans " # to english
 alias enf="en -d -pager more -i" # translate a file to english
 alias es="trans -t es" # to spanish.
