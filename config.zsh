@@ -79,7 +79,7 @@ alias install="pacaur -S"
 alias update="pacaur -Syu"
 alias pfind="pacaur -Ss " # find a package in the repo's or AUR.
 alias pinfo="pacman -Qi " # get info of an installed package.
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
+alias orphan="sudo pacman -Rns $(pacman -Qtdq)" # remove orphaned packages.
 alias cleanc="sudo pacman -Scc" # clean cached packages files.
 
 #spotify aliases.
