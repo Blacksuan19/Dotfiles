@@ -1,0 +1,202 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*hide close button*/
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button {
+	display: none ! important
+}
+
+tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after, .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before, tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+	display: none !important
+}
+
+/* Hide blue stripe on active tab */
+.tab-line[selected="true"] {
+	opacity: 0 !important;
+}
+
+/*rounded tabs*/
+#TabsToolbar .tabs-newtab-button, #TabsToolbar .tabbrowser-tab, #TabsToolbar .tabbrowser-tab .tab-stack, #TabsToolbar .tabbrowser-tab .tab-background, #TabsToolbar .tabbrowser-tab .tab-content {
+	border-top-left-radius: 2px !important;
+	border-top-right-radius: 2px !important;
+}
+
+/*make the adresses more compact */
+#urlbar {
+
+	/* Place bindings.xml in the same folder as userChrome.css */
+	-moz-binding: url("bindings.xml#urlbar") !important;
+}
+
+/*remove tab boarder*/
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+	border-left: none !important; /* Remove borders from inactive tabs */
+}
+
+:root {
+	--tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
+}
+
+/*drop down*/
+
+/* 
+  Firefox 57 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+  You can copy/paste into a userChrome.css file, see https://www.userchrome.org/
+  Firefox 52-56 users: roll back your Stylish to version 2.1.1 or 2.0.7 here:
+  https://addons.mozilla.org/firefox/addon/stylish/versions/
+  Then find Stylish on the Add-ons page, click its More link, and turn off updates
+*/
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	/* Remove " - Visit" or " - Search with" bar in the drop-down */
+	#PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"] {
+		display: none !important;
+	}
+
+	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	/* Restore persistent display of drop-marker */
+	#urlbar:not(:hover) > .urlbar-textbox-container > .urlbar-history-dropmarker {
+		opacity: 1 !important;
+	}
+
+	/* Set max-height for items visible without scrolling */
+	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+
+		/* height:auto doesn't work in photon */
+		max-height: calc(45.5px * 10) !important;
+	}
+
+	/* Set drop-down width */
+	#PopupAutoCompleteRichResult {
+		width: 1175px !important;
+		max-width: 1175px !important;
+		margin-left: 0 !important;
+	}
+
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text, #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text {
+		min-width: 810px !important;
+	}
+
+	/* Create sufficient height for two lines */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
+		position: relative !important;
+		height: 45.5px !important;
+	}
+
+	/* Subtle border between results */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+		border-bottom-color: #eee !important;
+	}
+
+	/* Position page title, set font-size */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
+		position: absolute !important;
+		left: 54px;
+		top: 1px;
+		font-size: 14px !important;
+	}
+
+	/* Position page url / action, set font-size */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url, #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
+		position: absolute !important;
+		left: 54px;
+		top: 20px;
+		font-size: 12px !important;
+	}
+
+	/* Position bookmark tags */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags {
+		position: absolute !important;
+		right: 0px;
+		top: 3px;
+	}
+
+	/* Hide separator between title and URL */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator {
+		display: none !important;
+	}
+
+	/* Position special icon (bookmark, switch-to-tab) */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon {
+		margin-left: 4px !important;
+	}
+
+	/* Prevent excess indenting of icons in Photon */
+	#PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"] {
+		display: none !important;
+	}
+
+	#PopupAutoCompleteRichResult {
+		--item-padding-start: 0 !important;
+	}
+
+	.autocomplete-richlistitem[selected=true] {
+		background-color: Highlight !important;
+	}
+
+	.autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
+		color: HighlightText !important;
+	}
+
+	/* Use default text matching style */
+
+	/* Ability to scroll in Fx57 */
+	#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
+		overflow-y: auto !important;
+		padding-right: 3px !important;
+	}
+
+	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+		padding-right: 0 !important;
+	}
+
+}
+
+/* Dark Themed Drop-down */
+
+/* Dark Theme - Firefox 48+ */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	background-color: #111 !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+	border-bottom-color: #333 !important;
+}
+
+.autocomplete-richlistitem .ac-title, .autocomplete-richlistitem .ac-action, .autocomplete-richlistitem .ac-separator {
+	color: #777 !important;
+}
+
+.autocomplete-richlistitem[selected=true] {
+	background-color: #666 !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
+	color: #eee !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected] {
+	color: #69f !important;
+}
+
+/* Use default text matching style */
+
+/* Ability to scroll in Fx57 */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
+	overflow-y: auto !important;
+	padding-right: 3px !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	padding-right: 0 !important;
+}
+
+}
+
+/* Remove window buttons (Close, Minimize, Fullscreen) */
+#titlebar {
+display: none !important;
+}
