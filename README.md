@@ -32,7 +32,13 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 #### terminal:
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
 
-#### conky:
+#### vivaldi:
 
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/Screenshot_20180221_165653.png)
+
+#### firefox:
+
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/Screenshot_20180221_165718.png)
+#### conky:
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
