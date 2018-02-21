@@ -1,6 +1,6 @@
 # Dotfiles
 
-**personal configuration for zsh, prezto, termite, tmux, neofetch and conky and also a custom Vivaldi CSS**
+**personal configuration for zsh, prezto, termite, tmux, neofetch, firefox, libinput-gesture and conky and also a custom Vivaldi CSS**
 
 ## **Requirements:**
 - \*NIX system 
