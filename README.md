@@ -30,7 +30,7 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 ## **Screenshots:**
 
 #### terminal:
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screenshot.png)
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/Screenshot.png)
 
 #### vivaldi:
 
