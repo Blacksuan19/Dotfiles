@@ -23,6 +23,8 @@
 - excuse the command `sudo sed -i '1s/^/@import "custom.css";/' common.css` (in vivaldi/style directory)
 - copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc to your $HOME directory (your existing files will be overwritten!!)
 - copy the Fatty folder to $HOME/.conky
+- copy userChrome.css to chrome folder under your firefox profile
+- copy libinput-gesture.conf to $HOME/.config
 
 scripts are available on a separate repo [here](http://github.com/madkita/Scripts)
 
