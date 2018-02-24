@@ -72,7 +72,7 @@ alias zsh="exec zsh"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sysinfo.sh"
 alias open="xdg-open"
 alias term="termite &" #nedded sometimes.
-alias sdcv="dict" # for sdcv dictionary
+alias dict="sdcv" # for sdcv dictionary
 
 #packages aliases.
 alias remove="sudo pacman -Rs"
