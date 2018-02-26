@@ -73,6 +73,7 @@ alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Others/Git/Scripts/sy
 alias open="xdg-open"
 alias term="termite &" #nedded sometimes.
 alias dict="sdcv -c" # for sdcv dictionary
+alias gpp="g++" # typing two plus signs is stupid
 
 #packages aliases.
 alias remove="sudo pacman -Rs"
