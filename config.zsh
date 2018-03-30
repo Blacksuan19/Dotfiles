@@ -73,7 +73,8 @@ alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Git/Scripts/sysinfo.s
 alias open="xdg-open"
 alias term="termite &" #nedded sometimes.
 alias dict="sdcv -c" # for sdcv dictionary
-alias gpp="g++" # typing two plus signs is stupid
+alias gpp="g++" # typing two plus signs is stupid.
+alias cp=pycp #this one has a pogress bar ma dude.
 
 #packages aliases.
 alias remove="sudo pacman -Rs"
@@ -108,7 +109,7 @@ alias ga="git add"
 alias gaa="git add -A"
 
 #Directory hashes.
-hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Bridging/Programmig/exercises"
+hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Kulliyya/Elements Of Prgramming/Excrecises"
 hash -d disk="/run/media/dark-emperor/Dark-Files"
 hash -d viv="/opt/vivaldi-snapshot/resources/vivaldi/style"
 hash -d Stuff="/run/media/dark-emperor/Dark-Files/Stuff"
