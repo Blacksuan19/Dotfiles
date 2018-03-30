@@ -1,11 +1,11 @@
-#arguments.
+# arguments.
 ZSH_COMMAND_TIME_MIN_SECONDS=5
 ZSH_COMMAND_TIME_ECHO=1
 eval $(dircolors -b $HOME/.dircolors) # just for colors in completions.
 LS_COLORS=$(ls_colors_generator) # ls icons.
 
 
-#systemd aliases.
+# systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
   is-enabled list-jobs show-environment cat list-timers)
@@ -71,10 +71,10 @@ alias st="$exec /opt/sublime_text_3/sublime_text"
 alias zsh="exec zsh"
 alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Stuff/Git/Scripts/sysinfo.sh"
 alias open="xdg-open"
-alias term="termite &" #nedded sometimes.
+alias term="termite &" # nedded sometimes.
 alias dict="sdcv -c" # for sdcv dictionary
 alias gpp="g++" # typing two plus signs is stupid.
-alias cp=pycp #this one has a pogress bar ma dude.
+alias cp="pycp" # this one has a pogress bar ma dude.
 
 #packages aliases.
 alias remove="sudo pacman -Rs"
@@ -100,15 +100,15 @@ alias en="trans " # to english
 alias enf="en -d -pager more -i" # translate a file to english
 alias es="trans -t es" # to spanish.
 alias ara="trans -t ar" # to arabic.
-alias ts="trans -shell" # intractive ahell.
-alias lyct="lyc | en -d -no-auto -pager more" #translate playing song lyrics to english.
+alias ts="trans -shell" # intractive shell.
+alias lyct="lyc | en -d -no-auto -pager more" # translate playing song lyrics to english.
 
-#git aliases.
+# git aliases.
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add -A"
 
-#Directory hashes.
+# Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Kulliyya/Elements Of Prgramming/Excrecises"
 hash -d disk="/run/media/dark-emperor/Dark-Files"
 hash -d viv="/opt/vivaldi-snapshot/resources/vivaldi/style"
