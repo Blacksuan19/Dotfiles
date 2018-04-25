@@ -1,5 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/*tab shit*/
+
 /*hide close button*/
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button {
 	display: none ! important
@@ -20,13 +22,6 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 	border-top-right-radius: 2px !important;
 }
 
-/*make the adresses more compact */
-#urlbar {
-
-	/* Place bindings.xml in the same folder as userChrome.css */
-	-moz-binding: url("bindings.xml#urlbar") !important;
-}
-
 /*remove tab boarder*/
 .tabbrowser-tab::after, .tabbrowser-tab::before {
 	border-left: none !important; /* Remove borders from inactive tabs */
@@ -36,15 +31,20 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 	--tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
 }
 
-/*drop down*/
+/* Position special icon (bookmark, switch-to-tab) */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon {
+	margin-left: 4px !important;
+}
 
-/* 
-  Firefox 57 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
-  You can copy/paste into a userChrome.css file, see https://www.userchrome.org/
-  Firefox 52-56 users: roll back your Stylish to version 2.1.1 or 2.0.7 here:
-  https://addons.mozilla.org/firefox/addon/stylish/versions/
-  Then find Stylish on the Add-ons page, click its More link, and turn off updates
-*/
+#TabsToolbar {
+	direction: rtl;
+}
+
+#tabbrowser-tabs {
+	direction: ltr;
+}
+
+/*drop down*/
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* Remove " - Visit" or " - Search with" bar in the drop-down */
@@ -55,11 +55,6 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
-	}
-
-	/* Restore persistent display of drop-marker */
-	#urlbar:not(:hover) > .urlbar-textbox-container > .urlbar-history-dropmarker {
-		opacity: 1 !important;
 	}
 
 	/* Set max-height for items visible without scrolling */
@@ -88,7 +83,7 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 
 	/* Subtle border between results */
 	#PopupAutoCompleteRichResult .autocomplete-richlistitem {
-		border-bottom-color: #eee !important;
+		border-bottom-color: ##002C36 !important;
 	}
 
 	/* Position page title, set font-size */
@@ -119,11 +114,6 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 		display: none !important;
 	}
 
-	/* Position special icon (bookmark, switch-to-tab) */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon {
-		margin-left: 4px !important;
-	}
-
 	/* Prevent excess indenting of icons in Photon */
 	#PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"] {
 		display: none !important;
@@ -134,11 +124,11 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 	}
 
 	.autocomplete-richlistitem[selected=true] {
-		background-color: Highlight !important;
+		background-color: #002C36 !important;
 	}
 
 	.autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
-		color: HighlightText !important;
+		color: #002C36 !important;
 	}
 
 	/* Use default text matching style */
@@ -159,23 +149,23 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 
 /* Dark Theme - Firefox 48+ */
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	background-color: #111 !important;
+	background-color: #002C36 !important;
 }
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
-	border-bottom-color: #333 !important;
+	border-bottom-color: #002C36 !important;
 }
 
 .autocomplete-richlistitem .ac-title, .autocomplete-richlistitem .ac-action, .autocomplete-richlistitem .ac-separator {
-	color: #777 !important;
+	color: #666 !important;
 }
 
 .autocomplete-richlistitem[selected=true] {
-	background-color: #666 !important;
+	background-color: #555 !important;
 }
 
 .autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
-	color: #eee !important;
+	color: #002C36 !important;
 }
 
 .autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected] {
@@ -196,7 +186,39 @@ tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-t
 
 }
 
-/* Remove window buttons (Close, Minimize, Fullscreen) */
-#titlebar {
+#titlebar-max {
+-moz-box-ordinal-group: 0;
+}
+
+#titlebar-content {
+direction: rtl;
+}
+
+/*URL bar shit*/
+#pageActionButton, #pocket-button, #urlbar-go-button, #pageActionSeparator, .tabs-newtab-button {
 display: none !important;
+}
+
+#urlbar {
+border-color: #002B36 !important;
+border-width: 1px !important;
+height: 28px !important;
+border-radius: 4px !important;
+}
+
+#urlbar[focused="true"], .searchbar-textbox[focused="true"] {
+box-shadow: none !important;
+border-color: ##003846 !important;
+}
+
+/*make the adresses more compact */
+#urlbar {
+
+/* Place bindings.xml in the same folder as userChrome.css */
+-moz-binding: url("bindings.xml#urlbar") !important;
+}
+
+/* Restore persistent display of drop-marker */
+#urlbar:not(:hover) > .urlbar-textbox-container > .urlbar-history-dropmarker {
+opacity: 1 !important;
 }
