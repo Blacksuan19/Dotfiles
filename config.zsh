@@ -107,6 +107,7 @@ alias lyct="lyc | en -d -no-auto -pager more" # translate playing song lyrics to
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add -A"
+alias gc="git commit --signoff"
 
 # Directory hashes.
 hash -d exercises="/run/media/dark-emperor/Dark-Files/Learning/Kulliyya/Elements Of Prgramming/Excrecises"
