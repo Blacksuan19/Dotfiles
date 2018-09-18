@@ -66,6 +66,7 @@ alias franco="git cherry-pick franco/oreo-mr1-custom "
 alias clang="git cherry-pick clang/msm-3.18-oreo "
 alias raph="git cherry-pick raph/stable/penkek "
 alias genom="git cherry-pick genom/pie "
+alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
 alias remove="sudo pacman -Rs"
