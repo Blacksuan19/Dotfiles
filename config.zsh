@@ -65,7 +65,7 @@ alias oveno="git cherry-pick oveno/musk "
 alias franco="git cherry-pick franco/oreo-mr1-custom "
 alias clang="git cherry-pick clang/msm-3.18-oreo "
 alias raph="git cherry-pick raph/stable/penkek "
-alias genom="git cherry-pick genom/pie "
+alias genom="git cherry-pick genom/pie-custom "
 alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
@@ -110,3 +110,4 @@ hash -d dots="/home/dark-emperor/.dotfiles"
 hash -d git="/run/media/dark-emperor/Dark-Files/Dev/Gits"
 hash -d android="/run/media/dark-emperor/Dark-Files/Dev/Android"
 hash -d da="/run/media/dark-emperor/Dark-Files/Dev/Android/Dark-Ages"
+hash -d java="/run/media/dark-emperor/Dark-Files/Kulliyya/CSC1103/exercises"
