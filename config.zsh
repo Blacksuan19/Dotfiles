@@ -1,9 +1,7 @@
 # arguments.
 ZSH_COMMAND_TIME_MIN_SECONDS=5
-ZSH_COMMAND_TIME_ECHO=1
+ZSH_COMMAND_TIME_ECHO=0
 eval $(dircolors -b $HOME/.dircolors) # just for colors in completions.
-
-
 
 # systemd aliases.
  user_commands=(
@@ -22,7 +20,6 @@ for c in $sudo_commands; do; alias sc-$c="sudo systemctl $c"; done
 alias sc-enable-now="sc-enable --now"
 alias sc-disable-now="sc-disable --now"
 alias sc-mask-now="sc-mask --now"
-
 
 # double press Esc to add sudo.
 sudo-command-line() {
@@ -51,12 +48,11 @@ alias blame="systemd-analyze && systemd-analyze blame"
 alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
-alias st="subl3"
+alias c="code"
 alias zsh="exec zsh"
-alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Dev/Gits/Scripts/sysinfo.sh"
+alias sysinfo="sh ~/.sysinfo.sh"
 alias open="xdg-open"
-alias term="termite &" # nedded sometimes.
-alias dict="sdcv -c" # for sdcv dictionary
+alias term="konsole &" # needed sometimes.
 alias gpp="g++" # typing two plus signs is stupid.
 alias cp="pycp" # this one has a pogress bar ma dude.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
@@ -69,13 +65,11 @@ alias genom="git cherry-pick genom/pie-custom "
 alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
-alias remove="sudo pacman -Rs"
-alias install="pacaur -S"
-alias update="pacaur -Syu"
-alias pfind="pacaur -Ss " # find a package in the repo's or AUR.
-alias pinfo="pacman -Qi " # get info of an installed package.
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)" # remove orphaned packages.
-alias cleanc="sudo pacman -Scc" # clean cached packages files.
+alias remove="yay -Rs"
+alias install="yay -S"
+alias pinfo="yay -Qi " # get info of an installed package.
+alias orphan="yay -Rns $(pacman -Qtdq)" # remove orphaned packages.
+alias cleanc="yay -Scc" # clean cached packages files.
 
 #spotify aliases.
 alias spn="sp next"
@@ -87,14 +81,6 @@ alias sph="sp help"
 alias spm="sp metadata"
 alias spl="sp lyrics"
 alias lyc="python /bin/lyc"
-
-#translator script aliases.
-alias en="trans " # to english
-alias enf="en -d -pager more -i" # translate a file to english
-alias es="trans -t es" # to spanish.
-alias ara="trans -t ar" # to arabic.
-alias ts="trans -shell" # intractive shell.
-alias lyct="lyc | en -d -no-auto -pager more" # translate playing song lyrics to english.
 
 # git aliases.
 alias gs="git status"
