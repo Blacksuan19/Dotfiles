@@ -65,6 +65,7 @@ alias genom="git cherry-pick genom/pie-custom "
 alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
+alias y="yay"
 alias remove="yay -Rs"
 alias install="yay -S"
 alias pinfo="yay -Qi " # get info of an installed package.
