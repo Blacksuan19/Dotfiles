@@ -100,7 +100,6 @@ hash -d android="/run/media/dark-emperor/Dark-Files/Dev/Android"
 hash -d da="/run/media/dark-emperor/Dark-Files/Dev/Android/Dark-Ages"
 hash -d java="/run/media/dark-emperor/Dark-Files/Kulliyya/CSC1103/exercises"
 
-
 lolcat -a << EOF
 
 
