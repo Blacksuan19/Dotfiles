@@ -1,9 +1,7 @@
 # arguments.
-ZSH_COMMAND_TIME_MIN_SECONDS=5
+ZSH_COMMAND_TIME_MIN_SECONDS=20
 ZSH_COMMAND_TIME_ECHO=0
 eval $(dircolors -b $HOME/.dircolors) # just for colors in completions.
-
-
 
 # systemd aliases.
  user_commands=(
@@ -22,7 +20,6 @@ for c in $sudo_commands; do; alias sc-$c="sudo systemctl $c"; done
 alias sc-enable-now="sc-enable --now"
 alias sc-disable-now="sc-disable --now"
 alias sc-mask-now="sc-mask --now"
-
 
 # double press Esc to add sudo.
 sudo-command-line() {
@@ -53,10 +50,10 @@ alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias c="code"
 alias zsh="exec zsh"
-alias sysinfo="sh /run/media/dark-emperor/Dark-Files/Dev/Gits/Scripts/sysinfo.sh"
+alias sysinfo="sh ~/.sysinfo.sh"
+alias memefetch="sh ~/.memefetch.sh"
 alias open="xdg-open"
-alias term="konsole &" # nedded sometimes.
-alias dict="sdcv -c" # for sdcv dictionary
+alias term="konsole &" # needed sometimes.
 alias gpp="g++" # typing two plus signs is stupid.
 alias cp="pycp" # this one has a pogress bar ma dude.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
@@ -69,6 +66,7 @@ alias genom="git cherry-pick genom/pie-custom "
 alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
+alias y="yay"
 alias remove="yay -Rs"
 alias install="yay -S"
 alias pinfo="yay -Qi " # get info of an installed package.
