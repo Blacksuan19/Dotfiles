@@ -1,6 +1,7 @@
 # Dotfiles
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_shield)  
+
 **personal configuration for zsh, prezto, termite, tmux, neofetch, firefox, libinput-gesture and conky and also a custom Vivaldi CSS**
 
 ## **Requirements:**
