@@ -33,6 +33,7 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 
 #### terminal:
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/Screenshot.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_shield)
 
 #### vivaldi:
 
@@ -44,3 +45,6 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 #### conky:
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_large)
