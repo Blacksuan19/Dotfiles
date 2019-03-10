@@ -56,14 +56,9 @@ alias open="xdg-open"
 alias term="konsole &" # needed sometimes.
 alias gpp="g++" # typing two plus signs is stupid.
 alias cp="pycp" # this one has a pogress bar ma dude.
+alias pt="cd /opt/pt/bin && ./PacketTracer7"
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias electra="git cherry-pick electra/treble "
-alias oveno="git cherry-pick oveno/musk "
-alias franco="git cherry-pick franco/oreo-mr1-custom "
-alias clang="git cherry-pick clang/msm-3.18-oreo "
-alias raph="git cherry-pick raph/stable/penkek "
-alias genom="git cherry-pick genom/pie-custom "
-alias beta="git cherry-pick darky-beta "
 
 #packages aliases.
 alias y="yay"
@@ -99,3 +94,4 @@ hash -d git="/run/media/dark-emperor/Dark-Files/Dev/Gits"
 hash -d android="/run/media/dark-emperor/Dark-Files/Dev/Android"
 hash -d da="/run/media/dark-emperor/Dark-Files/Dev/Android/Dark-Ages"
 hash -d java="/run/media/dark-emperor/Dark-Files/Kulliyya/CSC1103/exercises"
+hash -d trees="/run/media/dark-emperor/Dark-Files/Dev/Android/Trees"
