@@ -1,5 +1,7 @@
 # Dotfiles
 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_shield)  
+
 **personal configuration for zsh, prezto, termite, tmux, neofetch, firefox, libinput-gesture and conky and also a custom Vivaldi CSS**
 
 ## **Requirements:**
@@ -34,6 +36,7 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 #### terminal:
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/Screenshot.png)
 
+
 #### vivaldi:
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/Screenshot_20180221_165653.png)
@@ -44,3 +47,6 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 #### conky:
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_large)
