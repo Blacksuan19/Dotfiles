@@ -56,7 +56,7 @@ alias open="xdg-open"
 alias term="konsole &" # needed sometimes.
 alias gpp="g++" # typing two plus signs is stupid.
 alias cp="pycp" # this one has a pogress bar ma dude.
-alias pt="cd /opt/pt/bin && ./PacketTracer7"
+alias pt="cd /opt/pt/bin && ./PacketTracer7 && cd -"
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias electra="git cherry-pick electra/treble "
 
