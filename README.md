@@ -17,16 +17,7 @@
 
 ## **Installation:**
 - git clone https://github.com/Madkita/Dotfiles
-- copy termite config to .config/termite
-- copy neofetch config to ~/.config/neofetch/
-- source agnoster theme in your .zshrc (if you don't want to use my .zshrc)
-- source command-time.config.zsh in your zshrc (if you dont want to use mine)
-- copy the custom.css file to /opt/vivaldi(-snapshot)/resources/vivaldi/style
-- excuse the command `sudo sed -i '1s/^/@import "custom.css";/' common.css` (in vivaldi/style directory)
-- copy .tmux.conf, .tmux.conf.local, .zshrc and .zpreztorc to your $HOME directory (your existing files will be overwritten!!)
-- copy the Fatty folder to $HOME/.conky
-- copy userChrome.css to chrome folder under your firefox profile
-- copy libinput-gesture.conf to $HOME/.config
+- copy the files you want to their prespective places (easy to find)
 
 scripts are available on a separate repo [here](http://github.com/madkita/Scripts)
 
@@ -34,16 +25,16 @@ scripts are available on a separate repo [here](http://github.com/madkita/Script
 ## **Screenshots:**
 
 #### terminal:
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/Screenshot.png)
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/term.png)
 
 
 #### vivaldi:
 
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/Screenshot_20180221_165653.png)
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/vivaldi.png)
 
 #### firefox:
 
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/Screenshot_20180221_165718.png)
+![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/firefox.png)
 #### conky:
 
 ![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
