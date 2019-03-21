@@ -1,11 +1,3 @@
-/* ROUNDED TABS */
-
-.tabbrowser-tab {
-    box-sizing: border-box;
-    border-radius: 7px 7px 0 0 !important;
-}
-
-
 /*
  * Show close buttons on tabs only on hover
  */
@@ -101,7 +93,7 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
 }
 
 
-/*URL bar shit*/
+/* hide the stuff on the right (pocket, bookmarks etc) */
 
 #pageActionButton,
 #pocket-button,
@@ -111,8 +103,11 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
     display: none !important;
 }
 
+
+/* border colors */
+
 #urlbar {
-    border-color: #002B36 !important;
+    border-color: #474749 !important;
     border-width: 1px !important;
     height: 28px !important;
     border-radius: 4px !important;
@@ -121,7 +116,7 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
 #urlbar[focused="true"],
 .searchbar-textbox[focused="true"] {
     box-shadow: none !important;
-    border-color: #003846 !important;
+    border-color: #474749 !important;
 }
 
 
@@ -232,7 +227,7 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
     }
     /* Subtle border between results */
     #PopupAutoCompleteRichResult .autocomplete-richlistitem {
-        border-bottom-color: #002C36 !important;
+        border-bottom-color: #474749 !important;
     }
     /* Position page title, set font-size */
     #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
@@ -267,7 +262,7 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
         --item-padding-start: 0 !important;
     }
     .autocomplete-richlistitem[selected=true] {
-        background-color: #002C36 !important;
+        background-color: #B4B4B4 !important;
     }
     .autocomplete-richlistitem[selected=true] .ac-title,
     .ac-title[selected],
@@ -277,7 +272,7 @@ tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]
     .ac-action[selected],
     .autocomplete-richlistitem[selected=true] .ac-separator,
     .ac-separator[selected] {
-        color: #002C36 !important;
+        color: #474749 !important;
     }
     /* Use default text matching style */
     /* Ability to scroll in Fx57 */
