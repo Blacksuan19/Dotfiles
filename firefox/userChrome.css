@@ -1,224 +1,291 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* ROUNDED TABS */
 
-/*tab shit*/
-
-/*hide close button*/
-#tabbrowser-tabs .tabbrowser-tab .tab-close-button {
-	display: none ! important
+.tabbrowser-tab {
+    box-sizing: border-box;
+    border-radius: 7px 7px 0 0 !important;
 }
 
-tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after, .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before, tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
-	display: none !important
+
+/*
+ * Show close buttons on tabs only on hover
+ */
+
+.tabbrowser-tab:not([pinned]):not([selected]) .tab-close-button {
+    display: none !important;
 }
+
+.tabbrowser-tab:not([pinned]):not([selected]):hover .tab-close-button {
+    display: -moz-box !important;
+}
+
+
+/*
+ * Dim discarded tabs
+ */
+
+.tabbrowser-tab[pending] {
+    opacity: .66;
+}
+
+
+/*
+ * Hide HTTPS certificate label
+ */
+
+#identity-box:not(:hover) {
+    padding-inline-end: 0px !important;
+    margin-right: 8px !important;
+}
+
+#identity-box:not(:hover) #identity-icon-labels {
+    width: 0px;
+}
+
+tabbrowser-tabs[movingtab]>.tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+    display: none !important
+}
+
 
 /* Hide blue stripe on active tab */
+
 .tab-line[selected="true"] {
-	opacity: 0 !important;
+    opacity: 0 !important;
 }
+
+#identity-box:not(:hover) #identity-icon-labels #identity-icon-country-label {
+    display: none;
+}
+
+tabbrowser-tabs[movingtab]>.tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+tabbrowser-tabs:not([overflow])>.tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+    display: none !important
+}
+
+
+/*
+ * Remove border between Tabs and NavBar
+ */
+
+#nav-bar {
+    border: none !important;
+    box-shadow: none !important;
+    /*margin-top: -1px !important;  / bugs when a tab is dragged */
+    margin-bottom: -1px !important;
+}
+
+
+/* 
+ * Emulate Opera tab dividers
+ */
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    margin-top: 9px !important;
+    margin-bottom: 9px !important;
+}
+
+.tabbrowser-tab:hover::after,
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after,
+.tabbrowser-tab[multiselected]::after,
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[before-multiselected]::after {
+    visibility: hidden !important;
+}
+
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforeselected-visible]::after,
+#tabbrowser-tabs[movingtab]>.tabbrowser-tab[visuallyselected]::before,
+.tabbrowser-tab[visuallyselected]::after {
+    visibility: hidden !important;
+}
+
+
+/*URL bar shit*/
+
+#pageActionButton,
+#pocket-button,
+#urlbar-go-button,
+#pageActionSeparator,
+.tabs-newtab-button {
+    display: none !important;
+}
+
+#urlbar {
+    border-color: #002B36 !important;
+    border-width: 1px !important;
+    height: 28px !important;
+    border-radius: 4px !important;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+    box-shadow: none !important;
+    border-color: #003846 !important;
+}
+
+
+/* Restore persistent display of drop-marker */
+
+#urlbar:not(:hover)>.urlbar-textbox-container>.urlbar-history-dropmarker {
+    opacity: 1 !important;
+}
+
+
+/*
+ * Cleaner Context Menu
+ */
+
+
+/* page menu */
+
+#context-openlink,
+
+/* in new window */
+
+#context-bookmarklink,
+#context-savelinktopocket,
+#context-pocket,
+#context-sendimage,
+#context-setDesktopBackground,
+#context-selectall,
+
+/* tab menu */
+
+#context_toggleMuteTab,
+#context_moveTabOptions,
+#context_undoCloseTab,
+#context_closeTab {
+    display: none !important;
+}
+
+
+/* 
+ * Cleaner Bookmark menu 
+ */
+
+#BMB_bookmarksShowAllTop,
+#BMB_bookmarksShowAllTop+menuseparator,
+#BMB_viewBookmarksSidebar,
+#BMB_bookmarksToolbar,
+
+/* #BMB_unsortedBookmarks, */
+
+
+/* #BMB_bookmarksShowAll,  */
+
+#BMB_mobileBookmarks+menuseparator {
+    display: none !important;
+}
+
 
 /*rounded tabs*/
-#TabsToolbar .tabs-newtab-button, #TabsToolbar .tabbrowser-tab, #TabsToolbar .tabbrowser-tab .tab-stack, #TabsToolbar .tabbrowser-tab .tab-background, #TabsToolbar .tabbrowser-tab .tab-content {
-	border-top-left-radius: 2px !important;
-	border-top-right-radius: 2px !important;
-}
 
-/*remove tab boarder*/
-.tabbrowser-tab::after, .tabbrowser-tab::before {
-	border-left: none !important; /* Remove borders from inactive tabs */
+#TabsToolbar .tabs-newtab-button,
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar .tabbrowser-tab .tab-stack,
+#TabsToolbar .tabbrowser-tab .tab-background,
+#TabsToolbar .tabbrowser-tab .tab-content {
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 2px !important;
 }
 
 :root {
-	--tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
+    --tabs-border: transparent !important;
+    /* Remove borders from active tab and below tabs */
 }
 
-/* Position special icon (bookmark, switch-to-tab) */
-#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon {
-	margin-left: 4px !important;
-}
 
-#TabsToolbar {
-	direction: rtl;
-}
+/* more compact drop down  */
 
-#tabbrowser-tabs {
-	direction: ltr;
-}
-
-/*drop down*/
 @-moz-document url(chrome://browser/content/browser.xul) {
-
-	/* Remove " - Visit" or " - Search with" bar in the drop-down */
-	#PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"], #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"] {
-		display: none !important;
-	}
-
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-		padding-top: 0 !important;
-		padding-bottom: 0 !important;
-	}
-
-	/* Set max-height for items visible without scrolling */
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-
-		/* height:auto doesn't work in photon */
-		max-height: calc(45.5px * 10) !important;
-	}
-
-	/* Set drop-down width */
-	#PopupAutoCompleteRichResult {
-		width: 1175px !important;
-		max-width: 1175px !important;
-		margin-left: 0 !important;
-	}
-
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text, #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text {
-		min-width: 810px !important;
-	}
-
-	/* Create sufficient height for two lines */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
-		position: relative !important;
-		height: 45.5px !important;
-	}
-
-	/* Subtle border between results */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem {
-		border-bottom-color: ##002C36 !important;
-	}
-
-	/* Position page title, set font-size */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
-		position: absolute !important;
-		left: 54px;
-		top: 1px;
-		font-size: 14px !important;
-	}
-
-	/* Position page url / action, set font-size */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url, #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
-		position: absolute !important;
-		left: 54px;
-		top: 20px;
-		font-size: 12px !important;
-	}
-
-	/* Position bookmark tags */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags {
-		position: absolute !important;
-		right: 0px;
-		top: 3px;
-	}
-
-	/* Hide separator between title and URL */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator {
-		display: none !important;
-	}
-
-	/* Prevent excess indenting of icons in Photon */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"] {
-		display: none !important;
-	}
-
-	#PopupAutoCompleteRichResult {
-		--item-padding-start: 0 !important;
-	}
-
-	.autocomplete-richlistitem[selected=true] {
-		background-color: #002C36 !important;
-	}
-
-	.autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
-		color: #002C36 !important;
-	}
-
-	/* Use default text matching style */
-
-	/* Ability to scroll in Fx57 */
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
-		overflow-y: auto !important;
-		padding-right: 3px !important;
-	}
-
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-		padding-right: 0 !important;
-	}
-
-}
-
-/* Dark Themed Drop-down */
-
-/* Dark Theme - Firefox 48+ */
-#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	background-color: #002C36 !important;
-}
-
-#PopupAutoCompleteRichResult .autocomplete-richlistitem {
-	border-bottom-color: #002C36 !important;
-}
-
-.autocomplete-richlistitem .ac-title, .autocomplete-richlistitem .ac-action, .autocomplete-richlistitem .ac-separator {
-	color: #666 !important;
-}
-
-.autocomplete-richlistitem[selected=true] {
-	background-color: #555 !important;
-}
-
-.autocomplete-richlistitem[selected=true] .ac-title, .ac-title[selected], .autocomplete-richlistitem[selected=true] .ac-action, .ac-action[selected], .autocomplete-richlistitem[selected=true] .ac-separator, .ac-separator[selected] {
-	color: #002C36 !important;
-}
-
-.autocomplete-richlistitem[selected=true] .ac-url, .ac-url[selected] {
-	color: #69f !important;
-}
-
-/* Use default text matching style */
-
-/* Ability to scroll in Fx57 */
-#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
-	overflow-y: auto !important;
-	padding-right: 3px !important;
-}
-
-#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	padding-right: 0 !important;
-}
-
-}
-
-#titlebar-max {
--moz-box-ordinal-group: 0;
-}
-
-#titlebar-content {
-direction: rtl;
-}
-
-/*URL bar shit*/
-#pageActionButton, #pocket-button, #urlbar-go-button, #pageActionSeparator, .tabs-newtab-button {
-display: none !important;
-}
-
-#urlbar {
-border-color: #002B36 !important;
-border-width: 1px !important;
-height: 28px !important;
-border-radius: 4px !important;
-}
-
-#urlbar[focused="true"], .searchbar-textbox[focused="true"] {
-box-shadow: none !important;
-border-color: ##003846 !important;
-}
-
-/*make the adresses more compact */
-#urlbar {
-
-/* Place bindings.xml in the same folder as userChrome.css */
--moz-binding: url("bindings.xml#urlbar") !important;
-}
-
-/* Restore persistent display of drop-marker */
-#urlbar:not(:hover) > .urlbar-textbox-container > .urlbar-history-dropmarker {
-opacity: 1 !important;
+    /* Remove " - Visit" or " - Search with" bar in the drop-down */
+    #PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"],
+    #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"],
+    #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"],
+    #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"] {
+        display: none !important;
+    }
+    #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /* Set max-height for items visible without scrolling */
+    #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+        /* height:auto doesn't work in photon */
+        max-height: calc(45.5px * 10) !important;
+    }
+    /* Set drop-down width */
+    #PopupAutoCompleteRichResult {
+        width: 1175px !important;
+        max-width: 1175px !important;
+        margin-left: 0 !important;
+    }
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text,
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text {
+        min-width: 810px !important;
+    }
+    /* Create sufficient height for two lines */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
+        position: relative !important;
+        height: 45.5px !important;
+    }
+    /* Subtle border between results */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem {
+        border-bottom-color: #002C36 !important;
+    }
+    /* Position page title, set font-size */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
+        position: absolute !important;
+        left: 54px;
+        top: 1px;
+        font-size: 14px !important;
+    }
+    /* Position page url / action, set font-size */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
+        position: absolute !important;
+        left: 54px;
+        top: 20px;
+        font-size: 12px !important;
+    }
+    /* Position bookmark tags */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags {
+        position: absolute !important;
+        right: 0px;
+        top: 3px;
+    }
+    /* Hide separator between title and URL */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator {
+        display: none !important;
+    }
+    /* Prevent excess indenting of icons in Photon */
+    #PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"] {
+        display: none !important;
+    }
+    #PopupAutoCompleteRichResult {
+        --item-padding-start: 0 !important;
+    }
+    .autocomplete-richlistitem[selected=true] {
+        background-color: #002C36 !important;
+    }
+    .autocomplete-richlistitem[selected=true] .ac-title,
+    .ac-title[selected],
+    .autocomplete-richlistitem[selected=true] .ac-url,
+    .ac-url[selected],
+    .autocomplete-richlistitem[selected=true] .ac-action,
+    .ac-action[selected],
+    .autocomplete-richlistitem[selected=true] .ac-separator,
+    .ac-separator[selected] {
+        color: #002C36 !important;
+    }
+    /* Use default text matching style */
+    /* Ability to scroll in Fx57 */
+    #PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
+        overflow-y: auto !important;
+        padding-right: 3px !important;
+    }
+    #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+        padding-right: 0 !important;
+    }
 }
