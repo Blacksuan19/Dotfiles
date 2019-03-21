@@ -3,3 +3,7 @@
         background-color: #0C0C0D !important;
     }
 }
+
+* {
+    scrollbar-width: none
+}
