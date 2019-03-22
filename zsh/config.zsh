@@ -1,8 +1,3 @@
-# arguments.
-ZSH_COMMAND_TIME_MIN_SECONDS=20
-ZSH_COMMAND_TIME_ECHO=0
-eval $(dircolors -b $HOME/.dircolors) # just for colors in completions.
-
 # systemd aliases.
  user_commands=(
   list-units is-active status show help list-unit-files
@@ -40,8 +35,7 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
 # various aliases.
-alias shell="killall plasmashell && kstart5 plasmashell"
-alias latte="killall latte-dock && kstart5 latte-dock"
+
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
@@ -49,13 +43,14 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias c="code"
+alias ls="lsd"
+alias l="lsd -al"
 alias zsh="exec zsh"
 alias sysinfo="sh ~/.sysinfo.sh"
 alias memefetch="sh ~/.memefetch.sh"
 alias open="xdg-open"
 alias term="konsole &" # needed sometimes.
 alias gpp="g++" # typing two plus signs is stupid.
-alias cp="pycp" # this one has a pogress bar ma dude.
 alias pt="cd /opt/pt/bin && ./PacketTracer7 && cd -"
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias electra="git cherry-pick electra/treble "
@@ -86,12 +81,12 @@ alias gaa="git add -A"
 alias gc="git commit --signoff"
 
 # Directory hashes.
-hash -d disk="/run/media/dark-emperor/Dark-Files"
-hash -d dev="/run/media/dark-emperor/Dark-Files/Dev"
-hash -d sd="/run/media/dark-emperor/Dark-Files/SD Card/"
-hash -d dots="/home/dark-emperor/.dotfiles"
-hash -d git="/run/media/dark-emperor/Dark-Files/Dev/Gits"
-hash -d android="/run/media/dark-emperor/Dark-Files/Dev/Android"
-hash -d da="/run/media/dark-emperor/Dark-Files/Dev/Android/Dark-Ages"
-hash -d java="/run/media/dark-emperor/Dark-Files/Kulliyya/CSC1103/exercises"
-hash -d trees="/run/media/dark-emperor/Dark-Files/Dev/Android/Trees"
+hash -d disk="/run/media/Dark-Files"
+hash -d dev="/run/media/Dark-Files/Dev"
+hash -d sd="/run/media/Dark-Files/SD Card/"
+hash -d dots="/home/blacksuan19/.dotfiles"
+hash -d git="/run/media/Dark-Files/Dev/Gits"
+hash -d android="/run/media/Dark-Files/Dev/Android"
+hash -d da="/run/media/Dark-Files/Dev/Android/Dark-Ages"
+hash -d java="/run/media/Dark-Files/Kulliyya/CSC1103/exercises"
+hash -d trees="/run/media/Dark-Files/Dev/Android/Trees"
