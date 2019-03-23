@@ -1,0 +1,64 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/blacksuan19/.config/polybar/master.conf
+include-file = /home/blacksuan19/.config/polybar/modules.conf
+
+;========================================
+;         Colors
+;========================================
+[colors]
+background = #0F111A
+foreground = #a4a4a4
+moderate = #ebcb8b
+urgent = #bf616a
+trim = #919ba0
+blue = #a2d1ec
+purple = #b48ead
+border = #c0c5ce
+
+;================================
+;       Settings
+;================================
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+compositing-background = source
+compositing-foreground = source
+compositing-overline = source
+compositing-underline = source
+compositing-border = source
+screenchange-reload = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+;================================
+;       bspwm bar
+;================================
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = bspwm
+modules-center = 
+modules-right  = ${env:POLYBAR_MODULES: temperature pkg  battery volume network redshift weather clock}
+
+
+;;; modules
+
+;;;;;;;;;;;;;;;;
+;;   weather  ;;
+;;;;;;;;;;;;;;;;
+[module/weather]
+type = custom/script
+exec = ~/bin/weather.sh
+interval = 600
+label-font = 2
+
