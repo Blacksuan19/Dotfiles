@@ -1,43 +1,39 @@
-# Dotfiles
+# Dotfiles  
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_shield)  
-
-**personal configuration for zsh, prezto, termite, tmux, neofetch, firefox, libinput-gesture and conky and also a custom Vivaldi CSS**
+**personal configuration for various packages**
 
 ## **Requirements:**
 - \*NIX system 
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Powerline Fonts](https://github.com/powerline/fonts)
+
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 - [Oh-my-tmux](https://github.com/gpakosz/.tmux)
 - [Neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation)
-- [Vivaldi](https://vivaldi.net)
-- [Conky](https://github.com/brndnmtthws/conky) 
+- [sxhkd](https://github.com/baskerville/sxhkd)
+- [rofi](https://github.com/DaveDavenport/rofi)
+- [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
+
+- #### Fonts:
+    > - [Powerline Fonts](https://github.com/powerline/fonts)
+    > - [weather icons](https://github.com/erikflowers/weather-icons)
+    > - [DankMono](https://dank.sh/)
+    > - [Font Awesome](https://fontawesome.com/)
+    > - [Ubuntu mono nerd font](https://github.com/ryanoasis/nerd-fonts)
+    > - Material Icons
+    > - monospace
 
 ## **Installation:**
-- git clone https://github.com/Madkita/Dotfiles
-- copy the files you want to their prespective places (easy to find)
+- git clone https://github.com/Blacksuan19/Dotfiles  
+- use the configs you want   
+Some scripts are available on a separate repo [here](http://github.com/blacksuan19/Scripts)
 
-scripts are available on a separate repo [here](http://github.com/madkita/Scripts)
+## **Info:**
+> Distro: ArchLabs  
+> DE: BSPWM  
+> Visualizer: cava  
+> IDE: vscode
+
+![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/c00374d18c448db1912955db5b43cdb34b39d0e5/Screens/2019-03-23-052843_1366x768_scrot.png)
 
 
-## **Screenshots:**
-
-#### terminal:
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master//Screens/term.png)
-
-
-#### vivaldi:
-
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/vivaldi.png)
-
-#### firefox:
-
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Screens/firefox.png)
-#### conky:
-
-![alt text](https://raw.githubusercontent.com/Madkita/Dotfiles/master/Fatty/preview.png)
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBlacksuan19%2FDotfiles?ref=badge_large)
