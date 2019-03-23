@@ -144,3 +144,11 @@ XF86AudioPlay
 # lock screen i3-lock
 ctrl + alt + l
     i3lock-fancy
+
+# flameshot full screen
+Print
+    flameshot full -p /run/media/Dark-Files/Stuff/Screenshots
+
+# flameshot gui
+Print + shift
+    flameshot gui -p /run/media/Dark-Files/Stuff/Screenshots
