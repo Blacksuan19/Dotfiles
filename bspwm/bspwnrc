@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# set root pointer
+xsetroot -cursor_name left_ptr
+
+# key bindings
+sxhkd &
+
+# wallpaper
+nitrogen --restore &
+
+# launch compton
+al-compositor --start &
+
+# xfce settings
+xfsettingsd &
+
+# panel
+polybar bspwm-bar &
+
+# start libinput-gestures
+libinput-gestures-setup start
+
+# start redshift
+redshift -t 6500:5000 &
+
+#power management
+xfce4-power-manager
+
+# Set some bsp specific stuff
+bspc monitor -d I II III IV V VI VII
+
+bspc config border_width 0.5
+bspc config window_gap 10
+bspc config top_padding 18
+bspc config right_padding 0
+bspc config bottom_padding 0
+bspc config left_padding 0
+
+bspc config split_ratio 0.5
+bspc config borderless_monocle false
+bspc config gapless_monocle true
+bspc config paddingless_monocle true
+
+bspc config pointer_modifier mod1
+bspc config click_to_focus true
+bspc config focus_follows_pointer true
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
