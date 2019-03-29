@@ -48,7 +48,7 @@ monitor =
 
 modules-left   = bspwm
 modules-center = 
-modules-right  = ${env:POLYBAR_MODULES: temperature pkg  battery volume network redshift weather clock}
+modules-right  = ${env:POLYBAR_MODULES: temperature pkg  battery volume network redshift weather clock }
 
 
 ;;; modules
@@ -62,3 +62,15 @@ exec = ~/bin/weather.sh
 interval = 600
 label-font = 2
 
+
+;;;;;;;;;;;;;
+;; Network ;;
+;;;;;;;;;;;;;
+[module/network]
+type = custom/script
+exec = check-network
+click-left = networkmanager_dmenu &
+click-right = networkmanager_dmenu &
+label-padding = 1
+interval = 1000
+tail = true
