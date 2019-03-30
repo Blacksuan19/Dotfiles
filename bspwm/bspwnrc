@@ -24,8 +24,11 @@ libinput-gestures-setup start
 # start redshift
 redshift -t 6500:5000 &
 
-#power management
-xfce4-power-manager
+# power management
+xfce4-power-manager &
+
+# rofi greenclipboard daemon 
+greenclip daemon &
 
 # Set some bsp specific stuff
 bspc monitor -d I II III IV V VI VII
