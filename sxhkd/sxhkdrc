@@ -152,3 +152,7 @@ Print
 # flameshot gui
 Print + shift
     flameshot gui -p /run/media/Dark-Files/Stuff/Screenshots
+
+#rofi green cipboard
+super + v
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
