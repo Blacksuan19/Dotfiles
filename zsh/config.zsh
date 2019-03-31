@@ -83,6 +83,8 @@ alias gc="git commit --signoff"
 
 # Directory hashes.
 hash -d disk="/run/media/Dark-Files"
+hash -d stuff="/run/media/Dark-Files/Stuff"
+hash -d idea="/run/media/Dark-Files/Stuff/IdeaProjects"
 hash -d dev="/run/media/Dark-Files/Dev"
 hash -d sd="/run/media/Dark-Files/SD Card/"
 hash -d dots="/home/blacksuan19/.dotfiles"
