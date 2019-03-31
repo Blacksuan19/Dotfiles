@@ -72,5 +72,5 @@ exec = check-network
 click-left = networkmanager_dmenu &
 click-right = networkmanager_dmenu &
 label-padding = 1
-interval = 10
+interval = 1
 tail = true
