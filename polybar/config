@@ -48,7 +48,7 @@ monitor =
 
 modules-left   = bspwm
 modules-center = 
-modules-right  = ${env:POLYBAR_MODULES: temperature pkg  battery volume network redshift weather clock }
+modules-right  = ${env:POLYBAR_MODULES: temperature battery backlight volume network redshift weather clock }
 
 
 ;;; modules
@@ -74,3 +74,18 @@ click-right = networkmanager_dmenu &
 label-padding = 1
 interval = 1
 tail = true
+
+
+;;;;;;;;;;;;;
+;; Lights  ;;
+;;;;;;;;;;;;;
+[module/backlight]
+type = custom/script
+interval = 0.2
+exec = ~/bin/light.sh
+scroll-up = exec light -A 5
+scroll-down = exec light -U 5
+format-prefix = " "
+label = %output%
+label-foreground = ${colors.foreground}
+format-padding = 1
