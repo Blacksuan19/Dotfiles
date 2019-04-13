@@ -48,13 +48,10 @@ alias ls="lsd"
 alias l="lsd -al"
 alias zsh="exec zsh"
 alias sysinfo="sh ~/.sysinfo.sh"
-alias memefetch="sh ~/.memefetch.sh"
 alias open="xdg-open"
-alias term="konsole &" # needed sometimes.
+alias poly="killall polybar && polybar bspwm-bar </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
-alias pt="cd /opt/pt/bin && ./PacketTracer7 && cd -"
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
-alias electra="git cherry-pick electra/treble "
 
 #packages aliases.
 alias y="yay"
@@ -91,5 +88,4 @@ hash -d dots="/home/blacksuan19/.dotfiles"
 hash -d git="/run/media/Dark-Files/Dev/Gits"
 hash -d android="/run/media/Dark-Files/Dev/Android"
 hash -d da="/run/media/Dark-Files/Dev/Android/Dark-Ages"
-hash -d java="/run/media/Dark-Files/Kulliyya/CSC1103/exercises"
 hash -d trees="/run/media/Dark-Files/Dev/Android/Trees"
