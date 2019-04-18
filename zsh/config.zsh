@@ -34,6 +34,9 @@ sudo-command-line() {
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
+
+# set nvim as default EDITOR
+export EDITOR=/usr/bin/nvim
 # various aliases.
 
 alias free="free -h"
@@ -45,6 +48,7 @@ alias cleanj="sudo journalctl --vacuum-time=5d"
 alias cpr="rsync --progress --size-only --inplace --verbose "
 alias c="code"
 alias v="nvim"
+alias cat="bat " # this one is way better
 alias ls="lsd"
 alias l="lsd -al"
 alias zsh="exec zsh"
