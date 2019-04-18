@@ -156,3 +156,7 @@ Print + shift
 #rofi green cipboard
 super + v
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# spotify Stuff
+super + s
+    spotify
