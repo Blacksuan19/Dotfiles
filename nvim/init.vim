@@ -36,32 +36,19 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Now the actual plugins:
 
-" Override configs by directory
-" Plug 'arielrossanigo/dir-configs-override.vim'
-
-" Code commenter
-" Plug 'scrooloose/nerdcommenter'
-
 " Better file browser
 Plug 'scrooloose/nerdtree'
 
 " Class/module browser
 Plug 'majutsushi/tagbar'
-" TODO known problems:
-" * current block not refreshing
 
 " Search results counter
 Plug 'vim-scripts/IndexedSearch'
-
-" Terminal Vim with 256 colors colorscheme
-" Plug 'fisadev/fisa-vim-colorscheme'
 
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Code and files fuzzy finder
-" Plug 'ctrlpvim/ctrlp.vim'
 " Extension to ctrlp, for fuzzy command finder
 " Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -98,10 +85,6 @@ Plug 'jeetsukumaran/vim-indentwise'
 
 " Better language packs
 Plug 'sheerun/vim-polyglot'
-
-" Ack code search (requires ack installed in the system)
-Plug 'mileszs/ack.vim'
-" TODO is there a way to prevent the progress which hides the editor?
 
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
@@ -377,8 +360,3 @@ let g:yankring_history_dir = '~/.config/nvim/'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'papercolor'
 let g:airline#extensions#whitespace#enabled = 0
-" Custom configurations ----------------
-" Include user's custom nvim configurations
-if filereadable(expand("~/.config/nvim/custom.vim"))
-  source ~/.config/nvim/custom.vim
-endif
