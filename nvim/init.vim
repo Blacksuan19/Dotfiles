@@ -37,10 +37,10 @@ call plug#begin('~/.config/nvim/plugged')
 " Now the actual plugins:
 
 " Override configs by directory
-Plug 'arielrossanigo/dir-configs-override.vim'
+" Plug 'arielrossanigo/dir-configs-override.vim'
 
 " Code commenter
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
 
 " Better file browser
 Plug 'scrooloose/nerdtree'
@@ -54,7 +54,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/IndexedSearch'
 
 " Terminal Vim with 256 colors colorscheme
-Plug 'fisadev/fisa-vim-colorscheme'
+" Plug 'fisadev/fisa-vim-colorscheme'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -72,6 +72,10 @@ Plug 'fisadev/FixedTaskList.vim'
 
 " Async autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" cpp Completion
+Plug 'zchee/deoplete-clang'
+
 " Completion from other opened files
 Plug 'Shougo/context_filetype.vim'
 " Python autocompletion
@@ -140,8 +144,25 @@ Plug 'myusuf3/numbers.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " nord colorscheme
-
 Plug 'arcticicestudio/nord-vim'
+
+" make vim read pdf files
+Plug 'makerj/vim-pdf'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+" multi lines stuff
+Plug 'terryma/vim-multiple-cursors'
+
+" Track the engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" for aligning stuff
+Plug 'junegunn/vim-easy-align'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
