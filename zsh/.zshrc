@@ -7,3 +7,5 @@ export PATH=${PATH}:/home/blacksuan19/.gem/ruby/2.4.0/bin
 export PATH=${PATH}:/home/blacksuan19/.gem/ruby/2.5.0/bin
 source /home/blacksuan19/.zsh/fast/fast-syntax-highlighting.plugin.zsh
 source /home/blacksuan19/.zsh/config.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
