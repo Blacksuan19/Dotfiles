@@ -147,6 +147,9 @@ Plug 'honza/vim-snippets'
 " for aligning stuff
 Plug 'junegunn/vim-easy-align'
 
+" fix merge conflicts
+Plug 'samoshkin/vim-mergetool'
+
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
 
