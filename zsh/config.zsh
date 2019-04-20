@@ -34,9 +34,6 @@ sudo-command-line() {
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
-
-# set nvim as default EDITOR
-export EDITOR=/usr/bin/nvim
 # various aliases.
 
 alias free="free -h"
