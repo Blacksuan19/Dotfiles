@@ -160,3 +160,7 @@ super + v
 # spotify Stuff
 super + s
     spotify
+
+# VScode
+super + n
+    code
