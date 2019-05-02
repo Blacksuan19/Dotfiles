@@ -30,6 +30,9 @@ xfce4-power-manager &
 # rofi greenclipboard daemon 
 greenclip daemon &
 
+# gdrive notes sync
+bash ~/bin/drive.sh </dev/null &>/dev/null &
+
 # Set some bsp specific stuff
 bspc monitor -d I II III IV V VI VII
 
