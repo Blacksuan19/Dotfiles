@@ -60,7 +60,7 @@ modules-right  = ${env:POLYBAR_MODULES: temperature battery backlight volume net
 type = custom/script
 exec = ~/bin/weather.sh
 interval = 600
-label-font = 2
+label-font = 1
 
 
 ;;;;;;;;;;;;;
