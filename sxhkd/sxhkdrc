@@ -142,7 +142,7 @@ XF86AudioPlay
     sp play
 
 # lock screen i3-lock
-ctrl + alt + l
+ctrl + alt + x
     i3lock-fancy
 
 # flameshot full screen
@@ -155,7 +155,7 @@ Print + shift
 
 #rofi green cipboard
 super + v
-    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font "DankMono 14"
 
 # spotify Stuff
 super + s
