@@ -79,6 +79,7 @@ alias gs="git status"
 alias ga="git add"
 alias gaa="git add -A"
 alias gc="git commit --signoff"
+alias gcp="git cherry-pick"
 
 # Directory hashes.
 hash -d disk="/run/media/Dark-Files"
