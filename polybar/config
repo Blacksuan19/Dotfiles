@@ -49,7 +49,7 @@ monitor =
 modules-left   = bspwm
 modules-center = 
 modules-right  = ${env:POLYBAR_MODULES: temperature battery backlight volume network redshift weather clock }
-
+radius = 10.0
 
 ;;; modules
 

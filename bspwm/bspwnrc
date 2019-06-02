@@ -10,7 +10,7 @@ sxhkd &
 nitrogen --restore &
 
 # launch compton
-al-compositor --start &
+xdmxconfig -r 20 -c &
 
 # xfce settings
 xfsettingsd &
@@ -37,8 +37,8 @@ bash ~/bin/drive.sh </dev/null &>/dev/null &
 bspc monitor -d I II III IV V VI VII
 
 bspc config border_width 0.5
-bspc config window_gap 8
-bspc config top_padding 30
+bspc config window_gap 10
+bspc config top_padding 28
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
@@ -54,3 +54,5 @@ bspc config focus_follows_pointer true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
+bspc config border_radius 10
+
