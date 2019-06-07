@@ -10,7 +10,7 @@ sxhkd &
 nitrogen --restore &
 
 # launch compton
-xdmxconfig -r 20 -c &
+xcompmgr -r 20 -c &
 
 # xfce settings
 xfsettingsd &
