@@ -48,10 +48,20 @@ monitor =
 
 modules-left   = bspwm
 modules-center = 
-modules-right  = ${env:POLYBAR_MODULES: temperature battery backlight volume network redshift weather clock }
+modules-right  = ${env:POLYBAR_MODULES: lang temperature battery backlight volume network redshift weather clock }
 radius = 10.0
 
 ;;; modules
+
+
+;;;;;;;;;;;;;;;;
+;;  Language  ;;
+;;;;;;;;;;;;;;;;
+[module/lang]
+type = custom/script
+exec = ~/bin/lang.sh
+interval = 0.1
+label-font = 1
 
 ;;;;;;;;;;;;;;;;
 ;;   weather  ;;
