@@ -43,7 +43,7 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias cpr="rsync --progress --size-only --inplace --verbose "
-alias c="code"
+alias c="code --disable-gpu"
 alias v="nvim"
 alias cat="bat " # this one is way better
 alias ls="lsd"
