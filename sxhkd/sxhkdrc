@@ -159,8 +159,8 @@ super + v
 
 # spotify Stuff
 super + s
-    spotify
+    spotify --disable-gpu
 
-# VScode
+# 
 super + n
     notable
