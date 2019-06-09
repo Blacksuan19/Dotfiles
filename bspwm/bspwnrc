@@ -9,8 +9,8 @@ sxhkd &
 # wallpaper
 nitrogen --restore &
 
-# launch compton
-xcompmgr -r 20 -c &
+# launch compositor
+xcompmgr -r 20 -c -f -D 8 </dev/null &>/dev/null &
 
 # xfce settings
 xfsettingsd &
