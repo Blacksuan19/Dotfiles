@@ -10,7 +10,7 @@ sxhkd &
 nitrogen --restore &
 
 # launch compositor
-xcompmgr -r 20 -c -f -D 8 </dev/null &>/dev/null &
+compton -C -D 5 --backend glx -b
 
 # xfce settings
 xfsettingsd &
