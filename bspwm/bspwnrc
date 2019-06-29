@@ -17,6 +17,8 @@ xfsettingsd &
 
 # panel
 polybar bspwm-bar &
+polybar tiles &
+polybar music &
 
 # start libinput-gestures
 libinput-gestures-setup start
@@ -34,10 +36,10 @@ greenclip daemon &
 bash ~/bin/drive.sh </dev/null &>/dev/null &
 
 # Set some bsp specific stuff
-bspc monitor -d I II III IV V VI VII
+bspc monitor -d        
 
-bspc config border_width 0.5
-bspc config window_gap 10
+bspc config border_width 1.8
+bspc config window_gap 3
 bspc config top_padding 28
 bspc config right_padding 0
 bspc config bottom_padding 0
@@ -54,5 +56,5 @@ bspc config focus_follows_pointer true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
-bspc config border_radius 10
+bspc config border_radius 5
 
