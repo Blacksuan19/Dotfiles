@@ -36,21 +36,52 @@ screenchange-reload = true
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+
+
+
 ;================================
 ;       bspwm bar
 ;================================
 
 [bar/bspwm-bar]
 inherit = bar/master
-
+width = 20%
+height = 25
+offset-x = 538
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor =
 
-modules-left   = bspwm
-modules-center = 
-modules-right  = ${env:POLYBAR_MODULES: playing battery backlight volume network redshift lang clock }
-radius = 10.0
+; modules-left   = playing
+modules-left = bspwm
+; modules-right  = ${env:POLYBAR_MODULES: battery volume network redshift lang clock }
 
+;================================
+;       playing bar
+;================================
+
+[bar/music]
+inherit = bar/master
+width = 38.9%
+height = 25
+offset-x = 3
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = playing
+; modules-right  = ${env:POLYBAR_MODULES: battery volume network redshift lang clock }
+
+;================================
+;       tiles bar
+;================================
+
+[bar/tiles]
+inherit = bar/master
+width = 40.1%
+height = 25
+offset-x = 815
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+modules-right  = ${env:POLYBAR_MODULES: lang battery backlight volume network weather clock }
 ;;; modules
 
 
@@ -71,6 +102,7 @@ click-left = playerctl play-pause
 [module/lang]
 type = custom/script
 exec = ~/bin/lang.sh
+format-prefix = "  "
 interval = 0.1
 label-font = 1
 
