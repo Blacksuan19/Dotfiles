@@ -23,5 +23,5 @@ then
     fi
     
 else
-    echo Spotify is not running
+    echo  Spotify is not running
 fi
