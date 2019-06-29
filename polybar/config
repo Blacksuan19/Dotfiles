@@ -48,11 +48,22 @@ monitor =
 
 modules-left   = bspwm
 modules-center = 
-modules-right  = ${env:POLYBAR_MODULES: lang temperature battery backlight volume network redshift weather clock }
+modules-right  = ${env:POLYBAR_MODULES: playing battery backlight volume network redshift lang clock }
 radius = 10.0
 
 ;;; modules
 
+
+;;;;;;;;;;;;;;;;
+;;  Playing  ;;
+;;;;;;;;;;;;;;;;
+[module/playing]
+type = custom/script
+exec = ~/bin/playing.sh
+format-prefix = "  "
+interval = 0.1
+label-font = 0
+click-left = playerctl play-pause
 
 ;;;;;;;;;;;;;;;;
 ;;  Language  ;;
