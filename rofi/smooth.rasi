@@ -33,6 +33,7 @@
     alternate-active-foreground: @active-foreground;
     active-background:           rgba (15, 17, 26, 100 % );
     selected-active-background:  rgba(74, 85, 130, 1);
+    border-radius:  5;
 }
 #window {
     background-color: @background;
@@ -40,7 +41,6 @@
     padding:          5;
 }
 #mainbox {
-    border-radius:  10;
     padding: 0;
 }
 #message {
