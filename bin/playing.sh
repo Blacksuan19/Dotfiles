@@ -17,11 +17,11 @@ then
             awk -F '"' '/title/ {print $2}')
 
     if [[ $STATUS = "Playing" ]]; then
-    echo  $SONG by $ARTIST
+    echo " $SONG by $ARTIST"
     else
-    echo  $SONG by $ARTIST
+    echo " $SONG by $ARTIST"
     fi
     
 else
-    echo  Spotify is not running
+    echo " Spotify is not running"
 fi
