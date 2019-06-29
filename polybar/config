@@ -60,7 +60,7 @@ radius = 10.0
 [module/playing]
 type = custom/script
 exec = ~/bin/playing.sh
-format-prefix = "  "
+format-prefix = " "
 interval = 0.1
 label-font = 0
 click-left = playerctl play-pause
