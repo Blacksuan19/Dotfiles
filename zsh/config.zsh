@@ -71,7 +71,7 @@ alias spc="sp current"
 alias spf="sp feh"
 alias sph="sp help"
 alias spm="sp metadata"
-alias spl="sp lyrics"
+alias spl="sp lyrics | bat" # prettier
 alias lyc="python /bin/lyc"
 
 # git aliases.
