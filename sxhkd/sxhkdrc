@@ -23,7 +23,7 @@ super + shift + r
 
 # quit bspwm normally
 super + x
-    rofi_run -l
+    systemctl suspend
 
 # close and kill
 super + {_,shift + }q
@@ -140,10 +140,6 @@ XF86AudioPrev
     sp prev
 XF86AudioPlay
     sp play
-
-# lock screen i3-lock
-ctrl + alt + x
-    i3lock-fancy
 
 # flameshot full screen
 Print
