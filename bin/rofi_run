@@ -91,7 +91,7 @@ for arg in "$@"; do
             fi
 
             case "$ANS" in
-                *Lock) i3lock-fancy ;;
+                *Lock) slock ;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl -i poweroff ;;
                 *Logout) session-logout || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
