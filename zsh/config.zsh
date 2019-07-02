@@ -51,7 +51,7 @@ alias l="lsd -al"
 alias zsh="exec zsh"
 alias sysinfo="sh ~/.sysinfo.sh"
 alias open="xdg-open"
-alias poly="killall polybar && polybar bspwm-bar </dev/null &>/dev/null &"
+alias poly="killall polybar && polybar bspwm-bar </dev/null &>/dev/null &; polybar tiles </dev/null &>/dev/null &; polybar music </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 
