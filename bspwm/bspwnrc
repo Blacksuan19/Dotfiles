@@ -46,3 +46,9 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 bspc config border_radius 0
+
+# some window rules
+bspc rule -a feh state=floating follow=on
+bspc rule -a brave desktop='^2' follow=on focus=on
+bspc rule -a spotify desktop='^8' follow=on focus=on
+
