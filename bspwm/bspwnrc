@@ -25,11 +25,11 @@ redshift -t 6500:4600 -l 3.2476811:101.74012689999999 &
 greenclip daemon &
 
 # Set some bsp specific stuff
-bspc monitor -d        
+bspc monitor -d · · · · · · · ·
 
 bspc config border_width 0
 bspc config window_gap 3
-bspc config top_padding 28
+bspc config top_padding 31
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
