@@ -32,7 +32,9 @@
 
 ## **Screenshot:**
 
-> Visualizer: cava  
+> visualizer: glava  
+> clock: tty-clock  
+> system info: archLabs script (al-info)  
 > IDE: vscode (Theme: Material Ocean, font: DankMono)
 
-![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/2019-05-12_15-18.png)
+![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/2019-07-19_02-20.png)
