@@ -47,6 +47,8 @@ width = 99.5%
 height = 18
 offset-x = 3
 offset-y = 3
+override-redirect = true
+wm-restack = bspwm
 
 font-0 = "scientifica:size=10:antialias=true;1"
 font-1 = "Siji:size=9;2"
