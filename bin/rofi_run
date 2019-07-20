@@ -83,7 +83,7 @@ for arg in "$@"; do
             if grep -q 'exec startx' $HOME/.*profile; then
                 ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
                     -hide-scrollbar -line-padding 4 -padding 20 \
-                    -lines 3 -font "DankMono 14" <<< "Lock|Reboot|Shutdown")"
+                    -lines 4 -font "DankMono 14" <<< "Lock|Suspend|Reboot|Shutdown")"
             else
                 ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
                     -hide-scrollbar -line-padding 4 -padding 20 \
@@ -91,7 +91,8 @@ for arg in "$@"; do
             fi
 
             case "$ANS" in
-                *Lock) slock ;;
+                *Lock) betterlockscreen -l dim ;;
+                *Suspend) systemctl suspend;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl -i poweroff ;;
                 *Logout) session-logout || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
