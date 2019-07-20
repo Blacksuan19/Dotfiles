@@ -23,7 +23,7 @@ super + shift + r
 
 # quit bspwm normally
 super + x
-    systemctl suspend
+    rofi_run -l	
 
 # close and kill
 super + {_,shift + }q
