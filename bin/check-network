@@ -4,12 +4,11 @@ disconnect1="/"
 disconnect2="\\"
 wconnected=""
 econnected=""
-
-id="$(nmcli | grep -w 'connected\|available' | awk '{print $2}'
-)"
-if [[ $id = "connected" ]]
+connected="$(nmcli | grep -w 'connected\|available' | awk '{print $2}')"
+id="$(nmcli | grep -w 'connected\|available' | awk '{print $4}')"
+if [[ $connected = "connected" ]]
     then
-        echo "$wconnected"
+        echo "$wconnected $id"
 elif [[ $id = "available" ]]
     then
         echo "$econnected"
