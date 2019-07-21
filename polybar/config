@@ -1,14 +1,7 @@
-;=====================================================
-;     File Includes
-;=====================================================
-
-[section/base]
-include-file = /home/blacksuan19/.config/polybar/master.conf
-include-file = /home/blacksuan19/.config/polybar/modules.conf
-
 ;========================================
 ;         Colors
 ;========================================
+
 [colors]
 background = #0F111A
 foreground = #a4a4a4
@@ -18,6 +11,14 @@ trim = #919ba0
 blue = #a2d1ec
 purple = #b48ead
 border = #c0c5ce
+red = ${xrdb:color1}
+grn = ${xrdb:color2}
+ylw = ${xrdb:color3}
+blu = ${xrdb:color4}
+mag = ${xrdb:color5}
+cyn = ${xrdb:color6}
+wht = ${xrdb:color7}
+bblk = ${xrdb:color8}
 
 ;================================
 ;       Settings
@@ -37,57 +38,173 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 
-
-
 ;================================
-;       bspwm bar
+;       main bar
 ;================================
 
-[bar/bspwm-bar]
-inherit = bar/master
-width = 20%
-height = 25
-offset-x = 538
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
-
-; modules-left   = playing
-modules-left = bspwm
-; modules-right  = ${env:POLYBAR_MODULES: battery volume network redshift lang clock }
-
-;================================
-;       playing bar
-;================================
-
-[bar/music]
-inherit = bar/master
-width = 38.9%
-height = 25
+[bar/main]
+width = 99.5%
+height = 18
 offset-x = 3
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+offset-y = 3
 
-modules-left   = playing
-; modules-right  = ${env:POLYBAR_MODULES: battery volume network redshift lang clock }
+font-0 = "scientifica:size=10:antialias=true;1"
+font-1 = "Siji:size=9;2"
+font-2 = "Font Awesome 5 Solid:pixelsize=10;1"
+font-3 = "Weather Icons:size=9;1"
+font-4 = "MaterialIcons:size=10:antialias=false;2"
+font-5 = "icomoon:size=10:antialias=false;2"
+font-6 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
-;================================
-;       tiles bar
-;================================
+cursor-click = pointer
+border-size = 5
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 1
+module-margin-right = 0
+background = ${colors.background}
+foreground = ${colors.foreground}
+modules-left = playing title
+modules-center = bspwm
+modules-right = ${env:POLYBAR_MODULES: lang battery backlight volume network weather clock }
+border-color = ${colors.background}
 
-[bar/tiles]
-inherit = bar/master
-width = 40.1%
-height = 25
-offset-x = 815
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
-modules-right  = ${env:POLYBAR_MODULES: lang battery backlight volume network weather clock }
-;;; modules
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; Bspwm Workspaces ;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+ws-icon-0 = ;
+ws-icon-1 = ;
+ws-icon-2 = ;
+ws-icon-3 = ;
+ws-icon-4 = ;
+ws-icon-5 = ;
+ws-icon-6 = ;
+ws-icon-7 = ;
+format = <label-state>
+label-monitor = %name%
+label-mode-padding = 1
+label-focused = %icon% %name%
+label-focused-padding = 1
+label-occupied = %icon% %name%
+label-occupied-padding = 1
+label-urgent = %icon% %name%
+label-urgent-padding = 1
+label-empty = %icon% %name%
+label-empty-padding = 1
+label-dimmed-foreground = ${colors.purple}
+label-dimmed-underline = ${colors.purple}
+label-dimmed-focused-background = ${colors.purple}
+label-focused-foreground = ${colors.blue}
+label-focused-underline = ${colors.blue}
+label-occupied-underline = ${colors.purple}
+label-urgent-foreground = ${colors.urgent}
+label-urgent-underline = ${colors.urgent}
+label-monocle = 
+label-tiled = 
+label-fullscreen = 
+label-floating = 
+label-pseudotiled = P
+label-locked = 
+label-sticky = 
+label-private = 
+label-sticky-foreground = ${colors.purple}
+label-locked-foreground = ${colors.moderate}
+label-private-foreground = ${colors.urgent}
+
+
+;;;;;;;;;;;;
+;; Volume ;;
+;;;;;;;;;;;;
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume>
+format-muted = <label-muted>
+format-volume-background = ${colors.mag}
+format-volume-foreground = ${colors.background}
+format-muted-background = ${colors.mag}
+format-muted-foreground = ${colors.background}
+
+label-muted             = muted
+
+format-volume-prefix = " "
+format-muted-prefix  = " "
+
+format-volume-padding = 2
+format-muted-padding    = 2
+
+
+;;;;;;;;;;;
+;; Title ;;
+;;;;;;;;;;;
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 50
+format-padding = 2
+
+
+;;;;;;;;;;;
+;; Clock ;;
+;;;;;;;;;;;
+
+[module/clock]
+type                     = internal/date
+interval                 = 30
+date                     = "%I:%M %p"
+format-prefix            = " "
+; format-prefix-foreground = ${colors.grn}
+format-background = ${colors.blu}
+format-foreground = ${colors.background}
+format-padding           = 1
+
+
+;;;;;;;;;;;;;
+;; BATTERY ;;
+;;;;;;;;;;;;;
+
+[module/battery]
+type          = internal/battery
+full-at       = 98
+battery       = BAT0
+adapter       = AC0
+poll-interval = 5
+
+format-charging-prefix      = ""
+format-discharging-prefix   = ""
+format-full-prefix          = ""
+
+label-charging      = " %percentage%% "
+label-discharging   = " %percentage%% "
+label-full          = " %percentage%% "
+
+format-charging-padding = 1
+format-discharging-padding = 1
+format-full-padding    = 1
+
+format-charging-background      = ${colors.red}
+format-discharging-background   = ${colors.red}
+format-full-background          = ${colors.red}
+format-charging-foreground      = ${colors.background}
+format-discharging-foreground   = ${colors.background}
+format-full-foreground          = ${colors.background}
 
 
 ;;;;;;;;;;;;;;;;
 ;;  Playing  ;;
 ;;;;;;;;;;;;;;;;
+
 [module/playing]
 type = custom/script
 exec = ~/bin/playing.sh
@@ -95,43 +212,60 @@ format-prefix = " "
 interval = 0.1
 label-font = 0
 click-left = playerctl play-pause
+format-background = ${colors.blu}
+format-foreground = ${colors.background}
+format-padding           = 1
+
 
 ;;;;;;;;;;;;;;;;
 ;;  Language  ;;
 ;;;;;;;;;;;;;;;;
+
 [module/lang]
 type = custom/script
 exec = ~/bin/lang.sh
 format-prefix = "  "
 interval = 0.1
 label-font = 1
+format-background = ${colors.blu}
+format-foreground = ${colors.background}
+fo
+rmat-padding           = 1
 
 ;;;;;;;;;;;;;;;;
 ;;   weather  ;;
 ;;;;;;;;;;;;;;;;
+
 [module/weather]
 type = custom/script
 exec = ~/bin/weather.sh
 interval = 600
 label-font = 1
+format-background = ${colors.cyn}
+format-foreground = ${colors.background}
+format-padding           = 1
 
 
 ;;;;;;;;;;;;;
 ;; Network ;;
 ;;;;;;;;;;;;;
+
 [module/network]
 type = custom/script
 exec = check-network
 click-left = networkmanager_dmenu &
 click-right = networkmanager_dmenu &
-label-padding = 1
 interval = 1
 tail = true
+format-background = ${colors.red}
+format-foreground = ${colors.background}
+format-padding           = 1
 
 
 ;;;;;;;;;;;;;
 ;; Lights  ;;
 ;;;;;;;;;;;;;
+
 [module/backlight]
 type = custom/script
 interval = 0.2
@@ -140,5 +274,6 @@ scroll-up = exec light -A 5
 scroll-down = exec light -U 5
 format-prefix = " "
 label = %output%
-label-foreground = ${colors.foreground}
-format-padding = 1
+format-background = ${colors.blu}
+format-foreground = ${colors.background}
+format-padding           = 1
