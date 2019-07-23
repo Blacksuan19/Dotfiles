@@ -104,6 +104,7 @@ format-background = ${colors.cyn}
 format-foreground = ${colors.background}
 format-padding           = 1
 
+
 ;;;;;;;;;;;;
 ;; Volume ;;
 ;;;;;;;;;;;;
@@ -211,8 +212,8 @@ interval = 0.1
 label-font = 1
 format-background = ${colors.blu}
 format-foreground = ${colors.background}
-fo
-rmat-padding           = 1
+format-padding           = 1
+
 
 ;;;;;;;;;;;;;;;;
 ;;   weather  ;;
