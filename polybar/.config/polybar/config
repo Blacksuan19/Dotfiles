@@ -224,7 +224,7 @@ format-padding           = 1
 [module/battery]
 type = internal/battery
 
-full-at = 99
+full-at = 95
 
 battery = BAT0
 adapter = AC0
