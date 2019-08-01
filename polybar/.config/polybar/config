@@ -59,7 +59,7 @@ font-5 = "icomoon:size=10:antialias=false;2"
 font-6 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
 cursor-click = pointer
-border-size = 5
+border-size = 3
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 1
@@ -82,8 +82,6 @@ pin-workspaces = true
 inline-mode = false
 enable-click = true
 enable-scroll = false
-reverse-scroll = false
-fuzzy-match = false
 format = <label-state>
 label-monitor = %name%
 label-mode-padding = 1
