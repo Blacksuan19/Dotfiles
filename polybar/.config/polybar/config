@@ -1,231 +1,293 @@
-;========================================
-;         Colors
-;========================================
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; Created By Aditya Shakya @adi1090x
+;; 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[colors]
-background = #0F111A
-foreground = #a4a4a4
-moderate = #ebcb8b
-urgent = #bf616a
-trim = #919ba0
-blue = #a2d1ec
-purple = #b48ead
-border = #c0c5ce
-red = ${xrdb:color1}
-grn = ${xrdb:color2}
-ylw = ${xrdb:color3}
-blu = ${xrdb:color4}
-mag = ${xrdb:color5}
-cyn = ${xrdb:color6}
-wht = ${xrdb:color7}
-bblk = ${xrdb:color8}
+;;;;;;;;;;;;;
+;; Colors ;;
+;;;;;;;;;;;;;
 
-;================================
-;       Settings
-;================================
+
+[color]
+
+; Active Shade 
+shade1 = #0D47A1
+shade2 = #1565C0
+shade3 = #1976D2
+shade4 = #1E88E5
+shade5 = #2196F3
+shade6 = #42A5F5
+shade7 = #64B5F6
+shade8 = #90CAF9
+
+;; Active Colors
+bground = #0f111a
+fground = #f7f7f7
+accent = #1E88E5
+modulefg = #f7f7f7
+modulefg-alt = #f7f7f7
+
+;; Other
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+;; Material Colors
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+;;;;;;;;;;;;;;
+;; Settings ;;
+;;;;;;;;;;;;;;
 
 [settings]
+
 throttle-output = 5
 throttle-output-for = 10
 throttle-input-for = 30
+
+screenchange-reload = false
+
 compositing-background = source
-compositing-foreground = source
-compositing-overline = source
-compositing-underline = source
-compositing-border = source
-screenchange-reload = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 
+pseudo-transparency = false
 
-;================================
-;       main bar
-;================================
+;;;;;;;;;;;;;
+;;   Bar   ;;
+;;;;;;;;;;;;;
 
 [bar/main]
-width = 99.5%
-height = 18
-offset-x = 3
-offset-y = 3
-override-redirect = true
-wm-restack = bspwm
 
-font-0 = "scientifica:size=10:antialias=true;1"
-font-1 = "Siji:size=9;2"
-font-2 = "Font Awesome 5 Solid:pixelsize=10;1"
-font-3 = "Weather Icons:size=9;1"
-font-4 = "MaterialIcons:size=10:antialias=false;2"
-font-5 = "icomoon:size=10:antialias=false;2"
-font-6 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
+monitor = eDP
+monitor-strict = false
+override-redirect = false
 
+bottom = false
+fixed-center = true
+
+width = 100%
+height = 22
+offset-x = 0%
+offset-y = 0%
 cursor-click = pointer
-border-size = 3
-padding-left        = 0
-padding-right       = 0
-module-margin-left  = 1
-module-margin-right = 0
-background = ${colors.background}
-foreground = ${colors.foreground}
-modules-left = bspwm title
+
+background = ${color.bground}
+foreground = ${color.fground}
+
+overline-size = 2
+overline-color = ${color.accent}
+
+font-0 = "Misc Termsyn:size=12;2"
+font-1 = "Wuncon Siji:size=12;2"
+font-2 = "Iosevka Nerd Font:style=Medium:size=16;3"
+
+modules-left = workspaces left1 title left2
 modules-center = 
-modules-right = ${env:POLYBAR_MODULES: playing lang battery backlight volume network weather clock }
-border-color = ${colors.background}
+modules-right = right5 alsa right4 battery right3 backlight right2 network right1 date
 
+spacing = 0
+dim-value = 1.0
 
-;;;;;;;;;;;;;;;;;;;;;;
-;; Bspwm Workspaces ;;
-;;;;;;;;;;;;;;;;;;;;;;
+tray-position = none
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.bground}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+enable-ipc = true
 
-[module/bspwm]
-type = internal/bspwm
-pin-workspaces = true
-inline-mode = false
-enable-click = true
-enable-scroll = false
-format = <label-state>
-label-monitor = %name%
-label-mode-padding = 1
-label-focused = ●
-label-focused-padding = 1
-label-focused-foreground = ${colors.wht}
-label-focused-underline = ${colors.wht}
-label-occupied = ●
-label-occupied-padding = 1
-label-occupied-foreground = ${colors.background}
-label-urgent = ●
-label-urgent-padding = 1
-label-urgent-foreground = ${colors.background}
-label-empty = ●
-label-empty-padding = 1
-label-empty-foreground = ${colors.background}
-format-background = ${colors.cyn}
-format-foreground = ${colors.background}
-format-padding           = 1
-
-
-;;;;;;;;;;;;
-;; Volume ;;
-;;;;;;;;;;;;
-
-[module/volume]
-type = internal/volume
-
-format-volume = <label-volume>
-format-muted = <label-muted>
-format-volume-background = ${colors.mag}
-format-volume-foreground = ${colors.background}
-format-muted-background = ${colors.mag}
-format-muted-foreground = ${colors.background}
-
-label-muted             = muted
-
-format-volume-prefix = " "
-format-muted-prefix  = " "
-
-format-volume-padding = 2
-format-muted-padding    = 2
-
-
-;;;;;;;;;;;
-;; Title ;;
-;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;  Title  ;;
+;;;;;;;;;;;;;
 
 [module/title]
 type = internal/xwindow
-label-maxlen = 50
-format-padding = 2
 
+format = <label>
+format-background = ${color.shade2}
+format-foreground = ${color.modulefg}
+format-padding = 1
 
-;;;;;;;;;;;
-;; Clock ;;
-;;;;;;;;;;;
+label = " %title%"
+label-maxlen = 30
+label-empty = "  Arch Linux"
 
-[module/clock]
-type                     = internal/date
-interval                 = 30
-date                     = "%I:%M %p"
-format-prefix            = " "
-; format-prefix-foreground = ${colors.grn}
-format-background = ${colors.wht}
-format-foreground = ${colors.background}
-format-padding           = 1
+;;;;;;;;;;;;;;;;
+;; Workspaces ;;
+;;;;;;;;;;;;;;;;
 
+[module/workspaces]
+type = internal/xworkspaces
+
+pin-workspaces = true
+enable-click = true
+enable-scroll = true
+
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+
+format = <label-state>
+format-background = ${color.shade1}
+format-foreground = ${color.shade1}
+label-monitor = %name%
+label-active-foreground = ${color.accent}
+label-occupied-foreground = ${color.yellow}
+label-urgent-foreground = ${color.red}
+label-empty-foreground = ${color.modulefg-alt}
+
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
 
 ;;;;;;;;;;;;;
-;; BATTERY ;;
+;;  Sound  ;;
+;;;;;;;;;;;;;
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${color.shade5}
+format-volume-foreground = ${color.modulefg}
+format-volume-padding = 1
+
+label-volume = %percentage%%
+
+format-muted-prefix = 
+label-muted = " Muted"
+format-muted-background = ${color.shade5}
+format-muted-foreground = ${color.modulefg}
+format-muted-padding = 1
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+
+;;;;;;;;;;;;;;;
+;; Backlight ;;
+;;;;;;;;;;;;;;;
+
+[module/backlight]
+
+type = custom/script
+interval = 0.2
+exec = ~/bin/light.sh
+scroll-up = exec light -A 5
+scroll-down = exec light -U 5
+format-prefix = " "
+label = %output%
+format-background = ${color.shade3}
+format-foreground = ${color.modulefg}
+format-padding           = 1
+
+;;;;;;;;;;;;;
+;; Battery ;;
 ;;;;;;;;;;;;;
 
 [module/battery]
-type          = internal/battery
-full-at       = 98
-battery       = BAT0
-adapter       = AC0
-poll-interval = 5
+type = internal/battery
 
-format-charging-prefix      = ""
-format-discharging-prefix   = ""
-format-full-prefix          = ""
+full-at = 99
 
-label-charging      = " %percentage%% "
-label-discharging   = " %percentage%% "
-label-full          = " %percentage%% "
+battery = BAT0
+adapter = AC0
 
+poll-interval = 2
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.shade4}
+format-charging-foreground = ${color.modulefg}
 format-charging-padding = 1
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.shade4}
+format-discharging-foreground = ${color.modulefg}
 format-discharging-padding = 1
-format-full-padding    = 1
 
-format-charging-background      = ${colors.red}
-format-discharging-background   = ${colors.red}
-format-full-background          = ${colors.red}
-format-charging-foreground      = ${colors.background}
-format-discharging-foreground   = ${colors.background}
-format-full-foreground          = ${colors.background}
+label-charging = %percentage%%
+label-discharging = %percentage%%
 
+label-full = Fully Charged
+label-full-background = ${color.shade4}
+label-full-foreground = ${color.modulefg}
+label-full-padding = 1
 
-;;;;;;;;;;;;;;;;
-;;  Playing  ;;
-;;;;;;;;;;;;;;;;
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 
-[module/playing]
-type = custom/script
-exec = ~/bin/playing.sh
-format-prefix = " "
-interval = 0.1
-label-font = 0
-click-left = playerctl play-pause
-format-background = ${colors.grn}
-format-foreground = ${colors.background}
-format-padding           = 1
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-7 = 
+animation-charging-8 = 
+animation-charging-framerate = 750
 
+;;;;;;;;;;;;;
+;;  Date   ;;
+;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;
-;;  Language  ;;
-;;;;;;;;;;;;;;;;
+[module/date]
+type = internal/date
+interval = 1.0
 
-[module/lang]
-type = custom/script
-exec = ~/bin/lang.sh
-format-prefix = "  "
-interval = 0.1
-label-font = 1
-format-background = ${colors.blu}
-format-foreground = ${colors.background}
-format-padding           = 1
+time =  %I:%M %p
+time-alt =  %d/%m/%Y%
 
-
-;;;;;;;;;;;;;;;;
-;;   weather  ;;
-;;;;;;;;;;;;;;;;
-
-[module/weather]
-type = custom/script
-exec = ~/bin/weather.sh
-interval = 600
-label-font = 1
-format-background = ${colors.cyn}
-format-foreground = ${colors.background}
-format-padding           = 1
-
+format = <label>
+format-background = ${color.shade1}
+format-foreground = ${color.modulefg}
+format-padding = 1
+label = %time%
 
 ;;;;;;;;;;;;;
 ;; Network ;;
@@ -238,23 +300,56 @@ click-left = networkmanager_dmenu &
 click-right = networkmanager_dmenu &
 interval = 1
 tail = true
-format-background = ${colors.red}
-format-foreground = ${colors.background}
+format-background = ${color.shade2}
+format-foreground = ${color.modulefg}
 format-padding           = 1
 
 
-;;;;;;;;;;;;;
-;; Lights  ;;
-;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;; rounded shades ;;
+;;;;;;;;;;;;;;;;;;;;
 
-[module/backlight]
-type = custom/script
-interval = 0.2
-exec = ~/bin/light.sh
-scroll-up = exec light -A 5
-scroll-down = exec light -U 5
-format-prefix = " "
-label = %output%
-format-background = ${colors.blu}
-format-foreground = ${colors.background}
-format-padding           = 1
+[module/left1]
+type = custom/text
+content-background = ${color.shade2}
+content-foreground = ${color.shade1}
+content = "%{T3}%{T-}"
+
+[module/left2]
+type = custom/text
+content-background = ${color.bground}
+content-foreground = ${color.shade2}
+content = "%{T3}%{T-}"
+
+#+++++++++++++++++++++++++++++++++++++++
+
+[module/right1]
+type = custom/text
+content-background = ${color.shade2}
+content-foreground = ${color.shade1}
+content = "%{T3}%{T-}"
+
+[module/right2]
+type = custom/text
+content-background = ${color.shade3}
+content-foreground = ${color.shade2}
+content = "%{T3}%{T-}"
+
+[module/right3]
+type = custom/text
+content-background = ${color.shade4}
+content-foreground = ${color.shade3}
+content = "%{T3}%{T-}"
+
+[module/right4]
+type = custom/text
+content-background = ${color.shade5}
+content-foreground = ${color.shade4}
+content = "%{T3}%{T-}"
+
+[module/right5]
+type = custom/text
+content-background = ${color.bground}
+content-foreground = ${color.shade5}
+content = "%{T3}%{T-}"
+
