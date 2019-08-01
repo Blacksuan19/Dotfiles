@@ -89,8 +89,8 @@ pseudo-transparency = false
 
 monitor = eDP
 monitor-strict = false
-override-redirect = false
-
+override-redirect = true
+wm-restack = bspwm
 bottom = false
 fixed-center = true
 
