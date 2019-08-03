@@ -12,6 +12,9 @@ nitrogen --restore &
 # xfce settings
 xfsettingsd &
 
+# compton
+compton -C -b
+
 # panel
 polybar main &
 
