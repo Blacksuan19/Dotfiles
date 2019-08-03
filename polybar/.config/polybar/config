@@ -93,26 +93,26 @@ override-redirect = true
 wm-restack = bspwm
 bottom = false
 fixed-center = true
-
-width = 100%
+border-radius = 5
+width = 1360
 height = 22
-offset-x = 0%
-offset-y = 0%
+offset-x = 3
+offset-y = 3
 cursor-click = pointer
 
-background = ${color.bground}
+background = ${color.trans}
 foreground = ${color.fground}
 
 overline-size = 2
 overline-color = ${color.accent}
 
-font-0 = "Misc Termsyn:size=12;2"
-font-1 = "Wuncon Siji:size=12;2"
-font-2 = "Iosevka Nerd Font:style=Medium:size=16;3"
+font-0 = "scientifica:size=10:antialias=true;1"
+font-1 = "Siji:size=10;2"
+font-2 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
 modules-left = workspaces left1 title left2
 modules-center = 
-modules-right = right5 alsa right4 battery right3 backlight right2 network right1 date
+modules-right = right6 lang right5 alsa right4 battery right3 backlight right2 network right1 date
 
 spacing = 0
 dim-value = 1.0
@@ -141,7 +141,7 @@ format-foreground = ${color.modulefg}
 format-padding = 1
 
 label = " %title%"
-label-maxlen = 30
+label-maxlen = 50
 label-empty = "  Arch Linux"
 
 ;;;;;;;;;;;;;;;;
@@ -149,13 +149,13 @@ label-empty = "  Arch Linux"
 ;;;;;;;;;;;;;;;;
 
 [module/workspaces]
-type = internal/xworkspaces
+type = internal/bspwm
 
 pin-workspaces = true
 enable-click = true
 enable-scroll = true
 
-label-active = 
+label-focused = 
 label-occupied = 
 label-urgent = 
 label-empty = 
@@ -164,12 +164,12 @@ format = <label-state>
 format-background = ${color.shade1}
 format-foreground = ${color.shade1}
 label-monitor = %name%
-label-active-foreground = ${color.accent}
-label-occupied-foreground = ${color.yellow}
+label-focused-foreground = ${color.white}
+label-occupied-foreground = ${color.cyan}
 label-urgent-foreground = ${color.red}
 label-empty-foreground = ${color.modulefg-alt}
 
-label-active-padding = 1
+label-focused-padding = 1
 label-urgent-padding = 1
 label-occupied-padding = 1
 label-empty-padding = 1
@@ -289,6 +289,20 @@ format-foreground = ${color.modulefg}
 format-padding = 1
 label = %time%
 
+;;;;;;;;;;;;;;;;
+;;  Language  ;;
+;;;;;;;;;;;;;;;;
+
+[module/lang]
+type = custom/script
+exec = ~/bin/lang.sh
+format-prefix = "  "
+interval = 0.1
+label-font = 1
+format-background = ${color.shade6}
+format-foreground = ${color.modulefg}
+format-padding           = 1
+
 ;;;;;;;;;;;;;
 ;; Network ;;
 ;;;;;;;;;;;;;
@@ -311,13 +325,14 @@ format-padding           = 1
 
 [module/left1]
 type = custom/text
+content-font = 0
 content-background = ${color.shade2}
 content-foreground = ${color.shade1}
 content = "%{T3}%{T-}"
 
 [module/left2]
 type = custom/text
-content-background = ${color.bground}
+content-background = ${color.trans}
 content-foreground = ${color.shade2}
 content = "%{T3}%{T-}"
 
@@ -349,7 +364,12 @@ content = "%{T3}%{T-}"
 
 [module/right5]
 type = custom/text
-content-background = ${color.bground}
+content-background = ${color.shade6}
 content-foreground = ${color.shade5}
 content = "%{T3}%{T-}"
 
+[module/right6]
+type = custom/text
+content-background = ${color.trans}
+content-foreground = ${color.shade6}
+content = "%{T3}%{T-}"
