@@ -32,10 +32,11 @@ bspc monitor -d · · · · · · · ·
 
 bspc config border_width 0
 bspc config window_gap 3
-bspc config top_padding 22
+bspc config top_padding 26
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
+bspc config border_radius 5
 
 bspc config split_ratio 0.5
 bspc config borderless_monocle false
@@ -48,7 +49,6 @@ bspc config focus_follows_pointer true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
-bspc config border_radius 0
 
 # some window rules
 bspc rule -a Brave-browser desktop='^2' follow=on focus=on
