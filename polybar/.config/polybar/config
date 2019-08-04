@@ -19,19 +19,19 @@
 [color]
 
 ; Active Shade 
-shade1 = #0D47A1
-shade2 = #1565C0
-shade3 = #1976D2
-shade4 = #1E88E5
-shade5 = #2196F3
-shade6 = #42A5F5
+shade1 = #0f111a
+shade2 = #161926
+shade3 = #1d2133
+shade4 = #25293f
+shade5 = #2c324c
+shade6 = #333a58
 shade7 = #64B5F6
 shade8 = #90CAF9
 
 ;; Active Colors
 bground = #0f111a
 fground = #f7f7f7
-accent = #1E88E5
+accent = #31323a
 modulefg = #f7f7f7
 modulefg-alt = #f7f7f7
 
@@ -165,7 +165,7 @@ format-background = ${color.shade1}
 format-foreground = ${color.shade1}
 label-monitor = %name%
 label-focused-foreground = ${color.white}
-label-occupied-foreground = ${color.cyan}
+label-occupied-foreground = ${color.accent}
 label-urgent-foreground = ${color.red}
 label-empty-foreground = ${color.modulefg-alt}
 
