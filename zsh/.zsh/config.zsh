@@ -35,7 +35,7 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 
 # various aliases.
-
+alias ipm="/usr/lib/inkdrop/resources/app/ipm/bin/ipm"
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
