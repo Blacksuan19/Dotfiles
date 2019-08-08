@@ -25,7 +25,7 @@ shade3 = #1d2133
 shade4 = #25293f
 shade5 = #2c324c
 shade6 = #333a58
-shade7 = #64B5F6
+shade7 = #3a4265
 shade8 = #90CAF9
 
 ;; Active Colors
@@ -112,7 +112,7 @@ font-2 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
 modules-left = workspaces left1 title left2
 modules-center = 
-modules-right = right6 lang right5 alsa right4 battery right3 backlight right2 network right1 date
+modules-right = right7 playing right6 lang right5 alsa right4 battery right3 backlight right2 network right1 date
 
 spacing = 0
 dim-value = 1.0
@@ -318,6 +318,20 @@ format-background = ${color.shade2}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
+;;;;;;;;;;;;;;;;	
+;;  Playing  ;;	
+;;;;;;;;;;;;;;;;	
+
+[module/playing]	
+type = custom/script	
+exec = ~/bin/playing.sh	
+format-prefix = " "	
+interval = 0.1	
+label-font = 0	
+click-left = sp play	
+format-background = ${color.shade7}	
+format-foreground = ${color.modulefg}	
+format-padding           = 1
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; rounded shades ;;
@@ -370,6 +384,12 @@ content = "%{T3}%{T-}"
 
 [module/right6]
 type = custom/text
-content-background = ${color.trans}
+content-background = ${color.shade7}
 content-foreground = ${color.shade6}
+content = "%{T3}%{T-}"
+
+[module/right7]
+type = custom/text
+content-background = ${color.trans}
+content-foreground = ${color.shade7}
 content = "%{T3}%{T-}"
