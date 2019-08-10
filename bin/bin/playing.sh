@@ -14,12 +14,12 @@ then
             org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' \
             string:'Metadata' |\
             awk -F 'string "' '/string|array/ {printf "%s",$2; next}{print ""}' |\
-            awk -F '"' '/title/ {print $2}')
+            awk -F '"' '/title/ {print $2}' | sed -e 's/([^()]*)//g' | cut -c 1-20 )
 
     if [[ $STATUS = "Playing" ]]; then
-    echo " $SONG by $ARTIST"
+    echo " $SONG BY $ARTIST"
     else
-    echo " $SONG by $ARTIST"
+    echo " $SONG BY $ARTIST"
     fi
     
 else
