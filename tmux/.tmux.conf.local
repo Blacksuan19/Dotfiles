@@ -125,13 +125,13 @@ tmux_conf_theme_status_left=''
 tmux_conf_theme_status_right=' #{prefix} | #{hostname} '
 
 # status left style
-tmux_conf_theme_status_left_fg='#839491,#e4e4e4,#e4e4e4'
+tmux_conf_theme_status_left_fg='#839491,#8a8a8a,#8a8a8a'
 tmux_conf_theme_status_left_bg='#1d2133,#ff00af,#0f111a'
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#839491'
-tmux_conf_theme_status_right_bg='#0f111a,#0f111a,#e4e4e4'
+tmux_conf_theme_status_right_fg='#8a8a8a,#8a8a8a,#8a8a8a'
+tmux_conf_theme_status_right_bg='#0f111a,#0f111a,#8a8a8a'
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # prefix indicator
