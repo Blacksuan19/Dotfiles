@@ -9,6 +9,7 @@
 font = Iosevka Nerd Font 9
 fullscreen = true
 scrollback_lines = 10000
+mouse_autohide = true
 
 [colors]
 cursor = #d8dee9
