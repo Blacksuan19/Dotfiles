@@ -56,3 +56,4 @@ bspc rule -a Spotify desktop='^8' follow=on focus=on
 bspc rule -a feh state=floating follow=on
 
 
+xmodmap -e 'keycode 117='
