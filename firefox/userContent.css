@@ -1,9 +1,9 @@
 @-moz-document url("about:newtab") {
-    body {
-        background-color: #0C0C0D !important;
-    }
+  body {
+    background-color: #0f111a !important;
+  }
 }
 
 * {
-    scrollbar-width: none
+  scrollbar-width: none;
 }
