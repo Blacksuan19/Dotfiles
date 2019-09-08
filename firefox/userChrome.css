@@ -289,3 +289,10 @@ tabbrowser-tabs:not([overflow])
     padding-right: 0 !important;
   }
 }
+
+/* scroll bar overlay */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+toolbarbutton#alltabs-button {
+  -moz-binding: url("userChrome.xml#js");
+}
