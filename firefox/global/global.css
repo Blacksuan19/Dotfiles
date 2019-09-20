@@ -1,0 +1,174 @@
+@media (-moz-windows-compositor)
+{
+	@media not (-moz-os-version: windows-win7)
+	{
+		@media not (-moz-os-version: windows-win8)
+		{
+			@media (-moz-windows-default-theme)
+			{
+				:root[tabsintitlebar] .titlebar-buttonbox-container
+				{
+					height: 30px !important;
+				}
+				
+				:root[tabsintitlebar][sizemode=normal] .titlebar-buttonbox-container
+				{
+					margin-block-start: calc(0px - (var(--space-above-tabbar) + 5px)) !important;
+				}
+				
+				:root[tabsintitlebar][sizemode=maximized] .titlebar-buttonbox-container
+				{
+					margin-block-start: calc(2px - (var(--space-above-tabbar))) !important;
+				}
+					
+				:root[tabsintitlebar][sizemode=maximized]:not([extradragspace]) .titlebar-buttonbox-container
+				{
+					-moz-box-align: start !important;
+					margin-block-start: -4px !important;
+				}
+				
+				@media (-moz-windows-accent-color-in-titlebar: 0)
+				{					
+					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary])
+					{
+						background-color: #dee1e6 !important;
+						color: #3c4043 !important;
+        		  	}
+					
+					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]):-moz-window-inactive
+					{
+						background-color: #e7eaed !important;
+						color: #666a6d !important;
+        		  	}
+        		}
+      		}
+		}
+	}
+}
+
+#navigator-toolbox :-moz-any(toolbar, #nav-bar-customization-target):not(#toolbar-menubar)
+{
+	-moz-box-align: center !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down)
+{
+	border-radius: 99px !important;
+	transition-property:
+		background-color,
+		background-size,
+		fill-opacity !important;
+	transition-duration: .3s !important;
+	transition-timing-function:
+		var(--ease-basic),
+		var(--ease-out),
+		var(--ease-basic) !important;
+
+	fill: currentColor !important;
+	fill-opacity: 0 !important;
+
+	background-image:
+		url(circle.svg),
+		url(circle.svg) !important;
+	background-size: 25% !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-color: transparent !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down)
+{
+	font-size: 12px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: 2px solid transparent !important;
+	background-clip: padding-box !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, .scrollbutton-up, .scrollbutton-down)
+{
+	max-height: 32px !important;
+	height: 32px !important;
+	min-height: 32px !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down)[disabled]
+{
+	opacity: .42 !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down):hover:not([disabled]),
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down):-moz-any(:hover:active, [checked], [open]):not([disabled])
+{
+	background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton), .scrollbutton-up, .scrollbutton-down):-moz-any(:hover:active, [checked], [open]):not([disabled])
+{
+	fill-opacity: .04 !important;
+	background-size: 100% !important;
+}
+
+#navigator-toolbox :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack)
+{
+	fill-opacity: 1 !important;
+	border: 0 !important;
+	box-shadow: none !important;
+}
+
+#navigator-toolbox .toolbarbutton-1 > .toolbarbutton-icon
+{
+	width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+	height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+}
+
+#navigator-toolbox > #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon,
+#navigator-toolbox :-moz-any(.toolbarbutton-1, .scrollbutton-up, .scrollbutton-down) > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack)
+{
+	padding: 6px !important;
+	background: 0 !important;
+}
+
+/*
+	hack: fix customization screen popping bug when changing ui density
+	icon size is enforced and it doesn't like it when the normal density
+	nav-bar height is less than 38px (it's 36px due to smaller back icon)
+*/
+:root:not([uidensity=compact]) #customization-content-container
+{
+	padding-top: 1px !important;
+}
+
+:root:not([uidensity=compact]) :-moz-any(#customization-palette-container, #customization-panel-container)
+{
+	margin-top: -1px !important;
+}
+
+.menu-iconic,
+.menuitem-iconic
+{
+	fill: currentColor !important;
+}
+
+/* legacy */
+#navigator-toolbox
+{
+	border-bottom: 1px solid var(--chrome-content-separator-color, var(--toolbox-border-bottom-color)) !important;
+}
+
+/* legacy */
+#navigator-toolbox::after
+{
+	display: none !important;
+}
+
+/* high DPI adjustments */
+@media (min--moz-device-pixel-ratio: 2)
+{
+	#navigator-toolbox
+	{
+		border-bottom-width: .5px !important;
+		padding-bottom: .5px !important;
+		box-shadow: inset 0 -.5px var(--toolbar-bgcolor) !important;
+	}
+}
