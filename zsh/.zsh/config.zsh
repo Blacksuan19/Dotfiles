@@ -54,6 +54,7 @@ alias open="xdg-open"
 alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
+alias n="nvim"
 
 #packages aliases.
 alias y="yay"
