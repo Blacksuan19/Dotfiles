@@ -125,6 +125,7 @@ let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
 
 " fzf-vim
+let FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
