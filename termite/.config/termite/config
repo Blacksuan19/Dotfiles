@@ -6,7 +6,7 @@
 # License:    MIT
 
 [options]
-font = Iosevka Nerd Font 9
+font = Iosevka Nerd Font 10
 fullscreen = true
 scrollback_lines = 10000
 mouse_autohide = true
