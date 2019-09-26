@@ -33,7 +33,7 @@ sudo-command-line() {
 }
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
-
+export EDITOR=nvim
 # various aliases.
 alias ipm="/usr/lib/inkdrop/resources/app/ipm/bin/ipm"
 alias free="free -h"
