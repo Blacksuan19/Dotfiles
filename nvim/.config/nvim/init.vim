@@ -172,7 +172,7 @@ nnoremap <leader>W <nop>
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
-
+noremap <leader>e :PlugInstall<CR>
 " emulate windows copy, cut behavior
 noremap <LeftRelease> "+y<LeftRelease>
 noremap <C-c> "+y;startinsert<C-c>

@@ -49,7 +49,6 @@ alias cat="bat " # this one is way better
 alias ls="lsd"
 alias l="lsd -al"
 alias zsh="exec zsh"
-alias sysinfo="sh ~/.sysinfo.sh"
 alias open="xdg-open"
 alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
