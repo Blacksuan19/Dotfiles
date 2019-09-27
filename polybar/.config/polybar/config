@@ -100,7 +100,7 @@ offset-x = 3
 offset-y = 3
 cursor-click = pointer
 
-background = ${color.trans}
+background = ${color.bground}
 foreground = ${color.fground}
 
 overline-size = 2
@@ -110,9 +110,9 @@ font-0 = "scientifica:size=10:antialias=true;1"
 font-1 = "Siji:size=10;2"
 font-2 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
-modules-left = workspaces left1 title left2
+modules-left = workspaces title 
 modules-center = 
-modules-right = right7 playing right6 lang right5 alsa right4 battery right3 backlight right2 network right1 date
+modules-right =  playing lang alsa battery backlight network date
 
 spacing = 0
 dim-value = 1.0
@@ -136,7 +136,7 @@ enable-ipc = true
 type = internal/xwindow
 
 format = <label>
-format-background = ${color.shade2}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding = 1
 
@@ -182,7 +182,7 @@ label-empty-padding = 1
 type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume>
-format-volume-background = ${color.shade5}
+format-volume-background = ${color.bground}
 format-volume-foreground = ${color.modulefg}
 format-volume-padding = 1
 
@@ -190,7 +190,7 @@ label-volume = %percentage%%
 
 format-muted-prefix = 
 label-muted = " Muted"
-format-muted-background = ${color.shade5}
+format-muted-background = ${color.bground}
 format-muted-foreground = ${color.modulefg}
 format-muted-padding = 1
 
@@ -213,7 +213,7 @@ scroll-up = exec light -A 5
 scroll-down = exec light -U 5
 format-prefix = " "
 label = %output%
-format-background = ${color.shade3}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
@@ -233,12 +233,12 @@ poll-interval = 2
 time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${color.shade4}
+format-charging-background = ${color.bground}
 format-charging-foreground = ${color.modulefg}
 format-charging-padding = 1
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${color.shade4}
+format-discharging-background = ${color.bground}
 format-discharging-foreground = ${color.modulefg}
 format-discharging-padding = 1
 
@@ -246,7 +246,7 @@ label-charging = %percentage%%
 label-discharging = %percentage%%
 
 label-full = Fully Charged
-label-full-background = ${color.shade4}
+label-full-background = ${color.bground}
 label-full-foreground = ${color.modulefg}
 label-full-padding = 1
 
@@ -284,7 +284,7 @@ time =  %I:%M %p
 time-alt =  %d/%m/%Y%
 
 format = <label>
-format-background = ${color.shade1}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding = 1
 label = %time%
@@ -299,7 +299,7 @@ exec = ~/bin/lang.sh
 format-prefix = "  "
 interval = 0.1
 label-font = 1
-format-background = ${color.shade6}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
@@ -314,7 +314,7 @@ click-left = networkmanager_dmenu &
 click-right = networkmanager_dmenu &
 interval = 1
 tail = true
-format-background = ${color.shade2}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
@@ -329,7 +329,7 @@ format-prefix = " "
 interval = 0.1	
 label-font = 0	
 click-left = sp play	
-format-background = ${color.shade7}	
+format-background = ${color.bground}	
 format-foreground = ${color.modulefg}	
 format-padding           = 1
 
@@ -340,13 +340,13 @@ format-padding           = 1
 [module/left1]
 type = custom/text
 content-font = 0
-content-background = ${color.shade2}
+content-background = ${color.bground}
 content-foreground = ${color.shade1}
 content = "%{T3}%{T-}"
 
 [module/left2]
 type = custom/text
-content-background = ${color.trans}
+content-background = ${color.bground}
 content-foreground = ${color.shade2}
 content = "%{T3}%{T-}"
 
