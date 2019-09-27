@@ -3,68 +3,51 @@
 """ Vim-Plug
 call plug#begin()
 
+" looks and GUI stuff
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'zaki/zazen'
-Plug 'lervag/vimtex'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'rhysd/vim-grammarous'
 Plug 'hzchirs/vim-material'
+Plug 'junegunn/goyo.vim' " zen mode
 
 " Functionalities
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'ervandew/supertab'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-easy-align'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-abolish'
-Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'lervag/vimtex' " latex
+Plug 'rhysd/vim-grammarous' " grammer checker
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocomplete
+Plug 'tpope/vim-sensible' " sensible defaults
+Plug 'majutsushi/tagbar' " side bar of tags
+Plug 'scrooloose/nerdtree' " open folder tree
+Plug 'scrooloose/nerdcommenter' " commenting shortcuts and stuff
+Plug 'ervandew/supertab' " completion with tab key
+Plug 'jiangmiao/auto-pairs' " auto insert other paranthesis pair
+Plug 'alvan/vim-closetag' " auto close html tags
+Plug 'tpope/vim-abolish' " multi word substitution
+Plug 'Yggdroot/indentLine' " show indentation lines
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search integration
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'chrisbra/Colorizer'
-Plug 'heavenshell/vim-pydocstring'
-Plug 'vim-scripts/loremipsum'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'metakirby5/codi.vim'
-Plug 'dkarter/bullets.vim'
-
-" Entertainment
-"Plug 'ryanss/vim-hackernews'
+Plug 'sheerun/vim-polyglot' " many languages support
+Plug 'chrisbra/Colorizer' " show actual colors of color codes
+Plug 'vim-scripts/loremipsum' " dummy text generator
+Plug 'SirVer/ultisnips' " snippets and shit
+Plug 'honza/vim-snippets' " actual snippets
+Plug 'metakirby5/codi.vim' " using pyhon as an advanced calculator
+Plug 'dkarter/bullets.vim' " markdown bullet lists
+Plug 'google/vim-searchindex' " add number of found matching search items
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } 
+Plug 'makerj/vim-pdf' " preview pdf files
+Plug 'lambdalisue/suda.vim' " save as sudo
+Plug '907th/vim-auto-save' " auto save changes
+Plug 'tpope/vim-liquid' "liquid language support
+Plug 'mhinz/vim-startify' " cool start up screen
 
 call plug#end()
 
-""" Python3 VirtualEnv
-let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
-
-""" Coloring
-let g:material_style='oceanic'
-set background=dark
-colorscheme vim-material
-let g:airline_theme='material'
-
-highlight Pmenu guibg=white guifg=black gui=bold
-highlight Comment gui=bold
-highlight Normal gui=none
-highlight NonText guibg=none
-
-" Opaque Background (Comment out to use terminal's profile)
-set termguicolors
-
-" Transparent Background (For i3 and compton)
-highlight Normal guibg=NONE ctermbg=NONE
-highlight LineNr guibg=NONE ctermbg=NONE
+""" general config
+set termguicolors " Opaque Background
+set mouse=a " enable mouse scrolling
+set clipboard+=unnamedplus " use system clipboard by default
+behave mswin " select in insert and other good stuff
 
 """ Other Configurations
 filetype plugin indent on
@@ -79,6 +62,24 @@ set encoding=utf-8
 set number
 set title
 
+" Transparent Background (For i3 and compton)
+highlight Normal guibg=NONE ctermbg=NONE
+highlight LineNr guibg=NONE ctermbg=NONE
+
+"" Python3 VirtualEnv
+let g:python3_host_prog = expand('/usr/bin/python')
+""" Coloring
+let g:material_style='oceanic'
+set background=dark
+colorscheme vim-material
+let g:airline_theme='material'
+
+highlight Pmenu guibg=white guifg=black gui=bold
+highlight Comment gui=bold
+highlight Normal gui=none
+highlight NonText guibg=none
+
+
 """ Plugin Configurations
 
 "" NERDTree
@@ -92,18 +93,6 @@ let g:airline_section_z = ' %{strftime("%-I:%M %p")}'
 let g:airline_section_warning = ''
 "let g:airline#extensions#tabline#enabled = 1
 
-" Neovim :Terminal
-tmap <Esc> <C-\><C-n>
-tmap <C-w> <Esc><C-w>
-"tmap <C-d> <Esc>:q<CR>
-autocmd BufWinEnter,WinEnter term://* startinsert
-autocmd BufLeave term://* stopinsert
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-" Disable documentation window
-set completeopt-=preview
-
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-n>"
 
@@ -112,9 +101,6 @@ let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
-" EasyAlign
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " indentLine
 let g:indentLine_char = '▏'
@@ -171,30 +157,23 @@ endfunction
 """ Custom Mappings
 
 let mapleader=","
-nmap <leader>q :NERDTreeToggle<CR>
 nmap \ <leader>q
-nmap <leader>w :TagbarToggle<CR>
-nmap <leader>ee :Colors<CR>
-nmap <leader>ea :AirlineTheme 
-nmap <leader>e1 :call ColorDracula()<CR>
-nmap <leader>e2 :call ColorSeoul256()<CR>
-nmap <leader>e3 :call ColorForgotten()<CR>
-nmap <leader>e4 :call ColorZazen()<CR>
+map <F3> :NERDTreeToggle<CR>
+map <F4> :Tagbar <CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
-xmap <leader>a gaip*
-nmap <leader>a gaip*
-nmap <leader>s <C-w>s<C-w>j:terminal<CR>
-nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
-nmap <leader>d <Plug>(pydocstring)
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>g :Goyo<CR>
 nmap <leader>h :RainbowParentheses!!<CR>
-nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
-nmap <leader>l :Limelight!!<CR>
-xmap <leader>l :Limelight!!<CR>
-autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
+nnoremap <leader>W <nop>
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
+
+" emulate windows copy, cut behavior
+noremap <LeftRelease> "+y<LeftRelease>
+noremap <C-c> "+y;startinsert<C-c>
+noremap <C-x> "+d;startinsert<C-x>
