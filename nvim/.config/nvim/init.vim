@@ -61,7 +61,7 @@ set wrap breakindent
 set encoding=utf-8
 set number
 set title
-
+set ft=dosini " syntax highlighting on config files
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr guibg=NONE ctermbg=NONE
@@ -81,18 +81,31 @@ highlight NonText guibg=none
 
 
 """ Plugin Configurations
+" latex
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 0
+set conceallevel=0
+let g:tex_conceal='abdmg'
 
-"" NERDTree
+""" NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '↠'
 let g:NERDTreeDirArrowCollapsible = '↡'
 
 " Airline
-let g:airline_powerline_fonts = 1
-let g:airline_section_z = ' %{strftime("%-I:%M %p")}'
+let g:airline_powerline_fonts = 0
+let g:airline#themes#clean#palette = 1
+let g:airline_section_z = '%{strftime("%-I:%M %p")}'
 let g:airline_section_warning = ''
-"let g:airline#extensions#tabline#enabled = 1
-
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+"let g:airline_left_alt_sep=''
+"let g:airline_right_alt_sep=''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-n>"
 
@@ -162,7 +175,7 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :Tagbar <CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
-nmap <leader>q :q<CR>
+nmap <leader>q :bd<CR>
 nmap <leader>w :w<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>g :Goyo<CR>
