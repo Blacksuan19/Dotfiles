@@ -35,7 +35,6 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 export EDITOR=nvim
 # various aliases.
-alias ipm="/usr/lib/inkdrop/resources/app/ipm/bin/ipm"
 alias free="free -h"
 alias network="sc-restart NetworkManager"
 alias blame="systemd-analyze && systemd-analyze blame"
@@ -43,8 +42,6 @@ alias journal="journalctl -b0 -p err"
 alias fdisk="sudo fdisk -l"
 alias cleanj="sudo journalctl --vacuum-time=5d"
 alias cpr="rsync --progress --size-only --inplace --verbose "
-alias c="code --disable-gpu"
-alias v="nvim"
 alias cat="bat " # this one is way better
 alias ls="lsd"
 alias l="lsd -al"
