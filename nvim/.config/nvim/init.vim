@@ -12,6 +12,7 @@ Plug 'hzchirs/vim-material'
 Plug 'junegunn/goyo.vim' " zen mode
 
 " Functionalities
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'lervag/vimtex' " latex
 Plug 'ying17zi/vim-live-latex-preview'
 Plug 'rhysd/vim-grammarous' " grammer checker
@@ -63,14 +64,17 @@ set encoding=utf-8
 set number
 set number relativenumber
 set title
-set conceallevel=0
+set conceallevel=1 " set this so we womt break indentation plugin
+let g:indentLine_setConceal = 0 " actually fix the annoying markdown links conversion
+au BufEnter * set fo-=c fo-=r fo-=o " stop annying auto commenting on new lines
 
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr guibg=NONE ctermbg=NONE
 
-"" Python3 VirtualEnv
+" Python3 VirtualEnv
 let g:python3_host_prog = expand('/usr/bin/python')
+
 """ Coloring
 let g:material_style='oceanic'
 set background=dark
@@ -84,16 +88,18 @@ highlight NonText guibg=none
 
 
 """ Plugin Configurations
+
 " latex
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_quickfix_mode = 0
 let g:tex_conceal='abdmg'
 
-""" NERDTree
+" NerdTree
 let NERDTreeShowHidden=1
-let g:NERDTreeDirArrowExpandable = '↠'
-let g:NERDTreeDirArrowCollapsible = '↡'
+let NERDTreeShowLineNumbers=0
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " Airline
 let g:airline_powerline_fonts = 0
@@ -101,7 +107,7 @@ let g:airline#themes#clean#palette = 1
 let g:airline_section_z = '%{strftime("%-I:%M %p")}'
 let g:airline_section_warning = ''
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnamemod = ':t' " show only file name on tabs
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-n>"
@@ -118,7 +124,7 @@ let g:indentLine_color_gui = '#363949'
 
 " TagBar
 let g:tagbar_width = 30
-let g:tagbar_iconchars = ['↠', '↡']
+let g:tagbar_iconchars = ['', '']
 
 " fzf-vim
 let g:FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
@@ -153,9 +159,11 @@ autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
 autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
 
 " Markdown and Journal
-autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 conceallevel=0
 autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.html,*.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
 """ Custom Functions
 
 function! StartUp()
@@ -192,10 +200,12 @@ nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 noremap <leader>e :PlugInstall<CR>
 noremap <C-q> :q<CR>
+
 " use a different buffer for dd (finally figured this out)
 nnoremap d "_d
-vnoremap d "_d 
+vnoremap d "_d
 " emulate windows copy, cut behavior
 noremap <LeftRelease> "+y<LeftRelease>
 noremap <C-c> "+y<CR>
 noremap <C-x> "+d<CR>
+
