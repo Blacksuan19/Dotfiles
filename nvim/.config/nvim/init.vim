@@ -13,6 +13,7 @@ Plug 'junegunn/goyo.vim' " zen mode
 
 " Functionalities
 Plug 'lervag/vimtex' " latex
+Plug 'ying17zi/vim-live-latex-preview'
 Plug 'rhysd/vim-grammarous' " grammer checker
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocomplete
 Plug 'tpope/vim-sensible' " sensible defaults
@@ -55,13 +56,15 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 set ruler laststatus=2 showcmd showmode
 set list listchars=trail:»,tab:»-
-set fillchars+=vert:\|
+set fillchars+=vert:\ 
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
 set wrap breakindent
 set encoding=utf-8
 set number
+set number relativenumber
 set title
-set ft=dosini " syntax highlighting on config files
+set conceallevel=0
+
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr guibg=NONE ctermbg=NONE
@@ -85,7 +88,6 @@ highlight NonText guibg=none
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_quickfix_mode = 0
-set conceallevel=0
 let g:tex_conceal='abdmg'
 
 """ NERDTree
@@ -99,13 +101,8 @@ let g:airline#themes#clean#palette = 1
 let g:airline_section_z = '%{strftime("%-I:%M %p")}'
 let g:airline_section_warning = ''
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_left_sep=''
-"let g:airline_right_sep=''
-"let g:airline_left_alt_sep=''
-"let g:airline_right_alt_sep=''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = ''
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-n>"
 
@@ -124,7 +121,7 @@ let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
 
 " fzf-vim
-let FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
+let g:FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -161,6 +158,14 @@ autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 """ Custom Functions
 
+function! StartUp()
+    if 0 == argc()
+        Startify
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
 " Trim Whitespaces
 function! TrimWhitespace()
     let l:save = winsaveview()
@@ -186,7 +191,11 @@ nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 noremap <leader>e :PlugInstall<CR>
+noremap <C-q> :q<CR>
+" use a different buffer for dd (finally figured this out)
+nnoremap d "_d
+vnoremap d "_d 
 " emulate windows copy, cut behavior
 noremap <LeftRelease> "+y<LeftRelease>
-noremap <C-c> "+y;startinsert<C-c>
-noremap <C-x> "+d;startinsert<C-x>
+noremap <C-c> "+y<CR>
+noremap <C-x> "+d<CR>
