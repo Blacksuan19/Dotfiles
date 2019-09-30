@@ -46,11 +46,12 @@ alias cat="bat " # this one is way better
 alias ls="lsd"
 alias l="lsd -al"
 alias zsh="exec zsh"
-alias open="xdg-open"
+alias open="xdg-open 2>/dev/null"
 alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias n="nvim"
+alias study="cd ~kul && ranger"
 
 #packages aliases.
 alias y="yay"
@@ -89,4 +90,5 @@ hash -d android="/run/media/Dark-Files/Android-DEV"
 hash -d da="/run/media/Dark-Files/Android-DEV/Dark-Ages"
 hash -d trees="/run/media/Dark-Files/Android-DEV/Trees"
 hash -d flutter="/run/media/Dark-Files/Flutter"
-hash -d fox="/home/blacksuan19/.mozilla/firefox/5z0wud4p.dev-edition-default-1567701945705/chrome"
+hash -d kul="/run/media/Dark-Files/Kulliyya"
+ufetch # some fancy shit in the begining
