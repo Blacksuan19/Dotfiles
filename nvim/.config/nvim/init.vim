@@ -13,6 +13,9 @@ Plug 'junegunn/goyo.vim' " zen mode
 Plug 'amix/vim-zenroom2' "more focus in zen mode
 
 """ Functionalities 
+Plug 'scrooloose/nerdcommenter'
+Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " prettier formatting
 Plug 'rhysd/vim-grammarous' " grammer checker
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocomplete
@@ -60,6 +63,8 @@ set number
 set number relativenumber
 set title
 set conceallevel=1 " set this so we womt break indentation plugin
+set splitright " more natural split direction
+set splitbelow 
 let g:indentLine_setConceal = 0 " actually fix the annoying markdown links conversion
 au BufEnter * set fo-=c fo-=r fo-=o " stop annying auto commenting on new lines
 
@@ -153,7 +158,11 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 conceallevel=0
 
 " config files
-au BufReadPost,BufNewFile *config* set filetype=dosini
+au BufReadPost,BufNewFile */polybar/* set filetype=dosini
+au BufReadPost,BufNewFile */termite/* set filetype=dosini
+
+" note files being edited with sncli are markdown files
+au BufReadPost,BufNewFile *sncli*.txt set filetype=markdown
 
 " prettier 
 let g:prettier#autoformat = 0
@@ -184,6 +193,14 @@ function! TrimWhitespace()
     call winrestview(l:save)
 endfunction
 
+" markdown files preview inside
+function! TerminalPreviewMarkdown()
+	vsp | terminal ! mdv %
+endfu
+
+autocmd FileType markdown map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>
+
+
 """ Custom Mappings
 
 " the essentials
@@ -205,7 +222,7 @@ nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 noremap <leader>e :PlugInstall<CR>
 noremap <C-q> :q<CR>
-
+inoremap jj <ESC>
 " use a different buffer for dd (finally figured this out)
 nnoremap d "_d
 vnoremap d "_d
