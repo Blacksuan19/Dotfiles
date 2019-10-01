@@ -12,7 +12,8 @@ Plug 'hzchirs/vim-material'
 Plug 'junegunn/goyo.vim' " zen mode
 Plug 'amix/vim-zenroom2' "more focus in zen mode
 
-""" Functionalities 
+""" Functionalities
+Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -65,6 +66,7 @@ set title
 set conceallevel=1 " set this so we womt break indentation plugin
 set splitright " more natural split direction
 set splitbelow 
+set tw=80 " auto wrap lines that are longer than that
 let g:indentLine_setConceal = 0 " actually fix the annoying markdown links conversion
 au BufEnter * set fo-=c fo-=r fo-=o " stop annying auto commenting on new lines
 
@@ -123,6 +125,9 @@ let g:indentLine_color_gui = '#363949'
 let g:tagbar_width = 30
 let g:tagbar_iconchars = ['', '']
 
+" vim markdown
+let g:vim_markdown_folding_disabled = 1 " disable annoying code folding
+
 " fzf-vim
 let g:FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
 let g:fzf_action = {
@@ -156,13 +161,12 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Markdown
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 conceallevel=0
+autocmd FileType markdown map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>
+au BufReadPost,BufNewFile *sncli*.txt set filetype=markdown
 
 " config files
 au BufReadPost,BufNewFile */polybar/* set filetype=dosini
 au BufReadPost,BufNewFile */termite/* set filetype=dosini
-
-" note files being edited with sncli are markdown files
-au BufReadPost,BufNewFile *sncli*.txt set filetype=markdown
 
 " prettier 
 let g:prettier#autoformat = 0
@@ -198,8 +202,6 @@ function! TerminalPreviewMarkdown()
 	vsp | terminal ! mdv %
 endfu
 
-autocmd FileType markdown map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>
-
 
 """ Custom Mappings
 
@@ -226,9 +228,7 @@ inoremap jj <ESC>
 " use a different buffer for dd (finally figured this out)
 nnoremap d "_d
 vnoremap d "_d
-
 " emulate windows copy, cut behavior
 noremap <LeftRelease> "+y<LeftRelease>
 noremap <C-c> "+y<CR>
 noremap <C-x> "+d<CR>
-
