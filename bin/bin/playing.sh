@@ -21,6 +21,12 @@ then
     else
     echo " $SONG BY $ARTIST"
     fi
+    # mute the audio if an ad is playing(too broke for premium now)
+    if [[ $ARTIST = "" ]]; then
+        $(pamixer --mute)
+    else 
+        $(pamixer --unmute)
+    fi
     
 else
     echo " Spotify is not running"
