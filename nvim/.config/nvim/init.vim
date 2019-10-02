@@ -178,6 +178,9 @@ autocmd BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) | St
 " images
 autocmd BufNewFile,BufRead *.png, *.jpg, *.jpeg, *.gif :!feh % &
 
+" auto html tags closing, enable for markdown files as well
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.md'
+
 """ Custom Functions
 
 " start nerd tree and startify if there is no args()
