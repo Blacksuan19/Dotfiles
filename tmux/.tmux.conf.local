@@ -166,3 +166,4 @@ set -g mouse on
 unbind C-b
 set -g prefix C-z
 bind C-z send-prefix
+bind-key -T prefix q kill-pane
