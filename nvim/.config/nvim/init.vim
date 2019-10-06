@@ -66,6 +66,7 @@ Plug 'tpope/vim-sensible'                               " sensible defaults
 Plug 'lambdalisue/suda.vim'                             " save as sudo
 Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
+Plug 'dense-analysis/ale'                               " powerful linter
 
 call plug#end()
 
@@ -98,6 +99,7 @@ set undofile                                            " enable persistent undo
 set undodir=~/.nvim/tmp                                 " undo temp file directory
 set ttyfast                                             " faster scrolling
 set lazyredraw                                          " faster scrolling
+set spell                                               " enable spell check by default
 
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE
@@ -144,7 +146,7 @@ let g:airline_section_z = airline#section#create(['%3p%%  ',
 let g:airline_section_warning = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'        " show only file name on tabs
-
+let g:airline#extensions#ale#enabled = 1                " ALE integration
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<C-Space>"
@@ -215,7 +217,7 @@ let g:auto_save_no_updatetime = 1                       " do not change the 'upd
 let g:auto_save_in_insert_mode = 0                      " do not save while in insert mode
 
 " auto format on save
-" au BufWrite * :Autoformat
+au BufWrite * :Autoformat
 
 " disable defualt plugins that are not being used
 let g:loaded_tarPlugin = 1
