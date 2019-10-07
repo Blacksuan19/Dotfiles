@@ -4,7 +4,6 @@
 call plug#begin()
 
 " ================= looks and GUI stuff ================== "
-
 Plug 'vim-airline/vim-airline'                          " airline status bar
 Plug 'vim-airline/vim-airline-themes'                   " airline themes
 Plug 'ryanoasis/vim-devicons'                           " powerline like icons for NERDTree
@@ -15,22 +14,9 @@ Plug 'amix/vim-zenroom2'                                " more focus in zen mode
 
 " ================= Functionalities ================= "
 
-" autocompletion using ncm2 (much lighter and faster than coc)
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'filipekiss/ncm2-look.vim'
-Plug 'fgrsnau/ncm-otherbuf'
-Plug 'fgrsnau/ncm2-aspell'
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'ncm2/ncm2-pyclang'
-Plug 'davidhalter/jedi-vim'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'ncm2/ncm2-html-subscope'
-Plug 'ncm2/ncm2-markdown-subscope'
+" auto completion, lang servers and stuff
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'dense-analysis/ale'                               " powerful linter
 
 " markdown
 Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
@@ -66,7 +52,7 @@ Plug 'tpope/vim-sensible'                               " sensible defaults
 Plug 'lambdalisue/suda.vim'                             " save as sudo
 Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
-Plug 'dense-analysis/ale'                               " powerful linter
+
 
 call plug#end()
 
@@ -97,8 +83,6 @@ let g:indentLine_setConceal = 0                         " actually fix the annoy
 au BufEnter * set fo-=c fo-=r fo-=o                     " stop annying auto commenting on new lines
 set undofile                                            " enable persistent undo
 set undodir=~/.nvim/tmp                                 " undo temp file directory
-set ttyfast                                             " faster scrolling
-set lazyredraw                                          " faster scrolling
 set spell                                               " enable spell check by default
 
 " Transparent Background (For i3 and compton)
@@ -153,31 +137,19 @@ let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
-" ncm2
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-set shortmess+=c
-inoremap <c-c> <ESC>
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" coc
+" use tab for completino trigger
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" wrap existing omnifunc
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-" css
-call ncm2#register_source({'name' : 'css',
-            \ 'priority': 9,
-            \ 'subscope_enable': 1,
-            \ 'scope': ['css', 'scss', 'less'],
-            \ 'mark': 'css',
-            \ 'word_pattern': '[\w\-]+',
-            \ 'complete_pattern': ':\s*',
-            \ 'on_complete': ['ncm2#on_complete#omni',
-            \               'csscomplete#CompleteCSS'],
-            \ })
-
-let g:ncm2_look_enabled = 1                             " word dictionary completion
-inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " indentLine
 let g:indentLine_char = '▏'
