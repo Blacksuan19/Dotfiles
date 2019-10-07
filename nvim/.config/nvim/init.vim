@@ -57,7 +57,7 @@ Plug 'google/vim-searchindex'                           " add number of found ma
 " languages
 Plug 'sheerun/vim-polyglot'                             " many languages support
 Plug 'tpope/vim-liquid'                                 " liquid language support
-
+Plug 'harenome/vim-mipssyntax'
 " other
 Plug 'Chiel92/vim-autoformat'                           " an actually good and light auto formatter
 Plug 'tpope/vim-commentary'                             " better commenting
@@ -217,7 +217,7 @@ let g:auto_save_no_updatetime = 1                       " do not change the 'upd
 let g:auto_save_in_insert_mode = 0                      " do not save while in insert mode
 
 " auto format on save
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
 
 " disable defualt plugins that are not being used
 let g:loaded_tarPlugin = 1
@@ -255,6 +255,8 @@ autocmd BufNewFile,BufRead *.png, *.jpg, *.jpeg, *.gif :!feh % &
 " auto html tags closing, enable for markdown files as well
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.md'
 
+" mips assembly files
+autocmd BufReadPost,BufNewFile *.S set filetype=mips
 " ================== Custom Functions ===================== "
 
 " start nerd tree and startify if there is no args()
