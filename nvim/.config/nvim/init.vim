@@ -7,16 +7,18 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'                          " airline status bar
 Plug 'vim-airline/vim-airline-themes'                   " airline themes
 Plug 'ryanoasis/vim-devicons'                           " powerline like icons for NERDTree
-Plug 'junegunn/rainbow_parentheses.vim'                 " rainbow paranthesis
+Plug 'luochen1990/rainbow'                 " rainbow paranthesis
 Plug 'hzchirs/vim-material'                             " material color themes
 Plug 'junegunn/goyo.vim'                                " zen mode
-Plug 'amix/vim-zenroom2'                                " more focus in zen mode
 
 " ================= Functionalities ================= "
 
 " auto completion, lang servers and stuff
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'dense-analysis/ale'                               " powerful linter
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'less', 'scss', 'json',  'markdown',  'yaml', 'html'] }
 
 " markdown
 Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
@@ -34,7 +36,7 @@ Plug 'SirVer/ultisnips'                                 " snippets and shit
 " visual
 Plug 'majutsushi/tagbar'                                " side bar of tags
 Plug 'scrooloose/nerdtree'                              " open folder tree
-Plug 'jiangmiao/auto-pairs'                             " auto insert other paranthesis pairb
+Plug 'jiangmiao/auto-pairs'                             " auto insert other paranthesis pairs
 Plug 'alvan/vim-closetag'                               " auto close html tags
 Plug 'Yggdroot/indentLine'                              " show indentation lines
 Plug 'chrisbra/Colorizer'                               " show actual colors of color codes
@@ -44,8 +46,8 @@ Plug 'google/vim-searchindex'                           " add number of found ma
 Plug 'sheerun/vim-polyglot'                             " many languages support
 Plug 'tpope/vim-liquid'                                 " liquid language support
 Plug 'harenome/vim-mipssyntax'
+
 " other
-Plug 'Chiel92/vim-autoformat'                           " an actually good and light auto formatter
 Plug 'tpope/vim-commentary'                             " better commenting
 Plug 'rhysd/vim-grammarous'                             " grammer checker
 Plug 'tpope/vim-sensible'                               " sensible defaults
@@ -72,7 +74,6 @@ set fillchars+=vert:\▏                                  " requires a patched n
 set wrap breakindent                                    " wrap long lines to the width sset by tw
 set encoding=utf-8                                      " text encoding
 set number                                              " enable numbers on the left
-set number relativenumber                               " relative numbering to current line (current like is 0 )
 set title                                               " tab title as file file
 set conceallevel=2                                      " set this so we womt break indentation plugin
 set splitright                                          " open vertical split to the right
@@ -83,7 +84,6 @@ let g:indentLine_setConceal = 0                         " actually fix the annoy
 au BufEnter * set fo-=c fo-=r fo-=o                     " stop annying auto commenting on new lines
 set undofile                                            " enable persistent undo
 set undodir=~/.nvim/tmp                                 " undo temp file directory
-set spell                                               " enable spell check by default
 
 " Transparent Background (For i3 and compton)
 highlight Normal guibg=NONE ctermbg=NONE
@@ -150,6 +150,16 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" ALE
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'c' : ['clang-format'],
+\   'cpp' : ['clang-format'],
+\   'mips' : ['gcc'],
+\}
+let g:ale_fix_on_save = 1
 
 " indentLine
 let g:indentLine_char = '▏'
@@ -201,6 +211,9 @@ let g:loaded_gzip = 1
 let g:loaded_logipat = 1
 let g:loaded_2html_plugin = 1
 
+" rainbow brackets
+let g:rainbow_active = 1
+
 " ======================== Filetype-Specific Configurations ============================= "
 
 
@@ -211,6 +224,7 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Markdown
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType markdown set spell
 autocmd FileType markdown map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>
 au BufReadPost,BufNewFile *sncli*.txt set filetype=markdown " notes by sncli (simplenote cli client)
 
@@ -323,3 +337,7 @@ nnoremap <C-l> <C-w>l
 " select text via ctrl+shift+arrows in insert mode
 inoremap <C-S-left> <esc>vb
 inoremap <C-S-right> <esc>ve
+
+" new line in normal mode and back
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
