@@ -156,7 +156,3 @@ super + v
 # spotify Stuff
 super + s
     spotify --disable-gpu
-
-# 
-super + n
-    notable
