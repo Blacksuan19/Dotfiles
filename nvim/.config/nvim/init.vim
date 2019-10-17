@@ -288,13 +288,21 @@ endfunction
 
 nnoremap <F5> :call Rotate()<CR>
 
+function! Notes()
+    tabnew
+    NERDTree /home/blacksuan19/Dropbox/Notes
+endfunction
+
+nnoremap <F10> :call Notes()<CR>
+
 " ======================== Custom Mappings ====================== "
 
 " the essentials
 let mapleader=","
 nmap \ <leader>q
-map <F3> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle <CR>
 map <F4> :Tagbar <CR>
+map <F6> :Startify <CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
 nmap <leader>q :bd<CR>
