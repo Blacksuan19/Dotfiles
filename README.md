@@ -27,14 +27,14 @@
 ## **Installation:**
 
 - git clone https://github.com/Blacksuan19/Dotfiles
-- use the configs you want  
+- use the configs you want
   Some scripts are available on a separate repo [here](http://github.com/blacksuan19/Scripts)
 
 ## **Screenshot:**
 
-> visualizer: glava  
-> clock: tty-clock  
-> system info: archLabs script (al-info)  
+> visualizer: glava
+> clock: tty-clock
+> system info: archLabs script (al-info)
 > IDE: vscode (Theme: Material Ocean, font: DankMono)
 
 ![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/2019-07-19_02-20.png)
