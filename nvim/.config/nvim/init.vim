@@ -54,6 +54,7 @@ Plug 'tpope/vim-sensible'                               " sensible defaults
 Plug 'lambdalisue/suda.vim'                             " save as sudo
 Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
+Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
 
 
 call plug#end()
