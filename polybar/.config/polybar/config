@@ -1,14 +1,14 @@
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;
-;;	    ____        __      __              
+;;	    ____        __      __
 ;;	   / __ \____  / /_  __/ /_  ____ ______
 ;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
-;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
-;;	/_/    \____/_/\__, /_.___/\__,_/_/     
-;;	              /____/                    
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /
+;;	/_/    \____/_/\__, /_.___/\__,_/_/
+;;	              /____/
 ;;
 ;; Created By Aditya Shakya @adi1090x
-;; 
+;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ;;;;;;;;;;;;;
@@ -18,7 +18,7 @@
 
 [color]
 
-; Active Shade 
+; Active Shade
 shade1 = #0f111a
 shade2 = #161926
 shade3 = #1d2133
@@ -110,8 +110,8 @@ font-0 = "scientifica:size=10:antialias=true;1"
 font-1 = "Siji:size=10;2"
 font-2 = "Ubuntu Mono Nerd Font:size=10:antialias=false;2"
 
-modules-left = workspaces title 
-modules-center = 
+modules-left = workspaces title
+modules-center =
 modules-right =  playing lang alsa battery backlight network date
 
 spacing = 0
@@ -318,19 +318,19 @@ format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
-;;;;;;;;;;;;;;;;	
-;;  Playing  ;;	
-;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;
+;;  Playing  ;;
+;;;;;;;;;;;;;;;;
 
-[module/playing]	
-type = custom/script	
-exec = ~/bin/playing.sh	
-format-prefix = " "	
-interval = 0.1	
-label-font = 0	
-click-left = sp play	
-format-background = ${color.bground}	
-format-foreground = ${color.modulefg}	
+[module/playing]
+type = custom/script
+exec = ~/bin/playing.sh
+format-prefix = " "
+interval = 0.1
+label-font = 0
+click-left = playerctl -p spotifyd play-pause
+format-background = ${color.bground}
+format-foreground = ${color.modulefg}
 format-padding           = 1
 
 ;;;;;;;;;;;;;;;;;;;;
