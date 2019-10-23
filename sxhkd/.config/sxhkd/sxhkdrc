@@ -23,7 +23,7 @@ super + shift + r
 
 # quit bspwm normally
 super + x
-    rofi_run -l	
+    rofi_run -l
 
 # close and kill
 super + {_,shift + }q
@@ -106,7 +106,7 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
     bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-    
+
 #
 # move/resize
 #
@@ -135,11 +135,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     light -U 10
 XF86AudioNext
-    sp next
+    playerctl -p spotifyd next
 XF86AudioPrev
-    sp prev
+    playerctl -p spotifyd prev
 XF86AudioPlay
-    sp play
+    playerctl -p spotifyd play-pause
 
 # flameshot full screen
 Print
