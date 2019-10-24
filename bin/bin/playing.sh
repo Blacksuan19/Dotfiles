@@ -4,6 +4,12 @@ if pgrep -x "spotifyd" > /dev/null
 then
     STATUS=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotifyd /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus'|egrep -A 1 "string"|cut -b 26-|cut -d '"' -f 1)
 
+    if [[ $STATUS =~ "Error" ]]; then
+        echo " spotifyd is dead, retarting"
+        spd=$(pidof spotifyd)
+        kill $spd
+    fi
+
     ARTIST=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotifyd /org/mpris/MediaPlayer2 \
             org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' \
             string:'Metadata' |\
