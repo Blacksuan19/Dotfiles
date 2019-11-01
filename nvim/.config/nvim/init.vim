@@ -1,4 +1,5 @@
 
+
 " ============= Vim-Plug ============== "
 
 call plug#begin()
@@ -244,6 +245,11 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.md'
 
 " mips assembly files
 autocmd BufReadPost,BufNewFile *.S set filetype=mips
+
+" disable autosave on kernel directory and also formatting on save (we dont wanna fuck this up)
+autocmd BufRead,BufNewFile */Dark-Ages/* let b:auto_save = 0
+autocmd BufRead,BufNewFile */Dark-Ages/* let b:ale_fix_on_save = 0
+
 " ================== Custom Functions ===================== "
 
 " start nerd tree and startify if there is no args()
