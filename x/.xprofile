@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# ~/.xprofile
+
+# sourced at boot by ~/.xinitrc and display managers like lightdm
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+[ -d /sbin ] && PATH="$PATH:/sbin"
+[ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+
+# restore the background
+nitrogen --restore &
+
+# keyring and polkit daemons
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+gnome-keyring-daemon --start --components=pkcs11 &
+
+# super alone simulates Alt-F1
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# dpms: timeout sleep off
+xset dpms 600 900 1200
+
+# keyboard repeat rate
+xset r rate 350 60
