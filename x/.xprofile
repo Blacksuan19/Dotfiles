@@ -23,3 +23,8 @@ xset dpms 600 900 1200
 
 # keyboard repeat rate
 xset r rate 350 60
+
+ # autologin on tty1
+if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
+exec startx
+fi
