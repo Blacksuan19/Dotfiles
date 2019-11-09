@@ -56,7 +56,3 @@ bspc config pointer_action3 resize_corner
 # some window rules
 bspc rule -a Spotify desktop='^8' follow=on focus=on
 bspc rule -a feh state=floating follow=on
-
-# this key is stuck so disable it system wide (or at least on GTK apps, fuck
-# electron apps btw)
-xmodmap -e 'keycode 117='
