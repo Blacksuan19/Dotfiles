@@ -40,7 +40,7 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'command-not-found' \
   'tmux' \
-  'prompt' 
+  'prompt'
 
 #
 # Autosuggestions
