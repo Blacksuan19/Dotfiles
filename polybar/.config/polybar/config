@@ -116,7 +116,7 @@ font-4 = Roboto Mono:antialias=true:size=8;1
 
 modules-left = workspaces title
 modules-center =
-modules-right =  playing lang alsa battery backlight network date
+modules-right =  playing lang pulseaudio battery network backlight date
 
 spacing = 0
 dim-value = 1.0
@@ -177,8 +177,8 @@ label-empty-padding = 1
 ;;  Sound  ;;
 ;;;;;;;;;;;;;
 
-[module/alsa]
-type = internal/alsa
+[module/pulseaudio]
+type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-background = ${color.bground}
