@@ -143,11 +143,11 @@ XF86AudioPlay
 
 # flameshot full screen
 Print
-    flameshot full -p /run/media/Dark-Files/Screenshots
+    flameshot full -p /media/Dark-Files/Screenshots
 
 # flameshot gui
 Print + shift
-    flameshot gui -p /run/media/Dark-Files/Screenshots
+    flameshot gui -p /media/Dark-Files/Screenshots
 
 #rofi green cipboard
 super + v
