@@ -56,6 +56,7 @@ Plug 'lambdalisue/suda.vim'                             " save as sudo
 Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
 Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
+Plug 'tpope/vim-fugitive'                               " git support
 
 
 call plug#end()
@@ -92,7 +93,7 @@ highlight Normal guibg=NONE ctermbg=NONE
 highlight LineNr guibg=NONE ctermbg=NONE
 
 " Python3 VirtualEnv
-let g:python3_host_prog = expand('/usr/bin/python')
+let g:python3_host_prog = expand('/usr/bin/python3')
 
 " Coloring
 let g:material_style='oceanic'
@@ -228,7 +229,6 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType markdown set spell
 autocmd FileType markdown map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>
-au BufReadPost,BufNewFile *sncli*.txt set filetype=markdown " notes by sncli (simplenote cli client)
 
 " config files
 au BufReadPost,BufNewFile */polybar/* set filetype=dosini
@@ -297,7 +297,7 @@ nnoremap <F5> :call Rotate()<CR>
 
 function! Notes()
     tabnew
-    NERDTree /home/blacksuan19/Dropbox/Notes
+    NERDTree /media/Dark-Files/Random/Notes
 endfunction
 
 nnoremap <F10> :call Notes()<CR>
