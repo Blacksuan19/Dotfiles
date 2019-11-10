@@ -12,6 +12,9 @@ nitrogen --restore &
 # xfce settings
 xfsettingsd &
 
+# unclutter (hides mouse while typing)
+unclutter -idle 2 &
+
 # compton
 compton -C -b
 
