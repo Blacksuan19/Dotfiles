@@ -37,6 +37,7 @@ alias study="cd ~kul && ranger"
 alias install="sudo xbps-install "
 alias remove="sudo xbps-remove"
 alias pinfo="xbps-query " # get info of an installed package.
+alias update="sudo xbps-install -Su"
 
 #spotify aliases.
 alias spn="sp next"
