@@ -1,5 +1,4 @@
 
-
 " ============= Vim-Plug ============== "
 
 call plug#begin()
@@ -57,6 +56,7 @@ Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
 Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
 Plug 'tpope/vim-fugitive'                               " git support
+Plug 'tpope/vim-surround'                                     " surround stuff with stuff
 
 
 call plug#end()
