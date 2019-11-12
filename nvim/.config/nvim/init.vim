@@ -15,7 +15,7 @@ Plug 'junegunn/goyo.vim'                                " zen mode
 
 " auto completion, lang servers and stuff
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'dense-analysis/ale'                               " powerful linter
+Plug 'desmap/ale-sensible' | Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'less', 'scss', 'json',  'markdown',  'yaml', 'html'] }
@@ -56,8 +56,8 @@ Plug '907th/vim-auto-save'                              " auto save changes
 Plug 'mhinz/vim-startify'                               " cool start up screen
 Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
 Plug 'tpope/vim-fugitive'                               " git support
-Plug 'tpope/vim-surround'                                     " surround stuff with stuff
-
+Plug 'tpope/vim-surround'                               " surround stuff with stuff
+Plug 'ctrlpvim/ctrlp.vim'                               " a faster file manager
 
 call plug#end()
 
@@ -71,7 +71,7 @@ set clipboard+=unnamedplus                              " use system clipboard b
 
 filetype plugin indent on                               " enable indentations
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent              " tab key actions
-set incsearch ignorecase smartcase hlsearch             " highlight text while seaching
+set incsearch ignorecase smartcase hlsearch             " highlight text while searching
 set list listchars=trail:»,tab:»-                       " use tab to navigate in list mode
 set fillchars+=vert:\▏                                  " requires a patched nerd font (try furaCode)
 set wrap breakindent                                    " wrap long lines to the width sset by tw
@@ -105,6 +105,15 @@ highlight Comment gui=bold
 highlight Normal gui=none
 highlight NonText guibg=none
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
+
+" performance tweaks
+
+set nocursorline
+set nocursorcolumn
+set scrolljump=5
+set lazyredraw
+set synmaxcol=180
+set re=1
 
 " ======================== Plugin Configurations ======================== "
 
@@ -141,20 +150,21 @@ let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
 " coc
-" use tab for completino trigger
+" use tab for completion trigger
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" ALE
+let g:coc_snippet_next = '<tab>'
 
+" ALE
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
@@ -200,9 +210,7 @@ let g:startify_session_persistence = 1
 let g:auto_save = 1                                     " enable AutoSave on Vim startup
 let g:auto_save_no_updatetime = 1                       " do not change the 'updatetime' option
 let g:auto_save_in_insert_mode = 0                      " do not save while in insert mode
-
-" auto format on save
-" au BufWrite * :Autoformat
+let g:auto_save_silent = 1
 
 " disable defualt plugins that are not being used
 let g:loaded_tarPlugin = 1
@@ -216,6 +224,9 @@ let g:loaded_2html_plugin = 1
 
 " rainbow brackets
 let g:rainbow_active = 1
+
+" ctrlP
+let g:ctrlp_show_hidden = 1
 
 " ======================== Filetype-Specific Configurations ============================= "
 
@@ -306,6 +317,7 @@ nnoremap <F10> :call Notes()<CR>
 
 " the essentials
 let mapleader=","
+nnoremap ; :
 nmap \ <leader>q
 map <F3> :NERDTreeToggle <CR>
 map <F4> :Tagbar <CR>
@@ -345,7 +357,7 @@ inoremap <C-j> <C-\><C-N><C-w>j
 inoremap <C-k> <C-\><C-N><C-w>k
 inoremap <C-l> <C-\><C-N><C-w>l
 nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
+noremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
