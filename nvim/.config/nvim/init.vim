@@ -58,6 +58,7 @@ Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
 Plug 'tpope/vim-fugitive'                               " git support
 Plug 'tpope/vim-surround'                               " surround stuff with stuff
 Plug 'ctrlpvim/ctrlp.vim'                               " a faster file manager
+Plug 'psliwka/vim-smoothie'                             " some very smooth ass scrolling
 
 call plug#end()
 
