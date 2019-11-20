@@ -32,6 +32,7 @@ alias gpp="g++" # typing two plus signs is stupid.
 alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias n="nvim"
 alias study="cd ~kul && ranger"
+alias mars="java -jar /home/blacksuan19/Downloads/Mars4_5.jar"
 
 #packages aliases.
 alias install="sudo xbps-install "
