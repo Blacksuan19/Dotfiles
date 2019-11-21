@@ -1,0 +1,10 @@
+*.git
+.DS_Store
+.hg
+.svn
+*.vscode
+node_modules
+*.kate-swp
+*.swp
+*.swo
+*~
