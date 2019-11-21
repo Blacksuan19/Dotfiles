@@ -11,6 +11,7 @@
 - [Oh-my-tmux](https://github.com/gpakosz/.tmux)
 
 - #### Fonts:
+  > - Fura Code
   > - [Powerline Fonts](https://github.com/powerline/fonts)
   > - [weather icons](https://github.com/erikflowers/weather-icons)
   > - [DankMono](https://dank.sh/)
@@ -28,7 +29,13 @@
 
 ## **Screenshot:**
 
-> visualizer: glava
+> Colors: [material ocean](https://github.com/material-ocean)
+
+
+> Visualizer: cava
+
+
+> Bar: polybar
 
 
 > clock: tty-clock
@@ -37,7 +44,7 @@
 > system info: ufetch
 
 
-> IDE: neovim (Theme: Material Ocean, font:FuraCode)
+> IDE: neovim (Font: FuraCode)
 
 
 ![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/screenshot.png)
