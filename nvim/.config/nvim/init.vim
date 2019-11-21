@@ -369,3 +369,6 @@ inoremap <C-S-right> <esc>ve
 " new line in normal mode and back
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
+
+" carbon sh now
+vnoremap <F8> :CarbonNowSh<CR>
