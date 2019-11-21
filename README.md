@@ -1,19 +1,14 @@
 # Dotfiles
 
-**personal configuration for various packages**
+[Material Oceanized](https://github.com/material-ocean) configuration for various packages
 
 ## **Requirements:**
 
 - \*NIX system
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 - [Oh-my-tmux](https://github.com/gpakosz/.tmux)
-- [Neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation)
-- [sxhkd](https://github.com/baskerville/sxhkd)
-- [rofi](https://github.com/DaveDavenport/rofi)
-- [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
 
 - #### Fonts:
   > - [Powerline Fonts](https://github.com/powerline/fonts)
@@ -34,8 +29,15 @@
 ## **Screenshot:**
 
 > visualizer: glava
-> clock: tty-clock
-> system info: archLabs script (al-info)
-> IDE: vscode (Theme: Material Ocean, font: DankMono)
 
-![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/2019-07-19_02-20.png)
+
+> clock: tty-clock
+
+
+> system info: ufetch
+
+
+> IDE: neovim (Theme: Material Ocean, font:FuraCode)
+
+
+![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/screenshot.png)
