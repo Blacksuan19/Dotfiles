@@ -19,17 +19,24 @@ sudo-command-line() {
 zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 export EDITOR=nvim
+
+#determines search program for fzf
+if type ag &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+fi
+#refer rg over ag
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
 # various aliases.
 alias free="free -h"
 alias fdisk="sudo fdisk -l"
-alias cleanj="sudo journalctl --vacuum-time=5d"
 alias cpr="rsync --progress --size-only --inplace --verbose "
 alias cat="bat " # this one is way better
 alias zsh="exec zsh"
 alias open="xdg-open 2>/dev/null"
 alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
-alias 3.18="git cherry-pick 3.18/kernel.lnx.3.18.r33-rel "
 alias n="nvim"
 alias study="cd ~kul && ranger"
 alias mars="java -jar /home/blacksuan19/Downloads/Mars4_5.jar"
