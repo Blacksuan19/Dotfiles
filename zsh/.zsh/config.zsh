@@ -22,7 +22,7 @@ export EDITOR=nvim
 
 #determines search program for fzf
 if type ag &> /dev/null; then
-    export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.gitignore -g ""'
+    export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.fignore -g ""'
 fi
 # various aliases.
 alias free="free -h"
