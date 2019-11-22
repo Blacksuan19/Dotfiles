@@ -135,11 +135,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     light -U 10
 XF86AudioNext
-    sp next
+    playerctl next
 XF86AudioPrev
-    sp prev
+    playerctl previous
 XF86AudioPlay
-    sp play
+    playerctl play-pause
 
 # flameshot full screen
 Print
