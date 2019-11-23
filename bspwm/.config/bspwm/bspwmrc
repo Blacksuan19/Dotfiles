@@ -30,10 +30,11 @@ redshift -t 6500:4600 -l 3.2476811:101.74012689999999 &
 # rofi greenclipboard daemon
 greenclip daemon &
 
+# start dropbox sync
+dropbox start &
+
 # Set some bsp specific stuff
 bspc monitor -d 一 二 三 四 五 六 七 八
-# start dropbox sync
-dropbox &
 
 # bspwm settings
 bspc config border_width 0
