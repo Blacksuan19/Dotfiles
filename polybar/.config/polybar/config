@@ -319,7 +319,7 @@ format-padding           = 1
 
 [module/playing]
 type = custom/script
-exec = ~/bin/playing.sh
+exec = playing.sh
 format-prefix = " "
 interval = 0.1
 label-font = 0
