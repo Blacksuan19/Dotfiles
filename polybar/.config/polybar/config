@@ -30,10 +30,10 @@ shade8 = #90CAF9
 
 ;; Active Colors
 bground = #0f111a
-fground = #f7f7f7
+fground = #ffffff
 accent = #31323a
-modulefg = #f7f7f7
-modulefg-alt = #f7f7f7
+modulefg = #ffffff
+modulefg-alt = #ffffff
 
 ;; Other
 trans = #00000000
@@ -95,9 +95,9 @@ bottom = false
 fixed-center = true
 radius = 5
 width = 1360
-height = 22
+height = 26
 offset-x = 3
-offset-y = 3
+offset-y = 0
 cursor-click = pointer
 
 background = ${color.bground}
@@ -106,17 +106,13 @@ foreground = ${color.fground}
 overline-size = 2
 overline-color = ${color.accent}
 
-font-0 = MotoyaLMaru:antialias=true:size=8:1
-font-1 = "Siji:size=8;1"
-font-2 = FontAwesome:antialias=true:size=8;1
-font-3 = "scientifica:size=9:antialias=true;1"
-font-4 = Roboto Mono:antialias=true:size=8;1
-
-
+font-1 = "MotoyaLMaru:antialias=true:size=7.5:1"
+font-0 = "Siji:antialias=true:size=7.8;1"
+font-2 = "FontAwesome:antialias=true:size=8.5;1"
 
 modules-left = workspaces title
 modules-center =
-modules-right =  playing lang pulseaudio battery network backlight date
+modules-right =  playing lang pulseaudio battery backlight network date
 
 spacing = 0
 dim-value = 1.0
@@ -146,7 +142,7 @@ format-padding = 1
 
 label = " %title%"
 label-maxlen = 50
-label-empty = "  Arch Linux"
+label-empty = "  Void"
 
 ;;;;;;;;;;;;;;;;
 ;; Workspaces ;;
