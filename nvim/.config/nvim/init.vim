@@ -7,14 +7,14 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'                          " airline status bar
 Plug 'vim-airline/vim-airline-themes'                   " airline themes
 Plug 'ryanoasis/vim-devicons'                           " powerline like icons for NERDTree
-Plug 'luochen1990/rainbow'                 " rainbow paranthesis
+Plug 'luochen1990/rainbow'                              " rainbow paranthesis
 Plug 'hzchirs/vim-material'                             " material color themes
 Plug 'junegunn/goyo.vim'                                " zen mode
 
 " ================= Functionalities ================= "
 
 " auto completion, lang servers and stuff
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'desmap/ale-sensible' | Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -31,7 +31,6 @@ Plug 'junegunn/fzf.vim'                                " fuzzy search integratio
 
 " snippets
 Plug 'honza/vim-snippets'                               " actual snippets
-Plug 'SirVer/ultisnips'                                 " snippets and shit
 
 " visual
 Plug 'majutsushi/tagbar'                                " side bar of tags
