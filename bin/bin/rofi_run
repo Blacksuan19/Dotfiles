@@ -93,9 +93,9 @@ for arg in "$@"; do
 
             case "$ANS" in
                 *Lock) betterlockscreen -l dim ;;
-                *Suspend) sudo zzz;;
-                *Reboot) sudo shutdown -r now;;
-                *Shutdown) sudo shutdown -P now ;;
+                *Suspend) systemctl suspend;;
+                *Reboot) reboot;;
+                *Shutdown) shutdown ;;
                 *Logout) session-logout || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
             esac
             ;;
