@@ -235,7 +235,7 @@ label-full-foreground = ${color.modulefg}
 label-full-padding = 1
 
 
-format-full-prefix = " "
+format-full-prefix = 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
