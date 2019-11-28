@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-wconnected=""
-econnected=""
+wconnected=""
+econnected=""
 connected="$(nmcli | grep -w 'connected\|available' | awk '{print $2}')"
-wifi_id=$(nmcli | grep "wlp4s0f0" | awk '{print $4}')
+wifi_id=$(nmcli | grep "wlan0" | awk '{print $4}')
 ether_id=$(nmcli | grep "enp5s0" | awk '{print $4}')
 if [[ $connected = *"connected"* ]]
     then
@@ -16,4 +16,3 @@ if [[ $connected = *"connected"* ]]
 else
     echo "Not Connected"
 fi
-
