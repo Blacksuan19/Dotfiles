@@ -20,6 +20,11 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 export EDITOR=nvim
 
+# tmux config
+# hide the annoying right shit
+tmux set -g status-right "#(echo \\\\(test\\\\))"
+tmux set -g status-bg \#0f111a
+
 #determines search program for fzf
 if type ag &> /dev/null; then
     export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.fignore -g ""'
@@ -38,10 +43,10 @@ alias study="cd ~kul && ranger"
 alias mars="java -jar /home/blacksuan19/Downloads/Mars4_5.jar"
 
 #packages aliases.
-alias install="sudo xbps-install "
-alias remove="sudo xbps-remove -R "
-alias pinfo="xbps-query " # get info of an installed package.
-alias update="sudo xbps-install -Su"
+alias install="baph -i "
+alias remove="sudo pacman -Rdd "
+alias update="baph -u"
+alias orphan="pacman -Rns $(pacman -Qtdq)"
 
 #spotify aliases.
 alias spn="sp next"
