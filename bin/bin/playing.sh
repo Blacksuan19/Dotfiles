@@ -19,10 +19,10 @@ then
         awk -F '"' '/title/ {print $2}' | sed -e 's/([^()]*)//g' | cut -c 1-20 )
 
     if [ $STATUS = "Playing" ]; then
-    echo " $SONG - $ARTIST"
+    echo "  $SONG - $ARTIST"
     else
-    echo " $SONG - $ARTIST"
+    echo "  $SONG - $ARTIST"
     fi
     else
-        echo " No player is running"
+        echo "  No player is running"
     fi
