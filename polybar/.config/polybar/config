@@ -17,17 +17,6 @@
 
 
 [color]
-
-; Active Shade
-shade1 = #0f111a
-shade2 = #161926
-shade3 = #1d2133
-shade4 = #25293f
-shade5 = #2c324c
-shade6 = #333a58
-shade7 = #3a4265
-shade8 = #90CAF9
-
 ;; Active Colors
 bground = #0f111a
 fground = #ffffff
@@ -106,9 +95,8 @@ foreground = ${color.fground}
 overline-size = 2
 overline-color = ${color.accent}
 
-font-1 = "MotoyaLMaru:antialias=true:size=7.5:1"
-font-0 = "Siji:antialias=true:size=7.8;1"
-font-2 = "FontAwesome:antialias=true:size=8.5;1"
+font-0 = "MotoyaLMaru:antialias=true:size=7.5:1"
+font-1 = "Material Icons:size=9;1"
 
 modules-left = workspaces title
 modules-center =
@@ -156,8 +144,8 @@ enable-click = true
 enable-scroll = true
 
 format = <label-state>
-format-background = ${color.shade1}
-format-foreground = ${color.shade1}
+format-background = ${color.bground}
+format-foreground = ${color.bground}
 label-monitor = %name%
 label-focused-foreground = #ff4151
 label-occupied-foreground = ${color.blue-gray}
@@ -190,10 +178,12 @@ format-muted-foreground = ${color.modulefg}
 format-muted-padding = 1
 
 ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
 
 ;;;;;;;;;;;;;;;
 ;; Backlight ;;
@@ -206,7 +196,7 @@ interval = 0.2
 exec = ~/bin/light.sh
 scroll-up = exec light -A 5
 scroll-down = exec light -U 5
-format-prefix = " "
+format-prefix = "  "
 label = %output%
 format-background = ${color.bground}
 format-foreground = ${color.modulefg}
@@ -237,34 +227,27 @@ format-discharging-background = ${color.bground}
 format-discharging-foreground = ${color.modulefg}
 format-discharging-padding = 1
 
-label-charging = %percentage%%
+label-charging =  %percentage%%
 label-discharging = %percentage%%
 
-label-full = Fully Charged
 label-full-background = ${color.bground}
 label-full-foreground = ${color.modulefg}
 label-full-padding = 1
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-5 = 
-animation-charging-6 = 
-animation-charging-7 = 
-animation-charging-8 = 
+format-full-prefix = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+
 animation-charging-framerate = 750
 
 ;;;;;;;;;;;;;
@@ -275,8 +258,8 @@ animation-charging-framerate = 750
 type = internal/date
 interval = 1.0
 
-time =  %I:%M %p
-time-alt =  %d/%m/%Y%
+time =  %I:%M %p
+time-alt =  %d/%m/%Y%
 
 format = <label>
 format-background = ${color.bground}
@@ -291,7 +274,7 @@ label = %time%
 [module/lang]
 type = custom/script
 exec = ~/bin/lang.sh
-format-prefix = "  "
+format-prefix = "  "
 interval = 0.1
 label-font = 1
 format-background = ${color.bground}
@@ -327,64 +310,3 @@ click-left = playerctl play-pause
 format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
-
-;;;;;;;;;;;;;;;;;;;;
-;; rounded shades ;;
-;;;;;;;;;;;;;;;;;;;;
-
-[module/left1]
-type = custom/text
-content-font = 0
-content-background = ${color.bground}
-content-foreground = ${color.shade1}
-content = "%{T3}%{T-}"
-
-[module/left2]
-type = custom/text
-content-background = ${color.bground}
-content-foreground = ${color.shade2}
-content = "%{T3}%{T-}"
-
-#+++++++++++++++++++++++++++++++++++++++
-
-[module/right1]
-type = custom/text
-content-background = ${color.shade2}
-content-foreground = ${color.shade1}
-content = "%{T3}%{T-}"
-
-[module/right2]
-type = custom/text
-content-background = ${color.shade3}
-content-foreground = ${color.shade2}
-content = "%{T3}%{T-}"
-
-[module/right3]
-type = custom/text
-content-background = ${color.shade4}
-content-foreground = ${color.shade3}
-content = "%{T3}%{T-}"
-
-[module/right4]
-type = custom/text
-content-background = ${color.shade5}
-content-foreground = ${color.shade4}
-content = "%{T3}%{T-}"
-
-[module/right5]
-type = custom/text
-content-background = ${color.shade6}
-content-foreground = ${color.shade5}
-content = "%{T3}%{T-}"
-
-[module/right6]
-type = custom/text
-content-background = ${color.shade7}
-content-foreground = ${color.shade6}
-content = "%{T3}%{T-}"
-
-[module/right7]
-type = custom/text
-content-background = ${color.trans}
-content-foreground = ${color.shade7}
-content = "%{T3}%{T-}"
