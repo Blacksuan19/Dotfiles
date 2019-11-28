@@ -22,7 +22,7 @@
 
 ## **Installation:**
 
-- git clone https://github.com/Blacksuan19/Dotfiles
+- `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles`
 - stow the config you want (for example `stow zsh` will install zsh config in
     zsh folder)
   Some scripts are available on a separate repo [here](http://github.com/blacksuan19/Scripts)
