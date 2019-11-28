@@ -17,4 +17,4 @@ fi
 
 
 # launch the session, commands below this line will be ignored
-exec ck-launch-session dbus-launch --sh-syntax --exit-with-session bspwm
+exec bspwm
