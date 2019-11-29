@@ -110,13 +110,21 @@ hi Search guibg=orange
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
 
 " performance tweaks
-
 set nocursorline
 set nocursorcolumn
 set scrolljump=5
 set lazyredraw
 set synmaxcol=180
 set re=1
+
+" required by coc
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 
 " ======================== Plugin Configurations ======================== "
 
@@ -155,7 +163,7 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -164,6 +172,27 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+" list of the extensions required
+let g:coc_global_extensions = [
+            \'coc-yank',
+            \'coc-highlight',
+            \'coc-prettier',
+            \'coc-pairs',
+            \'coc-json',
+            \'coc-css',
+            \'coc-html',
+            \'coc-tsserver',
+            \'coc-yaml',
+            \'coc-lists',
+            \'coc-snippets',
+            \'coc-ultisnips',
+            \'coc-python',
+            \'coc-xml',
+            \'coc-word',
+            \'coc-syntax',
+            \'coc-emoji',
+            \'coc-git',
+            \]
 " ALE
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
