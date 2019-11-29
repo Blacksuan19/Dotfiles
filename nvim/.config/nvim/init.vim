@@ -1,6 +1,13 @@
 
 " ============= Vim-Plug ============== "
 
+" install vim plug if not installed
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+endif
+
 call plug#begin()
 
 " ================= looks and GUI stuff ================== "
@@ -380,8 +387,6 @@ nnoremap <C-l> <C-w>l
 nmap <silent> <C-c> <Plug>(coc-cursors-position)
 nmap <silent> <C-a> <Plug>(coc-cursors-word)
 xmap <silent> <C-a> <Plug>(coc-cursors-range)
-
-
 
 " new line in normal mode and back
 map <Enter> o<ESC>
