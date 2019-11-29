@@ -109,6 +109,10 @@ highlight NonText guibg=none
 hi Search guibg=orange
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
 
+" coc multi cursor highlight color
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+
+
 " performance tweaks
 set nocursorline
 set nocursorcolumn
@@ -193,6 +197,7 @@ let g:coc_global_extensions = [
             \'coc-emoji',
             \'coc-git',
             \]
+
 " ALE
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -371,9 +376,12 @@ noremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" select text via ctrl+shift+arrows in insert mode
-inoremap <C-S-left> <esc>vb
-inoremap <C-S-right> <esc>ve
+" multi cursor shortcuts
+nmap <silent> <C-c> <Plug>(coc-cursors-position)
+nmap <silent> <C-a> <Plug>(coc-cursors-word)
+xmap <silent> <C-a> <Plug>(coc-cursors-range)
+
+
 
 " new line in normal mode and back
 map <Enter> o<ESC>
