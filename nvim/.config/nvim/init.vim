@@ -4,6 +4,7 @@
 call plug#begin()
 
 " ================= looks and GUI stuff ================== "
+
 Plug 'vim-airline/vim-airline'                          " airline status bar
 Plug 'vim-airline/vim-airline-themes'                   " airline themes
 Plug 'ryanoasis/vim-devicons'                           " powerline like icons for NERDTree
@@ -21,34 +22,31 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'css', 'less', 'scss', 'json',  'markdown',  'yaml', 'html'] }
 
 " markdown
-Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
+Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }      " markdown checboxes
 Plug 'dkarter/bullets.vim'                              " markdown bullet lists
 
 " search
-Plug 'wsdjeg/FlyGrep.vim'                               " project wide search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                                " fuzzy search integration
 
 " snippets
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'                               " actual snippets
 
 " visual
-Plug 'majutsushi/tagbar'                                " side bar of tags
 Plug 'scrooloose/nerdtree'                              " open folder tree
 Plug 'jiangmiao/auto-pairs'                             " auto insert other paranthesis pairs
 Plug 'alvan/vim-closetag'                               " auto close html tags
 Plug 'Yggdroot/indentLine'                              " show indentation lines
-Plug 'chrisbra/Colorizer'                               " show actual colors of color codes
 Plug 'google/vim-searchindex'                           " add number of found matching search items
 
 " languages
 Plug 'sheerun/vim-polyglot'                             " many languages support
 Plug 'tpope/vim-liquid'                                 " liquid language support
-Plug 'harenome/vim-mipssyntax'
+Plug 'harenome/vim-mipssyntax'                          " Mips Assembly support
 
 " other
 Plug 'tpope/vim-commentary'                             " better commenting
-Plug 'rhysd/vim-grammarous'                             " grammer checker
 Plug 'tpope/vim-sensible'                               " sensible defaults
 Plug 'lambdalisue/suda.vim'                             " save as sudo
 Plug '907th/vim-auto-save'                              " auto save changes
@@ -56,10 +54,14 @@ Plug 'mhinz/vim-startify'                               " cool start up screen
 Plug 'kristijanhusak/vim-carbon-now-sh'                 " lit code screenshots
 Plug 'tpope/vim-fugitive'                               " git support
 Plug 'tpope/vim-surround'                               " surround stuff with stuff
-Plug 'ctrlpvim/ctrlp.vim'                               " a faster file manager
 Plug 'psliwka/vim-smoothie'                             " some very smooth ass scrolling
+Plug 'farmergreg/vim-lastplace'                         " open files at the last edited place
+Plug 'tpope/vim-eunuch'                                 " run common unix commands inside vim
+Plug 'romainl/vim-cool'                                 " disable hl until another search is performed
+Plug 'wellle/tmux-complete.vim'                         " complete words from a tmux panes
 
 call plug#end()
+
 
 " ==================== general config ======================== "
 
@@ -104,6 +106,7 @@ highlight Pmenu guibg=white guifg=black gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
 highlight NonText guibg=none
+hi Search guibg=orange
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
 
 " performance tweaks
@@ -144,11 +147,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'        " show only file name on tabs
 let g:airline#extensions#ale#enabled = 1                " ALE integration
 
-" Ultisnips
-let g:UltiSnipsExpandTrigger="<C-Space>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<C-x>"
-
 " coc
 " use tab for completion trigger
 inoremap <silent><expr> <TAB>
@@ -156,6 +154,8 @@ inoremap <silent><expr> <TAB>
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -177,10 +177,6 @@ let g:ale_fix_on_save = 1
 " indentLine
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = '#363949'
-
-" TagBar
-let g:tagbar_width = 30
-let g:tagbar_iconchars = ['', '']
 
 " fzf-vim
 let g:FZF_DEFAULT_COMMAND = 'rg --hidden --ignore .git -g ""'
@@ -212,21 +208,9 @@ let g:auto_save_no_updatetime = 1                       " do not change the 'upd
 let g:auto_save_in_insert_mode = 0                      " do not save while in insert mode
 let g:auto_save_silent = 1
 
-" disable defualt plugins that are not being used
-let g:loaded_tarPlugin = 1
-let g:loaded_vimballPlugin = 1
-let g:loaded_zipPlugin = 1
-let g:loaded_rrhelper = 1
-let g:loaded_netrwPlugin = 1
-let g:loaded_gzip = 1
-let g:loaded_logipat = 1
-let g:loaded_2html_plugin = 1
-
 " rainbow brackets
 let g:rainbow_active = 1
 
-" ctrlP
-let g:ctrlp_show_hidden = 1
 
 " ======================== Filetype-Specific Configurations ============================= "
 
@@ -247,9 +231,6 @@ au BufReadPost,BufNewFile */termite/* set filetype=dosini
 
 " startify when there is no buffer (file open)
 autocmd BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) | Startify | endif
-
-" images (use feh to open images)
-autocmd BufNewFile,BufRead *.png, *.jpg, *.jpeg, *.gif :!feh % &
 
 " auto html tags closing, enable for markdown files as well
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.md'
@@ -368,6 +349,9 @@ inoremap <C-S-right> <esc>ve
 " new line in normal mode and back
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
+
+" for project wide search
+map <leader>/ :Ag<CR>
 
 " carbon sh now
 vnoremap <F8> :CarbonNowSh<CR>
