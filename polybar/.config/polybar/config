@@ -288,8 +288,8 @@ format-padding           = 1
 [module/network]
 type = custom/script
 exec = check-network
-click-left = networkmanager_dmenu &
-click-right = networkmanager_dmenu &
+click-left = rofi-wifi-menu.sh
+click-right = rofi-wifi-menu.sh
 interval = 1
 tail = true
 format-background = ${color.bground}
