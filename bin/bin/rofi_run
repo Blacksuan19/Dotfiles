@@ -92,10 +92,10 @@ for arg in "$@"; do
             fi
 
             case "$ANS" in
-                *Lock) betterlockscreen -l dim ;;
+                *Lock) i3lock-fancy -p ;; # glitch
                 *Suspend) systemctl suspend;;
                 *Reboot) reboot;;
-                *Shutdown) shutdown ;;
+                *Shutdown) shutdown -P now ;;
                 *Logout) session-logout || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
             esac
             ;;
