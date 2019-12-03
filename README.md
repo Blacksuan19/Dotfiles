@@ -11,7 +11,7 @@
 - [Oh-my-tmux](https://github.com/gpakosz/.tmux)
 
 - #### Fonts:
-  > - Fura Code
+  > - Fira Code
   > - [Powerline Fonts](https://github.com/powerline/fonts)
   > - [weather icons](https://github.com/erikflowers/weather-icons)
   > - [DankMono](https://dank.sh/)
@@ -39,6 +39,6 @@
 
 > system info: ufetch
 
-> IDE: neovim (Font: FuraCode)
+> IDE: Neovim ([Config](https://github.com/Blacksuan19/init.nvim))
 
 ![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/screenshot.png)
