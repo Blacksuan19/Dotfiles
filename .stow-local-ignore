@@ -1,0 +1,7 @@
+# ignore readme and other git stuff
+
+\.git
+\.gitignore
+\.gitmodules
+^/README.*
+^/Screens
