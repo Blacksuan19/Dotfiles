@@ -141,6 +141,10 @@ XF86AudioPrev
 XF86AudioPlay
     playerctl play-pause
 
+# sleep key
+XF86Sleep
+    systemctl suspend
+
 # flameshot full screen
 Print
     flameshot full -p /media/Dark-Files/Screenshots
@@ -156,3 +160,6 @@ super + v
 # spotify Stuff
 super + s
     spotify --disable-gpu
+
+super + t
+    typora
