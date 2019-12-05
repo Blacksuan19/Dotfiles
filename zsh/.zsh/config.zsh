@@ -44,9 +44,10 @@ alias mars="java -jar /home/blacksuan19/Downloads/Mars4_5.jar"
 
 #packages aliases.
 alias install="baph -i "
-alias remove="sudo pacman -Rdd "
+alias remove="sudo pacman -Rds "
 alias update="baph -u"
 alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
+alias pinfo="sudo pacman -Qi " # get extensive info about packages
 
 #spotify aliases.
 alias spn="sp next"
