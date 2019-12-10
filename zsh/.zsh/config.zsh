@@ -1,3 +1,6 @@
+# enable vi mode
+bindkey -v
+
 #ls colors
 eval $( dircolors -b $HOME/.dircolors )
 
