@@ -259,7 +259,7 @@ type = internal/date
 interval = 1.0
 
 time =  %I:%M %p
-time-alt =  %d/%m/%Y%
+time-alt =  %a, %b %dth
 
 format = <label>
 format-background = ${color.bground}
