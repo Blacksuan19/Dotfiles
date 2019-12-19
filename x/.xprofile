@@ -5,6 +5,7 @@
 # sourced at boot by ~/.xinitrc and display managers like lightdm
 
 export XDG_CONFIG_HOME="$HOME/.config"
+export KDEWM=/usr/bin/bspwm # this is the magic word
 
 [ -d /sbin ] && PATH="$PATH:/sbin"
 [ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
@@ -19,6 +20,7 @@ xset dpms 600 900 1200
 
 # keyboard repeat rate
 xset r rate 350 60
+
 
  # autologin on tty1
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
