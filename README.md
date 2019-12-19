@@ -1,24 +1,21 @@
 # Dotfiles
 
-[Material Oceanized](https://github.com/material-ocean) configuration for various packages
+[Material Oceanized](https://github.com/material-ocean) configuration for
+running plasma with Bspwm and achieving synergy
 
 ## **Requirements:**
 
 - \*NIX system
+- KDE Plasma
+- Bspwm
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
-- [Oh-my-tmux](https://github.com/gpakosz/.tmux)
 
 - #### Fonts:
   > - Fira Code
   > - [Powerline Fonts](https://github.com/powerline/fonts)
-  > - [weather icons](https://github.com/erikflowers/weather-icons)
-  > - [DankMono](https://dank.sh/)
   > - [Font Awesome](https://fontawesome.com/)
-  > - [Ubuntu mono nerd font](https://github.com/ryanoasis/nerd-fonts)
-  > - Material Icons
-  > - monospace
 
 ## **Installation:**
 
@@ -33,12 +30,10 @@
 
 > Visualizer: cava
 
-> Bar: polybar
-
 > clock: tty-clock
 
-> system info: ufetch
+> bar: plasmashell
 
-> IDE: Neovim ([Config](https://github.com/Blacksuan19/init.nvim))
+> system info: plasma settings
 
 ![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/screenshot.png)
