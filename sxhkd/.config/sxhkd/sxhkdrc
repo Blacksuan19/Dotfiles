@@ -124,26 +124,26 @@ super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # volume control keys
-XF86AudioMute
-    pamixer -t
-XF86AudioRaiseVolume
-    pamixer -i 2
-XF86AudioLowerVolume
-    pamixer -d 2
-XF86MonBrightnessUp
-    light -A 10
-XF86MonBrightnessDown
-    light -U 10
-XF86AudioNext
-    playerctl next
-XF86AudioPrev
-    playerctl previous
-XF86AudioPlay
-    playerctl play-pause
+# XF86AudioMute
+#     pamixer -t
+# XF86AudioRaiseVolume
+#     pamixer -i 2
+# XF86AudioLowerVolume
+#     pamixer -d 2
+# XF86MonBrightnessUp
+#     light -A 10
+# XF86MonBrightnessDown
+#     light -U 10
+# XF86AudioNext
+#     playerctl next
+# XF86AudioPrev
+#     playerctl previous
+# XF86AudioPlay
+#     playerctl play-pause
 
 # sleep key
-XF86Sleep
-    systemctl suspend
+# XF86Sleep
+#     systemctl suspend
 
 # flameshot full screen
 Print
