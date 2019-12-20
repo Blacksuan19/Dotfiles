@@ -26,7 +26,9 @@ running plasma with Bspwm and achieving synergy
 
 ## **Screenshot:**
 
-> Colors: [material ocean](https://github.com/material-ocean)
+> Plasma Theme: [material ocean](https://github.com/material-ocean/plasma)
+
+> Colors: [material ocean](https://github.com/material-ocean/plasma)
 
 > Visualizer: cava
 
