@@ -1,0 +1,14 @@
+[OSD]
+Enabled=true
+
+[PlasmaToolTips]
+Delay=0.7
+
+[Theme]
+name=Aex Nomad Dark
+
+[Theme-plasmathemeexplorer]
+name=Aex Nomad Dark
+
+[Wallpapers]
+usersWallpapers=/media/Dark-Files/Wallpapers/Ocean Wall.png
