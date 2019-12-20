@@ -1,7 +1,7 @@
 # enable vi mode
 bindkey -v
 
-#ls colors
+# ls colors
 eval $( dircolors -b $HOME/.dircolors )
 
 # double press Esc to add sudo.
@@ -23,12 +23,7 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 export EDITOR=nvim
 
-# tmux config
-# hide the annoying right shit
-tmux set -g status-right "#(echo \\\\(test\\\\))"
-tmux set -g status-bg \#0f111a
-
-#determines search program for fzf
+# determines search program for fzf
 if type ag &> /dev/null; then
     export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.fignore -g ""'
 fi
@@ -42,26 +37,13 @@ alias open="xdg-open 2>/dev/null"
 alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
-alias study="cd ~kul && ranger"
-alias mars="java -jar /home/blacksuan19/Downloads/Mars4_5.jar"
 
-#packages aliases.
+# packages aliases.
 alias install="baph -i "
 alias remove="sudo pacman -Rds "
 alias update="baph -u"
 alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
 alias pinfo="sudo pacman -Qi " # get extensive info about packages
-
-#spotify aliases.
-alias spn="sp next"
-alias spv="sp prev"
-alias spp="sp play"
-alias spc="sp current"
-alias spf="sp feh"
-alias sph="sp help"
-alias spm="sp metadata"
-alias spl="sp lyrics | bat" # prettier
-alias lyc="python /bin/lyc"
 
 # git aliases.
 alias gs="git status"
@@ -82,4 +64,5 @@ hash -d da="/media/Dark-Files/Android-DEV/Dark-Ages"
 hash -d trees="/media/Dark-Files/Android-DEV/Trees"
 hash -d flutter="/media/Dark-Files/Flutter"
 hash -d kul="/media/Dark-Files/Kulliyya"
+
 ufetch # some fancy shit in the begining
