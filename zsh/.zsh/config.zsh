@@ -53,6 +53,7 @@ alias gaa="git add -A"
 alias gc="git commit --signoff"
 alias gcp="git cherry-pick"
 alias gl="git log | bat"
+alias gd="git diff"
 
 # Directory hashes.
 hash -d disk="/media/Dark-Files"
