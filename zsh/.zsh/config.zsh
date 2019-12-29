@@ -24,8 +24,8 @@ bindkey "\e\e" sudo-command-line
 export EDITOR=nvim
 
 # determines search program for fzf
-if type ag &> /dev/null; then
-    export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.fignore -g ""'
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden""'
 fi
 # various aliases.
 alias free="free -h"
@@ -34,7 +34,6 @@ alias cpr="rsync --progress --size-only --inplace --verbose "
 alias cat="bat " # this one is way better
 alias zsh="exec zsh"
 alias open="xdg-open 2>/dev/null"
-alias poly="killall polybar && polybar main </dev/null &>/dev/null &"
 alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
 
