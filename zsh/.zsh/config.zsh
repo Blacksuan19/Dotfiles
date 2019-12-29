@@ -39,11 +39,12 @@ alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
 
 # packages aliases.
-alias install="baph -i "
-alias remove="sudo pacman -Rds "
-alias update="baph -u"
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
-alias pinfo="sudo pacman -Qi " # get extensive info about packages
+alias y="yay"
+alias remove="yay -Rds"
+alias install="yay -S"
+alias pinfo="yay -Qi " # get info of an installed package.
+alias orphan="yay -Rns $(pacman -Qtdq)" # remove orphaned packages.
+alias cleanc="yay -Scc" # clean cached packages files.
 
 # git aliases.
 alias gs="git status"
