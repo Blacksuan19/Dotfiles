@@ -36,6 +36,7 @@ alias zsh="exec zsh"
 alias open="xdg-open 2>/dev/null"
 alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
+alias py="python3"
 
 # packages aliases.
 alias y="yay"
