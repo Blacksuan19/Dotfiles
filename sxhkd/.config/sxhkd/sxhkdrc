@@ -81,3 +81,7 @@ super + s
 # typora
 super + t
     typora
+
+# browser
+super + w
+    google-google-chrome-stable
