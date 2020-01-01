@@ -25,13 +25,13 @@ super + g
     bspc node -s biggest
 
 # set the window state
-F9
+super + F9
     bspc node --state tiled
 
-F10
+super + F10
     bspc node --state floating
 
-F11
+super + F11
     bspc node --state fullscreen
 
 # focus the node in the given direction
