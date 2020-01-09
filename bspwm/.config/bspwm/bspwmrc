@@ -25,7 +25,7 @@ picom -C -b
 libinput-gestures-setup start
 
 # start redshift
-redshift -t 6500:4600 -l 3.2476811:101.74012689999999 &
+redshift -t 6500:4900 -l 3.2476811:101.74012689999999 &
 
 # rofi greenclipboard daemon
 greenclip daemon &
