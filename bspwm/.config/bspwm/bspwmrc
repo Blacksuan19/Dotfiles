@@ -61,5 +61,4 @@ bspc rule -a Spotify desktop='^8' follow=on focus=on
 bspc rule -a feh state=floating follow=on
 
 # kde menus settings
-bspc rule -a plasmashell state=floating border=off layer=normal
-bspc rule -a krunner state=floating border=off
+bspc rule -a plasmashell state=floating border=off layer=normal focus=off
