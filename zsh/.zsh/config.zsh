@@ -66,5 +66,3 @@ hash -d da="/media/Dark-Files/Android-DEV/Dark-Ages"
 hash -d trees="/media/Dark-Files/Android-DEV/Trees"
 hash -d flutter="/media/Dark-Files/Flutter"
 hash -d kul="/media/Dark-Files/Kulliyya"
-
-ufetch # some fancy shit in the begining
