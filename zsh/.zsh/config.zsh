@@ -54,7 +54,7 @@ alias gc="git commit --signoff"
 alias gcp="git cherry-pick"
 alias gl="git log | bat"
 alias gd="git diff"
-
+alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
 # Directory hashes.
 hash -d disk="/media/Dark-Files"
 hash -d idea="/media/Dark-Files/IdeaProjects"
