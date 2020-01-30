@@ -12,10 +12,8 @@ running plasma with Bspwm and achieving synergy
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 
-- #### Fonts:
-  > - Fira Code
-  > - [Powerline Fonts](https://github.com/powerline/fonts)
-  > - [Font Awesome](https://fontawesome.com/)
+- Fonts:
+  > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ## **Installation:**
 
