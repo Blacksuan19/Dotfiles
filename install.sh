@@ -10,7 +10,7 @@ declare -a ignore_list=(".git"
 # go throw all files except ignore list
 for file in ~/.dotfiles/*; do
   if [ -d ${file} ] && [[ ! ${file} =~ ${ignore_list[@]} ]]; then
-    stow -R $(basename $file)
+    stow $(basename $file)
     if $SCRIPT_DEBUG; then echo "$(basename $file) stowed."; fi
   fi
 done
