@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
-# go throw all files (will respect the ignore list)
-for files in ~/.dotfiles/*; do
-  if [ -d ${files} ]; then
-    stow -R $(basename $files)
-    if $SCRIPT_DEBUG; then echo "$(basename $files) stowed."; fi
+
+# ignored files list
+declare -a ignore_list=(".git"
+                        ".gitignore"
+                        ".gitmodules"
+                        "README.md"
+                        "plasma.png")
+
+# go throw all files except ignore list
+for file in ~/.dotfiles/*; do
+  if [ -d ${file} ] && [[ ! ${file} =~ ${ignore_list[@]} ]]; then
+    stow -R $(basename $file)
+    if $SCRIPT_DEBUG; then echo "$(basename $file) stowed."; fi
   fi
 done
