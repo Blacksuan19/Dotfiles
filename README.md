@@ -36,4 +36,4 @@ running plasma with Bspwm and achieving synergy
 
 > system info: plasma settings
 
-![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/Screens/plasma.png)
+![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/plasma.png)
