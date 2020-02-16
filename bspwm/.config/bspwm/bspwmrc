@@ -6,20 +6,11 @@ xsetroot -cursor_name left_ptr
 # key bindings
 sxhkd &
 
-# wallpaper
-# nitrogen --restore &
-
-# xfce settings
-# xfsettingsd &
-
 # unclutter (hides mouse while typing)
 unclutter -idle 2 &
 
 # compton
 picom -C -b
-
-# panel
-# polybar main &
 
 # start libinput-gestures
 libinput-gestures-setup start
@@ -57,7 +48,6 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 # some window rules
-bspc rule -a Spotify desktop='^8' follow=on focus=on
 bspc rule -a feh state=floating follow=on
 
 # kde menus settings
