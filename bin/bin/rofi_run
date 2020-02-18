@@ -47,11 +47,11 @@ for arg in "$@"; do
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 1 -padding 50 -hide-scrollbar \
                -show-icons -drun-icon-theme "Tela Dark" \
-                -font "FuraCode Nerd Font 12"
+                -font "JetBrains Mono 12"
             ;;
         -w|--window)
             rofi -modi window -show window -hide-scrollbar -padding 50
-            -line-padding 4 -font "FuraCode Nerd Font 12"
+            -line-padding 4 -font "JetBrains Mono 12"
             ;;
         -q|--qalculate)
             hash qalc &>/dev/null ||
@@ -67,7 +67,7 @@ for arg in "$@"; do
 
             rofi -modi "clipboard:greenclip print" -padding 50 \
                 -line-padding 4 -show "clipboard:greenclip print" \
-                -hide-scrollbar -font "FuraCode Nerd Font 12"
+                -hide-scrollbar -font "JetBrains Mono 12"
             ;;
         -b|--browser)
             hash surfraw &>/dev/null ||
@@ -84,11 +84,11 @@ for arg in "$@"; do
             if grep -q 'exec startx' $HOME/.*profile; then
                 ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
                     -hide-scrollbar -line-padding 4 -padding 20 \
-                    -lines 4 -font "FuraCode Nerd Font 12" <<< "Lock|Suspend|Reboot|Shutdown")"
+                    -lines 4 -font "JetBrains Mono 12" <<< "Lock|Suspend|Reboot|Shutdown")"
             else
                 ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
                     -hide-scrollbar -line-padding 4 -padding 20 \
-                    -lines 4 -font "FuraCode Nerd Font 12" <<< "Lock|Logout|Reboot|Shutdown")"
+                    -lines 4 -font "JetBrains Mono 12" <<< "Lock|Logout|Reboot|Shutdown")"
             fi
 
             case "$ANS" in
