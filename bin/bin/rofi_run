@@ -17,13 +17,7 @@ usage()
 
      -r,--run           Application launcher
 
-     -w,--window        Switch between windows
-
      -l,--logout        System logout dialog
-
-     -b,--browser       Browser search by keyword (requires surfraw)
-
-     -q,--qalculate     Persistant calculator dialog (requires libqalculate)
 
      -c,--clipboard     Select previous clipboard entries (requires greenclip)
 
@@ -46,20 +40,8 @@ for arg in "$@"; do
         -r|--run)
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 1 -padding 50 -hide-scrollbar \
-               -show-icons -drun-icon-theme "Tela Dark" \
+               -show-icons -drun-icon-theme "La Capitaine" \
                 -font "JetBrains Mono 12"
-            ;;
-        -w|--window)
-            rofi -modi window -show window -hide-scrollbar -padding 50
-            -line-padding 4 -font "JetBrains Mono 12"
-            ;;
-        -q|--qalculate)
-            hash qalc &>/dev/null ||
-                { echo "Requires 'libqalculate' installed"; exit 1; }
-
-            rofi -modi "calc:qalc +u8 -nocurrencies" -padding 50 \
-                -show "calc:qalc +u8 -nocurrencies" -line-padding 4 \
-                -hide-scrollbar
             ;;
         -c|--clipboard)
             hash greenclip &>/dev/null ||
@@ -68,17 +50,6 @@ for arg in "$@"; do
             rofi -modi "clipboard:greenclip print" -padding 50 \
                 -line-padding 4 -show "clipboard:greenclip print" \
                 -hide-scrollbar -font "JetBrains Mono 12"
-            ;;
-        -b|--browser)
-            hash surfraw &>/dev/null ||
-                { echo "Requires 'surfraw' installed"; exit 1; }
-
-            surfraw -browser="$BROWSER" "$(sr -elvi | awk -F'-' '{print $1}' |
-                sed '/:/d' | awk '{$1=$1};1' |
-                rofi -hide-scrollbar -kb-row-select 'Tab' \
-                -kb-row-tab 'Control+space' -dmenu \
-                -mesg 'Tab for Autocomplete' -i -p 'Web Search' \
-                -padding 50 -line-padding 4 )"
             ;;
         -l|--logout)
             if grep -q 'exec startx' $HOME/.*profile; then
