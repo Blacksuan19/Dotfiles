@@ -18,12 +18,12 @@
     selected-active-foreground:  rgba ( 0, 142, 212, 100 % );
     alternate-active-background: rgba (15, 17, 26, 100 % );
     background:                  rgba (15, 17, 26, 100 % );
-    bordercolor:                 rgba (15, 17, 26, 100 % );
+    bordercolor:                 rgba (100, 25, 32, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba (15, 17, 26, 100 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  rgba(74, 85, 130, 1);
-    border-color:                @foreground;
+    border-color:                rgba (100, 25, 32, 100 % );
     spacing:                     2;
     separatorcolor:              rgba (15, 17, 26, 100 % );
     urgent-background:           rgba (15, 17, 26, 100 % );
@@ -37,7 +37,7 @@
 }
 #window {
     background-color: @background;
-    border:           0;
+    border:           2;
     padding:          5;
 }
 #mainbox {
