@@ -12,9 +12,8 @@ fi
 # various aliases.
 alias free="free -h"
 alias fdisk="sudo fdisk -l"
-alias cat="bat " # this one is way better
+alias c="bat " # this one is way better
 alias zsh="exec zsh"
-alias open="xdg-open 2>/dev/null"
 alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
 alias py="python3"
@@ -36,6 +35,7 @@ alias gcp="git cherry-pick"
 alias gl="git log | bat"
 alias gd="git diff"
 alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
+
 # Directory hashes.
 hash -d disk="/media/Dark-Files"
 hash -d idea="/media/Dark-Files/IdeaProjects"
