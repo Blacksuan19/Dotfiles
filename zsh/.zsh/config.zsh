@@ -14,7 +14,6 @@ alias free="free -h"
 alias fdisk="sudo fdisk -l"
 alias c="bat " # this one is way better
 alias zsh="exec zsh"
-alias gpp="g++" # typing two plus signs is stupid.
 alias n="nvim"
 alias py="python3"
 
@@ -34,15 +33,13 @@ alias gc="git commit --signoff"
 alias gcp="git cherry-pick"
 alias gl="git log | bat"
 alias gd="git diff"
+alias gpl="git pull"
 alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
 
 # Directory hashes.
 hash -d disk="/media/Dark-Files"
-hash -d idea="/media/Dark-Files/IdeaProjects"
-hash -d sd="/media/Dark-Files/SD Card/"
 hash -d dots="/home/blacksuan19/.dotfiles"
 hash -d git="/media/Dark-Files/Gits"
-hash -d android="/media/Dark-Files/Android-DEV"
 hash -d da="/media/Dark-Files/Android-DEV/Dark-Ages"
 hash -d trees="/media/Dark-Files/Android-DEV/Trees"
 hash -d flutter="/media/Dark-Files/Flutter"
