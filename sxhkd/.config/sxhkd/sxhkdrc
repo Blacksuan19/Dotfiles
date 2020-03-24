@@ -80,8 +80,11 @@ super + s
 
 # typora
 super + t
+   telegram-desktop
+
+super + shift + t
     typora
 
 # browser
 super + w
-    google-google-chrome-stable
+    google-chrome-stable
