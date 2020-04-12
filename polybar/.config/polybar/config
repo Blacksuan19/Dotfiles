@@ -131,9 +131,9 @@ format-background = ${color.bground}
 format-foreground = ${color.fground}
 label-monitor = %name%
 label-focused-background = #ff4151
-label-occupied-background = ${color.blue-gray}
+label-occupied-background = ${color.amber}
 label-urgent-background = ${color.red}
-label-empty-background = ${color.teal}
+label-empty-background = ${color.bground}
 
 label-focused-padding = 2
 label-urgent-padding = 2
