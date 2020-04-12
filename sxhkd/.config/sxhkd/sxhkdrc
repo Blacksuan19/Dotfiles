@@ -72,7 +72,7 @@ Print + shift
 
 # rofi green cipboard
 super + v
-    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font "DankMono 14"
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # spotify Stuff
 super + s
@@ -85,6 +85,32 @@ super + t
 super + shift + t
     typora
 
-# browser
-super + w
-    google-chrome-stable
+# volume control keys
+XF86AudioMute
+    pamixer -t
+XF86AudioRaiseVolume
+    pamixer -i 2
+XF86AudioLowerVolume
+    pamixer -d 2
+
+# brightness
+XF86MonBrightnessUp
+    light -A 10
+XF86MonBrightnessDown
+    light -U 10
+
+# music control
+XF86AudioNext
+    playerctl next
+XF86AudioPrev
+    playerctl previous
+XF86AudioPlay
+    playerctl play-pause
+
+# sleep key
+XF86Sleep
+    systemctl suspend
+
+# language switch
+alt + shift
+    xkblayout-state set +1 && notify-send Language "Changed to next layout"

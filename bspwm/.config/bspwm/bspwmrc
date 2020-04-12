@@ -3,6 +3,13 @@
 # set root pointer
 xsetroot -cursor_name left_ptr
 
+
+# polybar
+polybar main &
+
+# feh background
+~/.fehbg &
+
 # key bindings
 sxhkd &
 
@@ -29,8 +36,9 @@ bspc monitor -d 一 二 三 四 五 六 七 八
 
 # bspwm settings
 bspc config border_width 0
-bspc config window_gap 3
-bspc config top_padding 20
+bspc config border_radius 10
+bspc config window_gap 8
+bspc config top_padding 25
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
@@ -49,6 +57,3 @@ bspc config pointer_action3 resize_corner
 
 # some window rules
 bspc rule -a feh state=floating follow=on
-
-# kde menus settings
-bspc rule -a plasmashell state=floating border=off layer=normal focus=off

@@ -1,11 +1,7 @@
 #!/bin/sh
 
-# ~/.xprofile
-
-# sourced at boot by ~/.xinitrc and display managers like lightdm
-
+# set important paths
 export XDG_CONFIG_HOME="$HOME/.config"
-export KDEWM=/usr/bin/bspwm # this is the magic word
 
 [ -d /sbin ] && PATH="$PATH:/sbin"
 [ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
@@ -19,7 +15,10 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 xset dpms 600 900 1200
 
 # keyboard repeat rate
-xset r rate 400 100
+xset r rate 500 30
+
+# natural scrolling
+xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1
 
  # autologin on tty1
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then

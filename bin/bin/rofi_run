@@ -41,7 +41,7 @@ for arg in "$@"; do
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 1 -padding 50 -hide-scrollbar \
                -show-icons -drun-icon-theme "La Capitaine" \
-                -font "JetBrains Mono 12"
+                -font "Helvetica 7" -theme simplemenu
             ;;
         -c|--clipboard)
             hash greenclip &>/dev/null ||
@@ -49,7 +49,7 @@ for arg in "$@"; do
 
             rofi -modi "clipboard:greenclip print" -padding 50 \
                 -line-padding 4 -show "clipboard:greenclip print" \
-                -hide-scrollbar -font "JetBrains Mono 12"
+                -hide-scrollbar -font "JetBrains Mono 9" -theme ocean
             ;;
         -l|--logout)
             if grep -q 'exec startx' $HOME/.*profile; then

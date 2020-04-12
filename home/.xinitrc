@@ -17,4 +17,4 @@ fi
 
 
 # launch the session, commands below this line will be ignored
-exec startplasma-x11
+exec bspwm
