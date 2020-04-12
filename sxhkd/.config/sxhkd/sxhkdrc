@@ -87,11 +87,13 @@ super + shift + t
 
 # volume control keys
 XF86AudioMute
-    pamixer -t
+    pactl set-sink-mute 0 toggle
+
 XF86AudioRaiseVolume
-    pamixer -i 2
+    pactl set-sink-volume 0 +5%
+
 XF86AudioLowerVolume
-    pamixer -d 2
+    pactl set-sink-volume 0 -5%
 
 # brightness
 XF86MonBrightnessUp
