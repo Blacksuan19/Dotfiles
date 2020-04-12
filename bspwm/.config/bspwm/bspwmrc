@@ -3,7 +3,6 @@
 # set root pointer
 xsetroot -cursor_name left_ptr
 
-
 # polybar
 polybar main &
 
