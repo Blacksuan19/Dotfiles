@@ -25,6 +25,9 @@ setxkbmap -option "grp:alt_shift_toggle"
 # natural scrolling
 xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1
 
+# qt themeing
+export QT_QPA_PLATFORMTHEME=qt5ct
+
  # autologin on tty1
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
 exec startx
