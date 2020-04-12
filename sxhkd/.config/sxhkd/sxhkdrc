@@ -111,8 +111,5 @@ XF86AudioPlay
 
 # sleep key
 XF86Sleep
-    systemctl suspend
+    systemctl hybrid-sleep
 
-# language switch
-alt + shift
-    xkblayout-state set +1 && notify-send Language "Changed to next layout"
