@@ -5,7 +5,10 @@ declare -a ignore_list=(".git"
                         ".gitignore"
                         ".gitmodules"
                         "README.md"
-                        "plasma.png")
+                        "screen1.png"
+                        "screen2.png"
+                        "screen3.png"
+                    )
 
 # go throw all files except ignore list
 for file in ~/.dotfiles/*; do
