@@ -16,6 +16,7 @@ alias c="bat " # this one is way better
 alias zsh="exec zsh"
 alias n="nvim"
 alias py="python3"
+alias vifm="vifmrun"
 
 # packages aliases.
 alias y="yay"
@@ -33,8 +34,9 @@ alias gc="git commit --signoff"
 alias gcp="git cherry-pick"
 alias gl="git log | bat"
 alias gr="git remote"
-alias gra="git remote add "
+alias gra="git remote add"
 alias grm="git remote rm"
+alias grv="git remote -v"
 alias gd="git diff"
 alias gpl="git pull"
 alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
