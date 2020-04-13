@@ -38,7 +38,7 @@
     background-color: @background;
     border:           0;
     padding:          15;
-    border-radius: 20;
+    border-radius: 0;
 }
 #mainbox {
     padding: 0;

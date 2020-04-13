@@ -16,7 +16,7 @@ sxhkd &
 unclutter -idle 2 &
 
 # compton
-picom -C -b
+picom -b
 
 # start libinput-gestures
 libinput-gestures-setup start
@@ -35,7 +35,6 @@ bspc monitor -d 一 二 三 四 五 六 七 八
 
 # bspwm settings
 bspc config border_width 0
-bspc config border_radius 10
 bspc config window_gap 8
 bspc config top_padding 25
 bspc config right_padding 0
