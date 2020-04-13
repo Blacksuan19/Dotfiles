@@ -6,14 +6,30 @@ running plasma with Bspwm and achieving synergy
 ## **Requirements:**
 
 - \*NIX system
-- KDE Plasma
-- Bspwm
+- [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
+- [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
+- [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
+- required programs:
 
-- Fonts:
+  - dunst (notifcations daemon)
+  - rofi (applications window)
+  - polybar (top bar)
+  - ksuperkey (map meta to open rofi)
+  - xautolock (auto lockscreen)
+  - light (brightness control)
+  - playerctl (control current player with media keys)
+  - picom (rounded corners, compositer)
+  - cmus-notify (cmus notifcations)
+  - flameshot (for taking screenshots)
+  - greenclip (clipboard history)
+  - betterlockscreen (lockscreen)
+
+* Fonts:
   > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+  > - Halevetica
 
 ## **Installation:**
 
@@ -22,18 +38,47 @@ running plasma with Bspwm and achieving synergy
 - `stow folder` to install a specific config i.e `stow tmux` will install tmux config.
 - `./install.sh` to install everything (this will not overwrite existing files).
 
-## **Screenshot:**
+## Customizations
 
-> Plasma Theme: [material ocean](https://github.com/material-ocean/plasma)
+### keyboard shortcuts
 
-> Colors: [material ocean](https://github.com/material-ocean/plasma)
+Shortcuts are controlled by sxhkd, since there are no default applications handler you can
+set your default apps from sxhkd settings
 
-> Visualizer: cava
+#### default keyboard shortcuts
 
-> clock: tty-clock
+| key                     | function                                                   |
+| ----------------------- | ---------------------------------------------------------- |
+| win key(mod/super)      | launch rofi                                                |
+| super + w               | launch browser (default is google chrome)                  |
+| super + Enter           | launch terminal (default is kitty)                         |
+| super + f               | launch file manager (default is vifm)                      |
+| super + shift + r       | reload sxhkd settings                                      |
+| super + q               | kill current window                                        |
+| super + g               | swap current window with the biggest                       |
+| super + F9              | set window to tiled                                        |
+| super + F10             | set window to floating                                     |
+| super + F11             | set window to full screen                                  |
+| super + {h,j,k,l}       | focus the window on left, below, above, right respectively |
+| super + Tab             | focus last desktop                                         |
+| super + shift + 1-9     | move window to desktop number 1-9                          |
+| super + brackets        | focus window on left, right monitor                        |
+| super + alt + {h,j,k,l} | expand window on given side                                |
+| ctrl + alt + {h,j,k,l}  | contract window on given side                              |
+| super + direction       | move floating window on given direction                    |
+| print                   | take a full screenshot                                     |
+| print + shift           | launch flameshot area selection                            |
+| super + v               | launch clipboard                                           |
+| super + s               | launch spotify                                             |
+| super + t               | launch telegram                                            |
 
-> bar: plasmashell
+#### auto lockscreen on wake up
 
-> system info: plasma settings
+- copy betterlockscreen@.service to /etc/systemd/system
+- run `sudo systemctl enable betterlockscreen@$USER.service`
 
-![alt text](https://raw.githubusercontent.com/Blacksuan19/Dotfiles/master/plasma.png)
+## **Screenshots:**
+
+![alt text](/screen3.png)
+![alt text](/screen2.png)
+![alt text](/screen1.png)

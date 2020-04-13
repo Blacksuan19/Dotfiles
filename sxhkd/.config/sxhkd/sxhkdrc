@@ -6,7 +6,7 @@ super + Return
    kitty
 
 super + f
-   kitty vifm
+   kitty ~/bin/vifmrun
 
 # program launcher
 alt + F1
