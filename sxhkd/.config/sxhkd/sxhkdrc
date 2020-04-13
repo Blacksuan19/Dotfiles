@@ -1,12 +1,12 @@
 # regular everyday stuff
 super + w
-    exo-open --launch WebBrowser
+   google-chrome-stable
 
 super + Return
-    exo-open --launch TerminalEmulator
+   kitty
 
 super + f
-    exo-open --launch FileManager
+   kitty vifm
 
 # program launcher
 alt + F1
@@ -74,14 +74,15 @@ Print + shift
 super + v
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
-# spotify Stuff
+# spotify
 super + s
-    spotify --disable-gpu
+    spotify
 
-# typora
+# telegram
 super + t
    telegram-desktop
 
+# markdown editor
 super + shift + t
     typora
 
