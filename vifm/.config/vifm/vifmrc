@@ -201,3 +201,6 @@ nnoremap <f8> :delete<cr>
 " scrolling in pdf preview with <>
 map > :!vifmimg inc<CR>
 map < :!vifmimg dec<CR>
+
+" set wallpaper
+map bg :!feh --bg-fill %f 2>/dev/null &<cr>
