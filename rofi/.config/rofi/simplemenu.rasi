@@ -59,7 +59,7 @@ inputbar {
     text-color:                     @foreground;
     expand:                         false;
     border:                  		1px;
-    border-radius:                  2px;
+    border-radius:                  0px;
     border-color:                  	@border;
     margin:                         0px 0px 0px 0px;
     padding:                        5px 5px 5px 5px;
@@ -104,7 +104,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    vertical;
-    border-radius:                  4px;
+    border-radius:                  0px;
     padding:                        10px 0px 10px 0px;
 }
 
@@ -124,7 +124,7 @@ element normal.urgent,
 element alternate.urgent {
     background-color:               @urgent;
     text-color:                     @foreground;
-    border-radius:                  9px;
+    border-radius:                  0px;
 }
 
 element normal.active,
@@ -137,7 +137,7 @@ element selected {
     background-color:               @selected;
     text-color:                     @foreground;
     border:                  		1px;
-    border-radius:                  2px;
+    border-radius:                  0px;
     border-color:                  	@border;
 }
 
