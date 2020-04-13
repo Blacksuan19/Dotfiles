@@ -61,7 +61,7 @@
     class = Dunst
     startup_notification = false
     verbosity = mesg
-    corner_radius = 10
+    corner_radius = 0
 
     ### Legacy
     force_xinerama = false
