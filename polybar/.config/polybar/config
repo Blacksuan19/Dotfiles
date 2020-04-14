@@ -163,7 +163,7 @@ label-volume = %percentage%%
 format-muted-prefix = 
 label-muted = " Muted"
 format-muted-background = ${color.yellow}
-format-muted-foreground = ${color.modulefg}
+format-muted-foreground = ${color.black}
 format-muted-padding = 1
 
 ramp-volume-0 = 
