@@ -7,12 +7,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 [ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
+# qt themeing
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
-
-# dpms: timeout sleep off
-xset dpms 600 900 1200
 
 # keyboard repeat rate
 xset r rate 500 30
@@ -25,8 +25,10 @@ setxkbmap -option "grp:alt_shift_toggle"
 # natural scrolling
 xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1
 
-# qt themeing
-export QT_QPA_PLATFORMTHEME=qt5ct
+# auto sleep after 20 min (turn the screen off 600 seconds before)
+xautolock -notify 600 -time 20 \
+          -notifier "xset dpms force off" \
+          -killer "systemctl hybrid-sleep" &
 
  # autologin on tty1
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
