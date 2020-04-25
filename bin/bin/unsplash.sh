@@ -6,7 +6,7 @@
 # @hourly $HOME/bin/unsplash.sh
 
 notify-send "Getting new wallpaper..."
-wget -O /tmp/wallpaper.jpg https://unsplash.it/1920/1080/?random &> /dev/null
+wget -O /tmp/wallpaper.jpg "https://source.unsplash.com/random/1920x1080/?wallpaper" &> /dev/null
 # apply some light blur first
 convert /tmp/wallpaper.jpg -filter Gaussian -blur 0x2 /tmp/blur-wall.jpg
 feh --bg-fill /tmp/blur-wall.jpg
