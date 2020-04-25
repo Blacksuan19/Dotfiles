@@ -99,9 +99,9 @@ wm-restack = bspwm
 bottom = false
 fixed-center = true
 radius = 0
-width = 395
+width = 500
 height = 26
-offset-x = 963
+offset-x = 858
 offset-y = 3
 cursor-click = pointer
 tray-position = none
@@ -114,7 +114,8 @@ overline-color = ${color.accent}
 font-0 = "FuraCode Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
 
-modules-right =  playing pulseaudio battery backlight network date
+modules-left = date battery backlight network pulseaudio
+modules-right  = playing
 
 spacing = 1
 dim-value = 1.0
@@ -157,26 +158,23 @@ label-empty = 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <ramp-volume> <label-volume>
-format-volume-background = ${color.yellow}
-format-volume-foreground = ${color.black}
 format-volume-padding = 1
-
+format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%%
+format-volume-background = ${color.bground}
+format-volume-foreground = ${color.fground}
+use-ui-max = false
+interval = 5
 
-format-muted-prefix = 
-label-muted = " Muted"
-format-muted-background = ${color.yellow}
-format-muted-foreground = ${color.black}
-format-muted-padding = 1
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-volume-5 = 
-ramp-volume-6 = 
+
+label-muted = " Muted"
+label-muted-background = ${color.bground}
+label-muted-foreground = ${color.fground}
+label-muted-padding = 2
 
 ;;;;;;;;;;;;;;;
 ;; Backlight ;;
@@ -191,7 +189,7 @@ scroll-up = exec light -A 5
 scroll-down = exec light -U 5
 format-prefix = " "
 label = %output%
-format-background = ${color.pink}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding = 1
 
@@ -212,13 +210,13 @@ time-format = %H:%M
 
 format-charging = <label-charging>
 format-charging-prefix = " "
-format-charging-background = ${color.light-blue}
+format-charging-background = ${color.bground}
 format-charging-foreground = ${color.modulefg}
 format-charging-padding = 1
 
 format-discharging = <label-discharging>
 format-discharging-prefix = " "
-format-discharging-background = ${color.light-blue}
+format-discharging-background = ${color.bground}
 format-discharging-foreground = ${color.modulefg}
 format-discharging-padding = 1
 padding-left = 1
@@ -227,11 +225,11 @@ padding-left = 1
 label-charging =  %percentage%%
 label-discharging = %percentage%%
 
-label-full-background = ${color.light-blue}
+label-full-background = ${color.bground}
 label-full-foreground = ${color.modulefg}
 label-full-padding = 1
 
-format-full-prefix-background = ${color.light-blue} 
+format-full-prefix-background = ${color.bground} 
 format-full-prefix = " "
 
 ;;;;;;;;;;;;;
@@ -245,9 +243,9 @@ interval = 2.0
 time =  %I:%M %p
 time-alt =  %a, %b %dth
 format = <label>
-format-background = ${color.red}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
-format-padding = 1
+format-padding = 2
 label = %time%
 
 ;;;;;;;;;;;;;
@@ -261,7 +259,7 @@ click-left = rofi-wifi-menu.sh
 click-right = rofi-wifi-menu.sh
 interval = 3
 tail = true
-format-background = ${color.deep-purple}
+format-background = ${color.bground}
 format-foreground = ${color.modulefg}
 format-padding           = 1
 
