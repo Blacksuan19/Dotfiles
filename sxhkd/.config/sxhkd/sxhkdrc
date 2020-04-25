@@ -86,6 +86,10 @@ super + t
 super + shift + t
     typora
 
+# get a new wallpaper
+super + n
+    bash $HOME/bin/unsplash.sh
+
 # volume control keys
 XF86AudioMute
     pactl set-sink-mute 0 toggle
