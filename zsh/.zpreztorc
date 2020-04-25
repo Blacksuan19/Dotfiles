@@ -23,7 +23,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Set the prompt theme to load.
-zstyle ':prezto:module:prompt' theme 'powerlevel10k'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 # Auto start a tmux session when Zsh is launched in a local terminal.
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
