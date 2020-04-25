@@ -273,6 +273,7 @@ exec = playing.sh
 format-prefix = " "
 interval = 3
 label-font = 0
+label-maxlen = 35
 click-left = playerctl play-pause
 format-background = ${color.lime}
 format-foreground = ${color.black}
