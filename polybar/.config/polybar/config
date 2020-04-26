@@ -6,14 +6,8 @@
 ;; Active Colors
 bground = #0f111a
 fground = #ffffff
-accent = #31323a
+accent = #ff4151
 modulefg = #ffffff
-modulefg-alt = #ffffff
-
-;; Other
-trans = #00000000
-white = #FFFFFF
-black = #000000
 
 ;; Material Colors
 red = #e53935
@@ -79,9 +73,6 @@ tray-position = none
 background = ${color.bground}
 foreground = ${color.fground}
 
-overline-size = 2
-overline-color = ${color.accent}
-
 font-0 = "FuraCode Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
 
@@ -108,8 +99,6 @@ tray-position = none
 
 background = ${color.bground}
 foreground = ${color.fground}
-overline-size = 2
-overline-color = ${color.accent}
 
 font-0 = "FuraCode Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
@@ -136,7 +125,7 @@ format-background = ${color.bground}
 format-foreground = ${color.fground}
 label-monitor = %name%
 label-focused-background = #ff4151
-label-occupied-background = ${color.amber}
+label-occupied-background = ${color.bground}
 label-urgent-background = ${color.red}
 label-empty-background = ${color.bground}
 
@@ -275,6 +264,6 @@ interval = 3
 label-font = 0
 label-maxlen = 35
 click-left = playerctl play-pause
-format-background = ${color.lime}
-format-foreground = ${color.black}
+format-background = ${color.accent}
+format-foreground = ${color.bground}
 format-padding           = 1
