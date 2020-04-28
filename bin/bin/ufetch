@@ -11,31 +11,8 @@ kernel="$(uname -sr | sed 's/[0-9]-[0-9]-zen//')"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "$SHELL")"
-
-## UI DETECTION
-
-if [ -n "${DE}" ]; then
-	ui="${DE}"
-	uitype='DE'
-elif [ -n "${WM}" ]; then
-	ui="${WM}"
-	uitype='WM'
-elif [ -n "${XDG_CURRENT_DESKTOP}" ]; then
-	ui="${XDG_CURRENT_DESKTOP}"
-	uitype='DE'
-elif [ -n "${DESKTOP_SESSION}" ]; then
-	ui="${DESKTOP_SESSION}"
-	uitype='DE'
-elif [ -f "${HOME}/.xinitrc" ]; then
-	ui="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
-	uitype='WM'
-elif [ -f "${HOME}/.xsession" ]; then
-	ui="$(tail -n 1 "${HOME}/.xsession" | cut -d ' ' -f 2)"
-	uitype='WM'
-else
-	ui='unknown'
-	uitype='UI'
-fi
+temp=$(sensors | grep "temp1" | tail -1 | awk '{print $2}' | sed "s/+//")
+ui='BSPWM'
 
 ## DEFINE COLORS
 
@@ -63,12 +40,13 @@ c0="${reset}${blue}"                # first color
 
 cat <<EOF
 
-${c0}        /\\         ${nc}${USER}${ic}@${nc}${host}${reset}
-${c0}       /  \\        ${lc}OS:        ${ic}${os}${reset}
-${c0}      /\\   \\       ${lc}KERNEL:    ${ic}${kernel}${reset}
-${c0}     /  __  \\      ${lc}UPTIME:    ${ic}${uptime}${reset}
-${c0}    /  (  )  \\     ${lc}PACKAGES:  ${ic}${packages}${reset}
-${c0}   / __|  |__\\\\    ${lc}SHELL:     ${ic}${shell}${reset}
-${c0}  /.\`        \`.\\   ${lc}${uitype}:        ${ic}${ui}${reset}
+${c0}        /\\          ${nc}${USER}${ic}@${nc}${host}${reset}
+${c0}       /  \\         ${lc}OS:        ${ic}${os}${reset}
+${c0}      /    \\        ${lc}KERNEL:    ${ic}${kernel}${reset}
+${c0}     /  __  \\       ${lc}UPTIME:    ${ic}${uptime}${reset}
+${c0}    /   __   \\      ${lc}TEMP:      ${ic}${temp}${reset}
+${c0}   /   (  )   \\     ${lc}PACKAGES:  ${ic}${packages}${reset}
+${c0}  /  __|  |__  \\    ${lc}SHELL:     ${ic}${shell}${reset}
+${c0} /.\`          \`.\\   ${lc}DE:        ${ic}${ui}${reset}
 
 EOF
