@@ -1,0 +1,57 @@
+/* 
+  Copyright © 2020 Blacksuan19 
+  part of material ocean colorscheme
+  licensed under GNU's GPL 3
+*/
+
+* {
+  background-color: #0f111a;
+  bg-alt: #ff4151;
+  fg: #f1f1f1;
+  selected-fg: #ffffff;
+
+  border: 0;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+listview {
+  columns: 1;
+}
+
+element {
+  padding: 8;
+  orientation: vertical;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: @selected-fg;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @bg-alt;
+}
+
+entry {
+  padding: 12;
+  text-color: @selected-fg;
+  font: "FuraCode Nerd Font Mono Medium 12";
+}

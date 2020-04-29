@@ -267,3 +267,6 @@ click-left = playerctl play-pause
 format-background = ${color.accent}
 format-foreground = ${color.bground}
 format-padding           = 1
+
+
+/* vim:ft=dosini
