@@ -72,7 +72,11 @@ Print + shift
 
 # rofi green cipboard
 super + v
-    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+    rofi_run -c
+
+# exit screen
+super + x
+    rofi_run -l
 
 # spotify
 super + s
