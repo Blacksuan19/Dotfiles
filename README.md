@@ -79,6 +79,6 @@ set your default apps from sxhkd settings
 
 ## **Screenshots:**
 
-![alt text](/screen3.png)
-![alt text](/screen2.png)
 ![alt text](/screen1.png)
+![alt text](/screen2.png)
+![alt text](/screen3.png)
