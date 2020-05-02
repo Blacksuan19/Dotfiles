@@ -9,7 +9,7 @@ FIELDS=SSID,SECURITY
 POSITION=0
 YOFF=0
 XOFF=0
-FONT="DejaVu Sans Mono 8"
+FONT="FuraCode Nerd Font Mono 8"
 
 if [ -r "$DIR/config" ]; then
 	source "$DIR/config"
@@ -19,9 +19,9 @@ else
 	echo "WARNING: config file not found! Using default values."
 fi
 
-LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d')
+LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d' | awk -F'  +' '{ if (!seen[$1]++) print}')
 # For some reason rofi always approximates character width 2 short... hmmm
-RWIDTH=$(($(echo "$LIST" | head -n 1 | awk '{print length($0); }')+2))
+RWIDTH=$(($(echo "$LIST" | head -n 1 | awk '{print length($0); }')+3))
 # Dynamically change the height of the rofi menu
 LINENUM=$(echo "$LIST" | wc -l)
 # Gives a list of known connections so we can parse it later
@@ -45,20 +45,20 @@ fi
 
 
 if [[ "$CONSTATE" =~ "enabled" ]]; then
-	TOGGLE="toggle off"
+	TOGGLE="Toggle off"
 elif [[ "$CONSTATE" =~ "disabled" ]]; then
-	TOGGLE="toggle on"
+	TOGGLE="Toggle on"
 fi
 
 
 
-CHENTRY=$(echo -e "$TOGGLE\nmanual\n$LIST" | uniq -u | rofi -dmenu -p "Wi-Fi SSID: " -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
+CHENTRY=$(echo -e "$TOGGLE\nManual\n$LIST" | uniq -u | rofi -dmenu -p "Wi-Fi SSID: " -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
 #echo "$CHENTRY"
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 #echo "$CHSSID"
 
 # If the user inputs "manual" as their SSID in the start window, it will bring them to this screen
-if [ "$CHENTRY" = "manual" ] ; then
+if [ "$CHENTRY" = "Manual" ] ; then
 	# Manual entry of the SSID and password (if appplicable)
 	MSSID=$(echo "enter the SSID of the network (SSID,password)" | rofi -dmenu -p "Manual Entry: " -font "$FONT" -lines 1)
 	# Separating the password from the entered string
