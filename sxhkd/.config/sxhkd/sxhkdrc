@@ -70,6 +70,10 @@ Print
 Print + shift
     flameshot gui -p /media/Dark-Files/Screenshots
 
+# flameshot fullscreen with delay
+Print + alt
+    flameshot full -d 5000 -p /media/Dark-Files/Screenshots
+
 # rofi green cipboard
 super + v
     rofi_run -c
