@@ -1,2 +1,35 @@
 set selection-clipboard clipboard
 set guioptions none
+
+# material ocean colorscheme
+set default-bg                  "#0f111a"
+set default-fg                  "#ff4151"
+
+set statusbar-fg                "#ff4151"
+set statusbar-bg                "#00010a"
+
+set inputbar-bg                 "#0f111a"
+set inputbar-fg                 "#b0c7d4"
+
+set notification-bg             "#0f111a"
+set notification-fg             "#b0c7d4"
+
+set notification-error-bg       "#0f111a"
+set notification-error-fg       "#AB2E56"
+
+set notification-warning-bg     "#0f111a"
+set notification-warning-fg     "#AB2E56"
+
+set highlight-color             "#AB8C70"
+set highlight-active-color      "#ff4151"
+
+set completion-bg               "#0f111a"
+set completion-fg               "#ff4151"
+
+set completion-highlight-fg     "#0f111a"
+set completion-highlight-bg     "#ff4151"
+
+set recolor-lightcolor          "#0f111a"
+set recolor-darkcolor           "#f1f1f1"
+
+set recolor                     "true"
