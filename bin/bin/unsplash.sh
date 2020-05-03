@@ -15,5 +15,8 @@ betterlockscreen -u $HOME/.wallpaper blur &> /dev/null
 # set desktop wallpaper(add `blur` to use the blurred version)
 betterlockscreen -w
 
+# cleanup
+rm $HOME/.wallpaper
+
 #we out
 notify-send "New wallpaper set successfully."
