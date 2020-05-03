@@ -1,7 +1,6 @@
 # Dotfiles
 
-[Material Oceanized](https://github.com/material-ocean) configuration for
-running plasma with Bspwm and achieving synergy
+[Material Oceanized](https://github.com/material-ocean) configuration for Bspwm and others.
 
 ## **Requirements:**
 
@@ -29,7 +28,7 @@ running plasma with Bspwm and achieving synergy
 
 * Fonts:
   > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-  > - Halevetica
+  > - Fira Code Nerd Font
 
 ## **Installation:**
 
