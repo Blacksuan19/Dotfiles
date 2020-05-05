@@ -100,11 +100,11 @@ super + shift + t
 
 # get a new wallpaper
 super + n
-    bash $HOME/bin/unsplash.sh
+    unsplash.sh
 
 # show keybindings
 super + F1
-    bash $HOME/bin/keybindings.sh
+   rofi_run -s
 
 # toggle volume mute
 XF86AudioMute

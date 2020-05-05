@@ -1,32 +1,34 @@
 #!/usr/bin/env bash
-for arg in "$@"; do
-    case $arg in
-        -r|--run)
-            rofi -modi run,drun  -show drun
-            ;;
-        -c|--clipboard)
-            hash greenclip &>/dev/null ||
-                { echo "Requires 'greenclip' installed"; exit 1; }
+case $1 in
+    -r|--run)
+        rofi -modi run,drun  -show drun
+        ;;
+    -c|--clipboard)
+        hash greenclip &>/dev/null ||
+            { echo "Requires 'greenclip' installed"; exit 1; }
 
-            rofi -modi "clipboard:greenclip print" -lines 12 -show clipboard -run-command '{cmd}'
-            ;;
-        -l|--logout)
-            ANS="$(echo -e " Lock|鈴 Sleep|菱 Reboot|襤 Shutdown" | \
-                    rofi -sep "|" -dmenu -width 20 -lines 4  \
-                         -theme-str 'inputbar { children: []; }')"
+        rofi -modi "clipboard:greenclip print" -lines 12 -show clipboard -run-command '{cmd}'
+        ;;
+    -l|--logout)
+        ANS="$(echo -e " Lock|鈴 Sleep|菱 Reboot|襤 Shutdown" | \
+                rofi -sep "|" -dmenu -width 20 -lines 4  \
+                     -theme-str 'inputbar { children: []; }')"
 
-            case "$ANS" in
-                *Lock) betterlockscreen -l blur ;;
-                *Suspend) systemctl suspend;;
-                *Reboot) reboot;;
-                *Shutdown) shutdown -P now ;;
-            esac
-            ;;
-        *)
-            printf "\nOption does not exist: %s\n\n" "$arg"
-            exit 2
-    esac
-done
+        case "$ANS" in
+            *Lock) simplelock;;
+            *Sleep) systemctl hybrid-sleep;;
+            *Reboot) reboot;;
+            *Shutdown) shutdown -P now ;;
+        esac
+        ;;
+    -s|--shortcuts)
+        awk '/\w/ && last { print $0,"\t",last} {last=""} /^#/{gsub("#","");last=$0}' \
+        ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | rofi -dmenu -i -P "Keybindings:" -width 70;;
+
+    *)
+        printf "\nOption does not exist: %s\n\n" "$arg"
+        exit 2
+esac
 
 (( $# == 0 )) && "$0" -r
 
