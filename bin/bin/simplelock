@@ -6,6 +6,7 @@ WALL=$HOME/.wallpaper
 CACHE_DIR=$HOME/.cache/i3lock
 AVATAR=$CACHE_DIR/$USER-pic-crop.png
 FULLNAME=`getent passwd $USER | cut -d ":" -f 5 | cut -d "," -f 1`
+[[ -z $FULLNAME ]] || FULLNAME=$USER
 
 res=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
 height=$(echo $res | awk -F "x" '{print $2}')
@@ -17,6 +18,22 @@ fg_color=0f111aff
 trans_color=00000000
 wrong_color=f82a11aa
 annot_text="Type Password To Unlock"
+
+# check if wallpaper is light or dark
+imgdomcolor() {
+    hex=$(convert $WALL +dither -colors 1 -unique-colors -format "%[hex:p{0,0}]" info:)
+    red=$((16#$(echo $hex | awk '{gsub(/.{2}/,"& "); print $1}')))
+    green=$((16#$(echo $hex | awk '{gsub(/.{2}/,"& "); print $2}')))
+    blue=$((16#$(echo $hex | awk '{gsub(/.{2}/,"& "); print $3}')))
+    total=$((($red + $green + $blue)))
+    if [ $total -gt 186 ]
+    then
+       declare -g annot_color="000000" # light
+    else
+       declare -g annot_color="ffffff" # dark
+    fi
+}
+
 # make small circle of user avatar
 cropuser() {
 	convert $HOME/.face -resize 120x120 -gravity Center \( \
@@ -29,12 +46,13 @@ cropuser() {
 
 # blur and add user avatar
 blurwall() {
+    imgdomcolor # get dominant color
     # add blur to wallpaper
     x=$((half_width+140))
     y=$((height+250))
 
     convert "$WALL" -blur 0x8 -pointsize 26 \
-        -annotate +$x+$y "$annot_text" \
+        -fill \#$annot_color -annotate +$x+$y "$annot_text" \
         -resize "$res^" -gravity center \
         -extent "$res" "$CACHE_DIR/wallpaper-blur"
 
@@ -45,8 +63,9 @@ blurwall() {
 
 
 lock() {
+    imgdomcolor # get dominant color
 	i3lock -n -e --pass-media-keys --pass-screen-keys -i $CACHE_DIR/resize-pic-sc-blur.png \
-	--indpos="w/2:h/2-80" --greeterpos="w/2:h/2+10" --greetercolor=$fg_color \
+	--indpos="w/2:h/2-80" --greeterpos="w/2:h/2+10" --greetercolor=$annot_color"ff" \
 	--insidevercolor=$trans_color --insidewrongcolor=$wrong_color --insidecolor=$trans_color \
 	--ringvercolor=$fg_color --ringwrongcolor=$wrong_color --ringcolor=$trans_color \
 	--keyhlcolor=c4c5c5ff --bshlcolor=$fg_color --separatorcolor=$trans_color \
