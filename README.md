@@ -24,7 +24,6 @@
   - cmus-notify (cmus notifcations)
   - flameshot (for taking screenshots)
   - greenclip (clipboard history)
-  - betterlockscreen (lockscreen)
 
 * Fonts:
   > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
@@ -74,12 +73,23 @@ set your default apps from sxhkd settings
 
 #### auto lockscreen on wake up
 
-- copy betterlockscreen@.service to /etc/systemd/system
-- run `sudo systemctl enable betterlockscreen@$USER.service`
+- copy simplelock@.service to /etc/systemd/system
+- run `sudo systemctl enable simplelock@$USER`
 
 ## **Screenshots:**
 
+#### Clean
+
 ![desktop](/screen1.png)
-![desktop](/screen2.png)
-![neovim](/screen3.png)
-![keyboard shortcuts](/screen4.png)
+
+#### Lockscreen
+
+![lockscreen](/screen2.png)
+
+#### Keyboard shortcuts
+
+![keyboard shortcuts](/screen3.png)
+
+#### Busy neovim
+
+![neovim](/screen4.png)

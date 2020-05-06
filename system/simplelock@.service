@@ -7,12 +7,10 @@ Before=suspend.target
 User=%I
 Type=simple
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/betterlockscreen --lock blur
+ExecStart=/bin/simplelock
 TimeoutSec=infinity
 ExecStartPost=/usr/bin/sleep 1
 
 [Install]
 WantedBy=sleep.target
 WantedBy=suspend.target
-
-/* vim:ft=systemd
