@@ -25,3 +25,5 @@ integral = 80
 monstercat = 0
 waves = 0
 gravity = 100
+
+/* vim:ft=dosini
