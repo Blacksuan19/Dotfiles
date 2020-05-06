@@ -2,7 +2,7 @@
 
 STATUS=$(playerctl status 2> /dev/null)
 
-if [ "$STATUS" != "Playing" ] && [ "$STATUS" != "Paused" ]; then
+if [[ $STATUS == "" ]]; then
     echo " No player is running"
 else
     P_ICON=""
