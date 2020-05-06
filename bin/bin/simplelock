@@ -16,7 +16,7 @@ half_height=$((height/2))
 fg_color=0f111aff
 trans_color=00000000
 wrong_color=f82a11aa
-
+annot_text="Type Password To Unlock"
 # make small circle of user avatar
 cropuser() {
 	convert $HOME/.face -resize 120x120 -gravity Center \( \
@@ -30,7 +30,11 @@ cropuser() {
 # blur and add user avatar
 blurwall() {
     # add blur to wallpaper
-    convert "$WALL" -blur 0x8 \
+    x=$((half_width+140))
+    y=$((height+250))
+
+    convert "$WALL" -blur 0x8 -pointsize 26 \
+        -annotate +$x+$y "$annot_text" \
         -resize "$res^" -gravity center \
         -extent "$res" "$CACHE_DIR/wallpaper-blur"
 
