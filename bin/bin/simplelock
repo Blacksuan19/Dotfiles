@@ -47,7 +47,7 @@ lock() {
 	--ringvercolor=$fg_color --ringwrongcolor=$wrong_color --ringcolor=$trans_color \
 	--keyhlcolor=c4c5c5ff --bshlcolor=$fg_color --separatorcolor=$trans_color \
 	--line-uses-inside --radius 60 --ring-width 3 --indicator --greetersize=20 \
-    --wrongtext="" --noinputtext="" --greetertext="$FULLNAME" --veriftext='' --wrongtext=''
+    --wrongtext="" --noinputtext="" --greetertext="$FULLNAME" --veriftext=''
 }
 
 
