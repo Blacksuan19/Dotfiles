@@ -69,4 +69,4 @@ set classify+=' ::*.doc,,*.docx,,*.adoc::'
 set classify+=' ::*.xls,,*.xls,,*.xlsmx::'
 set classify+=' ::*.pptx,,*.ppt::'
 
-/* vim:ft=vim
+" vim:ft=vim
