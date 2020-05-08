@@ -49,6 +49,7 @@ set your default apps from sxhkd settings
 | key                     | function                                                   |
 | ----------------------- | ---------------------------------------------------------- |
 | win key(mod/super)      | launch rofi                                                |
+| super + F1              | show keyboard shortcuts in a window                        |
 | super + w               | launch browser (default is google chrome)                  |
 | super + Enter           | launch terminal (default is kitty)                         |
 | super + f               | launch file manager (default is vifm)                      |
@@ -78,6 +79,7 @@ set your default apps from sxhkd settings
 
 ## **Screenshots:**
 
-![alt text](/screen1.png)
-![alt text](/screen2.png)
-![alt text](/screen3.png)
+![desktop](/screen1.png)
+![desktop](/screen2.png)
+![neovim](/screen3.png)
+![keyboard shortcuts](/screen4.png)
