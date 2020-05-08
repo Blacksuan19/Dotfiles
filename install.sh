@@ -8,6 +8,7 @@ declare -a ignore_list=(".git"
                         "screen1.png"
                         "screen2.png"
                         "screen3.png"
+                        "screen4.png"
                     )
 
 # go throw all files except ignore list
