@@ -53,9 +53,7 @@ fi
 
 
 CHENTRY=$(echo -e "$TOGGLE\nManual\n$LIST" | uniq -u | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
-#echo "$CHENTRY"
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
-#echo "$CHSSID"
 
 # If the user inputs "manual" as their SSID in the start window, it will bring them to this screen
 if [ "$CHENTRY" = "Manual" ] ; then
@@ -63,9 +61,6 @@ if [ "$CHENTRY" = "Manual" ] ; then
 	MSSID=$(echo "enter the SSID of the network (SSID,password)" | rofi -dmenu -p "Manual Entry: " -font "$FONT" -lines 1)
 	# Separating the password from the entered string
 	MPASS=$(echo "$MSSID" | awk -F "," '{print $2}')
-
-	#echo "$MSSID"
-	#echo "$MPASS"
 
 	# If the user entered a manual password, then use the password nmcli command
 	if [ "$MPASS" = "" ]; then
