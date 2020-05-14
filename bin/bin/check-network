@@ -2,6 +2,7 @@
 
 wconnected=""
 econnected=""
+nconnected="睊"
 connected="$(nmcli | grep -w 'connected\|available' | awk '{print $2}')"
 wifi_id=$(nmcli | grep "wlan0" | awk '{print $4}')
 ether_id=$(nmcli | grep "enp5s0" | awk '{print $4}')
@@ -14,5 +15,5 @@ if [[ $connected = *"connected"* ]]
         echo " $econnected $ether_id"
     fi
 else
-    echo "Not Connected"
+    echo "$nconnected Not Connected"
 fi
