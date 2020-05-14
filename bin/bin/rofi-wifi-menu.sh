@@ -69,10 +69,10 @@ if [ "$CHENTRY" = "Manual" ] ; then
 		nmcli dev wifi con "$MSSID" password "$MPASS"
 	fi
 
-elif [ "$CHENTRY" = "toggle on" ]; then
+elif [ "$CHENTRY" = "Toggle on" ]; then
 	nmcli radio wifi on
 
-elif [ "$CHENTRY" = "toggle off" ]; then
+elif [ "$CHENTRY" = "Toggle off" ]; then
 	nmcli radio wifi off
 
 else
