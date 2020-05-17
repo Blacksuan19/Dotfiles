@@ -42,7 +42,7 @@ ex() {
             *.rar) c=(unrar x);;
             *.xz)  c=(unxz);;
             *.zip) c=(unzip);;
-            *.tgz  c=(tar xzvf);;
+            *.tgz) c=(tar xzvf);;
             *)     echo "$0: unrecognized file extension: \`$i'" >&2
                    continue;;
         esac
