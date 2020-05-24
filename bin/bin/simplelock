@@ -28,7 +28,7 @@ imgdomcolor() {
     total=$((($red + $green + $blue)))
     if [ $total -gt 186 ]
     then
-       declare -g annot_color="000000" # light
+       declare -g annot_color="0f111a" # light
     else
        declare -g annot_color="ffffff" # dark
     fi
