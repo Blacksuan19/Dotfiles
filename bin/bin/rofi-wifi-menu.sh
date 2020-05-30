@@ -10,6 +10,7 @@ POSITION=0
 YOFF=0
 XOFF=0
 FONT="FuraCode Nerd Font Mono 8"
+DIVIDER="------------------------------------------"
 
 if [ -r "$DIR/config" ]; then
 	source "$DIR/config"
@@ -19,7 +20,7 @@ else
 	echo "WARNING: config file not found! Using default values."
 fi
 
-LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d' | awk -F'  +' '{ if (!seen[$1]++) print}')
+LIST=$(nmcli --fields "$FIELDS" device wifi list | awk -F'  +' '{ if (!seen[$1]++) print}' | sed -n '1!p')
 # For some reason rofi always approximates character width 2 short... hmmm
 RWIDTH=$(($(echo "$LIST" | head -n 1 | awk '{print length($0); }')+3))
 # Dynamically change the height of the rofi menu
@@ -52,7 +53,7 @@ fi
 
 
 
-CHENTRY=$(echo -e "$TOGGLE\nManual\n$LIST" | uniq -u | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
+CHENTRY=$(echo -e "$TOGGLE\nManual\n$DIVIDER\n$LIST" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 
 # If the user inputs "manual" as their SSID in the start window, it will bring them to this screen
