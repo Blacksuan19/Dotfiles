@@ -1,6 +1,7 @@
 #!/bin/env bash
-# copyright © blacksuan19 @ 2020
+# copyright © 2020 blacksuan19
 # simplelock: a simple i3 lockscreen with user avatar and fullname
+# depends on i3lock and imagemagick
 
 WALL=$HOME/.wallpaper
 CACHE_DIR=$HOME/.cache/i3lock
