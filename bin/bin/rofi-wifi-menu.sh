@@ -53,7 +53,7 @@ fi
 
 
 
-CHENTRY=$(echo -e "$TOGGLE\nManual\n$DIVIDER\n$LIST" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
+CHENTRY=$(echo -e "$LIST\n$DIVIDER\nManual\n$TOGGLE" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 
 # If the user inputs "manual" as their SSID in the start window, it will bring them to this screen
