@@ -3,6 +3,20 @@
 # set root pointer
 xsetroot -cursor_name left_ptr
 
+# map / key to p
+xmodmap -e 'keycode 106 = p P p P'
+
+# map numbers to numpad
+xmodmap -e 'keycode 87 = 1 exclam'
+xmodmap -e 'keycode 88 = 2 at'
+xmodmap -e 'keycode 89 = 3 numbersign'
+xmodmap -e 'keycode 83 = 4 dollar'
+xmodmap -e 'keycode 84 = 5 percent'
+xmodmap -e 'keycode 85 = 6 asciicircum'
+xmodmap -e 'keycode 79 = 7 ampersand'
+xmodmap -e 'keycode 80 = 8 asterisk'
+xmodmap -e 'keycode 81 = 9 parenleft'
+
 # polybar
 polybar desks &
 polybar trays &
