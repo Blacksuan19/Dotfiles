@@ -10,7 +10,7 @@ POSITION=0
 YOFF=0
 XOFF=0
 FONT="FuraCode Nerd Font Mono 8"
-DIVIDER="------------------------------------------"
+DIVIDER="-------------"
 
 if [ -r "$DIR/config" ]; then
 	source "$DIR/config"
