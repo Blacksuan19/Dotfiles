@@ -90,9 +90,9 @@ wm-restack = bspwm
 bottom = false
 fixed-center = true
 radius = 0
-width = 500
+width = 550
 height = 26
-offset-x = 858
+offset-x = 808
 offset-y = 3
 cursor-click = pointer
 tray-position = none
@@ -103,7 +103,7 @@ foreground = ${color.fground}
 font-0 = "FuraCode Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
 
-modules-left = date battery backlight network pulseaudio
+modules-left = date battery backlight pulseaudio bluetooth network
 modules-right  = playing
 
 spacing = 1
@@ -267,6 +267,16 @@ click-left = playerctl play-pause
 format-background = ${color.accent}
 format-foreground = ${color.bground}
 format-padding           = 1
+
+;;;;;;;;;;;;;;;;
+;; Bluetooth  ;;
+;;;;;;;;;;;;;;;;
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+interval = 3
+click-left = rofi-bluetooth
+format-prefix = " "
 
 
 /* vim:ft=dosini
