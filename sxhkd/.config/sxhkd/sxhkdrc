@@ -94,9 +94,9 @@ super + s
 super + t
    telegram-desktop
 
-# markdown editor
-super + shift + t
-    typora
+# notion notes
+super + o
+    notion-app
 
 # get a new wallpaper
 super + n
