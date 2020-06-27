@@ -7,6 +7,7 @@
 - \*NIX system
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
+- [picom-rounded-corners](https://aur.archlinux.org/packages/picom-rounded-corners/)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
