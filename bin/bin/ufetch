@@ -7,7 +7,7 @@
 # user is already defined
 host="$(hostname)"
 os='Arch Linux'
-kernel="$(uname -sr | sed 's/-[0-9]-ck-piledriver//')"
+kernel="$(uname -sr | sed 's/-[a-z].*//')"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "$SHELL")"
