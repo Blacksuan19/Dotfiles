@@ -90,9 +90,9 @@ super + x
 super + s
     spotify
 
-# telegram
+# kotatogram
 super + t
-   telegram-desktop
+   kotatogram-desktop
 
 # notion notes
 super + o
