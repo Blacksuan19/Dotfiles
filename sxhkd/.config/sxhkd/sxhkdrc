@@ -1,6 +1,6 @@
 # launch web browser
 super + w
-   google-chrome-stable
+   firefox-developer-edition
 
 # launch terminal
 super + Return
