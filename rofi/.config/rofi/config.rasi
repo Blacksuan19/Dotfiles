@@ -1,5 +1,5 @@
 configuration {
-  font: "FuraCode Nerd Font Mono 10";
+  font: "SF Pro Rounded 10";
   display-run: " ";
   display-drun: " ";
   display-window: " ";
