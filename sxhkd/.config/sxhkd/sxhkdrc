@@ -8,7 +8,7 @@ super + Return
 
 # launch file manager
 super + f
-   kitty ~/bin/vifmrun
+  pcmanfm
 
 # program launcher
 alt + F1
