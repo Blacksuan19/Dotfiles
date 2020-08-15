@@ -28,7 +28,6 @@ alias c="bat " # this one is way better
 alias zsh="exec zsh"
 alias n="nvim"
 alias py="python3"
-alias vifm="vifmrun"
 
 # packages aliases.
 alias y="yay"
