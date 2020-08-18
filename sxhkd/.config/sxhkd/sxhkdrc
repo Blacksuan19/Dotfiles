@@ -1,50 +1,30 @@
-# launch web browser
-super + w
-   firefox-developer-edition
-
 # launch terminal
 super + Return
    kitty
-
-# launch file manager
-super + f
-  pcmanfm
 
 # program launcher
 alt + F1
     rofi_run -r
 
-# reload configurations
-super + shift + r
-    pkill -USR1 -x sxhkd
+# launch software 
+super + {w,f,s,t,o}
+    {firefox-developer-edition,pcmanfm,spotify,kotatogram-desktop,notion-app}
 
-# close current focused node
-super + q
-    bspc node -c
+# keybindings, clipboard, logout
+super + {F1,v,x}
+   rofi_run {-s,-c,-l}
 
-# swap the current node and the biggest node
-super + g
-    bspc node -s biggest
+# get a new wallpaper
+super + {n,q}
+    {unsplash.sh,bspc node -c}
 
-# set the window state to tiled
-super + F9
-    bspc node --state tiled
-
-# set the window state to floating
-super + F10
-    bspc node --state floating
-
-# set the window state to fullscreen
-super + F11
-    bspc node --state fullscreen
+# set the window state
+super + {F9,F10,F11}
+    bspc node --state {tiled,floating,fullscreen}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-    bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -66,79 +46,38 @@ ctrl + alt + {h,j,k,l}
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# take a fullscreen screenshot
-Print
-    flameshot full -p /media/Dark-Files/Screenshots
+# Toggle beetwen floating & tiled
+super + space
+    bspc node -t "~"{floating,tiled}
 
-# take a selected area screenshot
-Print + shift
-    flameshot gui -p /media/Dark-Files/Screenshots
+# Send the window to another edge of the screen
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
 
-# take a fullscreen screenshot with 5s delay
-Print + alt
-    flameshot full -d 5000 -p /media/Dark-Files/Screenshots
+# full screenshot, selection area, full in 5 seconds 
+Print + {_,shift,alt}
+    flameshot {full -p,gui -p,full -d 5000 -p} /media/Dark-Files/Screenshots
 
-# clipboard manager
-super + v
-    rofi_run -c
+# increase/decrease volume by 5%
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume 0 {+5%,-5%}
 
-# exit menu
-super + x
-    rofi_run -l
+# increase/decrease brightness by 10
+XF86MonBrightness{Up,Down}
+    light {-A,-U} 10
 
-# spotify
-super + s
-    spotify
-
-# kotatogram
-super + t
-   kotatogram-desktop
-
-# notion notes
-super + o
-    notion-app
-
-# get a new wallpaper
-super + n
-    unsplash.sh
-
-# show keybindings
-super + F1
-   rofi_run -s
+# next, previous, play-pause toggle 
+XF86Audio{Next,Prev,Play}
+    playerctl {next,previous,play-pause}
 
 # toggle volume mute
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
-# increase volume by 5%
-XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%
-
-# decrease volume by 5%
-XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%
-
-# increase brightness by 10
-XF86MonBrightnessUp
-    light -A 10
-
-# decrease brightness by 10
-XF86MonBrightnessDown
-    light -U 10
-
-# next song (whatever player)
-XF86AudioNext
-    playerctl next
-
-# previous song
-XF86AudioPrev
-    playerctl previous
-
-# toggle play and pause
-XF86AudioPlay
-    playerctl play-pause
-
 # hybrid sleep
 XF86Sleep
     systemctl hybrid-sleep
 
+# reload configurations
+super + shift + r
+    pkill -USR1 -x sxhkd
