@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;
-;; Colors ;;
+;; Colors  ;;
 ;;;;;;;;;;;;;
 
 [color]
@@ -54,19 +54,16 @@ pseudo-transparency = false
 ;;   Bars  ;;
 ;;;;;;;;;;;;;
 
-[bar/desks]
+[bar/onsie]
 
 monitor = eDP
 monitor-strict = false
 override-redirect = true
-wm-restack = bspwm
+wm_name = bspwm
 bottom = false
 fixed-center = true
-radius = 0
-width = 216.5
-height = 26
-offset-x = 9
-offset-y = 3
+width = 100%
+height = 20
 cursor-click = pointer
 tray-position = none
 
@@ -76,38 +73,15 @@ foreground = ${color.fground}
 font-0 = "FuraCode Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
 
+modules-right =  battery bluetooth network date
+modules-center  = playing
 modules-left = workspaces
-spacing = 1
-dim-value = 1.0
 
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
 
-[bar/trays]
-
-monitor = eDP
-monitor-strict = false
-override-redirect = true
-wm-restack = bspwm
-bottom = false
-fixed-center = true
-radius = 0
-width = 550
-height = 26
-offset-x = 808
-offset-y = 3
-cursor-click = pointer
-tray-position = none
-
-background = ${color.bground}
-foreground = ${color.fground}
-
-font-0 = "FuraCode Nerd Font:size=7;1"
-font-1 = "Material Icons:size=7.5;1"
-
-modules-left = date battery backlight pulseaudio bluetooth network
-modules-right  = playing
-
-spacing = 1
-dim-value = 1.0
+module-margin-left = 1
+module-margin-right = 1
 
 ;;;;;;;;;;;;;;;;
 ;; Workspaces ;;
@@ -141,48 +115,6 @@ label-empty = 
 
 
 ;;;;;;;;;;;;;
-;;  Sound  ;;
-;;;;;;;;;;;;;
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume-padding = 1
-format-volume = <ramp-volume><label-volume>
-label-volume = %percentage%%
-format-volume-background = ${color.bground}
-format-volume-foreground = ${color.fground}
-use-ui-max = false
-interval = 5
-
-ramp-volume-0 = ""
-ramp-volume-1 = ""
-ramp-volume-2 = ""
-
-
-label-muted = " Muted"
-label-muted-background = ${color.bground}
-label-muted-foreground = ${color.fground}
-label-muted-padding = 2
-
-;;;;;;;;;;;;;;;
-;; Backlight ;;
-;;;;;;;;;;;;;;;
-
-[module/backlight]
-
-type = custom/script
-interval = 3
-exec = ~/bin/light.sh
-scroll-up = exec light -A 5
-scroll-down = exec light -U 5
-format-prefix = " "
-label = %output%
-format-background = ${color.bground}
-format-foreground = ${color.modulefg}
-format-padding = 1
-
-;;;;;;;;;;;;;
 ;; Battery ;;
 ;;;;;;;;;;;;;
 
@@ -210,7 +142,6 @@ format-discharging-foreground = ${color.modulefg}
 format-discharging-padding = 1
 padding-left = 1
 
-
 label-charging =  %percentage%%
 label-discharging = %percentage%%
 
@@ -218,7 +149,6 @@ label-full-background = ${color.bground}
 label-full-foreground = ${color.modulefg}
 label-full-padding = 1
 
-format-full-prefix-background = ${color.bground} 
 format-full-prefix = " "
 
 ;;;;;;;;;;;;;
@@ -232,8 +162,8 @@ interval = 2.0
 time =  %I:%M %p
 time-alt =  %a, %b %dth
 format = <label>
-format-background = ${color.bground}
-format-foreground = ${color.modulefg}
+format-background = ${color.accent}
+format-foreground = #000
 format-padding = 2
 label = %time%
 
@@ -264,19 +194,18 @@ interval = 3
 label-font = 0
 label-maxlen = 35
 click-left = playerctl play-pause
-format-background = ${color.accent}
-format-foreground = ${color.bground}
+format-background = ${color.bground}
+format-foreground = ${color.modulefg}
 format-padding           = 1
 
 ;;;;;;;;;;;;;;;;
 ;; Bluetooth  ;;
 ;;;;;;;;;;;;;;;;
+;
 [module/bluetooth]
 type = custom/script
 exec = rofi-bluetooth --status
-interval = 3
+interval = 20
 click-left = rofi-bluetooth
-format-prefix = " "
-
 
 /* vim:ft=dosini

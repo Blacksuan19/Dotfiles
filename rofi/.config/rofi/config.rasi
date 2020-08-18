@@ -1,11 +1,6 @@
 configuration {
   font: "SF Pro Rounded 10";
-  display-run: " ";
-  display-drun: " ";
-  display-window: " ";
-  padding: 20;
-  line-padding: 2;
-  separator-style: "solid";
+  show-icons: true;
   hide-scrollbar: true;
   theme: "~/.config/rofi/material-ocean.rasi";
   kb-cancel: "Escape,Alt+F1";

@@ -10,7 +10,7 @@ case $1 in
         rofi -modi "clipboard:greenclip print" -lines 12 -show clipboard -run-command '{cmd}'
         ;;
     -l|--logout)
-        ANS="$(echo -e " Lock|鈴 Sleep|菱 Reboot|襤 Shutdown" | \
+        ANS="$(echo -e " Lock| Sleep| Reboot| Shutdown" | \
                 rofi -sep "|" -dmenu -width 20 -lines 4  \
                      -theme-str 'inputbar { children: []; }')"
 
