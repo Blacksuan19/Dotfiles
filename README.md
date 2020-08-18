@@ -27,8 +27,11 @@
   - greenclip (clipboard history)
 
 * Fonts:
+
   > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-  > - Fira Code Nerd Font
+  > - [Fira Code Nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+  > - [San Francesco Rounded](https://developer.apple.com/fonts/)
+  > - Material Icons Font
 
 ## **Installation:**
 
