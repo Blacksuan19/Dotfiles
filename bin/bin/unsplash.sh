@@ -1,5 +1,5 @@
 #/bin/bash
-# copyright © 2020 blacksuan19
+# copyright © blacksuan19 @ 2020
 # get a random 1080p wallpaper from unsplash.com whenever this script is run
 # depends on notify-send for notifications, feh for setting wallpaper
 # run hourly with cron:

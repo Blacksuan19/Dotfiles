@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 case $1 in
     -r|--run)
-        rofi -modi run,drun  -show drun
+        rofi -modi run,drun  -show drun -show-icons
         ;;
     -c|--clipboard)
         hash greenclip &>/dev/null ||
