@@ -60,7 +60,6 @@ bspc rule -a feh state=floating follow=on
 
 # 1 > terminal
 bspc rule -a kitty desktop='^1' follow=on focus=on
-bspc rule -a kitty state=floating follow=on focus=on
 
 # 2 > web
 bspc rule -a firefox desktop='^2' follow=on focus=on
@@ -79,7 +78,6 @@ for i in ${office[@]}; do
 
 # 6 > file manager
 bspc rule -a Pcmanfm desktop='^6' follow=on focus=on
-bspc rule -a Pcmanfm state=floating follow=on focus=on
 
 # 8 > music
 bspc rule -a spotify desktop='^8' follow=on focus=on
