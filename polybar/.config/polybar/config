@@ -163,7 +163,7 @@ time =  %I:%M %p
 time-alt =  %a, %b %dth
 format = <label>
 format-background = ${color.accent}
-format-foreground = #000
+format-foreground =${color.modulefg}
 format-padding = 2
 label = %time%
 
