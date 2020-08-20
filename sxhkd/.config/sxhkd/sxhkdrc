@@ -8,7 +8,7 @@ alt + F1
 
 # launch software 
 super + {w,f,s,t,o}
-    {firefox-developer-edition,pcmanfm,spotify,kotatogram-desktop,notion-app}
+    {vivaldi-snapshot,pcmanfm,spotify,kotatogram-desktop,notion-app}
 
 # keybindings, clipboard, logout
 super + {F1,v,x}
