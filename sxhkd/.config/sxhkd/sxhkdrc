@@ -6,7 +6,7 @@ super + Return
 alt + F1
     rofi_run -r
 
-# launch software 
+# launch software
 super + {w,f,s,t,o}
     {vivaldi-snapshot,pcmanfm,spotify,kotatogram-desktop,notion-app}
 
@@ -54,7 +54,7 @@ super + space
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
-# full screenshot, selection area, full in 5 seconds 
+# full screenshot, selection area, full in 5 seconds
 Print + {_,shift,alt}
     flameshot {full -p,gui -p,full -d 5000 -p} /media/Dark-Files/Screenshots
 
@@ -66,7 +66,7 @@ XF86Audio{Raise,Lower}Volume
 XF86MonBrightness{Up,Down}
     light {-A,-U} 10
 
-# next, previous, play-pause toggle 
+# next, previous, play-pause toggle
 XF86Audio{Next,Prev,Play}
     playerctl {next,previous,play-pause}
 
