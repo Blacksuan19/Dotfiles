@@ -23,8 +23,10 @@ case $1 in
         ;;
     -s|--shortcuts)
         awk '/\w/ && last { print $0,"\t",last} {last=""} /^#/{gsub("#","");last=$0}' \
-        ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | rofi -dmenu -i -P "Keybindings:" -width 70;;
-
+        ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | rofi -dmenu -i -P "Keybindings:" -width 40;;
+    -q)
+        rofi -show calc -modi calc -no-show-match -no-sort \
+            -width 40% -lines 5 -calc-command "printf '{result}' | xsel -b";;
     *)
         printf "\nOption does not exist: %s\n\n" "$arg"
         exit 2

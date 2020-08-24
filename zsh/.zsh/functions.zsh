@@ -41,8 +41,3 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-# quick calc
-calc() {
-    echo "scale=3;$@" | bc -l
-}
