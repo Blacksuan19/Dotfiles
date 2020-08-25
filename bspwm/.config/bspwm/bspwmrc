@@ -70,14 +70,14 @@ bspc rule -a kotatogram-desktop desktop='^3' follow=on focus=on
 # 4 > notion
 bspc rule -a notion-app desktop='^4' follow=on focus=on
 
-# 5 > office
+# 5 > file manager
+bspc rule -a Pcmanfm desktop='^5' follow=on focus=on
+
+# 6 > office
 declare -a office=(libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
-   bspc rule -a $i desktop='^5' follow=on focus=on; done
-
-# 6 > file manager
-bspc rule -a Pcmanfm desktop='^6' follow=on focus=on
+   bspc rule -a $i desktop='^6' follow=on focus=on; done
 
 # 8 > music
 bspc rule -a spotify desktop='^8' follow=on focus=on
