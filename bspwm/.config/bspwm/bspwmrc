@@ -62,7 +62,7 @@ bspc rule -a feh state=floating follow=on
 bspc rule -a kitty desktop='^1' follow=on focus=on
 
 # 2 > web
-bspc rule -a firefox desktop='^2' follow=on focus=on
+bspc rule -a vivaldi-snapshot desktop='^2' follow=on focus=on
 
 # 3 > telegram
 bspc rule -a kotatogram-desktop desktop='^3' follow=on focus=on
