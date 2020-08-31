@@ -60,19 +60,21 @@ Print + {_,shift,alt}
 
 # increase/decrease volume by 5%
 XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume 0 {+5%,-5%}
+    change-volume {up,down}
+
+# toggle volume mute
+XF86AudioMute
+   change-volume mute 
 
 # increase/decrease brightness by 10
 XF86MonBrightness{Up,Down}
-    light {-A,-U} 10
+    change-brightness {up,down}
 
 # next, previous, play-pause toggle
 XF86Audio{Next,Prev,Play}
     playerctl {next,previous,play-pause}
 
-# toggle volume mute
-XF86AudioMute
-    pactl set-sink-mute 0 toggle
+
 
 # hybrid sleep
 XF86Sleep

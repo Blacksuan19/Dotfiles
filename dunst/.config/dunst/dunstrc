@@ -32,15 +32,15 @@ hide_duplicate_count = false
 show_indicators = yes
 
 ### Icons ###
-icon_position = right
+icon_position = left
 max_icon_size = 50
-
+icon_path = /usr/share/icons/la-capitaine-icon-theme/actions/22x22-dark/:/usr/share/icons/la-capitaine-icon-theme/status/scalable-dark/
 ### History ###
 sticky_history = yes
 history_length = 20
 
 ### Misc/Advanced ###
-browser = /usr/bin/firefox-developer-edition
+browser = /usr/bin/vivaldi-snapshot
 always_run_script = true
 title = Dunst
 class = Dunst
