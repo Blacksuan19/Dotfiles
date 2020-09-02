@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
 case $1 in
-    -r|--run)
+    -r)
         rofi -modi run,drun  -show drun -show-icons
         ;;
-    -c|--clipboard)
+    -c)
         hash greenclip &>/dev/null ||
             { echo "Requires 'greenclip' installed"; exit 1; }
 
         rofi -modi "clipboard:greenclip print" -lines 12 -show clipboard -run-command '{cmd}'
         ;;
-    -l|--logout)
-        ANS="$(echo -e " Lock| Sleep| Reboot| Shutdown" | \
+    -l)
+        ANS="$(echo -e " Lock| Suspend| Reboot| Shutdown" | \
                 rofi -sep "|" -dmenu -width 20 -lines 4  \
                      -theme-str 'inputbar { children: []; }')"
 
         case "$ANS" in
-            *Lock) simplelock;;
-            *Sleep) systemctl hybrid-sleep;;
+            *Lock) betterlockscreen -l blur;;
+            *Suspend) betterlockscreen -s blur;;
             *Reboot) reboot;;
             *Shutdown) shutdown -P now ;;
         esac
         ;;
-    -s|--shortcuts)
+    -s)
         awk '/\w/ && last { print $0,"\t",last} {last=""} /^#/{gsub("#","");last=$0}' \
         ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | rofi -dmenu -i -P "Keybindings:" -width 40;;
     -q)

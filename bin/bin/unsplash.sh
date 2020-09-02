@@ -11,8 +11,8 @@ wget --no-check-certificate -O $HOME/.wallpaper "https://source.unsplash.com/ran
 # set desktop wallpaper
 feh --bg-fill $HOME/.wallpaper
 
-# update simplelock wallpaper (change to whatever lockscreen you use)
-simplelock -w
+# update lockscreen wallpaper
+betterlockscreen -u $HOME/.wallpaper &>/dev/null
 
 # we out
 notify-send "New wallpaper set successfully."
