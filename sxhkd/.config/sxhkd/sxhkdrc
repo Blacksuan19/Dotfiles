@@ -8,7 +8,7 @@ alt + F1
 
 # launch software
 super + {w,f,s,t,o}
-    {vivaldi-snapshot,pcmanfm,spotify,kotatogram-desktop,notion-app}
+    {brave,pcmanfm,spotify,kotatogram-desktop,notion-app}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
@@ -64,7 +64,7 @@ XF86Audio{Raise,Lower}Volume
 
 # toggle volume mute
 XF86AudioMute
-   change-volume mute 
+   change-volume mute
 
 # increase/decrease brightness by 10
 XF86MonBrightness{Up,Down}
@@ -73,8 +73,6 @@ XF86MonBrightness{Up,Down}
 # next, previous, play-pause toggle
 XF86Audio{Next,Prev,Play}
     playerctl {next,previous,play-pause}
-
-
 
 # hybrid sleep
 XF86Sleep
