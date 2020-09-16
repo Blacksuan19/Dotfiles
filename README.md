@@ -29,8 +29,7 @@
 * Fonts:
 
   > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-  > - [Fira Code Nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
-  > - [San Francesco Rounded](https://developer.apple.com/fonts/)
+  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
   > - Material Icons Font
 
 ## **Installation:**

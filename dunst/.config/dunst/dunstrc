@@ -3,7 +3,7 @@
 ### Display ###
 monitor = 0
 follow = none
-geometry = "400x40-10+30"
+geometry = "400x40-10+40"
 indicate_hidden = yes
 shrink = yes
 transparency = 0
@@ -18,7 +18,7 @@ sort = yes
 idle_threshold = 120
 
 ### Text ###
-font = JetBrains Mono Nerd Font 10
+font = San Francisco Display 10
 line_height = 1
 markup = full
 format = "<b>%s</b>\n%b"
@@ -35,6 +35,7 @@ show_indicators = yes
 icon_position = left
 max_icon_size = 50
 icon_path = /home/blacksuan19/.icons/Material-Ocean/22x22/actions/
+
 ### History ###
 sticky_history = yes
 history_length = 20
