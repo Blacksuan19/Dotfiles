@@ -7,7 +7,6 @@
 bground = #0f111a
 fground = #ffffff
 accent = #ff4151
-modulefg = #ffffff
 
 ;; Material Colors
 red = #e53935
@@ -62,8 +61,10 @@ override-redirect = true
 wm-restack = bspwm
 bottom = false
 fixed-center = true
-width = 100%
-height = 20
+width = 99.2%
+height = 25
+offset-x = 5
+offset-y = 5
 cursor-click = pointer
 tray-position = none
 
@@ -71,7 +72,6 @@ background = ${color.bground}
 foreground = ${color.fground}
 
 font-0 = "JetBrains Mono Nerd Font:size=7;1"
-font-1 = "Material Icons:size=7.5;1"
 
 modules-right =  battery bluetooth network date
 modules-center  = playing
@@ -100,7 +100,7 @@ format-foreground = ${color.fground}
 label-monitor = %name%
 label-focused-background = #ff4151
 label-occupied-background = ${color.bground}
-label-urgent-background = ${color.red}
+label-urgent-background = ${color.deep-orange}
 label-empty-background = ${color.bground}
 
 label-focused-padding = 2
@@ -108,10 +108,10 @@ label-urgent-padding = 2
 label-occupied-padding = 2
 label-empty-padding = 2
 
-label-focused = 
-label-occupied = 
-label-urgent = 
-label-empty = 
+label-focused = 
+label-occupied = 
+label-urgent = 
+label-empty = 
 
 
 ;;;;;;;;;;;;;
@@ -130,15 +130,15 @@ poll-interval = 5
 time-format = %H:%M
 
 format-charging = <label-charging>
-format-charging-prefix = " "
+format-charging-prefix = " "
 format-charging-background = ${color.bground}
-format-charging-foreground = ${color.modulefg}
+format-charging-foreground = ${color.fground}
 format-charging-padding = 1
 
 format-discharging = <label-discharging>
-format-discharging-prefix = " "
+format-discharging-prefix = "  "
 format-discharging-background = ${color.bground}
-format-discharging-foreground = ${color.modulefg}
+format-discharging-foreground = ${color.fground}
 format-discharging-padding = 1
 padding-left = 1
 
@@ -146,10 +146,10 @@ label-charging =  %percentage%%
 label-discharging = %percentage%%
 
 label-full-background = ${color.bground}
-label-full-foreground = ${color.modulefg}
+label-full-foreground = ${color.fground}
 label-full-padding = 1
 
-format-full-prefix = " "
+format-full-prefix = " "
 
 ;;;;;;;;;;;;;
 ;;  Date   ;;
@@ -159,11 +159,11 @@ format-full-prefix = " "
 type = internal/date
 interval = 2.0
 
-time =  %I:%M %p
-time-alt =  %a, %b %dth
+time =   %I:%M %p
+time-alt =   %a, %b %dth
 format = <label>
 format-background = ${color.accent}
-format-foreground =${color.modulefg}
+format-foreground =${color.fground}
 format-padding = 2
 label = %time%
 
@@ -172,15 +172,13 @@ label = %time%
 ;;;;;;;;;;;;;
 
 [module/network]
-type = custom/script
-exec = check-network
-click-left = rofi-wifi-menu.sh
-click-right = rofi-wifi-menu.sh
+type = internal/network
+interface = wlan0
 interval = 3
-tail = true
-format-background = ${color.bground}
-format-foreground = ${color.modulefg}
-format-padding           = 1
+label-connected = %{A1:rofi-wifi-menu.sh:}   %essid%%{A}
+label-disconnected = %{A1:rofi-wifi-menu.sh:}睊  Disconnected%{A}
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
 
 ;;;;;;;;;;;;;;;;
 ;;  Playing   ;;
@@ -191,11 +189,10 @@ type = custom/script
 exec = playing.sh
 format-prefix = " "
 interval = 3
-label-font = 0
 label-maxlen = 50
 click-left = playerctl play-pause
 format-background = ${color.bground}
-format-foreground = ${color.modulefg}
+format-foreground = ${color.fground}
 format-padding           = 1
 
 ;;;;;;;;;;;;;;;;

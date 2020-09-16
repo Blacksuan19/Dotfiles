@@ -15,15 +15,15 @@ else
         "Playing")
             # if spotify is playing on another device artist and song will be empty
             if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-                echo $P_ICON " " "Playing on Another Device"
+                echo $P_ICON"  ""Playing on Another Device"
             else
-                echo $P_ICON " " $TRIM
+                echo $P_ICON"  "$TRIM
             fi;;
         "Paused")
             if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-                echo $S_ICON " Paused on Another Device"
+                echo $S_ICON"  "" Paused on Another Device"
             else
-                echo $S_ICON " " $TRIM
+                echo $S_ICON"  "$TRIM
             fi;;
     esac
 fi
