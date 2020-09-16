@@ -9,7 +9,6 @@ FIELDS=SSID,SECURITY
 POSITION=0
 YOFF=0
 XOFF=0
-FONT="JetBrainsMono Nerd Font 8"
 DIVIDER="-------------"
 
 if [ -r "$DIR/config" ]; then
@@ -51,15 +50,14 @@ elif [[ "$CONSTATE" =~ "disabled" ]]; then
 	TOGGLE="Toggle on"
 fi
 
-
-
-CHENTRY=$(echo -e "$LIST\n$DIVIDER\nManual\n$TOGGLE" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "$FONT" -width -"$RWIDTH")
+echo $RWIDTH
+CHENTRY=$(echo -e "$LIST\n$DIVIDER\nManual\n$TOGGLE" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -width -"$RWIDTH")
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 
 # If the user inputs "manual" as their SSID in the start window, it will bring them to this screen
 if [ "$CHENTRY" = "Manual" ] ; then
 	# Manual entry of the SSID and password (if appplicable)
-	MSSID=$(echo "enter the SSID of the network (SSID,password)" | rofi -dmenu -p "Manual Entry: " -font "$FONT" -lines 1)
+	MSSID=$(echo "enter the SSID of the network (SSID,password)" | rofi -dmenu -p "Manual Entry: " -lines 1)
 	# Separating the password from the entered string
 	MPASS=$(echo "$MSSID" | awk -F "," '{print $2}')
 
@@ -88,7 +86,7 @@ else
 		nmcli con up "$CHSSID"
 	else
 		if [[ "$CHENTRY" =~ "WPA2" ]] || [[ "$CHENTRY" =~ "WEP" ]]; then
-			WIFIPASS=$(echo "if connection is stored, hit enter" | rofi -dmenu -p "password: " -lines 1 -font "$FONT" )
+			WIFIPASS=$(echo "if connection is stored, hit enter" | rofi -dmenu -p "password: " -lines 1 )
 		fi
 		nmcli dev wifi con "$CHSSID" password "$WIFIPASS"
 	fi
