@@ -11,8 +11,11 @@ FFTbufferSize = 12;
 method = pulse
 source = auto
 
+[output]
+method = ncurses
+
 [color]
-background = '#0f111a' 
+background = '#0f111a'
 foreground = '#0f111a'
 gradient = 1
 gradient_count = 3
