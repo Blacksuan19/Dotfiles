@@ -1,8 +1,18 @@
-# Dotfiles
-
 [Material Oceanized](https://github.com/material-ocean) configuration for Bspwm and others.
 
-## **Requirements:**
+### Table of content
+
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Customizations](#Customizations)
+  - [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Screenshots](Screenshots)
+  - [Clean](#Clean)
+  - [Spotify](#Spotify)
+  - [Firefox](#Firefox)
+  - [Rofi Launcher](#rofi-launcher)
+
+## Requirements
 
 - \*NIX system
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
@@ -12,8 +22,8 @@
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 - [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
-- required programs:
-
+- required programs
+  - pulseaudio (audio support)
   - dunst (notifcations daemon)
   - rofi (applications window)
   - polybar (top bar)
@@ -21,18 +31,16 @@
   - xautolock (auto lockscreen)
   - light (brightness control)
   - playerctl (control current player with media keys)
-  - picom (rounded corners, compositer)
-  - cmus-notify (cmus notifcations)
   - flameshot (for taking screenshots)
   - greenclip (clipboard history)
 
-* Fonts:
+* Fonts
 
-  > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
-  > - Material Icons Font
+  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont) (UI font)
+  > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Monospaced font)
+  > - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Regular/complete) (polybar icons)
 
-## **Installation:**
+## Installation
 
 - `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
@@ -41,12 +49,10 @@
 
 ## Customizations
 
-### keyboard shortcuts
+#### keyboard shortcuts
 
 Shortcuts are controlled by sxhkd, since there are no default applications handler you can
 set your default apps from sxhkd settings
-
-#### default keyboard shortcuts
 
 | key                     | function                                                   |
 | ----------------------- | ---------------------------------------------------------- |
@@ -74,25 +80,20 @@ set your default apps from sxhkd settings
 | super + s               | launch spotify                                             |
 | super + t               | launch telegram                                            |
 
-#### auto lockscreen on wake up
-
-- copy simplelock@.service to /etc/systemd/system
-- run `sudo systemctl enable simplelock@$USER`
-
-## **Screenshots:**
+## Screenshots
 
 #### Clean
 
-![desktop](/screen1.png)
+![desktop](./screen1.png)
 
-#### spotify
+#### Spotify
 
-![lockscreen](/screen2.png)
+![lockscreen](./screen2.png)
 
-#### firefox
+#### Firefox
 
-![keyboard shortcuts](/screen3.png)
+![keyboard shortcuts](./screen3.png)
 
-#### Rofi app launcher
+#### Rofi launcher
 
-![neovim](/screen4.png)
+![neovim](./screen4.png)
