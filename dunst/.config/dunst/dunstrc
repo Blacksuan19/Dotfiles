@@ -18,7 +18,7 @@ sort = yes
 idle_threshold = 120
 
 ### Text ###
-font = SF Pro Rounded 10
+font = JetBrains Mono Nerd Font 10
 line_height = 1
 markup = full
 format = "<b>%s</b>\n%b"
