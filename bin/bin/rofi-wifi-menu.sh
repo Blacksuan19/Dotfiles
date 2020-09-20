@@ -9,7 +9,7 @@ FIELDS=SSID,SECURITY
 POSITION=0
 YOFF=0
 XOFF=0
-FONT="FuraCode Nerd Font Mono 8"
+FONT="JetBrainsMono Nerd Font 8"
 DIVIDER="-------------"
 
 if [ -r "$DIR/config" ]; then

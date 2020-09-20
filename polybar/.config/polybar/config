@@ -70,7 +70,7 @@ tray-position = none
 background = ${color.bground}
 foreground = ${color.fground}
 
-font-0 = "FuraCode Nerd Font:size=7;1"
+font-0 = "JetBrains Mono Nerd Font:size=7;1"
 font-1 = "Material Icons:size=7.5;1"
 
 modules-right =  battery bluetooth network date

@@ -1,5 +1,5 @@
 configuration {
-  font: "SF Pro Rounded 10";
+  font: "JetBrainsMono Nerd Font 8";
   hide-scrollbar: true;
   theme: "~/.config/rofi/material-ocean.rasi";
   kb-cancel: "Escape,Alt+F1";
