@@ -10,6 +10,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # qt themeing
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+# light
+light -S 40
+
 # super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &

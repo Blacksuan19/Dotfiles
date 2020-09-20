@@ -5,10 +5,8 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'editor' \
   'history' \
   'directory' \
-  'spectrum' \
   'utility' \
   'completion' \
   'git' \
@@ -29,4 +27,4 @@ zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # safe options for cp, rm, mv
-zstyle ':prezto:module:utility' safe-ops 'no'
+zstyle ':prezto:module:utility' safe-ops 'yes'

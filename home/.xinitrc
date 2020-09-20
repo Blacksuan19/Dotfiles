@@ -19,4 +19,4 @@ fi
 betterlockscreen -l blur
 
 # launch the session, commands below this line will be ignored
-exec bspwm
+dbus-run-session bspwm
