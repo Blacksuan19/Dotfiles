@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Audio control using pactl 
+# Audio control using pactl
 
 function check_vol {
     pactl list sinks | grep "^[[:space:]]Volume:" | awk '{print $5}' | sed 's/%//'
@@ -8,14 +8,12 @@ function check_vol {
 
 function check_mute {
     pactl list sinks | grep "^[[:space:]]Mute:" | awk '{print $2}'
-    
+
 }
 
 function notify {
     volume=`check_vol`
-    icon=""
-    bar=$(seq -s "─" 0 $(($volume / 5)) | sed 's/[0-9]//g')
-    dunstify -i audio-volume-high -r 2593 -u normal "$bar"
+    dunstify -i audio-volume-high -r 2593 "Volume" "$volume%"
 }
 
 function unmute {
@@ -25,20 +23,19 @@ function unmute {
 case $1 in
     up)
         unmute
-	    pactl set-sink-volume 0 +5% > /dev/null
+        pactl -- set-sink-volume 0 +5% > /dev/null
 	    notify;;
     down)
         unmute
-	    pactl set-sink-volume 0 -5% > /dev/null
+        pactl -- set-sink-volume 0 -5% > /dev/null
 	    notify;;
     mute)
         pactl set-sink-mute 0 toggle > /dev/null
         m=`check_mute`
             if [[ $m == "yes" ]]; then
-                bar=$(seq -s "─" 0 $(($mstatus / 5)) | sed 's/[0-9]//g')
-                dunstify -i audio-volume-muted -r 2593 "$bar Muted"
+                dunstify -i audio-volume-high -r 2593 "Volume" "Muted"
             else
                 notify
             fi
         ;;
-esac    
+esac

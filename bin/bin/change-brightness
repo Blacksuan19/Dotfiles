@@ -5,10 +5,7 @@
 function notify {
     brightness=$(light)
     brightness=$(echo $brightness | awk '{print int($1)}')
-    echo $brightness
-    bar=$(seq -s "─" $(($brightness / 5)) | sed 's/[0-9]//g')
-    echo $bar
-    dunstify -i whitebalance -r 2593 -u normal "$bar  "
+    dunstify -i whitebalance -r 2593 -u normal "Brightnesss" "$brightness%"
 }
 
 case $1 in
