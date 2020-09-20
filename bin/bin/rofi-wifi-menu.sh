@@ -50,7 +50,6 @@ elif [[ "$CONSTATE" =~ "disabled" ]]; then
 	TOGGLE="Toggle on"
 fi
 
-echo $RWIDTH
 CHENTRY=$(echo -e "$LIST\n$DIVIDER\nManual\n$TOGGLE" | rofi -dmenu -p "Wi-Fi SSID: " -i -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -width -"$RWIDTH")
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 
