@@ -16,9 +16,9 @@ case $1 in
 
         case "$ANS" in
             *Lock) betterlockscreen -l blur;;
-            *Suspend) betterlockscreen -s blur;;
-            *Reboot) reboot;;
-            *Shutdown) shutdown -P now ;;
+            *Suspend) betterlockscreen -s blur; sudo zzz;;
+            *Reboot)sudo reboot;;
+            *Shutdown) sudo runit-init 0;;
         esac
         ;;
     -s)
