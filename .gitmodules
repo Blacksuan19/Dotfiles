@@ -1,6 +1,10 @@
 [submodule "fast-syntax-highlighting"]
     path = zsh/.zsh/fast
     url = https://github.com/zdharma/fast-syntax-highlighting
-[submodule "nvim/.config/nvim"]
+[submodule "init.nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/Blacksuan19/init.nvim
+
+[submodule "GTK-theme"]
+    path = GTK-theme/.local/share/themes/Material-Ocean
+    url = https://github.com/material-ocean/Gtk-Theme
