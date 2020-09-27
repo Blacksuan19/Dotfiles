@@ -4,7 +4,6 @@
 [submodule "init.nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/Blacksuan19/init.nvim
-
 [submodule "GTK-theme"]
     path = GTK-theme/.local/share/themes/Material-Ocean
     url = https://github.com/material-ocean/Gtk-Theme
