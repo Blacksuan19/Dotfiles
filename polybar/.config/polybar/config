@@ -73,12 +73,9 @@ foreground = ${color.fground}
 
 font-0 = "JetBrains Mono Nerd Font:size=7;1"
 
-modules-right =  battery bluetooth network date
+modules-right = polypomo battery bluetooth network date
 modules-center  = playing
 modules-left = workspaces
-
-scroll-up = bspc desktop -f prev.local
-scroll-down = bspc desktop -f next.local
 
 module-margin-left = 1
 module-margin-right = 1
@@ -98,7 +95,7 @@ format = <label-state>
 format-background = ${color.bground}
 format-foreground = ${color.fground}
 label-monitor = %name%
-label-focused-background = #ff4151
+label-focused-background = ${color.accent}
 label-occupied-background = ${color.bground}
 label-urgent-background = ${color.deep-orange}
 label-empty-background = ${color.bground}
@@ -193,7 +190,7 @@ label-maxlen = 50
 click-left = playerctl play-pause
 format-background = ${color.bground}
 format-foreground = ${color.fground}
-format-padding           = 1
+format-padding = 1
 
 ;;;;;;;;;;;;;;;;
 ;; Bluetooth  ;;
@@ -204,5 +201,22 @@ type = custom/script
 exec = rofi-bluetooth --status
 interval = 20
 click-left = rofi-bluetooth
+
+
+;;;;;;;;;;;;;;;;
+;;  polypomo  ;;
+;;;;;;;;;;;;;;;;
+[module/polypomo]
+type = custom/script
+
+exec = polypomo
+tail = true
+
+label = %output%
+click-left = polypomo toggle
+click-right = polypomo end
+click-middle = polypomo lock
+scroll-up = polypomo time +60
+scroll-down = polypomo time -60
 
 /* vim:ft=dosini
