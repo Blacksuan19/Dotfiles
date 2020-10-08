@@ -33,7 +33,7 @@ case $1 in
         pactl set-sink-mute 0 toggle > /dev/null
         m=`check_mute`
             if [[ $m == "yes" ]]; then
-                dunstify -i audio-volume-high -r 2593 "Volume" "Muted"
+                dunstify -i audio-volume-muted -r 2593 "Volume" "Muted"
             else
                 notify
             fi
