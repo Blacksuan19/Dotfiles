@@ -18,7 +18,7 @@ sort = yes
 idle_threshold = 120
 
 ### Text ###
-font = San Francisco Display 10
+font = San Francisco Display 8
 line_height = 1
 markup = full
 format = "<b>%s</b>\n%b"

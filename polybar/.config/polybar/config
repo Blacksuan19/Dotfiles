@@ -62,16 +62,16 @@ wm-restack = bspwm
 bottom = false
 fixed-center = true
 width = 99.2%
-height = 25
+height = 23
 offset-x = 5
-offset-y = 5
+offset-y = 3
 cursor-click = pointer
 tray-position = none
 
 background = ${color.bground}
 foreground = ${color.fground}
 
-font-0 = "JetBrains Mono Nerd Font:size=7;1"
+font-0 = "JetBrains Mono Nerd Font:size=6;1"
 
 modules-right = polypomo battery bluetooth network date
 modules-center  = playing
