@@ -33,7 +33,7 @@ alias n="nvim"
 alias py="python3"
 
 # packages aliases.
-alias y="yay"
+alias y="yay -Syu --noconfirm"
 alias remove="yay -Rds"
 alias install="yay -S"
 alias pinfo="yay -Qi " # get info of an installed package.
