@@ -16,7 +16,7 @@ sxhkd &
 unclutter -idle 2 &
 
 # picom
-picom -b
+picom --experimental-backends -b
 
 # start libinput-gestures
 libinput-gestures-setup start
