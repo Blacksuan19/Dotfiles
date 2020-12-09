@@ -72,7 +72,7 @@ foreground = ${color.fground}
 
 font-0 = "JetBrains Mono Nerd Font:size=6;1"
 
-modules-right = polypomo battery bluetooth network date
+modules-right = battery bluetooth network date
 modules-center  = playing
 modules-left = workspaces
 
@@ -201,19 +201,3 @@ exec = rofi-bluetooth --status
 interval = 20
 click-left = rofi-bluetooth
 
-
-;;;;;;;;;;;;;;;;
-;;  polypomo  ;;
-;;;;;;;;;;;;;;;;
-[module/polypomo]
-type = custom/script
-
-exec = polypomo
-tail = true
-
-label = %output%
-click-left = polypomo toggle
-click-right = polypomo end
-click-middle = polypomo lock
-scroll-up = polypomo time +60
-scroll-down = polypomo time -60
