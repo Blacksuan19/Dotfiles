@@ -3,81 +3,66 @@
 ;;;;;;;;;;;;;
 
 [color]
-;; Active Colors
 bground = #0f111a
 fground = #ffffff
 accent = #ff4151
-
-;; Material Colors
 red = #e53935
-pink = #d81b60
-purple = #8e24aa
-deep-purple = #5e35b1
-indigo = #3949ab
-blue = #1e88e5
-light-blue = #039be5
-cyan = #00acc1
-teal = #00897b
-green = #43a047
-light-green = #7cb342
-lime = #c0ca33
-yellow = #fdd835
-amber = #ffb300
-orange = #fb8c00
 deep-orange = #f4511e
-brown = #6d4c41
-grey = #757575
-blue-gray = #546e7a
 
 ;;;;;;;;;;;;;;
 ;; Settings ;;
 ;;;;;;;;;;;;;;
 
 [settings]
-
 throttle-output = 5
 throttle-output-for = 10
-
 screenchange-reload = false
-
 compositing-background = source
 compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
-
 pseudo-transparency = false
 
 ;;;;;;;;;;;;;
 ;;   Bars  ;;
 ;;;;;;;;;;;;;
 
-[bar/onsie]
-
+;; main bar with settings
+[bar/main]
 monitor = eDP
 monitor-strict = false
 override-redirect = true
 wm-restack = bspwm
 bottom = false
-fixed-center = true
-width = 99.2%
 height = 23
-offset-x = 5
+fixed-center = true
 offset-y = 3
 cursor-click = pointer
 tray-position = none
-
 background = ${color.bground}
 foreground = ${color.fground}
-
 font-0 = "JetBrains Mono Nerd Font:size=6;1"
-
-modules-right = battery bluetooth network date
-modules-center  = playing
-modules-left = workspaces
-
 module-margin-left = 1
 module-margin-right = 1
+
+[bar/workspaces]
+inherit = bar/main
+width = 14.65%
+offset-x = 5
+modules-left = workspaces
+
+[bar/widgets]
+inherit = bar/main
+width = 18.65%
+offset-x = 81%
+modules-right = battery bluetooth network date
+
+[bar/playing]
+inherit = bar/main
+width = 18%
+offset-x = 41%
+modules-center = playing
 
 ;;;;;;;;;;;;;;;;
 ;; Workspaces ;;
@@ -85,7 +70,6 @@ module-margin-right = 1
 
 [module/workspaces]
 type = internal/bspwm
-
 pin-workspaces = true
 enable-click = true
 enable-scroll = true
@@ -116,12 +100,9 @@ label-empty = 
 
 [module/battery]
 type = internal/battery
-
 full-at = 95
-
 battery = BAT0
 adapter = AC0
-
 poll-interval = 5
 time-format = %H:%M
 
@@ -140,11 +121,9 @@ padding-left = 1
 
 label-charging =  %percentage%%
 label-discharging = %percentage%%
-
 label-full-background = ${color.bground}
 label-full-foreground = ${color.fground}
 label-full-padding = 1
-
 format-full-prefix = " "
 
 ;;;;;;;;;;;;;
@@ -154,9 +133,7 @@ format-full-prefix = " "
 [module/date]
 type = internal/date
 interval = 2.0
-
 time =   %I:%M %p
-time-alt =   %a, %b %dth
 format = <label>
 format-background = ${color.accent}
 format-foreground =${color.fground}
@@ -185,7 +162,7 @@ type = custom/script
 exec = playing.sh
 format-prefix = " "
 interval = 3
-label-maxlen = 50
+label-maxlen = 40
 click-left = playerctl play-pause
 format-background = ${color.bground}
 format-foreground = ${color.fground}
@@ -194,7 +171,7 @@ format-padding = 1
 ;;;;;;;;;;;;;;;;
 ;; Bluetooth  ;;
 ;;;;;;;;;;;;;;;;
-;
+
 [module/bluetooth]
 type = custom/script
 exec = rofi-bluetooth --status
