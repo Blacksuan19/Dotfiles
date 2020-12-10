@@ -8,7 +8,7 @@ alt + F1
 
 # launch software
 super + {w,f,s,t,o}
-    {brave,pcmanfm,spotify,kotatogram-desktop,notion-app}
+    {brave,pcmanfm,spotify,telegram-desktop,notion-app}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
@@ -76,7 +76,7 @@ XF86Audio{Next,Prev,Play}
 
 # hybrid sleep
 XF86Sleep
-    systemctl hybrid-sleep
+   sudo zzz
 
 # reload configurations
 super + shift + r
