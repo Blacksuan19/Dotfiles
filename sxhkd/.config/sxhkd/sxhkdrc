@@ -8,7 +8,7 @@ alt + F1
 
 # launch software
 super + {w,f,s,t,o}
-    {brave,pcmanfm,spotify,telegram-desktop,notion-app}
+    {brave,nautilus,spotify,telegram-desktop,notion-app}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
