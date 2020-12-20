@@ -44,7 +44,7 @@
 
 - `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
-- `./install.sh` to install everything (including fonts).
+- `./screens/install.sh` to install everything (including fonts).
 
 ## Customizations
 
@@ -83,16 +83,22 @@ set your default apps from sxhkd settings
 
 #### Clean
 
-![desktop](./screen1.png)
+![desktop](<./screens/screen 1.png>)
 
-#### Spotify
+#### Lockscreen
 
-![lockscreen](./screen2.png)
+![lockscreen](<./screens/screen 2.png>)
 
-#### Firefox
+#### Applications
 
-![keyboard shortcuts](./screen3.png)
+![rofi](<./screens/screen 3.png>)
 
-#### Rofi launcher
+![brave](<./screens/screen 4.png>)
 
-![neovim](./screen4.png)
+![notion](<./screens/screen 5.png>)
+
+![nautilus](<./screens/screen 6.png>)
+
+![spotify](<./screens/screen 7.png>)
+
+![telegram](<./screens/screen 8.png>)
