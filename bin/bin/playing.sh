@@ -13,9 +13,8 @@ for player in $PLAYERS; do
         CURRENT=$player
     fi
 done
-if [ $CURRENT == "" ]; then
+if [ -z $CURRENT ]; then
 echo "  No player is running"
-exit 1;
 fi
 METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
 TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
