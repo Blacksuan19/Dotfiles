@@ -44,7 +44,7 @@
 
 - `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
-- `./screens/install.sh` to install everything (including fonts).
+- `bash install.sh` to install everything (including fonts).
 
 ## Customizations
 
