@@ -1,7 +1,7 @@
 #!/bin/bash
 P_ICON=""
 S_ICON=""
-PLAYERS=$(playerctl -l)
+PLAYERS=$(playerctl -l 2> /dev/null)
 
 # set current player to the one actually playing or paused
 for player in $PLAYERS; do
