@@ -65,11 +65,11 @@ bspc rule -a Brave-browser desktop='^2'
 # 3 > telegram
 bspc rule -a TelegramDesktop desktop='^3' state=floating
 # 4 > notion
-bspc rule -a Notion desktop='^4'
+bspc rule -a Notion desktop='^4' follow=off
 # 5 > file manager
 bspc rule -a Org.gnome.Nautilus desktop='^5' follow=on focus=on
 # 6 > office
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
 bspc rule -a Evince desktop='^6' follow=on focus=on
 # 8 > music
-bspc rule -a spotify desktop='^8'
+bspc rule -a spotify desktop='^8' state=floating follow=off
