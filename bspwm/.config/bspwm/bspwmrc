@@ -30,7 +30,7 @@ greenclip daemon &
 pulseaudio --start
 
 # Set some bsp specific stuff
-bspc monitor -d 一 二 三 四 五 六 七 八
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 # bspwm settings
 bspc config border_width 0
@@ -52,14 +52,14 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
-# some window rules
+## some window rules
 
 # always float feh
 bspc rule -a feh state=floating follow=on
 
-# map apps to desktops
-# 1 > terminal
+# 1 > terminal, code
 bspc rule -a kitty desktop='^1' follow=on focus=on
+bspc rule -a Code desktop='^1' follow=on focus=on
 # 2 > web
 bspc rule -a Brave-browser desktop='^2'
 # 3 > telegram
@@ -70,6 +70,9 @@ bspc rule -a Notion desktop='^4' follow=off
 bspc rule -a Org.gnome.Nautilus desktop='^5' follow=on focus=on
 # 6 > office
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
-bspc rule -a Evince desktop='^6' follow=on focus=on
-# 8 > music
-bspc rule -a spotify desktop='^8' state=floating follow=off
+# 7 > reading
+bspc rule -a Evince desktop='^7' follow=on focus=on
+# 8 > design
+bspc rule -a Figma desktop='^8' follow=on focus=on
+# 0 > music
+bspc rule -a spotify desktop='^0' state=floating follow=off

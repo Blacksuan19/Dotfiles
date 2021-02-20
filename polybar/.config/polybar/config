@@ -48,7 +48,7 @@ module-margin-right = 1
 
 [bar/workspaces]
 inherit = bar/main
-width = 14.65%
+width = 18.33%
 offset-x = 5
 modules-left = workspaces
 
