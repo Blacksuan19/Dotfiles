@@ -53,7 +53,7 @@ alias grm="git remote rm"
 alias grv="git remote -v"
 alias gd="git diff"
 alias gpl="git pull"
-alias ngd="nvim $(gd --name-only | uniq)" # open files with conflicts in nvim
+alias ngd="git diff --name-only | uniq | xargs nvim" # open files with conflicts in nvim
 alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
 
 # Directory hashes.
