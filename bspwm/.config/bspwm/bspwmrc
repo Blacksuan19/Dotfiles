@@ -73,6 +73,6 @@ bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
 # 7 > reading
 bspc rule -a Evince desktop='^7' follow=on focus=on
 # 8 > design
-bspc rule -a Figma desktop='^8' follow=on focus=on
-# 0 > music
-bspc rule -a spotify desktop='^0' state=floating follow=off
+bspc rule -a figma-linux desktop='^8' follow=on focus=on
+# 0 > music, does not always work
+bspc rule -a spotify desktop='^10' state=floating follow=off
