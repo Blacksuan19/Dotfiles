@@ -13,13 +13,13 @@ for player in $PLAYERS; do
         CURRENT=$player
     fi
 done
+# when no player is playing
 if [ -z $CURRENT ]; then
 echo "  No player is running"
 fi
 METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
+# remove everything in brackets and cut to 50 characters
 TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
-ARTIST=$(playerctl metadata artist)
-FULL_META=$(playerctl metadata)
 case $STATUS in
     "Playing")
             echo $P_ICON"  "$TRIM
