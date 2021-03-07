@@ -22,18 +22,11 @@ ARTIST=$(playerctl metadata artist)
 FULL_META=$(playerctl metadata)
 case $STATUS in
     "Playing")
-        # if spotify is playing on another device artist and song will be empty
-        if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-            echo $P_ICON"  ""Playing on Another Device"
-        else
             echo $P_ICON"  "$TRIM
-        fi;;
+            ;;
     "Paused")
-        if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-            echo $S_ICON"  "" Paused on Another Device"
-        else
             echo $S_ICON"  "$TRIM
-        fi;;
+            ;;
 esac
 
 # for pause play functionality
