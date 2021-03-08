@@ -1,0 +1,42 @@
+# material ocean color scheme
+colors:
+  primary:
+    background: '0x0f111a'
+    foreground: '0xD8DEE9'
+  cursor:
+    cursor: '0xff4151'
+  normal:
+    black:      '0x0f111a'
+    red:        '0xBF616A'
+    green:      '0xA3BE8C'
+    yellow:     '0xEBCB8B'
+    blue:       '0x81A1C1'
+    magenta:    '0xB48EAD'
+    cyan:       '0x88C0D0'
+    white:      '0xE5E9F0'
+
+font:
+  size: 8.5
+  # fixes tmux bottom navbar being cut-off
+  offset:
+    y: 1
+  normal:
+    family: "JetBrainsMono Nerd Font"
+
+window:
+  padding:
+    x: 5
+    y: 5
+
+cursor:
+  unfocused_hollow: true
+  style:
+    blinking: Always
+
+# fixes nvim background
+env:
+  TERM: xterm-256color
+
+scrolling:
+  history: 2000
+  auto_scroll: true
