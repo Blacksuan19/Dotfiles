@@ -6,7 +6,7 @@ colors:
   cursor:
     cursor: '0xff4151'
   normal:
-    black:      '0x0f111a'
+    black:      '0x4C566A'
     red:        '0xBF616A'
     green:      '0xA3BE8C'
     yellow:     '0xEBCB8B'
