@@ -58,7 +58,7 @@ bspc config pointer_action3 resize_corner
 bspc rule -a feh state=floating follow=on
 
 # 1 > terminal, code
-bspc rule -a kitty desktop='^1' follow=on focus=on
+bspc rule -a Alacritty desktop='^1' follow=on focus=on
 bspc rule -a Code desktop='^1' follow=on focus=on
 # 2 > web
 bspc rule -a Brave-browser desktop='^2'
