@@ -1,17 +1,5 @@
 [Material Oceanized](https://github.com/material-ocean) configuration for Bspwm and others.
 
-### Table of content
-
-- [Requirements](#Requirements)
-- [Installation](#Installation)
-- [Customizations](#Customizations)
-  - [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Screenshots](Screenshots)
-  - [Clean](#Clean)
-  - [Spotify](#Spotify)
-  - [Firefox](#Firefox)
-  - [Rofi Launcher](#rofi-launcher)
-
 ## Requirements
 
 - \*NIX system
