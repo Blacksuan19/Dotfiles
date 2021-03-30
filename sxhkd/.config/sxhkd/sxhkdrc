@@ -1,6 +1,6 @@
 # launch terminal
 super + Return
-  alacritty
+ kitty
 
 # program launcher
 alt + F1
