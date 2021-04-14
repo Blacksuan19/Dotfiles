@@ -15,9 +15,14 @@ for player in $PLAYERS; do
 done
 # when no player is playing
 if [ -z $CURRENT ]; then
-echo "  No player is running"
+    echo "  No player is running"
 fi
-METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
+
+if [ "$CURRENT" == "vlc" ]; then
+    METADATA="$(basename $(playerctl -p vlc metadata xesam:url))"
+else
+    METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
+fi
 # remove everything in brackets and cut to 50 characters
 TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
 case $STATUS in
