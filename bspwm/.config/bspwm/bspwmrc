@@ -63,7 +63,7 @@ bspc rule -a Code desktop='^1' follow=on focus=on
 # 2 > web
 bspc rule -a Brave-browser desktop='^2'
 # 3 > telegram
-bspc rule -a TelegramDesktop desktop='^3' state=floating
+bspc rule -a KotatogramDesktop desktop='^3' state=floating
 # 4 > notion
 bspc rule -a Notion desktop='^4' follow=off
 # 5 > file manager
