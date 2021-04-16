@@ -13,18 +13,26 @@ for player in $PLAYERS; do
         CURRENT=$player
     fi
 done
+
 # when no player is playing
 if [ -z $CURRENT ]; then
     echo "  No player is running"
+else
+    # get artist and song
+    ARTIST=$(playerctl -p $CURRENT metadata artist 2> /dev/null)
+    SONG=$(playerctl -p $CURRENT metadata title 2> /dev/null)
 fi
 
-if [ "$CURRENT" == "vlc" ]; then
-    METADATA="$(basename $(playerctl -p vlc metadata xesam:url))"
+# if artist or song are empty get filename from URL
+if [ "$ARTIST" == "" ] || [ "$SONG" == "" ]; then
+    METADATA="$(basename $(playerctl -p $CURRENT metadata xesam:url))"
 else
-    METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
+    METADATA="$ARTIST - $SONG"
 fi
+
 # remove everything in brackets and cut to 50 characters
-TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
+TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' -e 's/%20/ /g' | cut -c 1-50)
+
 case $STATUS in
     "Playing")
             echo $P_ICON"  "$TRIM
