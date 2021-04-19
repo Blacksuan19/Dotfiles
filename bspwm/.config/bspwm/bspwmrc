@@ -71,7 +71,7 @@ bspc rule -a Nemo desktop='^5' follow=on focus=on
 # 6 > office
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
 # 7 > reading
-bspc rule -a qpdfview desktop='^7' follow=on focus=on
+bspc rule -a Xreader desktop='^7' follow=on focus=on
 # 8 > design
 bspc rule -a figma-linux desktop='^8' follow=on focus=on
 # 0 > music, does not always work
