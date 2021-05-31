@@ -27,7 +27,7 @@ redshift -t 6500:4900 -l 3.2476811:101.74012689999999 &
 greenclip daemon &
 
 # start pulseaudio daemon
-pulseaudio --start
+start-pulseaudio-x11
 
 # Set some bsp specific stuff
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
