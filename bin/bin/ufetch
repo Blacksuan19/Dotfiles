@@ -8,7 +8,8 @@
 host="$(hostname)"
 os='Arch Linux'
 kernel="$(uname -sr | sed 's/-[a-z].*//')"
-uptime="$(uptime -p | sed -e 's/up //' -e 's/ days/d/' -e 's/ hours/h/' -e 's/ minutes/m/')"
+uptime="$(uptime -p | sed -e 's/up //' -e 's/ days/d/' -e 's/ hours/h/' \
+          -e 's/ minutes/m/' -e 's/ week/w/')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "$SHELL")"
 temp=$(sensors | grep "temp1" | tail -1 | awk '{print $2}' | sed "s/+//")
