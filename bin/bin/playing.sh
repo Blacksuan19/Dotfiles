@@ -12,7 +12,14 @@ for player in $PLAYERS; do
     elif [ "$STATUS" == "Paused" ]; then
         # use the last playing player if its saved
         if [ -f /tmp/last-player ]; then
-            CURRENT=$(tail -1 /tmp/last-player)
+            LAST=$(tail -1 /tmp/last-player)
+            LAST_STATUS=$(playerctl -p $LAST status 2> /dev/null)
+            # use the last player on the list if the saved player was paused
+            if [ "$LAST_STATUS" == "Stopped" ] || [ "$LAST_STATUS" == "" ] && [ "$LAST" != "$player" ]; then
+                CURRENT=$player
+            else
+                CURRENT=$LAST
+            fi
         else
             # otherwise use the last player in players list
             CURRENT=$player
