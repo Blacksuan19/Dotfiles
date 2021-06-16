@@ -40,7 +40,7 @@ fi
 # if artist or song are empty get filename from URL
 # if url is empty use the title
 if [ "$ARTIST" == "" ] || [ "$TITLE" == "" ] && [ "$URL" != "" ]; then
-    METADATA="$(basename $(playerctl -p $CURRENT metadata xesam:url))"
+    METADATA="$(basename $URL)"
 elif [ "$URL" == "" ]; then
     METADATA=$TITLE
 else
