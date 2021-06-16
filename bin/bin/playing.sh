@@ -3,14 +3,20 @@ P_ICON=""
 S_ICON=""
 PLAYERS=$(playerctl -l 2> /dev/null)
 
-# set current player to the one actually playing or paused
 for player in $PLAYERS; do
     STATUS=$(playerctl -p $player status 2> /dev/null)
     if [ "$STATUS" == "Playing" ]; then
         CURRENT=$player
+        echo $CURRENT > /tmp/last-player
         break; #  prioritize playing players
     elif [ "$STATUS" == "Paused" ]; then
-        CURRENT=$player
+        # use the last playing player if its saved
+        if [ -f /tmp/last-player ]; then
+            CURRENT=$(tail -1 /tmp/last-player)
+        else
+            # otherwise use the last player in players list
+            CURRENT=$player
+        fi
     fi
 done
 
