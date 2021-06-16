@@ -18,16 +18,20 @@ done
 if [ -z $CURRENT ]; then
     echo "  No player is running"
 else
-    # get artist and song
+    # get some metadata
     ARTIST=$(playerctl -p $CURRENT metadata artist 2> /dev/null)
-    SONG=$(playerctl -p $CURRENT metadata title 2> /dev/null)
+    TITLE=$(playerctl -p $CURRENT metadata title 2> /dev/null)
+    URL=$(playerctl -p $CURRENT metadata xesam:url 2> /dev/null)
 fi
 
 # if artist or song are empty get filename from URL
-if [ "$ARTIST" == "" ] || [ "$SONG" == "" ]; then
+# if url is empty use the title
+if [ "$ARTIST" == "" ] || [ "$TITLE" == "" ] && [ "$URL" != "" ]; then
     METADATA="$(basename $(playerctl -p $CURRENT metadata xesam:url))"
+elif [ "$URL" == "" ]; then
+    METADATA=$TITLE
 else
-    METADATA="$ARTIST - $SONG"
+    METADATA="$ARTIST - $TITLE"
 fi
 
 # remove everything in brackets and cut to 50 characters
