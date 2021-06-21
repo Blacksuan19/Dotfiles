@@ -1,4 +1,5 @@
-[Material Oceanized](https://github.com/material-ocean) configuration for Bspwm and others.
+[Material Oceanized](https://github.com/material-ocean) configuration for Bspwm
+and others.
 
 ## Requirements
 
@@ -22,11 +23,13 @@
   - flameshot (for taking screenshots)
   - greenclip (clipboard history)
 
-* Fonts
+### Fonts
 
-  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont) (UI font)
-  > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Monospaced font)
-  > - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Regular/complete) (polybar icons)
+> - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
+>   (UI font)
+> - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Monospaced font)
+> - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Regular/complete)
+>   (polybar icons)
 
 ## Installation
 
@@ -36,10 +39,10 @@
 
 ## Customizations
 
-#### keyboard shortcuts
+### keyboard shortcuts
 
-Shortcuts are controlled by sxhkd, since there are no default applications handler you can
-set your default apps from sxhkd settings
+Shortcuts are controlled by sxhkd, since there are no default applications
+handler you can set your default apps from sxhkd settings
 
 | key                     | function                                                   |
 | ----------------------- | ---------------------------------------------------------- |
