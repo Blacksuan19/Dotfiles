@@ -16,9 +16,6 @@ autoload -U compinit && compinit
 # ls colors
 eval $( dircolors -b $HOME/.dircolors )
 
-# default editor
-export EDITOR=nvim
-
 # determines search program for fzf
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden""'
