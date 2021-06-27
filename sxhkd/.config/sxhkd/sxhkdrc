@@ -8,7 +8,7 @@ alt + F1
 
 # launch software
 super + {w,f,s,t,o}
-    {brave,nemo,spotify,kotatogram-desktop,notion-app}
+    {brave,dolphin,spotify,kotatogram-desktop,notion-app}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
@@ -56,19 +56,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # full screenshot, selection area, full in 5 seconds
 Print + {_,shift,alt}
-    flameshot {full -p,gui -p,full -d 5000 -p} /media/Dark-Files/Screenshots
-
-# increase/decrease volume by 5%
-XF86Audio{Raise,Lower}Volume
-    change-volume {up,down}
-
-# toggle volume mute
-XF86AudioMute
-   change-volume mute
-
-# increase/decrease brightness by 10
-XF86MonBrightness{Up,Down}
-    change-brightness {up,down}
+    flameshot {full -p,gui -p,full -d 5000 -p} /run/media/blacksuan19/Dark-Files/Screenshots
 
 # next, previous, play-pause toggle
 XF86Audio{Next,Prev,Play}

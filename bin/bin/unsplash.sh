@@ -5,14 +5,11 @@
 # run hourly with cron:
 # @hourly $HOME/bin/unsplash.sh
 
-notify-send "Getting new wallpaper..."
+notify-send -i info "Random Wallpaper" "Getting new wallpaper..."
 wget --no-check-certificate -O $HOME/.wallpaper "https://source.unsplash.com/random/1920x1080" &> /dev/null
 
 # set desktop wallpaper
 feh --bg-fill $HOME/.wallpaper
-
-# update lockscreen wallpaper
-betterlockscreen -u $HOME/.wallpaper &>/dev/null
 
 # we out
 notify-send "New wallpaper set successfully."

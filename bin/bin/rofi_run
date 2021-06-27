@@ -10,16 +10,7 @@ case $1 in
         rofi -modi "clipboard:greenclip print" -lines 12 -show clipboard -run-command '{cmd}'
         ;;
     -l)
-        ANS="$(echo -e " Lock| Suspend| Reboot| Shutdown" | \
-                rofi -sep "|" -dmenu -width 20 -lines 4  \
-                     -theme-str 'inputbar { children: []; }')"
-
-        case "$ANS" in
-            *Lock) betterlockscreen -l blur;;
-            *Suspend) betterlockscreen -s blur; sudo zzz;;
-            *Reboot)sudo reboot;;
-            *Shutdown) sudo runit-init 0;;
-        esac
+        qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
         ;;
     -s)
         awk '/\w/ && last { print $0,"\t",last} {last=""} /^#/{gsub("#","");last=$0}' \

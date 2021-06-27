@@ -3,11 +3,6 @@
 # set root pointer
 xsetroot -cursor_name left_ptr
 
-# polybar
-polybar workspaces &
-polybar widgets &
-polybar playing &
-
 # feh background
 ~/.fehbg &
 
@@ -26,8 +21,8 @@ redshift -t 6500:4900 -l 3.2476811:101.74012689999999 &
 # rofi greenclipboard daemon
 greenclip daemon &
 
-# start pulseaudio daemon
-start-pulseaudio-x11
+# stop plasmashell fuckary
+killall plasmashell
 
 # Set some bsp specific stuff
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
@@ -36,9 +31,9 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 bspc config border_width 0
 bspc config window_gap 3
 bspc config top_padding 28
-bspc config right_padding 0
-bspc config bottom_padding 0
-bspc config left_padding 0
+bspc config right_padding 5
+bspc config bottom_padding 5
+bspc config left_padding 5
 
 bspc config split_ratio 0.5
 bspc config borderless_monocle false
@@ -67,12 +62,16 @@ bspc rule -a KotatogramDesktop desktop='^3' state=floating
 # 4 > notion
 bspc rule -a Notion desktop='^4' follow=off
 # 5 > file manager
-bspc rule -a Nemo desktop='^5' follow=on focus=on
+bspc rule -a dolphin desktop='^5' follow=on focus=on
 # 6 > office
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
 # 7 > reading
-bspc rule -a Xreader desktop='^7' follow=on focus=on
+bspc rule -a okular desktop='^7' follow=on focus=on
 # 8 > design
 bspc rule -a figma-linux desktop='^8' follow=on focus=on
 # 0 > music, does not always work
-bspc rule -a spotify desktop='^10' state=floating follow=off
+bspc rule -a Spotify desktop='^10' state=floating follow=off
+
+
+# Plasma window rules
+bspc rule -a lattedock state=floating follow=on

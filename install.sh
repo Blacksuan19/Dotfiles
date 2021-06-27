@@ -31,7 +31,7 @@ function stow_con() {
                             ".gitignore"
                             ".gitmodules"
                             "README.md"
-                            "screens"
+                            "screens/*"
                         )
 
     # go throw all files except ignore list
