@@ -27,9 +27,8 @@ and others.
 
 > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
 >   (UI font)
-> - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Monospaced font)
-> - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Regular/complete)
->   (polybar icons)
+> - [JetBrains Mono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono/)
+>   (Mono font)
 
 ## Installation
 

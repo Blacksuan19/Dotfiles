@@ -10,17 +10,8 @@ function install_fonts() {
        --output SF.zip
     unzip -j SF.zip SanFranciscoFont-master/SanFranciscoDisplay-\* -d $target/SanFranciscoDisplay
 
-    # install JetBrainsMono
-    curl https://download-cf.jetbrains.com/fonts/JetBrainsMono-2.001.zip --output \
-        JetBrainsMono.zip
-    unzip -j JetBrainsMono.zip ttf\/JetBrainsMono\* -d $target/JetBrainsMono
-
     # cleanup
-    rm SF.zip JetBrainsMono.zip
-
-    # install JetBrainsMono nerd font
-    curl https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete.ttf \
-        --output $target/JetBrainsMono/JetBrains\ Mono\ Regular\ Nerd\ Font\ Complete.ttf
+    rm SF.zip
 
 }
 
