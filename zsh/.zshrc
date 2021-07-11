@@ -9,6 +9,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
+export GPG_TTY=$(tty) # fix gpg
 
 # FZF bindings
 source /usr/share/fzf/key-bindings.zsh

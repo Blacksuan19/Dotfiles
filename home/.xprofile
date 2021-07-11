@@ -9,9 +9,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # default editor
 export EDITOR=nvim
 
-# fix gpg
-export GPG_TTY=$(tty)
-
 # super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
