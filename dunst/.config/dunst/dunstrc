@@ -34,17 +34,17 @@ show_indicators = yes
 ### Icons ###
 icon_position = left
 max_icon_size = 50
-icon_path = /home/blacksuan19/.local/share/icons/Material-Ocean/22x22/actions/
+icon_path =
 
 ### History ###
 sticky_history = yes
 history_length = 20
 
 ### Misc/Advanced ###
-browser = /usr/bin/vivaldi-snapshot
+browser = /usr/bin/brave
 always_run_script = true
-title = Dunst
-class = Dunst
+title = Brave Browser
+class = Brave-browser
 corner_radius = 0
 
 [shortcuts]
