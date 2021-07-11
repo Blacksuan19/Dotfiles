@@ -8,7 +8,7 @@ alt + F1
 
 # launch software
 super + {w,f,s,t,o}
-    {brave,dolphin,spotify,kotatogram-desktop,notion-app}
+    {brave,dolphin,spotify,kotatogram-desktop,notion-app-enhanced}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}

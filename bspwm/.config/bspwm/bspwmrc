@@ -60,7 +60,7 @@ bspc rule -a Brave-browser desktop='^2'
 # 3 > telegram
 bspc rule -a KotatogramDesktop desktop='^3' state=floating
 # 4 > notion
-bspc rule -a Notion desktop='^4' follow=off
+bspc rule -a notion-app-enhanced desktop='^4' follow=on focus=on
 # 5 > file manager
 bspc rule -a dolphin desktop='^5' follow=on focus=on
 # 6 > office
