@@ -79,22 +79,18 @@ handler you can set your default apps from sxhkd settings
 
 #### Clean
 
-![desktop](<./screens/screen 1.png>)
-
-#### Lockscreen
-
-![lockscreen](<./screens/screen 2.png>)
+![desktop](./screens/1.png)
 
 #### Applications
 
-![rofi](<./screens/screen 3.png>)
+![lockscreen](./screens/2.png)
 
-![brave](<./screens/screen 4.png>)
+![rofi](./screens/3.png)
 
-![notion](<./screens/screen 5.png>)
+![brave](./screens/4.png)
 
-![nautilus](<./screens/screen 6.png>)
+![notion](./screens/5.png)
 
-![spotify](<./screens/screen 7.png>)
+![nautilus](./screens/6.png)
 
-![telegram](<./screens/screen 8.png>)
+![spotify](./screens/7.png)
