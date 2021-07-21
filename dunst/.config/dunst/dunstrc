@@ -34,7 +34,7 @@ show_indicators = yes
 ### Icons ###
 icon_position = left
 max_icon_size = 50
-icon_path =
+icon_path = /home/blacksuan19/.local/share/icons/Tela-dark/22/actions
 
 ### History ###
 sticky_history = yes
