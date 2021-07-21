@@ -4,6 +4,7 @@ and others.
 ## Requirements
 
 - \*NIX system
+- An already setup KDE installation
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
 - [picom-joanburg](https://github.com/jonaburg/picom)
@@ -11,13 +12,13 @@ and others.
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 - [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
+- [Plasma Theme](https://github.com/material-ocean/Plasma-Theme)
+- [Latte-Dock](https://github.com/KDE/latte-dock)
 - required programs
   - pulseaudio (audio support)
   - dunst (notifcations daemon)
   - rofi (applications window)
-  - polybar (top bar)
   - ksuperkey (map meta to open rofi)
-  - xautolock (auto lockscreen)
   - light (brightness control)
   - playerctl (control current player with media keys)
   - flameshot (for taking screenshots)
@@ -35,6 +36,11 @@ and others.
 - `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `bash install.sh` to install everything (including fonts).
+
+### After Installation to do
+
+- set plasma themes.
+- select `split beauty` layout for latte dock.
 
 ## Customizations
 

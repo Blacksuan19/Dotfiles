@@ -12,9 +12,16 @@ function install_fonts() {
 
     # cleanup
     rm SF.zip
-
 }
 
+# clone install plasma theme
+function install_themes() {
+    git clone https://github.com/material-ocean/Plasma-Theme /tmp/plasma-theme
+    cd /tmp/plasma-theme
+    bash install.sh
+    cd -
+    rm -rf /tmp/plasma-theme
+}
 # symlink configs
 function stow_con() {
     # ignored files list
@@ -22,7 +29,7 @@ function stow_con() {
                             ".gitignore"
                             ".gitmodules"
                             "README.md"
-                            "screens/*"
+                            "screens"
                         )
 
     # go throw all files except ignore list
@@ -36,3 +43,4 @@ function stow_con() {
 
 stow_con
 install_fonts
+install_themes
