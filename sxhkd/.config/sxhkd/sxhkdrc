@@ -58,13 +58,18 @@ super + {_,shift + }{Left,Down,Up,Right}
 Print + {_,shift,alt}
     flameshot {full -p,gui -p,full -d 5000 -p} /run/media/blacksuan19/Dark-Files/Screenshots
 
+
+# increase/decrease volume by 5%
+XF86Audio{Raise,Lower}Volume
+    change-volume {up,down}
+
+# toggle volume mute
+XF86AudioMute
+   change-volume mute
+
 # next, previous, play-pause toggle
 XF86Audio{Next,Prev,Play}
     playerctl {next,previous,play-pause}
-
-# hybrid sleep
-XF86Sleep
-   sudo zzz
 
 # reload configurations
 super + shift + r

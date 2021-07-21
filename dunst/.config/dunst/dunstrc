@@ -3,7 +3,7 @@
 ### Display ###
 monitor = 0
 follow = none
-geometry = "400x40-10+40"
+geometry = "400x40-12+40"
 indicate_hidden = yes
 shrink = yes
 transparency = 0
