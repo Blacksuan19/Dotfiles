@@ -28,6 +28,7 @@ function stow_con() {
     declare -a ignore_list=(".git"
                             ".gitignore"
                             ".gitmodules"
+                            "once.sh"
                             "README.md"
                             "screens"
                         )
@@ -40,6 +41,8 @@ function stow_con() {
       fi
     done
 }
+
+bash once.sh
 
 stow_con
 install_fonts
