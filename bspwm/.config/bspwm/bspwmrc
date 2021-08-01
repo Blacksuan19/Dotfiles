@@ -16,7 +16,7 @@ unclutter -idle 2 &
 picom --experimental-backends -b
 
 # start redshift
-redshift -t 6500:4900 -l 3.2476811:101.74012689999999 &
+redshift &
 
 # rofi greenclipboard daemon
 greenclip daemon &
