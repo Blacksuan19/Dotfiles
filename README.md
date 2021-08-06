@@ -41,6 +41,7 @@ and others.
 
 ### After Installation to do
 
+- `bash once.sh` if on a clean install.
 - set plasma themes.
 - select `split beauty` layout for latte dock.
 
