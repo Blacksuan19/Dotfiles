@@ -4,7 +4,9 @@ and others.
 ## Requirements
 
 - \*NIX system
-- An already setup KDE installation
+- An already setup KDE Plasma installation(checkout
+  [bspwm branch](https://github.com/Blacksuan19/Dotfiles/tree/bspwm) for bspwm
+  only setup)
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
 - [picom-joanburg](https://github.com/jonaburg/picom)
