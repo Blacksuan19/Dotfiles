@@ -1,10 +1,29 @@
 #!/usr/bin/env bash
 
 # this script should only be run once during the first setup
+
+##
+# Pacman Stuff
+##
+# add chaotic and herecura repos
+function setup_repos() {
+echo -e "Setting up Repos Mirrors..."
+cat << EOF >> /etc/pacman.conf
+[chaotic-aur]
+#SigLevel = Never
+Include = /etc/pacman.d/chaotic-mirrorlist
+
+[herecura]
+# packages built against stable
+Server = https://repo.herecura.be/herecura/x86_64
+EOF
+echo -e "Pacman Repos Configured Successfully."
+}
+
 ##
 # Git Config
 ##
-
+function setup_git() {
 echo -e "Configuring git..."
 # setup user details
 git config --global user.name Blacksuan19
@@ -32,20 +51,19 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverseenv bash"
 echo -e "Git Configured Successfully."
+}
 
+setup_repos
+# install yay from chaotic-aur
+sudo pacman -S --noconfirm yay
 
 ##
-# Pacman Stuff
+# Install packages
 ##
-# add chaotic and herecura repos
-echo -e "Setting up Repos Mirrors..."
-cat << EOF >> /etc/pacman.conf
-[chaotic-aur]
-#SigLevel = Never
-Include = /etc/pacman.d/chaotic-mirrorlist
+packages=(git lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono notion-app-enhanced picom-jonaburg-git rofi-greenclip)
+yay -S --noconfirm $packages
 
-[herecura]
-# packages built against stable
-Server = https://repo.herecura.be/herecura/x86_64
-EOF
-echo -e "Pacman Repos Configured Successfully."
+setup_git
+# setup prezto
+echo -e "Downloading prezto..."
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" &> /dev/null
