@@ -13,21 +13,21 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 # zsh completion
 autoload -U compinit && compinit
 
-# ls colors
-eval $( dircolors -b $HOME/.dircolors )
-
 # determines search program for fzf
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden""'
 fi
 
 # various aliases.
-alias free="free -h"
-alias fdisk="sudo fdisk -l"
-alias c="bat " # this one is way better
 alias zsh="exec zsh"
 alias n="nvim"
 alias py="python3"
+
+# modernaize
+alias ls="lsd"
+alias du="dust"
+alias df="duf"
+alias c="bat"
 
 # packages aliases.
 alias y="yay -Syu --noconfirm"
