@@ -15,7 +15,7 @@ and others.
 - [Tmux](https://github.com/tmux/tmux)
 - [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
 - [Plasma Theme](https://github.com/material-ocean/Plasma-Theme)
-- [Latte-Dock](https://github.com/KDE/latte-dock)
+- [Latte-Dock-git](https://aur.archlinux.org/packages/latte-dock-git/)
 - required programs
   - pulseaudio (audio support)
   - dunst (notifcations daemon)
