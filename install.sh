@@ -42,8 +42,6 @@ function stow_con() {
     done
 }
 
-bash once.sh
-
 stow_con
 install_fonts
 install_themes
