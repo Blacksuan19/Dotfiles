@@ -9,7 +9,7 @@ and others.
   only setup)
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
-- [picom-joanburg](https://github.com/jonaburg/picom)
+- [picom-jonaburg](https://github.com/jonaburg/picom)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
