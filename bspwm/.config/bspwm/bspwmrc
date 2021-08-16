@@ -78,3 +78,4 @@ bspc rule -a lattedock state=floating follow=on focus=on
 bspc rule -a plasmawindowed state=floating focus=on follow=on
 bspc rule -a plasmashell state=floating border=off layer=normal
 bspc rule -a krunner state=floating border=off
+bspc rule -a gwenview state=floating
