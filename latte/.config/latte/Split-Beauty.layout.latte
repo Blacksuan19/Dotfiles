@@ -23,6 +23,45 @@ viewType=0
 visibility=4
 wallpaperplugin=org.kde.image
 
+[Containments][12][Applets][100]
+immutability=1
+plugin=org.kde.plasma.battery
+
+[Containments][12][Applets][118]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][12][Applets][119]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][12][Applets][119][Configuration]
+PreloadWeight=18
+
+[Containments][12][Applets][119][Configuration][ConfigDialog]
+DialogHeight=434
+DialogWidth=560
+
+[Containments][12][Applets][119][Configuration][General]
+containmentType=Latte
+lengthPixels=5
+
+[Containments][12][Applets][120]
+immutability=1
+plugin=org.kde.plasma.colorpicker
+
+[Containments][12][Applets][121]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][12][Applets][121][Configuration][ConfigDialog]
+DialogHeight=434
+DialogWidth=560
+
+[Containments][12][Applets][121][Configuration][General]
+containmentType=Latte
+lengthPixels=5
+
 [Containments][12][Applets][86]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
@@ -44,7 +83,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][12][Applets][91][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][12][Applets][91][Configuration][ConfigDialog]
 DialogHeight=729
@@ -59,7 +98,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][12][Applets][92][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][12][Applets][92][Configuration][ConfigDialog]
 DialogHeight=729
@@ -74,34 +113,30 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][12][Applets][93][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][12][Applets][93][Configuration][ConfigDialog]
-DialogHeight=729
-DialogWidth=1350
+DialogHeight=583
+DialogWidth=608
 
 [Containments][12][Applets][93][Configuration][General]
 containmentType=Latte
-lengthPixels=5
+lengthPixels=7
 
 [Containments][12][Applets][94]
 immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][12][Applets][94][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][12][Applets][94][Configuration][ConfigDialog]
-DialogHeight=729
-DialogWidth=1350
+DialogHeight=572
+DialogWidth=560
 
 [Containments][12][Applets][94][Configuration][General]
 containmentType=Latte
-lengthPixels=5
-
-[Containments][12][Applets][96]
-immutability=1
-plugin=org.kde.plasma.notifications
+lengthPixels=7
 
 [Containments][12][ConfigDialog]
 DialogHeight=600
@@ -114,10 +149,10 @@ PreloadWeight=0
 advanced=false
 alignment=2
 alignmentUpgraded=true
-appletOrder=96;93;89;94;88;92;87;91;86
+appletOrder=120;121;118;119;100;93;89;94;88;92;87;91;86
 appletShadowsEnabled=false
 autoSizeEnabled=false
-backgroundRadius=20
+backgroundRadius=50
 blurEnabled=false
 dragActiveWindowEnabled=true
 iconSize=16
@@ -175,7 +210,7 @@ immutability=1
 plugin=org.kde.plasma.virtualdesktopbar
 
 [Containments][13][Applets][41][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][13][Applets][41][Configuration][ConfigDialog]
 DialogHeight=729
@@ -183,17 +218,17 @@ DialogWidth=674
 
 [Containments][13][Applets][41][Configuration][Preferences]
 AddDesktopButtonShow=false
-AnimationsEnable=false
 DesktopButtonsHorizontalMargin=4
 DesktopButtonsSetCommonSizeForAll=true
-DesktopButtonsSpacing=2
+DesktopButtonsShowOnlyForCurrentDesktop=true
+DesktopButtonsShowOnlyForOccupiedDesktops=true
 DesktopButtonsVerticalMargin=2
 DesktopIndicatorsCustomColorForIdleDesktops=#00ffffff
 DesktopIndicatorsCustomColorForOccupiedIdleDesktops=#32ffffff
-DesktopIndicatorsStyle=2
-DesktopIndicatorsStyleBlockRadius=3
+DesktopIndicatorsInvertPosition=true
+DesktopIndicatorsStyle=3
 DesktopLabelsBoldFontForCurrentDesktop=true
-DesktopLabelsCustomFont=Fira Sans Book
+DesktopLabelsCustomFont=San Francisco Display
 DesktopLabelsCustomFontSize=12
 DesktopLabelsDimForIdleDesktops=false
 DesktopLabelsMaximumLength=5
@@ -214,10 +249,9 @@ alignmentUpgraded=true
 appletOrder=41
 appletShadowsEnabled=false
 autoSizeEnabled=false
-backgroundRadius=20
+backgroundRadius=50
 blurEnabled=false
 dragActiveWindowEnabled=true
-hideFloatingGapForMaximized=true
 iconSize=16
 inConfigureAppletsMode=true
 lastDodgeVisibilityMode=4
@@ -289,10 +323,9 @@ alignmentUpgraded=true
 appletOrder=99
 appletShadowsEnabled=false
 autoSizeEnabled=false
-backgroundRadius=20
+backgroundRadius=50
 blurEnabled=false
 dragActiveWindowEnabled=true
-hideFloatingGapForMaximized=true
 iconSize=16
 inConfigureAppletsMode=true
 lastDodgeVisibilityMode=4
