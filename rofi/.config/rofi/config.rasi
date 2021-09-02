@@ -1,6 +1,0 @@
-configuration {
-  font: "San Francisco Display 9";
-  hide-scrollbar: true;
-  theme: "~/.config/rofi/material-ocean.rasi";
-  kb-cancel: "Escape,Alt+F1";
-}

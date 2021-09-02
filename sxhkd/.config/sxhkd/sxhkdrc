@@ -11,8 +11,8 @@ super + {w,f,s,t,o}
     {brave,dolphin,spotify,kotatogram-desktop,notion-app-enhanced}
 
 # keybindings, clipboard, logout, calculator
-super + {F1,v,x,c}
-   rofi_run {-s,-c,-l,-q}
+super + {v,x}
+   run_command {-c,-l}
 
 # get a new wallpaper
 super + {n,q}
