@@ -17,14 +17,8 @@ and others.
 - [Plasma Theme](https://github.com/material-ocean/Plasma-Theme)
 - [Latte-Dock-git](https://aur.archlinux.org/packages/latte-dock-git/)
 - required programs
-  - pulseaudio (audio support)
-  - dunst (notifcations daemon)
-  - rofi (applications window)
-  - ksuperkey (map meta to open rofi)
-  - light (brightness control)
-  - playerctl (control current player with media keys)
+  - ksuperkey (map meta to open krunner)
   - flameshot (for taking screenshots)
-  - greenclip (clipboard history)
 
 ### Fonts
 

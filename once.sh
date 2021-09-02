@@ -60,7 +60,7 @@ sudo pacman -S --noconfirm yay
 ##
 # Install packages
 ##
-packages=(git diff-so-fancy stow lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono notion-app-enhanced picom-jonaburg-git rofi-greenclip)
+packages=(git diff-so-fancy stow lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono notion-app-enhanced picom-jonaburg-git)
 yay -S --noconfirm $packages
 
 setup_git
