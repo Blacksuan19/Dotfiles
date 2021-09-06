@@ -41,18 +41,17 @@ and others.
 
 ## Customizations
 
-### keyboard shortcuts
+### keybindings
 
-Shortcuts are controlled by sxhkd, since there are no default applications
-handler you can set your default apps from sxhkd settings
+Most of the keybidings are controlled by sxhkd, however some plasma shortcuts
+still work as intended, (changing {audio, brightness, volume, music}).
 
 | key                     | function                                                   |
 | ----------------------- | ---------------------------------------------------------- |
-| win key(mod/super)      | launch rofi                                                |
-| super + F1              | show keyboard shortcuts in a window                        |
+| win key(mod/super)      | launch krunner                                             |
 | super + w               | launch browser (default is google chrome)                  |
 | super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is vifm)                      |
+| super + f               | launch file manager (default is dolphin)                   |
 | super + shift + r       | reload sxhkd settings                                      |
 | super + q               | kill current window                                        |
 | super + g               | swap current window with the biggest                       |
@@ -64,7 +63,7 @@ handler you can set your default apps from sxhkd settings
 | super + shift + 1-9     | move window to desktop number 1-9                          |
 | super + brackets        | focus window on left, right monitor                        |
 | super + alt + {h,j,k,l} | expand window on given side                                |
-| ctrl + alt + {h,j,k,l}  | contract window on given side                              |
+| ctrl + alt + {h,j,k,l}  | shrink window on given side                                |
 | super + direction       | move floating window on given direction                    |
 | print                   | take a full screenshot                                     |
 | print + shift           | launch flameshot area selection                            |
