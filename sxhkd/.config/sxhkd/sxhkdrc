@@ -16,7 +16,7 @@ super + {v,x}
 
 # get a new wallpaper
 super + {n,q}
-    {unsplash.sh,bspc node -c}
+    {unsplash,bspc node -c}
 
 # set the window state
 super + {F9,F10,F11}
