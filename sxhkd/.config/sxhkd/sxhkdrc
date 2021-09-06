@@ -2,19 +2,15 @@
 super + Return
  kitty
 
-# program launcher
-alt + F1
-    rofi_run -r
-
 # launch software
 super + {w,f,s,t,o}
     {brave,dolphin,spotify,kotatogram-desktop,notion-app-enhanced}
 
-# keybindings, clipboard, logout, calculator
+# clipboard, logout
 super + {v,x}
    run_command {-c,-l}
 
-# get a new wallpaper
+# new wallpaper, close window
 super + {n,q}
     {unsplash,bspc node -c}
 
@@ -57,7 +53,6 @@ super + {_,shift + }{Left,Down,Up,Right}
 # full screenshot, selection area, full in 5 seconds
 Print + {_,shift,alt}
     flameshot {full -p,gui -p,full -d 5000 -p} /run/media/blacksuan19/Dark-Files/Screenshots
-
 
 # reload configurations
 super + shift + r
