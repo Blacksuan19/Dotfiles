@@ -16,10 +16,7 @@ unclutter -idle 2 &
 picom --experimental-backends -b
 
 # start redshift
-redshift &
-
-# rofi greenclipboard daemon
-greenclip daemon &
+redshift -l 3.152815:101.703651 -t 6500:4200 &
 
 # stop plasmashell fuckary
 killall plasmashell
@@ -67,8 +64,6 @@ bspc rule -a dolphin desktop='^5' follow=on focus=on
 bspc rule -a libreoffice desktop='^6' follow=on focus=on
 # 7 > reading
 bspc rule -a okular desktop='^7' follow=on focus=on
-# 8 > design
-bspc rule -a figma-linux desktop='^8' follow=on focus=on
 # 0 > music, does not always work
 bspc rule -a Spotify desktop='^10' state=floating follow=off
 
