@@ -10,8 +10,12 @@ setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
-# zsh completion
+# bash & zsh completion
+autoload bashcompinit && bashcompinit
 autoload -U compinit && compinit
+
+# aws cli completion
+complete -C '/usr/bin/aws_completer' aws
 
 # determines search program for fzf
 if type rg &> /dev/null; then

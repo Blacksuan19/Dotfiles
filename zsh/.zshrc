@@ -15,3 +15,8 @@ export GPG_TTY=$TTY # fix gpg
 # FZF bindings
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# python virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME
+source /usr/bin/virtualenvwrapper.sh
