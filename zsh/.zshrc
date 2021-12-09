@@ -1,5 +1,6 @@
 # only sourcing here!!
 source $HOME/.zprezto/init.zsh
+source $HOME/.zsh/fast/fast-syntax-highlighting.plugin.zsh
 source $HOME/.zsh/config.zsh
 source $HOME/.zsh/functions.zsh
 
@@ -19,3 +20,4 @@ source /usr/share/fzf/completion.zsh
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
 source /usr/bin/virtualenvwrapper.sh
+source /usr/share/nvm/init-nvm.sh

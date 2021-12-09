@@ -52,8 +52,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # full screenshot, selection area, full in 5 seconds
 Print + {_,shift,alt}
-    flameshot {full -p,gui -p,full -d 5000 -p} /run/media/blacksuan19/Dark-Files/Screenshots
-
+    flameshot {full -p,gui -p,full -d 5000 -p} ~/Pictures
 # reload configurations
 super + shift + r
     pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
