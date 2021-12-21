@@ -2,3 +2,7 @@ vifm/.config/vifm/vifminfo
 vifm/.config/vifm/vifm-help.txt
 vifm/.config/vifm/vifmimgpdffile
 .directory
+
+# ignore everything in latte folder except custom layout
+latte
+!latte/.config/latte/Split-Beauty.layout.latte
