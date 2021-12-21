@@ -18,9 +18,6 @@ picom --experimental-backends -b
 # start redshift
 redshift -l 3.152815:101.703651 -t 6500:4200 &
 
-# stop plasmashell fuckary
-killall plasmashell
-
 # Set some bsp specific stuff
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
@@ -77,6 +74,8 @@ bspc rule -a plasmawindowed state=floating focus=on follow=on
 bspc rule -a plasmashell state=floating border=off layer=normal
 bspc rule -a krunner state=floating border=off
 bspc rule -a gwenview state=floating
+bspc rule -a kruler state=floating
 
 # other applications rules
 bspc rule -a persepolis state=floating
+bspc rule -a smplayer layer=above state=floating sticky=on
