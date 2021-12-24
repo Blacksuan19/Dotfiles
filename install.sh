@@ -31,6 +31,7 @@ function stow_con() {
                             "once.sh"
                             "README.md"
                             "screens"
+                            "pacman.conf"
                         )
 
     # go throw all files except ignore list

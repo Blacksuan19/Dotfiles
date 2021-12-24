@@ -7,17 +7,7 @@
 ##
 # add chaotic and herecura repos
 function setup_repos() {
-echo -e "Setting up Repos Mirrors..."
-cat << EOF >> /etc/pacman.conf
-[chaotic-aur]
-#SigLevel = Never
-Include = /etc/pacman.d/chaotic-mirrorlist
-
-[herecura]
-# packages built against stable
-Server = https://repo.herecura.be/herecura/x86_64
-EOF
-echo -e "Pacman Repos Configured Successfully."
+sudo cp pacman.conf /etc/pacman.conf
 }
 
 ##
