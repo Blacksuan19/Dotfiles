@@ -58,13 +58,6 @@ alias ngd="git diff --name-only | uniq | xargs nvim" # open files with conflicts
 alias gclean="git reflog expire --all --expire=now && git gc --prune=now --aggressive"
 
 # Directory hashes.
-hash -d disk="/run/media/blacksuan19/Dark-Files"
 hash -d dots="/home/blacksuan19/.dotfiles"
-hash -d git="/run/media/blacksuan19/Dark-Files/Gits"
-hash -d dav="/run/media/blacksuan19/Dark-Files/Android-DEV/kernel/vince"
-hash -d dax="/run/media/blacksuan19/Dark-Files/Android-DEV/kernel/phoenix"
-hash -d trees="/run/media/blacksuan19/Dark-Files/Android-DEV/Trees"
-hash -d vince="/run/media/blacksuan19/Dark-Files/Android-DEV/Trees/vince"
-hash -d ph="/run/media/blacksuan19/Dark-Files/Android-DEV/Trees/phoenix"
-hash -d flutter="/run/media/blacksuan19/Dark-Files/Flutter"
-hash -d kul="/run/media/blacksuan19/Dark-Files/Kulliyya"
+hash -d git="/home/blacksuan19/Random/git"
+hash -d dav="/home/blacksuan19/Random/git/vince"
