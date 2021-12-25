@@ -50,10 +50,11 @@ sudo pacman -S --noconfirm yay
 ##
 # Install packages
 ##
-packages=(git diff-so-fancy stow lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono notion-app-enhanced picom-jonaburg-git)
+packages=(git diff-so-fancy stow lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono ferdi-bin picom-jonaburg-git kotatogram-desktop)
 yay -S --noconfirm $packages
 
 setup_git
+
 # setup prezto
 echo -e "Downloading prezto..."
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" &> /dev/null
