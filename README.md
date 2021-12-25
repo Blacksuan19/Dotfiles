@@ -60,6 +60,7 @@ still work as intended, (changing {audio, brightness, volume, music}).
 | super + F9              | set window to tiled                                        |
 | super + F10             | set window to floating                                     |
 | super + F11             | set window to full screen                                  |
+| super + F12             | make window sticky (above all)                             |
 | super + {h,j,k,l}       | focus the window on left, below, above, right respectively |
 | super + Tab             | focus last desktop                                         |
 | super + shift + 1-9     | move window to desktop number 1-9                          |
@@ -75,20 +76,6 @@ still work as intended, (changing {audio, brightness, volume, music}).
 
 ## Screenshots
 
-#### Clean
-
 ![desktop](./screens/1.png)
 
-#### Applications
-
-![lockscreen](./screens/2.png)
-
-![rofi](./screens/3.png)
-
-![brave](./screens/4.png)
-
-![notion](./screens/5.png)
-
-![nautilus](./screens/6.png)
-
-![spotify](./screens/7.png)
+![apps](./screens/2.png)
