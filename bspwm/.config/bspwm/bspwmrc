@@ -78,4 +78,4 @@ bspc rule -a kruler state=floating
 
 # other applications rules
 bspc rule -a persepolis state=floating
-bspc rule -a smplayer layer=above state=floating sticky=on
+bspc rule -a smplayer state=floating

@@ -22,6 +22,10 @@ super + {F9,F10,F11}
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
 
+# make node stick on all desktops
+super + F12
+	bspc node --flag sticky
+
 # focus the last node/desktop
 super + {grave,Tab}
     bspc {node,desktop} -f last
