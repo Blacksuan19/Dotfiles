@@ -15,8 +15,5 @@ fi
 [ -r ~/.Xresources ] && xrdb -merge ~/.Xresources
 [ -r ~/.xprofile ] && . ~/.xprofile
 
-# lock the screen (no, i wont just use a display manager)
-betterlockscreen -l blur &
-
 # launch the session, commands below this line will be ignored
 dbus-run-session bspwm
