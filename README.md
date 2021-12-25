@@ -19,6 +19,8 @@ and others.
 - required programs
   - ksuperkey (map meta to open krunner)
   - flameshot (for taking screenshots)
+  - libinput-gestures (touchpad gestures)
+  - unclutter (hide pointer when not in use)
 
 ### Fonts
 
