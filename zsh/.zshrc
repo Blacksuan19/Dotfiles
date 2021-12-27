@@ -23,9 +23,8 @@ source /usr/share/fzf/completion.zsh
 # python version manager
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-unstable
-
