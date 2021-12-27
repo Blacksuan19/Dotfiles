@@ -12,7 +12,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'tmux' \
   'autosuggestions' \
-  'prompt'
+  'prompt' \
+  'fzf-tab'
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'vi'
