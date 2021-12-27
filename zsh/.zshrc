@@ -20,11 +20,12 @@ export GPG_TTY=$TTY
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-# python virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME
-source /usr/bin/virtualenvwrapper.sh
-source /usr/share/nvm/init-nvm.sh
+# python version manager
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-unstable
+
