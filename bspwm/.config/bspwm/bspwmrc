@@ -18,6 +18,9 @@ picom --experimental-backends -b
 # start redshift
 redshift -l 3.152815:101.703651 -t 6500:4200 &
 
+# start libinput gestures
+libinput-gestures-setup start
+
 # Set some bsp specific stuff
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
