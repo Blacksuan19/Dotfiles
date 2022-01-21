@@ -4,7 +4,7 @@ super + Return
 
 # launch software
 super + {w,f,s,t,o,e}
-    {google-chrome-unstable,dolphin,spotify,kotatogram-desktop,notion-app-enhanced,ferdi}
+    {google-chrome-stable,dolphin,spotify,kotatogram-desktop,notion-app-enhanced,ferdi}
 
 # clipboard, logout
 super + {v,x}
