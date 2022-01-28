@@ -61,7 +61,7 @@ bspc rule -a notion-app-enhanced desktop='^4' follow=on focus=on
 # 5 > file manager
 bspc rule -a dolphin desktop='^5' follow=on focus=on
 # 6 > office
-bspc rule -a libreoffice desktop='^6' follow=on focus=on
+bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
 # 7 > reading
 bspc rule -a okular desktop='^7' follow=on focus=on
 # 8 > slack
