@@ -1,6 +1,6 @@
 # launch terminal
 super + Return
- kitty
+    konsole
 
 # launch software
 super + {w,f,s,t,o,e}
