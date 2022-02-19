@@ -8,6 +8,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # default editor
 export EDITOR=nvim
+export LC_ALL=en_US.UTF-8
 
 # super alone simulates Alt-F2
 ksuperkey -e 'Super_L=Alt_L|F2' &
