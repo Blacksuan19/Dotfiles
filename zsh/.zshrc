@@ -25,6 +25,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# flutter
-export CHROME_EXECUTABLE=/usr/bin/google-chrome-unstable
