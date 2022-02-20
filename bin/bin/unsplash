@@ -8,8 +8,9 @@
 notify-send -i info "Random Wallpaper" "Getting new wallpaper..."
 wget --no-check-certificate -O $HOME/.wallpaper "https://source.unsplash.com/random/1920x1080" &> /dev/null
 
-# set desktop wallpaper
-feh --bg-fill $HOME/.wallpaper
+# set plasma wallpaper
+set_plasma_bg # first reset wallpaper to default
+set_plasma_bg /home/blacksuan19/.wallpaper
 
 # we out
 notify-send "New wallpaper set successfully."
