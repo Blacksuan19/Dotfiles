@@ -35,6 +35,16 @@ Personal configurations to make plasma a fully tiling desktop
 - select `split beauty` layout for latte dock.
 - import kwin rules and shortcuts from plasma settings
 
+## Plasma Extras
+
+to achinve an exact replica of this setup there are some plasma settings that
+need to be tweaked
+
+- enable snap helper under effects
+- disable title bars for all windows
+  [from here](https://www.reddit.com/r/unixporn/comments/4gez8w/hide_title_bars_in_kde_plasma_5/)
+- [rounded corners add-on](https://github.com/matinlotfali/KDE-Rounded-Corners)
+
 ## Customizations
 
 ### keybindings
