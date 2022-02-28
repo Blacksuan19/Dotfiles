@@ -26,6 +26,7 @@ fi
 alias zsh="exec zsh"
 alias n="nvim"
 alias py="python3"
+alias open="xdg-open"
 
 # modernaize
 alias ls="lsd"
