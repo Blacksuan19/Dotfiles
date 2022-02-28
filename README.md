@@ -1,4 +1,6 @@
-Personal configurations to make plasma a fully tiling desktop
+Personal configurations to make plasma a fully tiling desktop. With themes and
+color schemes from
+[Material ocean](https://github.com/material-ocean/material-ocean)
 
 ## Requirements
 
@@ -6,8 +8,6 @@ Personal configurations to make plasma a fully tiling desktop
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
-- [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
-- [Plasma Theme](https://github.com/material-ocean/Plasma-Theme)
 - [Latte-Dock-git](https://aur.archlinux.org/packages/latte-dock-git/)
 - required programs
   - ksuperkey (map meta to open krunner)
@@ -33,11 +33,11 @@ Personal configurations to make plasma a fully tiling desktop
 - `bash once.sh` if on a clean install.
 - set plasma themes.
 - select `split beauty` layout for latte dock.
-- import kwin rules and shortcuts from plasma settings
+- import kwin rules and shortcuts under the `plasma` folder
 
 ## Plasma Extras
 
-to achinve an exact replica of this setup there are some plasma settings that
+To achieve an exact replica of this setup there are some plasma settings that
 need to be tweaked
 
 - enable snap helper, desktop grid and desktop overview from desktop effects
@@ -49,10 +49,9 @@ need to be tweaked
   modifier key)
 - set focus stealing to none, focuses new window on open (window behaviour ->
   focus -> focus stealing)
+- set wallpaper to picture of the day from Wikimedia
 
-## Customizations
-
-### keybindings
+## Shortcuts
 
 For tiling, [Bismuth](https://github.com/Bismuth-Forge/bismuth) is used with
 most of the shortcuts left as default, any changes done are mentioned below.
@@ -79,6 +78,18 @@ most of the shortcuts left as default, any changes done are mentioned below.
 | super + t                | launch telegram                                            |
 
 ## Screenshots
+
+```txt
+Global theme:   Breeze
+Plasma Style:   Material Ocean
+Color scheme:   Breeze with #ff4151 as accent color
+Terminal:       Konsole
+Terminal Theme: Material ocean
+File Manager:   Dolphin
+Icons:          Tela
+Browser:        Google Chrome Stable
+Docks:          Latte Dock (Split Beauty)
+```
 
 ![desktop](./screens/1.png)
 
