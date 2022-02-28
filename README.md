@@ -50,6 +50,7 @@ need to be tweaked
   modifier key)
 - set focus stealing to none, focuses new window on open (window behaviour ->
   focus -> focus stealing)
+- set focus to follow mouse (window behaviour -> focus window activity policy)
 - set wallpaper to picture of the day from Wikimedia
 
 ## Shortcuts
