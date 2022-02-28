@@ -32,6 +32,7 @@ function stow_con() {
                             "README.md"
                             "screens"
                             "pacman.conf"
+                            "plasma"
                         )
 
     # go throw all files except ignore list

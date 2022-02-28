@@ -1,0 +1,75 @@
+[New window settings]
+Description=New window settings
+above=true
+aboverule=3
+wmclassmatch=1
+
+[Settings for Code]
+Description=Settings for Code
+desktops=7ffcb747-8a73-4a95-9a0a-d21062d31b52
+desktopsrule=3
+wmclass=code
+wmclassmatch=1
+
+[Settings for DesktopEditors]
+Description=Settings for DesktopEditors
+desktops=33139177-333d-4a08-9434-ac137f4aeb54
+desktopsrule=3
+wmclass=desktopeditors
+wmclassmatch=1
+
+[Settings for Ferdi]
+Description=Settings for Ferdi
+desktops=790bbcfe-3fd8-4b6e-ad2d-5baac3c2c6c5
+desktopsrule=3
+wmclass=ferdi
+wmclassmatch=1
+
+[Settings for KotatogramDesktop]
+Description=Settings for KotatogramDesktop
+desktops=1caa9765-7930-4b8a-a446-50254156d115
+desktopsrule=3
+wmclass=kotatogramdesktop
+wmclassmatch=1
+
+[Settings for Spotify]
+Description=Settings for Spotify
+desktops=ef822169-713f-4b97-bd05-8941b613beeb
+desktopsrule=3
+wmclass=spotify
+wmclassmatch=1
+
+[Settings for dolphin]
+Description=Settings for dolphin
+desktops=5b5065b9-12d9-4039-be8b-5e9bb13fb31e
+desktopsrule=3
+wmclass=dolphin
+wmclassmatch=1
+
+[Settings for google-chrome]
+Description=Settings for google-chrome
+desktops=3ae0178c-a626-4fd7-9d44-c02508ca5122
+desktopsrule=3
+wmclass=google-chrome
+wmclassmatch=1
+
+[Settings for konsole]
+Description=Settings for konsole
+desktops=7ffcb747-8a73-4a95-9a0a-d21062d31b52
+desktopsrule=3
+wmclass=konsole
+wmclassmatch=1
+
+[Settings for okular]
+Description=Settings for okular
+desktops=973f63a0-a724-4807-a3d9-6b34c6a266ef
+desktopsrule=3
+wmclass=okular
+wmclassmatch=1
+
+[Settings for zoom]
+Description=Settings for zoom
+desktops=5d407eb6-77d9-4501-9003-d19715997cf0
+desktopsrule=3
+wmclass=zoom
+wmclassmatch=1
