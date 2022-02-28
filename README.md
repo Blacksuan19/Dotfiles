@@ -40,10 +40,15 @@ Personal configurations to make plasma a fully tiling desktop
 to achinve an exact replica of this setup there are some plasma settings that
 need to be tweaked
 
-- enable snap helper under effects
+- enable snap helper, desktop grid and desktop overview from desktop effects
+- set hot corners for desktops overview and desktop grid (top right, top left)
 - disable title bars for all windows
   [from here](https://www.reddit.com/r/unixporn/comments/4gez8w/hide_title_bars_in_kde_plasma_5/)
 - [rounded corners add-on](https://github.com/matinlotfali/KDE-Rounded-Corners)
+- move windows with alt and mouse (window behaviour -> window actions ->
+  modifier key)
+- set focus stealing to none, focuses new window on open (window behaviour ->
+  focus -> focus stealing)
 
 ## Customizations
 
