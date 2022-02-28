@@ -1,15 +1,8 @@
-[Material Oceanized](https://github.com/material-ocean) configuration for Bspwm
-and others.
+Personal configurations to make plasma a fully tiling desktop
 
 ## Requirements
 
-- \*NIX system
-- An already setup KDE Plasma installation(checkout
-  [bspwm branch](https://github.com/Blacksuan19/Dotfiles/tree/bspwm) for bspwm
-  only setup)
-- [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
-- [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
-- [picom-jonaburg](https://github.com/jonaburg/picom)
+- A fresh KDE Plasma installation(check other branches for other dots)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
@@ -40,39 +33,35 @@ and others.
 - `bash once.sh` if on a clean install.
 - set plasma themes.
 - select `split beauty` layout for latte dock.
+- import kwin rules and shortcuts from plasma settings
 
 ## Customizations
 
 ### keybindings
 
-Most of the keybidings are controlled by sxhkd, however some plasma shortcuts
-still work as intended, (changing {audio, brightness, volume, music}).
+For tiling, [Bismuth](https://github.com/Bismuth-Forge/bismuth) is used with
+most of the shortcuts left as default, any changes done are mentioned below.
 
-| key                     | function                                                   |
-| ----------------------- | ---------------------------------------------------------- |
-| win key(mod/super)      | launch krunner                                             |
-| super + w               | launch browser (default is google chrome)                  |
-| super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is dolphin)                   |
-| super + shift + r       | reload sxhkd settings                                      |
-| super + q               | kill current window                                        |
-| super + g               | swap current window with the biggest                       |
-| super + F9              | set window to tiled                                        |
-| super + F10             | set window to floating                                     |
-| super + F11             | set window to full screen                                  |
-| super + F12             | make window sticky (above all)                             |
-| super + {h,j,k,l}       | focus the window on left, below, above, right respectively |
-| super + Tab             | focus last desktop                                         |
-| super + shift + 1-9     | move window to desktop number 1-9                          |
-| super + brackets        | focus window on left, right monitor                        |
-| super + alt + {h,j,k,l} | expand window on given side                                |
-| ctrl + alt + {h,j,k,l}  | shrink window on given side                                |
-| super + direction       | move floating window on given direction                    |
-| print                   | take a full screenshot                                     |
-| print + shift           | launch flameshot area selection                            |
-| super + v               | launch clipboard                                           |
-| super + s               | launch spotify                                             |
-| super + t               | launch telegram                                            |
+| key                      | function                                                   |
+| ------------------------ | ---------------------------------------------------------- |
+| win key(mod/super)       | launch krunner                                             |
+| super + w                | launch browser (default is google chrome)                  |
+| super + Enter            | launch terminal (default is kitty)                         |
+| super + f                | launch file manager (default is dolphin)                   |
+| super + q                | kill current window                                        |
+| super + space            | switch between tiling and last used layout                 |
+| super + shift + F        | make window float                                          |
+| super + {h,j,k,l}        | focus the window on left, below, above, right respectively |
+| super + Tab              | cycle through last used desktops (in order)                |
+| super + 1-9              | go to desktop 1-9                                          |
+| super + shift + 1-9      | move window to desktop number 1-9                          |
+| super + ctrl + {h,j,k,l} | shrink window on given side                                |
+| super + direction        | stick window at given direction corner                     |
+| print                    | take a full screenshot                                     |
+| print + shift            | launch flameshot area selection                            |
+| super + v                | launch clipboard                                           |
+| super + s                | launch spotify                                             |
+| super + t                | launch telegram                                            |
 
 ## Screenshots
 
