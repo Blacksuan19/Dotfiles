@@ -54,8 +54,12 @@ need to be tweaked
 
 ## Shortcuts
 
-For tiling, [Bismuth](https://github.com/Bismuth-Forge/bismuth) is used with
-most of the shortcuts left as default, any changes done are mentioned below.
+### Keybindings
+
+Plasma shortcuts under settings is the preferred way to manage keyboard
+shortcuts, for tiling, [Bismuth](https://github.com/Bismuth-Forge/bismuth) is
+used with most of the shortcuts left as default, any changes done are mentioned
+below.
 
 | key                      | function                                                   |
 | ------------------------ | ---------------------------------------------------------- |
@@ -77,6 +81,21 @@ most of the shortcuts left as default, any changes done are mentioned below.
 | super + v                | launch clipboard                                           |
 | super + s                | launch spotify                                             |
 | super + t                | launch telegram                                            |
+
+### Gestures
+
+Gestures are handled by libinput-gestures, to modify them, directly edit the
+conf file under .config (not recommended) or use
+[gestures](https://gitlab.com/cunidev/gestures) tool.
+
+| gesture              | function                                  |
+| -------------------- | ----------------------------------------- |
+| 3 finger swipe down  | go to next desktop                        |
+| 3 finger swipe up    | go to previous desktop                    |
+| 3 finger swipe left  | go back (alt + left)                      |
+| 3 finger swipe right | go forward (alt + right)                  |
+| 4 finger swipe down  | enter window overview mode (all desktops) |
+| 4 finger swipe up    | display desktops grid                     |
 
 ## Screenshots
 
