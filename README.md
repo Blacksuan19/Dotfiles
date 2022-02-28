@@ -30,6 +30,7 @@ color schemes from
 
 ### After Installation to do
 
+- `cd others`
 - `bash once.sh` if on a clean install.
 - set plasma themes.
 - select `split beauty` layout for latte dock.
@@ -88,6 +89,7 @@ Terminal Theme: Material ocean
 File Manager:   Dolphin
 Icons:          Tela
 Browser:        Google Chrome Stable
+New Page:       Tabliss (config under others folder)
 Docks:          Latte Dock (Split Beauty)
 ```
 

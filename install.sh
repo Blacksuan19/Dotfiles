@@ -28,11 +28,10 @@ function stow_con() {
     declare -a ignore_list=(".git"
                             ".gitignore"
                             ".gitmodules"
-                            "once.sh"
                             "README.md"
                             "screens"
-                            "pacman.conf"
                             "plasma"
+                            "others"
                         )
 
     # go throw all files except ignore list
