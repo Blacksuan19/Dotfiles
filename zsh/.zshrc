@@ -4,6 +4,7 @@ source $HOME/.zsh/fast/fast-syntax-highlighting.plugin.zsh
 source $HOME/.zsh/config.zsh
 source $HOME/.zsh/functions.zsh
 source $HOME/.zsh/systemd.plugin.zsh
+source $HOME/.zsh/wakatime.plugin.zsh
 
 # path changes
 export PATH=$HOME/bin:$PATH
