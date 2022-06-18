@@ -45,13 +45,12 @@ need to be tweaked
 - set hot corners for desktops overview and desktop grid (top right, top left)
 - disable title bars for all windows
   [from here](https://www.reddit.com/r/unixporn/comments/4gez8w/hide_title_bars_in_kde_plasma_5/)
-- [rounded corners add-on](https://github.com/matinlotfali/KDE-Rounded-Corners)
+- [lightly shaders](https://aur.archlinux.org/packages/lightlyshaders-git)
 - move windows with alt and mouse (window behaviour -> window actions ->
   modifier key)
 - set focus stealing to none, focuses new window on open (window behaviour ->
   focus -> focus stealing)
 - set focus to follow mouse (window behaviour -> focus window activity policy)
-- set wallpaper to picture of the day from Wikimedia
 
 ## Shortcuts
 
@@ -96,7 +95,7 @@ conf file under .config (not recommended) or use
 | 3 finger swipe left  | go back (alt + left)                      |
 | 3 finger swipe right | go forward (alt + right)                  |
 | 4 finger swipe down  | enter window overview mode (all desktops) |
-| 4 finger swipe up    | display desktops grid                     |
+| 4 finger swipe up    | enter desktop overview mode               |
 
 ## Screenshots
 
