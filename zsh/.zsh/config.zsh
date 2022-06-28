@@ -43,6 +43,7 @@ alias orphan="yay -Rns $(pacman -Qtdq)" # remove orphaned packages.
 alias cleanc="yay -Scc" # clean cached packages files.
 
 # git aliases.
+alias clone="git clone"
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add -A"
