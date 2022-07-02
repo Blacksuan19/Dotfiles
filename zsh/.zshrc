@@ -14,6 +14,3 @@ zstyle ':completion:*:descriptions' format '[%d]'
 # FZF bindings
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-
-# aws cli completion
-complete -C '/usr/bin/aws_completer' aws

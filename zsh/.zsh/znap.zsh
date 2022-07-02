@@ -20,12 +20,15 @@ znap source zdharma-continuum/fast-syntax-highlighting
 znap source wbingli/zsh-wakatime
 znap source mikcho/zsh-systemd
 znap source ael-code/zsh-colored-man-pages
-znap source pyenv/pyenv completions
 
 # evals
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
 # completion
+znap source pyenv/pyenv completions
+
 znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
 compctl -K    _pip_completion pip
 
+# aws cli completion
+complete -C '/usr/bin/aws_completer' aws
