@@ -6,7 +6,6 @@ color schemes from
 
 - A fresh KDE Plasma installation(check other branches for other dots)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
 - [Latte-Dock-git](https://aur.archlinux.org/packages/latte-dock-git/)
 - required programs
