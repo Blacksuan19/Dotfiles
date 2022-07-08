@@ -23,9 +23,14 @@ function setup_repos() {
 # Git Config
 function setup_git() {
 	echo -e "Configuring git..."
+	echo -n "Git username: "
+	read username
+	echo -n "Git email address: "
+	read email
+
 	# setup user details
-	git config --global user.name Blacksuan19
-	git config --global user.email abubakaryagob@gmail.com
+	git config --global user.name $username
+	git config --global user.email $email
 
 	# setup gpg signing
 	git config --global --add gpg.program /usr/bin/gpg
