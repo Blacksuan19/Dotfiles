@@ -1,4 +1,3 @@
-export PYENV_ROOT="$HOME/.pyenv"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
 # PATH changes
