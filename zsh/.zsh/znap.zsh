@@ -26,6 +26,7 @@ znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
 # completion
 znap source pyenv/pyenv completions
+znap source MenkeTechnologies/zsh-cargo-completion
 
 znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
 compctl -K    _pip_completion pip
