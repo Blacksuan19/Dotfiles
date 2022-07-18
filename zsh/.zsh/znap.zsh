@@ -9,7 +9,7 @@ source ~/.zsh-snap/zsh-snap/znap.zsh
 znap prompt sindresorhus/pure
 
 # stuff from prezto or oh-my-zsh
-znap source sorin-ionescu/prezto modules/{history,completion}
+znap source sorin-ionescu/prezto modules/{history,completion,editor}
 znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux}
 
 # plugins
