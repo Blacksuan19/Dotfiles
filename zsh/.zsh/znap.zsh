@@ -33,3 +33,4 @@ compctl -K    _pip_completion pip
 
 # aws cli completion
 complete -C '/usr/bin/aws_completer' aws
+complete -C '/usr/bin/aws_completer' awslocal
