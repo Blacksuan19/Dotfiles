@@ -17,6 +17,7 @@ alias install="yay -S"
 alias pinfo="yay -Qi " # get info of an installed package.
 alias orphan="yay -Rns $(pacman -Qtdq)" # remove orphaned packages.
 alias cleanc="yay -Scc" # clean cached packages files.
+alias flib="pacman -F " # find what package a lib belongs to
 
 # git aliases.
 alias clone="git clone"
