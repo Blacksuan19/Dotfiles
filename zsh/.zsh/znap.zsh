@@ -17,9 +17,9 @@ znap source Aloxaf/fzf-tab
 znap source marlonrichert/zcolors
 znap source zsh-users/zsh-autosuggestions
 znap source zdharma-continuum/fast-syntax-highlighting
-znap source wbingli/zsh-wakatime
 znap source mikcho/zsh-systemd
 znap source ael-code/zsh-colored-man-pages
+znap source nickbradley/aw-watcher-shell aw-watcher-shell
 
 # evals
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
