@@ -10,10 +10,11 @@ znap prompt sindresorhus/pure
 
 # stuff from prezto or oh-my-zsh
 znap source sorin-ionescu/prezto modules/{history,completion,editor,directory}
-znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux}
+znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux,python,pyenv}
 
 # plugins
 znap source Aloxaf/fzf-tab
+znap source agkozak/zsh-z
 znap source marlonrichert/zcolors
 znap source zsh-users/zsh-autosuggestions
 znap source zdharma-continuum/fast-syntax-highlighting
