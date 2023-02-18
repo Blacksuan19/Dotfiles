@@ -10,7 +10,7 @@ znap prompt sindresorhus/pure
 
 # stuff from prezto or oh-my-zsh
 znap source sorin-ionescu/prezto modules/{history,completion,editor,directory}
-znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux,python,pyenv}
+znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux,python,pyenv,pip,common-aliases,aliases}
 
 # plugins
 znap source Aloxaf/fzf-tab
