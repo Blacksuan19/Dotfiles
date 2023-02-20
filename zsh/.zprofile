@@ -6,3 +6,6 @@ eval "$(pyenv init --path)"
 # fix perl language when using package manager
 export LC_ALL=en_US.UTF-8
 
+
+# start unclutter
+unclutter --fork --ignore-scrolling --timeout 5 --jitter 10
