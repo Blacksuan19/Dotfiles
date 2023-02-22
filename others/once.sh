@@ -15,10 +15,6 @@ EndSection
 EOT
 }
 
-# Pacman Stuff
-function setup_repos() {
-	sudo cp pacman.conf /etc/pacman.conf
-}
 
 # Git Config
 function setup_git() {
@@ -46,15 +42,26 @@ function setup_git() {
 	echo -e "Git Configured Successfully."
 }
 
-setup_repos
-# install yay from chaotic-aur
-sudo pacman -S --noconfirm yay
+# Pacman Stuff
+function setup_pacman() {
+    # setup chaotic AUR
+    pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+    pacman-key --lsign-key FBA220DFC880C036
+    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-# Install packages
-packages=(git delta stow lsd bat ksuperkey tmux ripgrep duf dust nerd-fonts-jetbrains-mono ferdium-bin telegram-desktop kwin-bismuth-bin)
-yay -S --noconfirm $packages
+    # update pacman config
+	sudo cp pacman.conf /etc/pacman.conf
 
-setup_git
+    # update repos and install yay
+    sudo pacman -Syyu --noconfirm yay
 
-# fix brightness
+    # Install packages
+    packages=(git delta stow lsd bat tmux ripgrep duf dust nerd-fonts-jetbrains-mono telegram-desktop-userfonts kwin-bismuth-bin fastfetch mailspring microsoft-edge-stable-bin onlyoffice-bin visual-studio-code-bin)
+    yay -S --noconfirm $packages
+}
+
 fix_brightness
+setup_git
+setup_pacman
+
+echo -e "Done!"
