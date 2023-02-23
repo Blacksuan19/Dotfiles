@@ -7,3 +7,6 @@
 [submodule "zsh/.zsh/fast"]
 	path = zsh/.zsh/fast
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
+[submodule "mpv/.config/mpv"]
+	path = mpv/.config/mpv
+	url = https://github.com/Blacksuan19/MinMPV
