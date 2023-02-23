@@ -56,7 +56,7 @@ function setup_pacman() {
     sudo pacman -Syyu --noconfirm yay
 
     # Install packages
-    packages=(git delta stow lsd bat tmux ripgrep duf dust nerd-fonts-jetbrains-mono telegram-desktop-userfonts kwin-bismuth-bin fastfetch mailspring microsoft-edge-stable-bin onlyoffice-bin visual-studio-code-bin)
+    packages=(git delta stow lsd bat tmux ripgrep duf dust nerd-fonts-jetbrains-mono telegram-desktop-userfonts kwin-bismuth-bin fastfetch mailspring microsoft-edge-stable-bin onlyoffice-bin visual-studio-code-bin mpv)
     yay -S --noconfirm $packages
 }
 
