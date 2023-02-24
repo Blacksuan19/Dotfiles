@@ -5,13 +5,8 @@ function install_fonts() {
 	target="$HOME/.local/share/fonts"
 	mkdir -p $target
 
-	# install apple SanFranciscoDisplay font
-	curl https://codeload.github.com/AppleDesignResources/SanFranciscoFont/zip/master \
-		--output SF.zip
-	unzip -j SF.zip SanFranciscoFont-master/SanFranciscoDisplay-\* -d $target/SanFranciscoDisplay
-
-	# cleanup
-	rm SF.zip
+	# install SF Pro font
+    git clone https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts.git ~/.local/share/fonts/SanFranciscoPro
 }
 
 # clone install plasma theme
