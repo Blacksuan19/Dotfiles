@@ -7,6 +7,9 @@ function install_fonts() {
 
 	# install SF Pro font
     git clone https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts.git ~/.local/share/fonts/SanFranciscoPro
+
+    # remove git folder (huge)
+    rm -rf ~/.local/share/fonts/SanFranciscoPro/.git
 }
 
 # clone install plasma theme
