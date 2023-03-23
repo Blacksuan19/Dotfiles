@@ -15,4 +15,6 @@ zstyle ':completion:*:descriptions' format '[%d]'
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+# pyenv setup
 eval "$(pyenv init -)"
+

@@ -5,8 +5,11 @@
 
 source ~/.zsh-snap/zsh-snap/znap.zsh
 
-# prmpt
-znap prompt sindresorhus/pure
+znap clone https://github.com/romkatv/powerlevel10k.git
+
+# prompt
+eval "$(starship init zsh)"
+znap prompt
 
 # stuff from prezto or oh-my-zsh
 znap source sorin-ionescu/prezto modules/{history,completion,editor,directory}
