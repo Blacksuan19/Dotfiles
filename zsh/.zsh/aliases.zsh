@@ -3,8 +3,10 @@ alias zsh="exec zsh"
 alias n="nvim"
 alias py="python3"
 alias open="xdg-open"
+alias o="open"
 
 # modernaize
+alias cd="z"
 alias ls="exa --icons"
 alias du="dust"
 alias df="duf"
