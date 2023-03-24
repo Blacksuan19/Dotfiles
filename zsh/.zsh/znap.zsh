@@ -17,16 +17,12 @@ znap source ohmyzsh/ohmyzsh plugins/{sudo,extract,git,tmux,python,pyenv,pip,comm
 
 # plugins
 znap source Aloxaf/fzf-tab
-znap source agkozak/zsh-z
 znap source marlonrichert/zcolors
 znap source zsh-users/zsh-autosuggestions
 znap source zdharma-continuum/fast-syntax-highlighting
 znap source mikcho/zsh-systemd
 znap source ael-code/zsh-colored-man-pages
 znap source nickbradley/aw-watcher-shell aw-watcher-shell
-
-# evals
-znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
 # completion
 znap source pyenv/pyenv completions
