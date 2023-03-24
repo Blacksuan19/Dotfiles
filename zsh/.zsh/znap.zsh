@@ -5,8 +5,6 @@
 
 source ~/.zsh-snap/zsh-snap/znap.zsh
 
-znap clone https://github.com/romkatv/powerlevel10k.git
-
 # prompt
 eval "$(starship init zsh)"
 znap prompt
