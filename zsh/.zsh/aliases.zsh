@@ -5,7 +5,7 @@ alias py="python3"
 alias open="xdg-open"
 
 # modernaize
-alias ls="lsd"
+alias ls="exa --icons"
 alias du="dust"
 alias df="duf"
 alias c="bat"
