@@ -48,3 +48,7 @@ format = ' [$duration](bold yellow)'
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
+symbol = " "
+pyenv_version_name = false
+pyenv_prefix = "pyenv"
+disabled = false
