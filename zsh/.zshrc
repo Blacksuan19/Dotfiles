@@ -17,6 +17,7 @@ source /usr/share/fzf/completion.zsh
 
 # pyenv setup
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # zoxide setup
 eval "$(zoxide init zsh)"
