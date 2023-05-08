@@ -17,7 +17,6 @@ alias y="yay -Syu --noconfirm"
 alias remove="yay -Rds"
 alias install="yay -S"
 alias pinfo="yay -Qi " # get info of an installed package.
-alias orphan="yay -Rns $(pacman -Qtdq)" # remove orphaned packages.
 alias cleanc="yay -Scc" # clean cached packages files.
 alias pacf="pacman -F " # find what package a lib belongs to
 
