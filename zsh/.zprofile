@@ -9,5 +9,8 @@ export LC_ALL=en_US.UTF-8
 # set EDITOR
 export EDITOR=nvim
 
+# better font rendering
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0"
+
 # start unclutter
 unclutter --fork --ignore-scrolling --timeout 5 --jitter 10
