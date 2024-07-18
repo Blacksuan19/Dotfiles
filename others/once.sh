@@ -2,20 +2,6 @@
 
 # this script should only be run once during the first setup
 
-function fix_brightness() {
-	target="/usr/share/X11/xorg.conf.d/10-quirks.conf"
-
-	sudo tee -a $target >/dev/null <<EOT
-# Fix brightness randomly changing
-Section "InputClass"
-        Identifier "Spooky Ghosts"
-        MatchProduct "Video Bus"
-        Option "Ignore" "on"
-EndSection
-EOT
-}
-
-
 # Git Config
 function setup_git() {
 	echo -e "Configuring git..."
@@ -45,22 +31,25 @@ function setup_git() {
 # Pacman Stuff
 function setup_pacman() {
     # setup chaotic AUR
-    pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-    pacman-key --lsign-key FBA220DFC880C036
-    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+    sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
     # update pacman config
-	sudo cp pacman.conf /etc/pacman.conf
+    sudo tee -a /etc/pacman.conf > /dev/null <<EOT
+
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+EOT
 
     # update repos and install yay
     sudo pacman -Syyu --noconfirm yay
 
     # Install packages
-    packages=(git delta stow exa bat tmux ripgrep duf dust nerd-fonts-jetbrains-mono telegram-desktop-userfonts kwin-bismuth-bin fastfetch mailspring microsoft-edge-stable-bin onlyoffice-bin visual-studio-code-bin mpv)
+    packages=(git git-delta stow exa bat tmux ripgrep duf dust ttf-jetbrains-mono-nerd fastfetch mailspring microsoft-edge-stable-bin onlyoffice-bin visual-studio-code-bin)
     yay -S --noconfirm $packages
 }
 
-fix_brightness
 setup_git
 setup_pacman
 
