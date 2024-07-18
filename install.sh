@@ -14,37 +14,34 @@ function install_fonts() {
 
     # remove all fonts except SF-Pro.ttf
     rm -rf $(find . -name "*" ! -name "SF-Pro.ttf")
+
+    # update font cache
+    fc-cache -f -v
+
+    echo "Fonts installed successfully."
+
+    # return to script directory
+    cd - > /dev/null
 }
 
-# clone install plasma theme
-function install_themes() {
-	git clone https://github.com/material-ocean/Plasma-Theme /tmp/plasma-theme
-	cd /tmp/plasma-theme
-	bash install.sh
-	cd -
-	rm -rf /tmp/plasma-theme
-}
 # symlink configs
 function stow_con() {
-	# ignored files list
-	declare -a ignore_list=(".git"
-		".gitignore"
-		".gitmodules"
-		"README.md"
-		"screens"
-		"plasma"
-		"others"
-	)
 
-	# go throw all files except ignore list
-	for file in ~/.dotfiles/*; do
-		if [ -d ${file} ] && [[ ! ${file} =~ ${ignore_list[@]} ]]; then
-			stow $(basename $file)
-			if $SCRIPT_DEBUG; then echo "$(basename $file) stowed."; fi
-		fi
-	done
+    declare -a dirs=($(ls -d */))
+    ignore_list=("others/" "plasma/" "screens/")
+
+    # remove ignored directories from list
+    for ignore in ${ignore_list[@]}; do
+        dirs=(${dirs[@]/$ignore})
+    done
+
+    echo "Stowing Directories: ${dirs[@]}"
+
+    for dir in ${dirs[@]}; do
+        stow ${dir}
+        if $SCRIPT_DEBUG; then echo "${dir} stowed."; fi
+    done
 }
 
 stow_con
 install_fonts
-install_themes
