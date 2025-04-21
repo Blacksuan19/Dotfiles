@@ -8,9 +8,11 @@ alias o="open"
 # modernaize
 alias cd="z"
 alias ls="exa --icons"
+alias l="ls -lhF"
 alias du="dust"
 alias df="duf"
 alias c="bat"
+
 
 # packages aliases.
 alias y="yay -Syu --noconfirm"
