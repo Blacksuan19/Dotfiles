@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# LOGGING
+LOG="/tmp/alist-handler.log"
+echo "$(date) - Received: $1" >> "$LOG"
+
+URI="$1"
+
+# 1. Clean the URL
+# Added 'potplayer' to the regex removal list
+CLEAN_URL=$(echo "$URI" | sed -E 's/^(vlc|mpv|potplayer)(:|\/\/)+//')
+
+# 2. Fix Missing Colon
+if [[ "$CLEAN_URL" == https//* ]]; then
+    CLEAN_URL="https:${CLEAN_URL#https}"
+elif [[ "$CLEAN_URL" == http//* ]]; then
+    CLEAN_URL="http:${CLEAN_URL#http}"
+fi
+
+# 3. Encode Spaces for VLC
+ENCODED_URL="${CLEAN_URL// /%20}"
+
+echo "$(date) - Cleaned: $CLEAN_URL" >> "$LOG"
+
+# 4. Execute
+# If URI is mpv OR potplayer, launch MPV
+if [[ "$URI" == mpv* ]] || [[ "$URI" == potplayer* ]]; then
+    echo "$(date) - Launching MPV (Hijack)" >> "$LOG"
+    /usr/bin/mpv --force-window=immediate --keep-open=yes "$ENCODED_URL" >> "$LOG" 2>&1
+
+elif [[ "$URI" == vlc* ]]; then
+    echo "$(date) - Launching VLC" >> "$LOG"
+    vlc "$ENCODED_URL"
+else
+    notify-send "Alist Error" "Unknown protocol: $URI"
+fi
+
