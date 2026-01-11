@@ -4,6 +4,7 @@ alias n="nvim"
 alias py="python3"
 alias open="xdg-open"
 alias o="open"
+alias paws="aws --profile personal"
 
 # modernaize
 alias cd="z"
