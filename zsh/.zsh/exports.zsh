@@ -14,7 +14,7 @@ export GPG_TTY=$TTY
 export FZF_DEFAULT_COMMAND='rg --files --hidden""'
 
 # autostart a tmux session
-export ZSH_TMUX_AUTOSTART=true
+[[ "$TERM_PROGRAM" != "vscode" ]] && export ZSH_TMUX_AUTOSTART=true
 
 # disable python env prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=1
