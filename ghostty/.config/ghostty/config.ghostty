@@ -1,0 +1,5 @@
+shell-integration = zsh
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+confirm-close-surface = false
+font-family = "JetBrainsMono Nerd Font"
+font-size = 10
