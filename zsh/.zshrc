@@ -30,3 +30,5 @@ fi
 # hide gtk window controls
 gsettings set org.gnome.desktop.wm.preferences button-layout ':'
 
+# setup nvm
+source /usr/share/nvm/init-nvm.sh
