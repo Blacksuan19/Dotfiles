@@ -1,0 +1,15 @@
+[Unit]
+Description=Rclone AList Mount
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount Alist: %h/AList \
+  --vfs-cache-mode full \
+  --vfs-cache-max-size 10G \
+  --vfs-read-chunk-size 1M
+ExecStop=/bin/fusermount -u %h/AList
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
