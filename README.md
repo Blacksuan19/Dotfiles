@@ -1,116 +1,225 @@
-Personal configurations to make plasma a fully tiling desktop. With themes and
-color schemes from
-[Material ocean](https://github.com/material-ocean/material-ocean)
+# Dotfiles
 
-## Requirements
+![preview](./screens/preview.png)
 
-- A fresh KDE Plasma installation(check other branches for other dots)
-- [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Tmux](https://github.com/tmux/tmux)
-- [Latte-Dock-git](https://aur.archlinux.org/packages/latte-dock-git/)
-- required programs
-  - ksuperkey (map meta to open krunner)
-  - flameshot (for taking screenshots)
-  - libinput-gestures (touchpad gestures)
-  - unclutter (hide pointer when not in use)
+Personal KDE Plasma 6 dotfiles for a tiling-focused desktop on CachyOS. Config
+files are managed with [GNU Stow](https://www.gnu.org/software/stow/) and the
+full Plasma environment (themes, KWin rules, shortcuts, plasmoids) is
+snapshotted and restored via [konsave](https://github.com/Prayag2/konsave).
 
-### Fonts
+## Quick Start
 
-> - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
->   (UI font)
-> - [JetBrains Mono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono/)
->   (Mono font)
+### 1. Install Required Tools
 
-## Installation
+- [`stow`](https://www.gnu.org/software/stow/) — symlinks config packages into
+  `$HOME`
+- [`konsave`](https://github.com/Prayag2/konsave) — restores the Plasma
+  environment (`pip install konsave`)
 
-- `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
-- `cd ~/.dotfiles`
-- `bash install.sh` to install everything (including fonts).
+### 2. Install Required Plasma Packages
 
-### After Installation to do
+These need to be present before applying the konsave profile. On CachyOS/Arch
+(see [Bootstrap](#bootstrap) for chaotic-AUR setup):
 
-- `cd others`
-- `bash once.sh` if on a clean install.
-- set plasma themes.
-- select `split beauty` layout for latte dock.
-- import kwin rules and shortcuts under the `plasma` folder
-
-## Plasma Extras
-
-To achieve an exact replica of this setup there are some plasma settings that
-need to be tweaked
-
-- enable snap helper, desktop grid and desktop overview from desktop effects
-- set hot corners for desktops overview and desktop grid (top right, top left)
-- disable title bars for all windows
-  [from here](https://www.reddit.com/r/unixporn/comments/4gez8w/hide_title_bars_in_kde_plasma_5/)
-- [lightly shaders](https://aur.archlinux.org/packages/lightlyshaders-git)
-- move windows with alt and mouse (window behaviour -> window actions ->
-  modifier key)
-- set focus stealing to none, focuses new window on open (window behaviour ->
-  focus -> focus stealing)
-- set focus to follow mouse (window behaviour -> focus window activity policy)
-
-## Shortcuts
-
-### Keybindings
-
-Plasma shortcuts under settings is the preferred way to manage keyboard
-shortcuts, for tiling, [Bismuth](https://github.com/Bismuth-Forge/bismuth) is
-used with most of the shortcuts left as default, any changes done are mentioned
-below.
-
-| key                      | function                                                   |
-| ------------------------ | ---------------------------------------------------------- |
-| win key(mod/super)       | launch krunner                                             |
-| super + w                | launch browser (default is google chrome)                  |
-| super + Enter            | launch terminal (default is kitty)                         |
-| super + f                | launch file manager (default is dolphin)                   |
-| super + q                | kill current window                                        |
-| super + space            | switch between tiling and last used layout                 |
-| super + shift + F        | make window float                                          |
-| super + {h,j,k,l}        | focus the window on left, below, above, right respectively |
-| super + Tab              | cycle through last used desktops (in order)                |
-| super + 1-9              | go to desktop 1-9                                          |
-| super + shift + 1-9      | move window to desktop number 1-9                          |
-| super + ctrl + {h,j,k,l} | shrink window on given side                                |
-| super + direction        | stick window at given direction corner                     |
-| print                    | take a full screenshot                                     |
-| print + shift            | launch flameshot area selection                            |
-| super + v                | launch clipboard                                           |
-| super + s                | launch spotify                                             |
-| super + t                | launch telegram                                            |
-
-### Gestures
-
-Gestures are handled by libinput-gestures, to modify them, directly edit the
-conf file under .config (not recommended) or use
-[gestures](https://gitlab.com/cunidev/gestures) tool.
-
-| gesture              | function                                  |
-| -------------------- | ----------------------------------------- |
-| 3 finger swipe down  | go to next desktop                        |
-| 3 finger swipe up    | go to previous desktop                    |
-| 3 finger swipe left  | go back (alt + left)                      |
-| 3 finger swipe right | go forward (alt + right)                  |
-| 4 finger swipe down  | enter window overview mode (all desktops) |
-| 4 finger swipe up    | enter desktop overview mode               |
-
-## Screenshots
-
-```txt
-Global theme:   Breeze
-Plasma Style:   Material Ocean
-Color scheme:   Breeze with #ff4151 as accent color
-Terminal:       Konsole
-Terminal Theme: Material ocean
-File Manager:   Dolphin
-Icons:          Tela
-Browser:        Google Chrome Stable
-New Page:       Tabliss (config under others folder)
-Docks:          Latte Dock (Split Beauty)
+```bash
+yay -S darkly-bin kwin-effect-rounded-corners-git kwin-scripts-krohnkite-git colloid-icon-theme-git plasma6-applets-wallhaven-reborn-git
 ```
 
-![desktop](./screens/1.png)
+For other distros, install from source:
 
-![apps](./screens/2.png)
+| Component                         | Source                                                              |
+| --------------------------------- | ------------------------------------------------------------------- |
+| Darkly — Qt application style     | [GitHub](https://github.com/Bali10050/Darkly)                       |
+| KDE Rounded Corners — KWin effect | [GitHub](https://github.com/matinlotfali/KDE-Rounded-Corners)       |
+| Krohnkite — tiling KWin script    | [Codeberg](https://codeberg.org/anametologin/Krohnkite)             |
+| Colloid Icon Theme — icons        | [GitHub](https://github.com/vinceliuice/Colloid-icon-theme)         |
+| Wallhaven wallpaper plugin        | [GitHub](https://github.com/Blacksuan19/plasma-wallpaper-wallhaven) |
+
+### 3. Clone and Run
+
+```bash
+git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles
+cd ~/.dotfiles
+bash install.sh
+```
+
+`install.sh` stows all config packages and then prompts whether to apply the
+`Plasma-Colloid` konsave profile. Answer `y` for a fully configured system in
+one shot.
+
+> **Fresh machine?** Run `~/.scripts/bootstrap.sh` first — it sets up git
+> identity, chaotic-AUR, and installs all packages via `yay`. See
+> [Bootstrap](#bootstrap) below.
+
+## What the Plasma-Colloid Profile Installs
+
+The `Plasma-Colloid` konsave profile is a full snapshot of the Plasma
+environment. Applying it restores everything below. The required packages listed
+in Quick Start are the only things that need to be installed separately.
+
+### Themes & Visuals
+
+| Component                    | Theme                                                                                         |
+| ---------------------------- | --------------------------------------------------------------------------------------------- |
+| Global theme                 | `Dark Mode` / `Light Mode` (custom, toggle between them)                                      |
+| Plasma desktop theme         | Colloid dark & light                                                                          |
+| Look-and-feel packages       | Colloid dark/light + Nord variants                                                            |
+| Window decorations (Aurorae) | Colloid dark/light + round/Nord variants, MacSequoia dark/light                               |
+| Color schemes                | ColloidDark, ColloidLight, ColloidDarkNord, ColloidLightNord, BreezeDarkTint, BreezeLightTint |
+| Qt/Kvantum style             | Colloid, ColloidNord                                                                          |
+| GTK 3 & GTK 4 themes         | Colloid (via `gtk-3.0` / `gtk-4.0` configs)                                                   |
+| Icons                        | Colloid                                                                                       |
+| Application style            | Darkly                                                                                        |
+| Font                         | San Francisco Pro (bundled in profile under `share_folder/fonts/`)                            |
+
+### KWin Scripts & Effects
+
+| Name                           | Purpose                           |
+| ------------------------------ | --------------------------------- |
+| Krohnkite                      | Tiling window manager script      |
+| Rounded Corners                | Rounded window corners            |
+| `kwin-walk-through-desktops`   | Cycle through desktops            |
+| `switch-to-previous-desktop`   | Jump back to last desktop         |
+| `kwin4_effect_geometry_change` | Smooth window geometry animations |
+
+### Plasmoids
+
+| Name                 | Purpose                    |
+| -------------------- | -------------------------- |
+| AndromedaLauncher    | App launcher               |
+| com.dv.fokus         | Focus/productivity widget  |
+| org.kde.latte.spacer | Panel spacer               |
+| Wallhaven            | Wallhaven wallpaper plugin |
+
+### KDE Config Files Restored
+
+The profile captures and restores these config files from `~/.config/`:
+
+| File                                      | What it controls                                        |
+| ----------------------------------------- | ------------------------------------------------------- |
+| `kdeglobals`                              | Global KDE settings (fonts, color scheme, widget style) |
+| `kglobalshortcutsrc`                      | All global keyboard shortcuts                           |
+| `kwinrc`                                  | KWin compositor and window manager settings             |
+| `kwinrulesrc`                             | Per-window KWin rules (e.g. hide titlebar)              |
+| `plasmarc`                                | Plasma shell settings                                   |
+| `plasmashellrc`                           | Panel and desktop layout                                |
+| `plasma-org.kde.plasma.desktop-appletsrc` | Plasmoid configuration                                  |
+| `breezerc`                                | Breeze window decoration settings                       |
+| `kcminputrc`                              | Mouse, touchpad, and cursor settings                    |
+| `kscreenlockerrc`                         | Lock screen settings                                    |
+| `ksplashrc`                               | Splash screen theme                                     |
+| `ksmserverrc`                             | Session manager settings                                |
+| `krunnerrc`                               | KRunner settings                                        |
+| `klipperrc`                               | Clipboard manager settings                              |
+| `konsolerc`                               | Konsole terminal settings                               |
+| `plasmanotifyrc`                          | Notification settings                                   |
+| `spectaclerc`                             | Screenshot tool settings                                |
+| `systemsettingsrc`                        | System Settings state                                   |
+| `xdg-desktop-portal-kderc`                | XDG desktop portal settings                             |
+| `plasma-localerc`                         | Locale and language settings                            |
+| `kconf_updaterc`                          | KDE config migration tracking                           |
+| `kded5rc`                                 | KDE daemon settings                                     |
+| `Kvantum/`                                | Kvantum Qt style config (Colloid, ColloidNord)          |
+| `gtk-3.0/`                                | GTK 3 theme config                                      |
+| `gtk-4.0/`                                | GTK 4 theme config                                      |
+
+### Color System
+
+The setup uses the active wallpaper's colors to tint the entire desktop — Qt and
+GTK apps alike pick up the palette automatically through KDE's color scheme
+integration. Switching wallpapers updates the accent color system-wide with no
+manual intervention.
+
+For code editors and the terminal,
+[Ayu](https://github.com/ayu-theme/ayu-colors) is used as the color scheme:
+
+| Mode  | Theme     | Used by                  |
+| ----- | --------- | ------------------------ |
+| Light | Ayu Light | VS Code, Ghostty, Neovim |
+| Dark  | Ayu Dark  | VS Code, Ghostty, Neovim |
+
+Both themes switch automatically with the system light/dark mode.
+
+### Light/Dark Switching
+
+The profile ships two custom global themes — `Dark Mode` and `Light Mode` — that
+can be toggled manually via System Settings → Global Theme, or wired to Plasma's
+automatic light/dark switching schedule.
+
+## Stow Packages
+
+Each top-level directory (except `screens/`) is a stow package that mirrors
+`$HOME`. `install.sh` discovers and stows them automatically.
+
+| Package     | Stowed to                      | Contents                                                   |
+| ----------- | ------------------------------ | ---------------------------------------------------------- |
+| `zsh/`      | `~/`                           | `.zshrc`, `.zsh/` (aliases, exports, config, znap plugins) |
+| `tmux/`     | `~/`                           | `.tmux.conf`, auto light/dark theme watch scripts          |
+| `nvim/`     | `~/.config/nvim/`              | Neovim config (git submodule)                              |
+| `ghostty/`  | `~/.config/ghostty/`           | Ghostty terminal config                                    |
+| `starship/` | `~/.config/`                   | `starship.toml` — shell prompt config                      |
+| `mpv/`      | `~/.config/mpv/`               | MPV config                                                 |
+| `fusuma/`   | `~/.config/fusuma/`            | Touchpad gesture config                                    |
+| `systemd/`  | `~/.config/systemd/`           | User services (alist webdav mount)                         |
+| `scripts/`  | `~/.scripts/`                  | Shell scripts (bootstrap, alist-handler, etc.)             |
+| `desktop/`  | `~/.local/share/applications/` | XDG desktop entries                                        |
+| `konsave/`  | `~/.config/konsave/`           | Plasma-Colloid konsave profile                             |
+
+## Bootstrap
+
+Only needed on a fresh machine, run once before `install.sh`:
+
+```bash
+~/.scripts/bootstrap.sh
+```
+
+It handles:
+
+- Interactive git identity setup + sane git defaults (delta, GPG signing)
+- Chaotic-AUR setup
+- Package installation via `yay` from `~/.scripts/packages-arch.txt`
+
+The package list lives at `scripts/.scripts/packages-arch.txt` — edit it to
+add/remove packages before running bootstrap.
+
+## Media Protocol Handler
+
+Handles `mpv://`, `vlc://`, and `potplayer://` protocol links by stripping the
+scheme prefix and launching the appropriate local player with the real URL.
+Originally set up for use with [AList](https://alist.nn.ci/) but works with any
+site that fires these protocol schemes.
+
+- `mpv://` and `potplayer://` links both open in MPV
+- `vlc://` links open in VLC
+
+Files:
+
+- Handler script: `scripts/.scripts/alist-handler` (stowed to
+  `~/.scripts/alist-handler`)
+- Desktop entry: `desktop/.local/share/applications/alist-player.desktop`
+  (stowed to `~/.local/share/applications/`)
+
+## Keybindings
+
+Tiling is handled by Krohnkite. All shortcuts are stored in the konsave profile
+(`kglobalshortcutsrc`) and restored automatically.
+
+| Key                    | Action                      |
+| ---------------------- | --------------------------- |
+| Super                  | Launch KRunner              |
+| Super + Enter          | Terminal                    |
+| Super + W              | Browser                     |
+| Super + F              | File manager                |
+| Super + Q              | Close window                |
+| Super + Space          | Toggle tiling layout        |
+| Super + Shift + F      | Float window                |
+| Super + H/J/K/L        | Focus left/down/up/right    |
+| Super + 1–9            | Switch to desktop N         |
+| Super + Shift + 1–9    | Move window to desktop N    |
+| Super + Tab            | Cycle recent desktops       |
+| Super + Ctrl + H/J/K/L | Shrink window               |
+| Print                  | Full screenshot             |
+| Shift + Print          | Area screenshot (Spectacle) |
+| Super + V              | Clipboard history           |
+| Super + S              | Spotify                     |
+| Super + T              | Telegram                    |
