@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "vlad.zahorodnii@kde.org",
+                "Name": "Vlad Zahorodnii"
+            }
+        ],
+        "Description": "Adds a shortcut to switch to the previous desktop",
+        "Icon": "preferences-system-windows-script-test",
+        "Id": "switch-to-previous-desktop",
+        "License": "GPL",
+        "Name": "Switch to previous desktop"
+    },
+    "X-Plasma-API": "javascript"
+}

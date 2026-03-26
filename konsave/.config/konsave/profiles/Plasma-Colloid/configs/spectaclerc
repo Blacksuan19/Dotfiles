@@ -1,0 +1,24 @@
+[Annotations]
+annotationToolType=7
+blurStrength=0.63507080078125
+pixelateStrength=0.585205078125
+rectangleFillColor=39,27,14,0
+rectangleShadow=false
+rectangleStrokeColor=255,17,0
+
+[General]
+launchAction=DoNotTakeScreenshot
+
+[GuiConfig]
+captureMode=5
+
+[ImageSave]
+lastImageSaveLocation=file:///home/blacksuan19/Pictures/Screenshots/Screenshot_20260326_025455.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts
+
+[ViewerWindow]
+2560x1440 screen: Height=570
+2560x1440 screen: Width=780

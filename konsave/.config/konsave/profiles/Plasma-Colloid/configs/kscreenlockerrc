@@ -1,0 +1,17 @@
+[Daemon]
+Timeout=10
+
+[Greeter]
+WallpaperPlugin=org.kde.potd
+
+[Greeter][Wallpaper][com.plasma.wallpaper.wallhaven][General]
+APIKey=VYkYgEhIe2r7qVK3OPyIGiN1riCIU3dQ
+PurityNSFW=true
+RefetchSignal=true
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/cachyos-wallpapers/BlueNekoLady.png
+PreviewImage=/usr/share/wallpapers/cachyos-wallpapers/BlueNekoLady.png
+
+[Greeter][Wallpaper][org.kde.potd][General]
+Provider=simonstalenhag

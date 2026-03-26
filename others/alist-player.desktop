@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Alist Player Handler
-Comment=Play Alist media in MPV or VLC
-Exec=/home/blacksuan19/.dotfiles/scripts/.scripts/alist-handler %u
-StartupNotify=false
-Terminal=false
-MimeType=x-scheme-handler/mpv;x-scheme-handler/vlc;x-scheme-handler/potplayer;

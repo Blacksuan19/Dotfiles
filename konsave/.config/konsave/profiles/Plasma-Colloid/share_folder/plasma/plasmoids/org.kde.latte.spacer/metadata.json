@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "mvourlakos@gmail.com",
+                "Name": "Michail Vourlakos"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Reserve empty spaces within panels and docks",
+        "Icon": "filename-space-amarok",
+        "Id": "org.kde.latte.spacer",
+        "License": "GPLv2",
+        "Name": "Latte Spacer",
+        "Version": "0.3.0",
+        "Website": "https://github.com/psifidotos/applet-latte-spacer"
+    },
+    "Keywords": "spacer",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPackageStructure": "Plasma/Applet"
+}

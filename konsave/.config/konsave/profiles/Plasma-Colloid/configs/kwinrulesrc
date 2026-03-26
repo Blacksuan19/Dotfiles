@@ -1,0 +1,261 @@
+[0560dade-0029-4c57-885f-54d9ce6b3e19]
+Description=Application settings for Notion
+clientmachine=localhost
+desktops=aa400b48-a65f-4ade-b08e-d49a520e95d4
+desktopsrule=3
+wmclass=notion Notion
+wmclasscomplete=true
+wmclassmatch=1
+
+[07757b4e-e2df-41e8-bdab-d954906d2f7e]
+Description=Application settings for GLava
+clientmachine=localhost
+layer=desktop
+layerrule=2
+noborderrule=3
+wmclass=GLava
+wmclassmatch=1
+
+[0b338d43-e0da-45a4-90bd-4db02784829f]
+Description=Application settings for Spotify
+clientmachine=localhost
+desktops=b21379e5-1421-47e7-8fe7-01b60959008f
+desktopsrule=3
+wmclass=spotify
+wmclasscomplete=true
+wmclassmatch=2
+
+[0cca2968-6362-4d3a-b05a-3f575baa1877]
+Description=Application settings for Code
+clientmachine=localhost
+desktops=fa2b150d-a85f-4fab-8912-2464e834c6dc
+desktopsrule=3
+wmclass=code Code
+wmclasscomplete=true
+wmclassmatch=1
+
+[0d576394-8da7-4753-b522-25defffb8e58]
+Description=Application settings for Microsoft-edge-beta
+clientmachine=localhost
+desktops=1b38abdb-becc-4a13-9db0-cf8d7e3b8a2e
+desktopsrule=3
+wmclass=microsoft-edge-beta Microsoft-edge-beta
+wmclasscomplete=true
+wmclassmatch=1
+
+[12ca621a-bfef-430d-8b3d-27d6ffc2ba86]
+Description=Application settings for vlc
+clientmachine=localhost
+desktops=c9ecf1a7-9690-4a57-aa4b-edb57d29557b
+desktopsrule=3
+wmclass=vlc
+wmclassmatch=1
+
+[2ac8cec1-ab4d-478f-89ba-802098c26ea0]
+Description=Window settings for vivaldi-bin
+desktops=\\0
+desktopsrule=3
+position=1996,1102
+positionrule=3
+title=Picture in picture
+titlematch=1
+types=1
+wmclass=vivaldi-bin
+wmclassmatch=1
+
+[583e5442-fc3e-4d35-9ed1-9f2e2c6dcd5b]
+Description=Window settings for thunderbird
+aboverule=3
+desktops=\\0
+desktopsrule=3
+position=2124,1201
+positionrule=3
+size=402,190
+sizerule=3
+title=Reminder
+titlematch=2
+wmclass=thunderbird
+wmclassmatch=1
+
+[65b5b2a8-9edd-43a4-bdc4-49f570e1fe4d]
+Description=Application settings for org.kde.okular
+desktops=2cea789e-1b47-4a25-8dee-fb1d963e6b9b
+desktopsrule=3
+wmclass=okular org.kde.okular
+wmclasscomplete=true
+wmclassmatch=1
+
+[6d58f7fb-98d2-4513-beb4-e26d40375ac2]
+Description=Application settings for Code
+clientmachine=localhost
+desktops=fa2b150d-a85f-4fab-8912-2464e834c6dc
+desktopsrule=3
+wmclass=code Code
+wmclasscomplete=true
+wmclassmatch=1
+
+[7a24c3fc-3557-44b2-98c2-7f8eea09e97e]
+Description=Application settings for Cursor
+clientmachine=localhost
+desktops=fa2b150d-a85f-4fab-8912-2464e834c6dc
+desktopsrule=3
+wmclass=cursor Cursor
+wmclasscomplete=true
+wmclassmatch=1
+
+[834f82d5-bf11-4b57-b740-876829e59d11]
+Description=Application settings for io.github.kukuruzka165.materialgram
+desktops=77a1e38e-f642-4701-a769-51d3da32593c
+desktopsrule=3
+wmclass=materialgram io.github.kukuruzka165.materialgram
+wmclasscomplete=true
+wmclassmatch=1
+
+[849e060a-7ee2-4fb6-bcc0-8e2233a1852a]
+Description=Application settings for org.kde.gwenview
+aboverule=3
+wmclass=gwenview org.kde.gwenview
+wmclasscomplete=true
+wmclassmatch=1
+
+[94cfe559-5752-4e55-9b84-5a66fb254384]
+Description=Application settings for org.kde.dolphin
+desktops=c079e761-fd77-42fa-8707-a583080b84c7
+desktopsrule=3
+wmclass=dolphin org.kde.dolphin
+wmclasscomplete=true
+wmclassmatch=1
+
+[97fc7fe5-536b-4c09-957a-8cc0d668d9f9]
+Description=Application settings for Microsoft-edge
+clientmachine=localhost
+desktops=d71836d7-910c-4faa-ba9c-2fa90dbfe118
+desktopsrule=3
+wmclass=microsoft-edge Microsoft-edge
+wmclasscomplete=true
+wmclassmatch=1
+
+[9ccf4a5a-1d03-4937-96c3-910c871c5c18]
+Description=Application settings for ONLYOFFICE
+clientmachine=localhost
+desktops=d71836d7-910c-4faa-ba9c-2fa90dbfe118
+desktopsrule=3
+wmclass=DesktopEditors ONLYOFFICE
+wmclasscomplete=true
+wmclassmatch=1
+
+[9e308b24-34ac-41f4-8804-40560052cbda]
+Description=Application settings for vivaldi-snapshot
+desktops=1b38abdb-becc-4a13-9db0-cf8d7e3b8a2e
+desktopsrule=3
+wmclass=vivaldi-bin vivaldi-snapshot
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=27
+rules=b11c7836-814f-4245-aab7-01cfd840eecf,07757b4e-e2df-41e8-bdab-d954906d2f7e,9e308b24-34ac-41f4-8804-40560052cbda,2ac8cec1-ab4d-478f-89ba-802098c26ea0,aa95f367-b5f1-4821-a025-703dd29f7aca,caeb91a2-8ca6-4991-ab85-3875bb23e0a6,d005f085-df58-465c-a4f1-da8e9820cffd,0b338d43-e0da-45a4-90bd-4db02784829f,9ccf4a5a-1d03-4937-96c3-910c871c5c18,583e5442-fc3e-4d35-9ed1-9f2e2c6dcd5b,7a24c3fc-3557-44b2-98c2-7f8eea09e97e,b095648b-391b-46a0-81b4-69bbfc2f3443,b4946552-1e11-46e5-98f4-fddacb1d5c53,d224fd80-ddd8-472d-93b6-f8ba3026edd3,834f82d5-bf11-4b57-b740-876829e59d11,12ca621a-bfef-430d-8b3d-27d6ffc2ba86,0560dade-0029-4c57-885f-54d9ce6b3e19,c53eade9-2efb-49ed-92ad-db1bb6c3c03a,97fc7fe5-536b-4c09-957a-8cc0d668d9f9,849e060a-7ee2-4fb6-bcc0-8e2233a1852a,ebd93a0b-fda1-4fd5-8f69-5cc27a67dd4e,f1b33763-6631-40aa-9a65-6c2d24bdf345,0cca2968-6362-4d3a-b05a-3f575baa1877,65b5b2a8-9edd-43a4-bdc4-49f570e1fe4d,c791cb43-a0ca-4a46-99fb-bd96f8ac1ac3,0d576394-8da7-4753-b522-25defffb8e58,94cfe559-5752-4e55-9b84-5a66fb254384
+
+[aa95f367-b5f1-4821-a025-703dd29f7aca]
+Description=Application settings for microsoft-edge
+desktops=d71836d7-910c-4faa-ba9c-2fa90dbfe118
+desktopsrule=3
+wmclass=msedge microsoft-edge
+wmclasscomplete=true
+wmclassmatch=1
+
+[afef5e39-adea-4aa0-bbd6-e4344e5e77a7]
+Description=Application settings for ONLYOFFICE Desktop Editors
+clientmachine=localhost
+desktops=2cea789e-1b47-4a25-8dee-fb1d963e6b9b
+desktopsrule=3
+wmclass=DesktopEditors ONLYOFFICE Desktop Editors
+wmclasscomplete=true
+wmclassmatch=1
+
+[b095648b-391b-46a0-81b4-69bbfc2f3443]
+Description=Application settings for com.stremio.stremio
+desktops=d71836d7-910c-4faa-ba9c-2fa90dbfe118
+desktopsrule=3
+wmclass=stremio com.stremio.stremio
+wmclasscomplete=true
+wmclassmatch=1
+
+[b11c7836-814f-4245-aab7-01cfd840eecf]
+Description=Application settings for io.github.alainm23.planify
+ignoregeometry=true
+ignoregeometryrule=3
+position=572,248
+positionrule=3
+size=1444,966
+sizerule=3
+wmclass=io.github.alainm23.planify
+wmclassmatch=1
+
+[b4946552-1e11-46e5-98f4-fddacb1d5c53]
+Description=Application settings for mpv
+desktops=c9ecf1a7-9690-4a57-aa4b-edb57d29557b
+desktopsrule=3
+wmclass=mpv
+wmclassmatch=1
+
+[c53eade9-2efb-49ed-92ad-db1bb6c3c03a]
+Description=Window settings for org.kde.krunner
+aboverule=2
+title=KRunner
+types=1
+wmclass=krunner org.kde.krunner
+wmclasscomplete=true
+wmclassmatch=1
+
+[c791cb43-a0ca-4a46-99fb-bd96f8ac1ac3]
+Description=Application settings for notion-nativefier-46aee8
+clientmachine=localhost
+desktops=aa400b48-a65f-4ade-b08e-d49a520e95d4
+desktopsrule=3
+wmclass=notion-nativefier-46aee8
+wmclassmatch=1
+
+[caeb91a2-8ca6-4991-ab85-3875bb23e0a6]
+Description=Application settings for microsoft-edge-beta
+desktops=1b38abdb-becc-4a13-9db0-cf8d7e3b8a2e
+desktopsrule=3
+wmclass=msedge microsoft-edge-beta
+wmclasscomplete=true
+wmclassmatch=1
+
+[d005f085-df58-465c-a4f1-da8e9820cffd]
+Description=Window settings for msedge
+desktops=\\0
+desktopsrule=3
+title=Picture in picture
+titlematch=1
+types=1
+wmclass=msedge
+wmclassmatch=1
+
+[d224fd80-ddd8-472d-93b6-f8ba3026edd3]
+Description=Application settings for thunderbird
+desktopfile=thunderbird
+desktopfilerule=3
+desktops=d9aa91df-f3ca-4531-962b-8c5547fc2741
+desktopsrule=3
+wmclass=thunderbird
+wmclassmatch=1
+
+[ebd93a0b-fda1-4fd5-8f69-5cc27a67dd4e]
+Description=Application settings for ONLYOFFICE Desktop Editors
+clientmachine=localhost
+desktops=2cea789e-1b47-4a25-8dee-fb1d963e6b9b
+desktopsrule=2
+wmclass=DesktopEditors ONLYOFFICE Desktop Editors
+wmclasscomplete=true
+wmclassmatch=1
+
+[f1b33763-6631-40aa-9a65-6c2d24bdf345]
+Description=Application settings for org.kde.konsole
+desktops=fa2b150d-a85f-4fab-8912-2464e834c6dc
+desktopsrule=3
+wmclass=konsole org.kde.konsole
+wmclasscomplete=true
+wmclassmatch=1

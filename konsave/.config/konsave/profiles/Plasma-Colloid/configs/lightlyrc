@@ -1,0 +1,14 @@
+[Common]
+CornerRadius=8
+
+[Style]
+DolphinSidebarOpacity=100
+TransparentDolphinView=false
+
+[Windeco Exception 0]
+BorderSize=0
+Enabled=true
+ExceptionPattern=.*
+ExceptionType=0
+HideTitleBar=true
+Mask=0

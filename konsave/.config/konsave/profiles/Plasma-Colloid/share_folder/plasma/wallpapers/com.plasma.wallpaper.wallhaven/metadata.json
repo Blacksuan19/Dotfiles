@@ -1,0 +1,30 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Abubakar Yagoub",
+                "Email": "plasma@aolabs.dev"
+            },
+            {
+                "Email": "link@sub-pop.net",
+                "Name": "Link Dupont"
+            }
+        ],
+        "Category": "",
+        "Description": "Wallpaper plugin to fetch wallpapers from wallhaven.cc",
+        "Icon": "preferences-desktop-wallpaper",
+        "Id": "com.plasma.wallpaper.wallhaven",
+        "License": "GPLv2+",
+        "Version": "2.0.0",
+        "Name": "Wallhaven",
+        "Website": "https://github.com/Blacksuan19/plasma-wallpaper-wallhaven-reborn",
+        "BugReportUrl": "https://github.com/Blacksuan19/plasma-wallpaper-wallhaven-reborn/issues"
+    },
+    "Keywords": [
+        "wallhaven",
+        "wallpaper"
+    ],
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

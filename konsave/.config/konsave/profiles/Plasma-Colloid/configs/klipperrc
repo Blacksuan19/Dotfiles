@@ -1,0 +1,5 @@
+[General]
+ActionsInfoMessageShown=false
+IgnoreImages=false
+MaxClipItems=100
+Version=6.3.0

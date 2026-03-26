@@ -1,0 +1,13 @@
+[Common]
+OutlineEnabled=false
+OutlineIntensity=OutlineOff
+RoundedCorners=false
+ShadowSize=ShadowSmall
+
+[Windeco Exception 0]
+BorderSize=0
+Enabled=true
+ExceptionPattern=.*
+ExceptionType=0
+HideTitleBar=true
+Mask=0

@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "lipinski.j@pm.me",
+                "Name": "Jakub Lipiński"
+            }
+        ],
+        "Category": "Date and Time",
+        "Description": "Pomodoro timer plasmoid",
+        "Icon": "chronometer",
+        "Id": "com.dv.fokus",
+        "Name": "Fokus",
+        "Version": "2.3.3",
+        "Website": "https://gitlab.com/divinae/focus-plasmoid/"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-KDE-ParentApp": ""
+}

@@ -1,0 +1,34 @@
+[ExtractDialog]
+1920x1080 screen: Height=540
+1920x1080 screen: Width=1252
+
+[General]
+AutoExpandFolders=true
+ConfirmClosingMultipleTabs=false
+ConfirmClosingTerminalRunningProgram=false
+GlobalViewProps=false
+OpenExternallyCalledFolderInNewTab=true
+RememberOpenedTabs=false
+ShowFullPathInTitlebar=true
+ShowToolTips=true
+Version=202
+ViewPropsTimestamp=2024,7,16,22,21,24.772
+
+[IconsMode]
+PreviewSize=128
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[Notification Messages]
+ConfirmHide=true
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs

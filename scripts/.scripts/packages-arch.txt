@@ -1,0 +1,27 @@
+# Core tooling
+git
+git-delta
+stow
+exa
+bat
+tmux
+ripgrep
+duf
+dust
+ttf-jetbrains-mono-nerd
+fastfetch
+
+# Apps
+ghostty
+floorp
+onlyoffice-bin
+visual-studio-code-bin
+talanoa-bin
+materialgram-bin
+
+# Plasma stuff
+darkly-bin
+kwin-effect-rounded-corners-git
+kwin-scripts-krohnkite-git
+colloid-icon-theme-git
+plasma6-applets-wallhaven-reborn-git

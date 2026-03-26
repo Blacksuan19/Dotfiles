@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="" />
+
+    <group name="General">
+        <entry name="focus_time" type="Int">
+            <default>25</default>
+        </entry>
+        <entry name="short_break_time" type="Int">
+            <default>5</default>
+        </entry>
+        <entry name="long_break_time" type="Int">
+            <default>20</default>
+        </entry>
+        <entry name="ticking_time" type="Int">
+            <default>10</default>
+        </entry>
+        <entry name="number_of_sessions" type="Int">
+            <default>4</default>
+        </entry>
+        <entry name="flow_divisor" type="Int">
+            <default>3</default>
+        </entry>
+
+        <entry name="clock_fontfamily" type="String">
+            <default></default>
+        </entry>
+
+        <entry name="timer_start_notification_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timer_end_notification_enabled" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="timer_start_sfx_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timer_start_sfx_filepath" type="String">
+            <default>/usr/share/sounds/ocean/stereo/dialog-information.oga</default>
+        </entry>
+        <entry name="timer_stop_sfx_enabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="timer_stop_sfx_filepath" type="String">
+            <default>/usr/share/sounds/ocean/stereo/dialog-question.oga</default>
+        </entry>
+        <entry name="timer_tick_sfx_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timer_tick_sfx_filepath" type="String">
+            <default>/usr/share/sounds/ocean/stereo/dialog-warning.oga</default>
+        </entry>
+        <entry name="timer_auto_focus_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timer_auto_pause_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="start_focus_script_filepath" type="String">
+            <default></default>
+        </entry>
+        <entry name="start_focus_script_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="start_break_script_filepath" type="String">
+            <default></default>
+        </entry>
+        <entry name="start_break_script_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="end_focus_script_filepath" type="String">
+            <default></default>
+        </entry>
+        <entry name="end_focus_script_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="end_break_script_filepath" type="String">
+            <default></default>
+        </entry>
+        <entry name="end_break_script_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="stop_script_filepath" type="String">
+            <default></default>
+        </entry>
+        <entry name="stop_script_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="show_icon_in_compact_mode" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="show_time_in_compact_mode" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="show_fullscreen_break" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="flowmodoro_mode_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="autostart" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="fullscreen_buttons_postpone" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="fullscreen_buttons_skip" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="fullscreen_buttons_close" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="do_not_disturb_enabled" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="show_buttons_on_hover" type="Bool">
+            <default>false</default>
+        </entry>
+    </group>
+</kcfg>

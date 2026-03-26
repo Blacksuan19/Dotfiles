@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="Blur" type="bool">
+      <label>Blur background filling</label>
+      <default>false</default>
+    </entry>
+    <entry name="Color" type="Color">
+      <label>Color of the wallpaper</label>
+      <default>#000000</default>
+    </entry>
+    <entry name="FillMode" type="int">
+      <label>Sizing, cropping and positioning of the wallpaper image</label>
+      <default>0</default>
+    </entry>
+    <entry name="APIKey" type="String">
+      <label>Personal API key (required for user collections)</label>
+    </entry>
+    <entry name="Query" type="String">
+      <label>Query parameter to use when fetching images</label>
+      <default>landscape mountains</default>
+    </entry>
+    <entry name="CategoryGeneral" type="bool">
+      <label>Enable general category</label>
+      <default>true</default>
+    </entry>
+    <entry name="CategoryAnime" type="bool">
+      <label>Enable anime category</label>
+      <default>true</default>
+    </entry>
+    <entry name="CategoryPeople" type="bool">
+      <label>Enable people category</label>
+      <default>true</default>
+    </entry>
+    <entry name="PuritySFW" type="bool">
+      <label>Enable SFW purity level</label>
+      <default>true</default>
+    </entry>
+    <entry name="PuritySketchy" type="bool">
+      <label>Enable sketchy purity level</label>
+      <default>false</default>
+    </entry>
+    <entry name="PurityNSFW" type="bool">
+      <label>Enable NSFW purity level</label>
+      <default>false</default>
+    </entry>
+    <entry name="Sorting" type="string">
+      <label>Sort by date added, relevance, random, views, favorites or top list</label>
+      <default>random</default>
+    </entry>
+    <entry name="Top Range" type="string">
+      <label>Range limit when sorting by top list</label>
+      <default>1M</default>
+    </entry>
+    <entry name="Search Color" type="string">
+      <label>Color to filter the search results</label>
+      <default></default>
+    </entry>
+    <entry name="WallpaperDelay" type="int">
+      <label>How much time in minutes between wallpaper change.</label>
+      <default>60</default>
+    </entry>
+    <entry name="RetryRequestCount" type="int">
+      <label>How many times to retry request when it fails.</label>
+      <default>3</default>
+    </entry>
+    <entry name="RetryRequestDelay" type="int">
+      <label>How much time in seconds between request retries when request fails.</label>
+      <default>5</default>
+    </entry>
+    <entry name="RefetchSignal" type="bool">
+      <label>Need this to enable a refetch button in the config page that bypasses the apply button.</label>
+      <default>false</default>
+    </entry>
+    <entry name="RefreshNotification" type="bool">
+      <label>Whether to show notification when wallpaper is being refreshed.</label>
+      <default>true</default>
+    </entry>
+    <entry name="ErrorNotification" type="bool">
+      <label>Whether to show notification when an error occurs.</label>
+      <default>true</default>
+    </entry>
+    <entry name="currentWallpaperThumbnail" type="String">
+      <label>Small wallpaper preview</label>
+      <default></default>
+    </entry>
+    <entry name="RatioAny" type="bool">
+      <label>Use any picture aspect ratio</label>
+      <default>true</default>
+    </entry>
+    <entry name="Ratio169" type="bool">
+      <label>Use 16x9 picture aspect ratio</label>
+      <default>false</default>
+    </entry>
+    <entry name="Ratio1610" type="bool">
+      <label>Use 16x10 picture aspect ratio</label>
+      <default>false</default>
+    </entry>
+    <entry name="Ratio32" type="bool">
+      <label>Use 3x2 picture aspect ratio</label>
+      <default>false</default>
+    </entry>
+    <entry name="RatioCustom" type="bool">
+      <label>Use custom picture aspect ratio</label>
+      <default>true</default>
+    </entry>
+    <entry name="RatioCustomValue" type="string">
+      <label>Custom picture aspect ratio value</label>
+      <default>3x2,4x3</default>
+    </entry>
+    <entry name="ResolutionX" type="int">
+      <label>The minimum horizontal resolution.</label>
+      <default>1920</default>
+    </entry>
+    <entry name="ResolutionY" type="int">
+      <label>The minimum vertical resolution.</label>
+      <default>1080</default>
+    </entry>
+    <entry name="lastValidImagePath" type="String">
+      <label>Path to the last valid loaded image</label>
+      <default></default>
+    </entry>
+    <entry name="FollowSystemTheme" type="bool">
+      <label>Follow system color scheme (Dark Mode)</label>
+      <default>false</default>
+    </entry>
+    <entry name="SavedWallpapers" type="StringList">
+      <label>List of saved wallpaper URLs</label>
+      <default></default>
+    </entry>
+    <entry name="UseSavedWallpapers" type="bool">
+      <label>Use only saved wallpapers instead of fetching from Wallhaven</label>
+      <default>false</default>
+    </entry>
+    <entry name="CycleSavedWallpapers" type="bool">
+      <label>Loop through saved wallpapers when all have been shown</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShuffleSavedWallpapers" type="bool">
+      <label>Shuffle saved wallpapers instead of showing them in order</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShownSavedWallpapers" type="StringList">
+      <label>Track which saved wallpapers have been shown in current cycle</label>
+      <default></default>
+    </entry>
+
+  </group>
+
+</kcfg>

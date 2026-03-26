@@ -7,3 +7,6 @@ vifm/.config/vifm/vifmimgpdffile
 # ignore everything in latte folder except custom layout
 latte
 !latte/.config/latte/Split-Beauty.layout.latte
+vivaldi
+.github
+.vscode

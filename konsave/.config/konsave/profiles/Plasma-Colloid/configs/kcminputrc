@@ -1,0 +1,27 @@
+[ButtonRebinds][Mouse]
+ExtraButton2=Key,Ctrl+F10
+
+[Keyboard]
+RepeatDelay=700
+
+[Libinput][0][6][Video Bus]
+Enabled=false
+
+[Libinput][1133][50504][Logitech USB Receiver Mouse]
+PointerAcceleration=0.600
+ScrollFactor=1.5
+
+[Libinput][1739][32382][PNP0C50:0e 06CB:7E7E Mouse]
+LeftHanded=false
+NaturalScroll=true
+PointerAcceleration=1.000
+
+[Libinput][1739][32382][PNP0C50:0e 06CB:7E7E Touchpad]
+ClickMethod=2
+DisableEventsOnExternalMouse=true
+Enabled=true
+NaturalScroll=true
+PointerAcceleration=0.250
+
+[Mouse]
+cursorSize=30
