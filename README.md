@@ -74,19 +74,17 @@ in Quick Start are the only things that need to be installed separately.
 
 ### KWin Scripts & Effects
 
-| Name                           | Purpose                           |
-| ------------------------------ | --------------------------------- |
-| Krohnkite                      | Tiling window manager script      |
-| Rounded Corners                | Rounded window corners            |
-| `kwin-walk-through-desktops`   | Cycle through desktops            |
-| `switch-to-previous-desktop`   | Jump back to last desktop         |
-| `kwin4_effect_geometry_change` | Smooth window geometry animations |
+| Name                           | Purpose                                       |
+| ------------------------------ | --------------------------------------------- |
+| Krohnkite                      | Tiling window manager script                  |
+| Rounded Corners                | Rounded window corners                        |
+| `switch-to-previous-desktop`   | Jump back to last desktop using `Super + Tab` |
+| `kwin4_effect_geometry_change` | Smooth window geometry animations             |
 
 ### Plasmoids
 
 | Name                 | Purpose                    |
 | -------------------- | -------------------------- |
-| AndromedaLauncher    | App launcher               |
 | com.dv.fokus         | Focus/productivity widget  |
 | org.kde.latte.spacer | Panel spacer               |
 | Wallhaven            | Wallhaven wallpaper plugin |
@@ -204,22 +202,23 @@ Files:
 Tiling is handled by Krohnkite. All shortcuts are stored in the konsave profile
 (`kglobalshortcutsrc`) and restored automatically.
 
-| Key                    | Action                      |
-| ---------------------- | --------------------------- |
-| Super                  | Launch KRunner              |
-| Super + Enter          | Terminal                    |
-| Super + W              | Browser                     |
-| Super + F              | File manager                |
-| Super + Q              | Close window                |
-| Super + Space          | Toggle tiling layout        |
-| Super + Shift + F      | Float window                |
-| Super + H/J/K/L        | Focus left/down/up/right    |
-| Super + 1–9            | Switch to desktop N         |
-| Super + Shift + 1–9    | Move window to desktop N    |
-| Super + Tab            | Cycle recent desktops       |
-| Super + Ctrl + H/J/K/L | Shrink window               |
-| Print                  | Full screenshot             |
-| Shift + Print          | Area screenshot (Spectacle) |
-| Super + V              | Clipboard history           |
-| Super + S              | Spotify                     |
-| Super + T              | Telegram                    |
+| Key                    | Action                        |
+| ---------------------- | ----------------------------- |
+| Super                  | Launch KRunner                |
+| Super + Enter          | Terminal                      |
+| Super + W              | Browser                       |
+| Super + F              | File manager                  |
+| Super + Q              | Close window                  |
+| Super + Space          | Toggle tiling layout          |
+| Super + Shift + F      | Float window                  |
+| Super + H/J/K/L        | Focus left/down/up/right      |
+| Super + 1–9            | Switch to desktop N           |
+| Super + Shift + 1–9    | Move window to desktop N      |
+| Super + Tab            | Cycle recent desktops         |
+| Super + Ctrl + H/J/K/L | Shrink window                 |
+| Print                  | Full screenshot               |
+| Shift + Print          | Area screenshot (Spectacle)   |
+| Super + V              | Clipboard history             |
+| Super + S              | Spotify                       |
+| Super + T              | Telegram                      |
+| Alt + Tab              | Cycle windows in all desktops |
