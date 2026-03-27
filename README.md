@@ -44,33 +44,34 @@ bash install.sh
 ```
 
 `install.sh` stows all config packages and then prompts whether to apply the
-`Plasma-Colloid` konsave profile. Answer `y` for a fully configured system in
-one shot.
+`Plasma-Round` konsave profile. Answer `y` for a fully configured system in one
+shot.
 
 > **Fresh machine?** Run `~/.scripts/bootstrap.sh` first — it sets up git
 > identity, chaotic-AUR, and installs all packages via `yay`. See
 > [Bootstrap](#bootstrap) below.
 
-## What the Plasma-Colloid Profile Installs
+## What the Plasma-Round Profile Installs
 
-The `Plasma-Colloid` konsave profile is a full snapshot of the Plasma
-environment. Applying it restores everything below. The required packages listed
-in Quick Start are the only things that need to be installed separately.
+The `Plasma-Round` konsave profile is a full snapshot of the Plasma environment.
+Applying it restores everything below. The required packages listed in Quick
+Start are the only things that need to be installed separately.
 
 ### Themes & Visuals
 
-| Component                    | Theme                                                                                         |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| Global theme                 | `Dark Mode` / `Light Mode` (custom, toggle between them)                                      |
-| Plasma desktop theme         | Colloid dark & light                                                                          |
-| Look-and-feel packages       | Colloid dark/light + Nord variants                                                            |
-| Window decorations (Aurorae) | Colloid dark/light + round/Nord variants, MacSequoia dark/light                               |
-| Color schemes                | ColloidDark, ColloidLight, ColloidDarkNord, ColloidLightNord, BreezeDarkTint, BreezeLightTint |
-| Qt/Kvantum style             | Colloid, ColloidNord                                                                          |
-| GTK 3 & GTK 4 themes         | Colloid (via `gtk-3.0` / `gtk-4.0` configs)                                                   |
-| Icons                        | Colloid                                                                                       |
-| Application style            | Darkly                                                                                        |
-| Font                         | San Francisco Pro (bundled in profile under `share_folder/fonts/`)                            |
+| Component              | Theme / Package                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| Global theme           | `Dark Mode` / `Light Mode` (custom, toggle between them)                        |
+| Plasma desktop theme   | `Utterly-Round`                                                                 |
+| Look-and-feel packages | `Dark Mode`, `Light Mode`                                                       |
+| Window decorations     | KWin is configured for `Darkly`; no Aurorae themes are bundled in the profile   |
+| Color schemes          | `BreezeDarkTint`, `BreezeLightTint`                                             |
+| Kvantum themes         | None                                                                            |
+| GTK 3 & GTK 4 themes   | `Breeze`                                                                        |
+| Icons                  | GTK is configured to use `Colloid-Dark` (icon pack not bundled in this profile) |
+| Cursor theme           | `Layan-white-cursors` (configured in GTK / look-and-feel defaults)              |
+| Application style      | `Darkly`                                                                        |
+| Fonts                  | `Inter` UI and `JetBrainsMonoNL Nerd Font` monospace                            |
 
 ### KWin Scripts & Effects
 
@@ -117,9 +118,8 @@ The profile captures and restores these config files from `~/.config/`:
 | `plasma-localerc`                         | Locale and language settings                            |
 | `kconf_updaterc`                          | KDE config migration tracking                           |
 | `kded5rc`                                 | KDE daemon settings                                     |
-| `Kvantum/`                                | Kvantum Qt style config (Colloid, ColloidNord)          |
-| `gtk-3.0/`                                | GTK 3 theme config                                      |
-| `gtk-4.0/`                                | GTK 4 theme config                                      |
+| `gtk-3.0/`                                | GTK 3 theme config (Breeze)                             |
+| `gtk-4.0/`                                | GTK 4 theme config (Breeze)                             |
 
 ### Color System
 
@@ -161,7 +161,7 @@ Each top-level directory (except `screens/`) is a stow package that mirrors
 | `systemd/`  | `~/.config/systemd/`           | User services (alist webdav mount)                         |
 | `scripts/`  | `~/.scripts/`                  | Shell scripts (bootstrap, alist-handler, etc.)             |
 | `desktop/`  | `~/.local/share/applications/` | XDG desktop entries                                        |
-| `konsave/`  | `~/.config/konsave/`           | Plasma-Colloid konsave profile                             |
+| `konsave/`  | `~/.config/konsave/`           | Plasma-Round konsave profile                               |
 
 ## Bootstrap
 

@@ -25,10 +25,10 @@ function apply_plasma() {
         echo "Install it with: pip install konsave"
         return
     fi
-    konsave -a Plasma-Colloid && echo "Plasma-Colloid profile applied."
+    konsave -a Plasma-Round && echo "Plasma-Round profile applied."
 }
 
 stow_con
 
-read -rp "Apply Plasma-Colloid konsave profile? [y/N] " answer
+read -rp "Apply Plasma-Round konsave profile? [y/N] " answer
 [[ "${answer,,}" == "y" ]] && apply_plasma
