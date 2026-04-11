@@ -3,8 +3,16 @@
 # this script should only be run once during the first setup
 set -euo pipefail
 
-SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-PACKAGES_FILE="${SCRIPT_DIR}/packages-arch.txt"
+source_path="${BASH_SOURCE[0]}"
+while [[ -L "$source_path" ]]; do
+  script_dir="$(cd -P "$(dirname "$source_path")" && pwd)"
+  source_path="$(readlink "$source_path")"
+  [[ "$source_path" != /* ]] && source_path="$script_dir/$source_path"
+done
+
+SCRIPT_DIR="$(cd -P "$(dirname "$source_path")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+PACKAGES_FILE="$REPO_ROOT/tools/bootstrap/packages-arch.txt"
 
 # Git Config
 function setup_git() {

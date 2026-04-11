@@ -3,7 +3,7 @@
 # symlink configs
 function stow_con() {
     declare -a dirs=($(ls -d */))
-    ignore_list=("screens/")
+    ignore_list=("screens/" "tools/")
 
     # remove ignored directories from list
     for ignore in ${ignore_list[@]}; do
