@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source_path="${BASH_SOURCE[0]}"
+while [[ -L "$source_path" ]]; do
+  script_dir="$(cd -P "$(dirname "$source_path")" && pwd)"
+  source_path="$(readlink "$source_path")"
+  [[ "$source_path" != /* ]] && source_path="$script_dir/$source_path"
+done
+
+script_dir="$(cd -P "$(dirname "$source_path")" && pwd)"
+repo_root="$(cd "$script_dir/../../.." && pwd)"
+tool_dir="$repo_root/tools/plasma2telegram"
+
+state_home="${XDG_STATE_HOME:-$HOME/.local/state}"
+output_path="$state_home/plasma2telegram/plasma-auto.tdesktop-theme"
+mkdir -p "$(dirname "$output_path")"
+
+exec python3 "$tool_dir/plasma2telegram.py" \
+  --template-dark "$tool_dir/material-template-dark.tdesktop-theme" \
+  --template-light "$tool_dir/material-template-light.tdesktop-theme" \
+  --output "$output_path" \
+  --watch \
+  "$@"

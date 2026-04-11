@@ -47,7 +47,7 @@ bash install.sh
 `Plasma-Round` konsave profile. Answer `y` for a fully configured system in one
 shot.
 
-> **Fresh machine?** Run `~/.scripts/bootstrap.sh` first — it sets up git
+> **Fresh machine?** Run `~/.local/bin/bootstrap.sh` first — it sets up git
 > identity, chaotic-AUR, and installs all packages via `yay`. See
 > [Bootstrap](#bootstrap) below.
 
@@ -159,7 +159,7 @@ Each top-level directory (except `screens/`) is a stow package that mirrors
 | `mpv/`      | `~/.config/mpv/`               | MPV config                                                 |
 | `fusuma/`   | `~/.config/fusuma/`            | Touchpad gesture config                                    |
 | `systemd/`  | `~/.config/systemd/`           | User services (alist webdav mount)                         |
-| `scripts/`  | `~/.scripts/`                  | Shell scripts (bootstrap, alist-handler, etc.)             |
+| `scripts/`  | `~/.local/bin/`               | User commands (bootstrap, alist-handler, plasma2telegram-watch, etc.) |
 | `desktop/`  | `~/.local/share/applications/` | XDG desktop entries                                        |
 | `konsave/`  | `~/.config/konsave/`           | Plasma-Round konsave profile                               |
 
@@ -168,16 +168,16 @@ Each top-level directory (except `screens/`) is a stow package that mirrors
 Only needed on a fresh machine, run once before `install.sh`:
 
 ```bash
-~/.scripts/bootstrap.sh
+~/.local/bin/bootstrap.sh
 ```
 
 It handles:
 
 - Interactive git identity setup + sane git defaults (delta, GPG signing)
 - Chaotic-AUR setup
-- Package installation via `yay` from `~/.scripts/packages-arch.txt`
+- Package installation via `yay` from the repo-owned package list
 
-The package list lives at `scripts/.scripts/packages-arch.txt` — edit it to
+The package list lives at `tools/bootstrap/packages-arch.txt` — edit it to
 add/remove packages before running bootstrap.
 
 ## Media Protocol Handler
@@ -192,8 +192,8 @@ site that fires these protocol schemes.
 
 Files:
 
-- Handler script: `scripts/.scripts/alist-handler` (stowed to
-  `~/.scripts/alist-handler`)
+- Handler script: `scripts/.local/bin/alist-handler` (stowed to
+  `~/.local/bin/alist-handler`)
 - Desktop entry: `desktop/.local/share/applications/alist-player.desktop`
   (stowed to `~/.local/share/applications/`)
 
