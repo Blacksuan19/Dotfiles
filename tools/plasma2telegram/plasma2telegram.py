@@ -675,6 +675,8 @@ def build_key_replacements(
     search_active_bg = surface("search_active_bg")
     sidebar_text_fg = mix(window_fg, search_bg, 0.30 if is_dark else 0.22)
     sidebar_active_fg = mix(accent, active_list, 0.18 if is_dark else 0.12)
+    dialogs_service_fg = mix(accent, window_fg, 0.14 if is_dark else 0.30)
+    link_fg = mix(accent, window_fg, 0.52 if is_dark else 0.22)
     elevated_fg = elevated_text(window_fg, is_dark)
     image_overlay_fg = window_fg
     action_icon_fg = mix(accent, window_fg, 0.10 if is_dark else 0.42)
@@ -701,15 +703,19 @@ def build_key_replacements(
         "tooltipBorderFg": hex_rgba(
             tooltip_bg, color_alpha(resolved, "tooltipBorderFg", 0xE6)
         ),
-        "dialogsTextFgService": hex_rgb(window_fg),
-        "dialogsTextFgServiceOver": hex_rgb(window_fg),
-        "dialogsTextFgServiceActive": hex_rgb(window_fg),
+        "dialogsTextFgService": hex_rgb(dialogs_service_fg),
+        "dialogsTextFgServiceOver": hex_rgb(dialogs_service_fg),
+        "dialogsTextFgServiceActive": hex_rgb(dialogs_service_fg),
         "msgServiceFg": hex_rgb(window_fg),
         "msgInServiceFg": hex_rgb(window_fg),
         "msgInServiceFgSelected": hex_rgb(window_fg),
         "msgOutServiceFg": hex_rgb(window_fg),
         "msgOutServiceFgSelected": hex_rgb(window_fg),
         "historyComposeAreaFgService": hex_rgb(window_fg),
+        "historyLinkInFg": hex_rgb(link_fg),
+        "historyLinkInFgSelected": hex_rgb(link_fg),
+        "historyLinkOutFg": hex_rgb(link_fg),
+        "historyLinkOutFgSelected": hex_rgb(link_fg),
         "sideBarBadgeFg": hex_rgb(active_fg),
         "sideBarBadgeBgMuted": hex_rgb(muted_badge),
         "mainMenuCloudBg": hex_rgba(

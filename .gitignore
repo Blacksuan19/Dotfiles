@@ -10,3 +10,7 @@ latte
 vivaldi
 .github
 .vscode
+
+# python cache
+__pycache__/
+*.pyc
