@@ -37,8 +37,8 @@ HEX_RE = re.compile(r"#([0-9a-fA-F]{6})([0-9a-fA-F]{2})?")
 
 SURFACE_SPECS: list[tuple[str, str, str, float, float]] = [
     ("base_bg", "view_bg", "sideBarBg", 0.06, 0.04),
-    ("hover_bg", "base_bg", "windowBgOver", 0.08, 0.06),
-    ("ripple_bg", "base_bg", "windowBgRipple", 0.12, 0.10),
+    ("hover_bg", "base_bg", "windowBgOver", 0.14, 0.06),
+    ("ripple_bg", "base_bg", "windowBgRipple", 0.18, 0.10),
     ("active_bg", "base_bg", "dialogsBgActive", 0.22, 0.18),
     ("active_ripple_bg", "base_bg", "dialogsRippleBgActive", 0.26, 0.22),
     ("search_bg", "base_bg", "filterInputInactiveBg", 0.10, 0.08),
