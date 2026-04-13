@@ -234,5 +234,3 @@ Scale=1
 
 [org.kde.kdecoration2]
 BorderSize=Normal
-library=org.kde.darkly
-theme=Darkly

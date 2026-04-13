@@ -14,7 +14,7 @@ calendars=8,11,26,29,30,32,39
 [PlasmaViews][Panel 23]
 floating=1
 panelLengthMode=0
-panelOpacity=2
+panelOpacity=1
 panelVisibility=2
 
 [PlasmaViews][Panel 23][Defaults]

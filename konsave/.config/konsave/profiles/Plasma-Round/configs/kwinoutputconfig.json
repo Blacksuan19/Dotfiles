@@ -79,7 +79,7 @@
                 ],
                 "autoRotation": "InTabletMode",
                 "automaticBrightness": false,
-                "brightness": 0.4,
+                "brightness": 0.5,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "EDID",
                 "connectorName": "HDMI-A-1",
