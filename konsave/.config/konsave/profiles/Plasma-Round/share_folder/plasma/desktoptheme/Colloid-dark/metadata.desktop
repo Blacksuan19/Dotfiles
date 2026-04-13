@@ -1,0 +1,27 @@
+[AdaptiveTransparency]
+enabled=true
+
+[ContrastEffect]
+contrast=0.2
+enabled=false
+intensity=1.4
+saturation=10
+
+[Desktop Entry]
+Comment=Colloid-dark theme for plasma by vince
+Name=Colloid-dark
+X-KDE-PluginInfo-Author=Vince Liuice
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=vinceliuice@hotmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-Name=Colloid-dark
+X-KDE-PluginInfo-Version=5.84.1
+X-KDE-PluginInfo-Website=https://plasma.kde.org
+X-Plasma-API=5.0
+
+[Wallpaper]
+defaultFileSuffix=.png
+defaultHeight=2160
+defaultWallpaperTheme=Colloid-dark
+defaultWidth=3840
