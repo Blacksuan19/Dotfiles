@@ -13,6 +13,9 @@ Seen=true
 [Applications][floorp]
 Seen=true
 
+[Applications][google-chrome]
+Seen=true
+
 [Applications][io.github.alainm23.planify]
 Seen=true
 

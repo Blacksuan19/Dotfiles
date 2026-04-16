@@ -12,13 +12,13 @@ font-family="Inter" font-size="8" font-weight="500" font-style="normal"
 >
 </g>
 
-<g fill="#4d4a47" fill-opacity="1" stroke="none" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+<g fill="#454a53" fill-opacity="1" stroke="none" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
 font-family="Inter" font-size="8" font-weight="500" font-style="normal" 
 >
 <circle cx="9" cy="9" r="9"/>
 </g>
 
-<g fill="none" stroke="#26221f" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+<g fill="none" stroke="#1c232d" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
 font-family="Inter" font-size="8" font-weight="500" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="4,7 9,12 14,7 " />

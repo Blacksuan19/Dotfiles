@@ -456,6 +456,9 @@ _launch=Meta+W
 [services][io.github.kukuruzka165.materialgram.desktop]
 _launch=Meta+T
 
+[services][io.github.tdesktop_x64.TDesktop.desktop]
+_launch=Meta+T
+
 [services][kotatogramdesktop.desktop]
 _launch=Meta+T
 
@@ -465,11 +468,11 @@ _launch=Meta+W
 [services][microsoft-edge.desktop]
 _launch=Meta+Alt+E
 
+[services][net.local.google-chrome-stable.desktop]
+_launch=Meta+E
+
 [services][net.local.planify.quick-add.desktop]
 _launch=Meta+N
-
-[services][net.local.vivaldi-snapshot.desktop]
-_launch=Meta+E
 
 [services][org.kde.dolphin.desktop]
 _launch=Meta+F
