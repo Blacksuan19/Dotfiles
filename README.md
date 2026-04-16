@@ -33,7 +33,7 @@ For other distros, install from source:
 | KDE Rounded Corners — KWin effect | [GitHub](https://github.com/matinlotfali/KDE-Rounded-Corners)       |
 | Krohnkite — tiling KWin script    | [Codeberg](https://codeberg.org/anametologin/Krohnkite)             |
 | Colloid Icon Theme — icons        | [GitHub](https://github.com/vinceliuice/Colloid-icon-theme)         |
-| Wallhaven wallpaper plugin        | [GitHub](https://github.com/Blacksuan19/plasma-wallpaper-wallhaven) |
+| Wallhaven wallpaper plugin        | [GitHub](https://github.com/Blacksuan19/plasma-wallpaper-wallhaven-reborn/) |
 
 ### 3. Clone and Run
 
