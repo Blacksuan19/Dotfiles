@@ -14,3 +14,6 @@ vivaldi
 # python cache
 __pycache__/
 *.pyc
+
+# random stuff
+*.zip
