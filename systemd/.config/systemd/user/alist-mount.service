@@ -7,7 +7,11 @@ Type=simple
 ExecStart=/usr/bin/rclone mount Alist: %h/AList \
   --vfs-cache-mode full \
   --vfs-cache-max-size 10G \
-  --vfs-read-chunk-size 1M
+  --vfs-read-chunk-size 1M \
+  --no-modtime \
+  --vfs-cache-max-age 1h \
+  --vfs-write-back 5s \
+  --rc
 ExecStop=/bin/fusermount -u %h/AList
 Restart=on-failure
 
