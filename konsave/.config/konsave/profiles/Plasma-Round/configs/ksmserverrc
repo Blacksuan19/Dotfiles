@@ -2,4 +2,9 @@
 count=0
 
 [Session: saved at previous logout]
-count=0
+clientId1=10e5110138de000178024672300000135670001
+count=1
+program1=floorp
+restartCommand1=/usr/lib/floorp/floorp,--sm-client-id,10e5110138de000178024672300000135670001
+restartStyleHint1=0
+userId1=blacksuan19

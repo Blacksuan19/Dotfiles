@@ -42,6 +42,9 @@ WallpaperItem {
     property var currentWallpaperColors: []
     readonly property bool systemDarkMode: Kirigami.Theme.textColor.hsvValue > Kirigami.Theme.backgroundColor.hsvValue
     readonly property bool followSystemTheme: main.configuration.FollowSystemTheme
+    readonly property string cacheDir: Utils.normalizePath(Platform.StandardPaths.writableLocation(Platform.StandardPaths.AppDataLocation)) + "/cache"
+    readonly property string cacheFilePath: cacheDir + "/current-wallpaper.jpg"
+    readonly property url cacheFileUrl: "file://" + cacheFilePath
     readonly property string savedWallpapersDir: Utils.normalizePath(Platform.StandardPaths.writableLocation(Platform.StandardPaths.AppDataLocation)) + "/wallhaven-saved"
     property var pendingDownloads: ({
     }) // Track pending downloads: {url: {thumbnail, entry}}
@@ -55,6 +58,8 @@ WallpaperItem {
         return {
             "config": main.configuration,
             "savedDir": savedWallpapersDir,
+            "cacheDir": cacheDir,
+            "cacheFilePath": cacheFilePath,
             "pendingDownloads": pendingDownloads,
             "notify": showNotification,
             "writeConfig": function() {
@@ -112,6 +117,9 @@ WallpaperItem {
             "downloadWallpaper": function(url, thumb, isDark) {
                 Downloads.queueDownload(buildDownloadCtx(), url, thumb, isDark);
             },
+            "cacheWallpaper": function(url) {
+                Downloads.queueCacheDownload(buildDownloadCtx(), url);
+            },
             "saveEntry": function(url, thumb, localPath, isDark) {
                 Downloads.saveEntry(buildDownloadCtx(), url, thumb, localPath, isDark);
             },
@@ -123,13 +131,21 @@ WallpaperItem {
     }
 
     function loadFallbackImage() {
-        if (lastValidImagePath !== "") {
-            log("Using last valid cached image");
+        if (cacheFilePath !== "") {
+            log("Using startup wallpaper cache");
+            main.currentUrl = cacheFileUrl;
+        } else if (lastValidImagePath !== "") {
+            log("Using last valid image path");
             main.currentUrl = lastValidImagePath;
         } else {
             main.currentUrl = "blackscreen.jpg";
         }
         loadImage();
+    }
+
+    function loadStartupCache() {
+        log("Trying startup wallpaper cache: " + cacheFileUrl);
+        main.currentUrl = cacheFileUrl;
     }
 
     function fetchFromWallhaven(reason) {
@@ -343,8 +359,19 @@ WallpaperItem {
         }
     }
 
+    function openWallpaperPage() {
+        const currentUrlString = main.currentUrl ? main.currentUrl.toString() : "";
+        const wallhavenId = Utils.extractWallhavenId(currentUrlString);
+        if (!wallhavenId) {
+            showNotification("Wallhaven Wallpaper Error", "Could not determine the wallpaper page for this image", "dialog-error", true);
+            return ;
+        }
+        Qt.openUrlExternally(`https://wallhaven.cc/w/${wallhavenId}`);
+    }
+
     anchors.fill: parent
     Component.onCompleted: {
+        loadStartupCache();
     }
     onCurrentUrlChanged: loadImage()
     onFillModeChanged: loadImage()
@@ -370,9 +397,9 @@ WallpaperItem {
     onFollowSystemThemeChanged: refreshTimer.restart()
     contextualActions: [
         PlasmaCore.Action {
-            text: i18n("Open Wallpaper URL")
+            text: i18n("Open Wallpaper Page")
             icon.name: "link"
-            onTriggered: Qt.openUrlExternally(main.currentUrl)
+            onTriggered: openWallpaperPage()
         },
         PlasmaCore.Action {
             text: i18n("Save Wallpaper")
@@ -451,8 +478,10 @@ WallpaperItem {
                 smooth: true
                 onStatusChanged: {
                     if (status === Image.Error) {
-                        log("Error loading image");
-                        showNotification("Wallhaven Wallpaper Error", "Failed to load image. Try refreshing or restart Plasma shell.", "dialog-error", true);
+                        log("Error loading image: " + source);
+                        if (source.toString() !== cacheFileUrl.toString())
+                            showNotification("Wallhaven Wallpaper Error", "Failed to load image. Try refreshing or restart Plasma shell.", "dialog-error", true);
+
                         if (imageItem === main.pendingImage) {
                             main.pendingImage = null;
                             imageItem.destroy();
@@ -463,6 +492,7 @@ WallpaperItem {
                         if (Utils.isHttpUrl(source)) {
                             main.configuration.lastValidImagePath = source.toString();
                             wallpaper.configuration.writeConfig();
+                            Downloads.queueCacheDownload(buildDownloadCtx(), source.toString());
                         }
                         if (imageItem === main.pendingImage && root.currentItem !== imageItem) {
                             if (root.depth === 0)

@@ -33,31 +33,68 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][23][Applets][104]
+[Containments][23][Applets][115]
 immutability=1
-plugin=com.dv.fokus
+plugin=dev.xarbit.appgrid
 
-[Containments][23][Applets][104][Configuration]
-popupHeight=318
-popupWidth=316
-
-[Containments][23][Applets][113]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][23][Applets][113][Configuration]
+[Containments][23][Applets][115][Configuration]
 popupHeight=588
 popupWidth=714
 
-[Containments][23][Applets][113][Configuration][ConfigDialog]
+[Containments][23][Applets][115][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][23][Applets][113][Configuration][General]
+[Containments][23][Applets][115][Configuration][General]
 alphaSort=true
+cornerRadius=20
+customButtonImage=goa-panel-symbolic
 favoritesPortedToKAstats=true
+gridColumns=6
+headerActions=updateCheck:bar,sleep:off,restart:off,shutdown:off,lock:off,logout:off,switchuser:off
+headerActionsMigrated=true
+hideGridWhenEmpty=true
+hoverAnimation=0
+iconMigratedFrom17=true
+knownApps=io.github.tdesktop_x64.TDesktop.desktop,alist-player.desktop,amdgpu_top.desktop,org.kde.ark.desktop,bssh.desktop,bvnc.desktop,avahi-discover.desktop,btrfs-assistant.desktop,cachyos-hello.desktop,org.cachyos.KernelManager.desktop,cachyos-pi.desktop,cmake-gui.desktop,org.kde.discover.desktop,org.kde.dolphin.desktop,dupeguru.desktop,org.kde.plasma.emojier.desktop,org.kde.filelight.desktop,floorp.desktop,com.mitchellh.ghostty.desktop,google-chrome.desktop,org.kde.gwenview.desktop,lstopo.desktop,org.kde.iconexplorer.desktop,org.kde.kinfocenter.desktop,org.kde.kamoso.desktop,org.kde.kdeconnect.app.desktop,org.kde.kdeconnect.sms.desktop,org.kde.partitionmanager.desktop,org.kde.konsole.desktop,org.kde.kwalletmanager.desktop,cups.desktop,org.kde.kmenuedit.desktop,micro.desktop,mpv.desktop,nvim.desktop,org.kde.okular.desktop,onlyoffice-desktopeditors.desktop,org.gnome.seahorse.Application.desktop,io.github.alainm23.planify.desktop,org.kde.plasmaengineexplorer.desktop,org.kde.plasma.lookandfeelexplorer.desktop,org.kde.plasma.themeexplorer.desktop,system-config-printer.desktop,assistant.desktop,qdbusviewer.desktop,linguist.desktop,qv4l2.desktop,qvidcap.desktop,designer.desktop,rclone-browser.desktop,org.cachyos.scx-manager.desktop,org.kde.spectacle.desktop,spotify.desktop,com.stremio.stremio.desktop,org.kde.plasma-systemmonitor.desktop,systemsettings.desktop,talanoa.desktop,thunderbird.desktop,ventoy.desktop,vim.desktop,code.desktop,vlc.desktop,org.pulseaudio.pavucontrol.desktop,xdvi.desktop,Zoom.desktop
+launchCounts=btrfs-assistant.desktop=1,code.desktop=1,dupeguru.desktop=1,google-chrome.desktop=1,onlyoffice-desktopeditors.desktop=2,org.kde.kamoso.desktop=1,systemsettings.desktop=2,talanoa.desktop=4,thunderbird.desktop=1
+openAnimation=6
+overrideRadius=true
+powerButtonOrder=sleep,restart,shutdown,session
+powerButtonsHidden=sleep,restart,shutdown,session
+powerButtonsMigrated=true
+recentApps=google-chrome.desktop,onlyoffice-desktopeditors.desktop,systemsettings.desktop,talanoa.desktop,code.desktop,org.kde.kamoso.desktop
+showCategoryBar=false
 switchCategoryOnHover=true
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+terminalShell=/usr/bin/zsh
+useCustomButtonImage=true
+
+[Containments][23][Applets][115][Shortcuts]
+global=
+
+[Containments][23][Applets][116]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][23][Applets][116][Configuration][General]
+expanding=false
+length=10
+
+[Containments][23][Applets][117]
+immutability=1
+plugin=org.kde.plasma.colorpicker
+
+[Containments][23][Applets][117][Configuration]
+popupHeight=325
+popupWidth=324
+
+[Containments][23][Applets][117][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][23][Applets][117][Configuration][General]
+history=#dc7777,#331f19
 
 [Containments][23][Applets][28]
 activityId=
@@ -77,6 +114,10 @@ plugin=org.kde.merkuro.contact.applet
 [Containments][23][Applets][28][Applets][102][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
+
+[Containments][23][Applets][28][Applets][114]
+immutability=1
+plugin=org.kde.plasma.printmanager
 
 [Containments][23][Applets][28][Applets][30]
 immutability=1
@@ -151,10 +192,10 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][23][Applets][28][General]
-extraItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard
+extraItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.plasma.printmanager
 hiddenItems=chrome_status_icon_1,64Gram,Stremio,materialgram,Thunderbird,Xwayland Video Bridge_pipewireToXProxy,Wallet Manager
 iconSpacing=6
-knownItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator,org.kde.plasma.weather
+knownItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.printmanager
 shownItems=org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.battery,koi
 
 [Containments][23][Applets][47]
@@ -204,7 +245,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][23][General]
-AppletOrder=113;48;96;47;104;28;69
+AppletOrder=116;115;48;96;47;117;28;69
 
 [Containments][43][Wallpaper][org.kde.slideshow][General]
 Image=file:///usr/share/wallpapers/cachyos-wallpapers/PurpleFeathers.png
@@ -241,10 +282,11 @@ Ratio169=true
 RatioAny=false
 RatioCustom=false
 RefetchSignal=true
-SavedWallpapers=https://w.wallhaven.cc/full/we/wallhaven-we91wr.jpg|||https://th.wallhaven.cc/small/we/we91wr.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/we91wr.jpg,https://w.wallhaven.cc/full/r7/wallhaven-r7e32q.jpg|||https://th.wallhaven.cc/small/r7/r7e32q.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/r7e32q.jpg,https://w.wallhaven.cc/full/3z/wallhaven-3zmxj3.jpg|||https://th.wallhaven.cc/small/3z/3zmxj3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/3zmxj3.jpg,https://w.wallhaven.cc/full/w5/wallhaven-w5yp3q.jpg|||https://th.wallhaven.cc/small/w5/w5yp3q.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/w5yp3q.jpg,https://w.wallhaven.cc/full/ym/wallhaven-ymkr1l.jpg|||https://th.wallhaven.cc/small/ym/ymkr1l.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/ymkr1l.jpg,https://w.wallhaven.cc/full/vq/wallhaven-vqxop3.jpg|||https://th.wallhaven.cc/small/vq/vqxop3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/vqxop3.jpg,https://w.wallhaven.cc/full/3l/wallhaven-3ld8y6.jpg|||https://th.wallhaven.cc/small/3l/3ld8y6.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/3ld8y6.jpg,https://w.wallhaven.cc/full/y8/wallhaven-y81l5g.jpg|||https://th.wallhaven.cc/small/y8/y81l5g.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/y81l5g.jpg,https://w.wallhaven.cc/full/we/wallhaven-wezjjx.jpg|||https://th.wallhaven.cc/small/we/wezjjx.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/wezjjx.jpg,https://w.wallhaven.cc/full/5w/wallhaven-5w8d58.jpg|||https://th.wallhaven.cc/small/47/47585y.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/5w8d58.jpg|||1,https://w.wallhaven.cc/full/d5/wallhaven-d5g8r3.jpg|||https://th.wallhaven.cc/small/d5/d5g8r3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/d5g8r3.jpg|||1,https://w.wallhaven.cc/full/85/wallhaven-852kwj.jpg|||https://th.wallhaven.cc/small/85/852kwj.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/852kwj.jpg|||0,https://w.wallhaven.cc/full/9d/wallhaven-9d596d.jpg|||https://th.wallhaven.cc/small/9d/9d596d.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/9d596d.jpg|||0,https://w.wallhaven.cc/full/rr/wallhaven-rrexl7.jpg|||https://th.wallhaven.cc/small/rr/rrexl7.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/rrexl7.jpg|||0,https://w.wallhaven.cc/full/q6/wallhaven-q6kmld.png|||https://th.wallhaven.cc/small/q6/q6kmld.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/q6kmld.jpg|||0,https://w.wallhaven.cc/full/jx/wallhaven-jx2qxw.jpg|||https://th.wallhaven.cc/small/jx/jx2qxw.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/jx2qxw.jpg|||0
+SavedWallpapers=https://w.wallhaven.cc/full/we/wallhaven-we91wr.jpg|||https://th.wallhaven.cc/small/we/we91wr.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/we91wr.jpg,https://w.wallhaven.cc/full/r7/wallhaven-r7e32q.jpg|||https://th.wallhaven.cc/small/r7/r7e32q.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/r7e32q.jpg,https://w.wallhaven.cc/full/3z/wallhaven-3zmxj3.jpg|||https://th.wallhaven.cc/small/3z/3zmxj3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/3zmxj3.jpg,https://w.wallhaven.cc/full/w5/wallhaven-w5yp3q.jpg|||https://th.wallhaven.cc/small/w5/w5yp3q.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/w5yp3q.jpg,https://w.wallhaven.cc/full/ym/wallhaven-ymkr1l.jpg|||https://th.wallhaven.cc/small/ym/ymkr1l.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/ymkr1l.jpg,https://w.wallhaven.cc/full/vq/wallhaven-vqxop3.jpg|||https://th.wallhaven.cc/small/vq/vqxop3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/vqxop3.jpg,https://w.wallhaven.cc/full/3l/wallhaven-3ld8y6.jpg|||https://th.wallhaven.cc/small/3l/3ld8y6.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/3ld8y6.jpg,https://w.wallhaven.cc/full/y8/wallhaven-y81l5g.jpg|||https://th.wallhaven.cc/small/y8/y81l5g.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/y81l5g.jpg,https://w.wallhaven.cc/full/we/wallhaven-wezjjx.jpg|||https://th.wallhaven.cc/small/we/wezjjx.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/wezjjx.jpg,https://w.wallhaven.cc/full/5w/wallhaven-5w8d58.jpg|||https://th.wallhaven.cc/small/47/47585y.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/5w8d58.jpg|||1,https://w.wallhaven.cc/full/d5/wallhaven-d5g8r3.jpg|||https://th.wallhaven.cc/small/d5/d5g8r3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/d5g8r3.jpg|||1,https://w.wallhaven.cc/full/85/wallhaven-852kwj.jpg|||https://th.wallhaven.cc/small/85/852kwj.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/852kwj.jpg|||0,https://w.wallhaven.cc/full/9d/wallhaven-9d596d.jpg|||https://th.wallhaven.cc/small/9d/9d596d.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/9d596d.jpg|||0,https://w.wallhaven.cc/full/rr/wallhaven-rrexl7.jpg|||https://th.wallhaven.cc/small/rr/rrexl7.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/rrexl7.jpg|||0,https://w.wallhaven.cc/full/q6/wallhaven-q6kmld.png|||https://th.wallhaven.cc/small/q6/q6kmld.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/q6kmld.jpg|||0,https://w.wallhaven.cc/full/jx/wallhaven-jx2qxw.jpg|||https://th.wallhaven.cc/small/jx/jx2qxw.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/jx2qxw.jpg|||0,https://w.wallhaven.cc/full/5g/wallhaven-5geoz7.jpg|||https://th.wallhaven.cc/small/5g/5geoz7.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/5geoz7.jpg|||1,https://w.wallhaven.cc/full/je/wallhaven-je9kym.png|||https://th.wallhaven.cc/small/je/je9kym.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/je9kym.jpg|||0,https://w.wallhaven.cc/full/9d/wallhaven-9d8vyw.jpg|||https://th.wallhaven.cc/small/9d/9d8vyw.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/wallhaven-9d8vyw.jpg|||0
 SearchColor=#000000
-currentWallpaperThumbnail=https://th.wallhaven.cc/small/q2/q2dleq.jpg
-lastValidImagePath=https://w.wallhaven.cc/full/q2/wallhaven-q2dleq.jpg
+ShownSavedWallpapers=https://w.wallhaven.cc/full/3z/wallhaven-3zmxj3.jpg|||https://th.wallhaven.cc/small/3z/3zmxj3.jpg|||/home/blacksuan19/.local/share/plasmashell/wallhaven-saved/3zmxj3.jpg
+currentWallpaperThumbnail=https://th.wallhaven.cc/small/x8/x8rl8l.jpg
+lastValidImagePath=https://w.wallhaven.cc/full/x8/wallhaven-x8rl8l.jpg
 
 [Containments][54][Wallpaper][net.sub-pop.kdewallhavenwallpaper][General]
 FillMode=2

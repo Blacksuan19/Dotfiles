@@ -1,3 +1,47 @@
+/**
+ * @typedef {{
+ *   SavedWallpapers?: string[],
+ *   FollowSystemTheme?: boolean,
+ *   CycleSavedWallpapers?: boolean,
+ *   ShuffleSavedWallpapers?: boolean
+ * }} SavedWallpaperConfig
+ */
+
+/**
+ * @typedef {{
+ *   lastLoadedUrl: string
+ * }} SavedWallpaperState
+ */
+
+/**
+ * @typedef {{
+ *   config: SavedWallpaperConfig,
+ *   state: SavedWallpaperState,
+ *   notify: function(string, string, string, boolean=): void,
+ *   setCurrentUrl: function(string): void,
+ *   setLastValidImagePath: function(string): void,
+ *   setThumbnail: function(string): void,
+ *   writeConfig: function(): void,
+ *   loadImage: function(): void,
+ *   fetchFromWallhaven: function(string): void,
+ *   setLoading: function(boolean): void,
+ *   currentUrl: function(): string,
+ *   thumbnail: function(): string,
+ *   getShownList: function(): string[],
+ *   setShownList: function(string[]): void,
+ *   downloadWallpaper: function(string, string, (boolean|null|undefined)): void,
+ *   saveEntry: function(string, string, string, (boolean|null|undefined)): void,
+ *   isDark: (boolean|null),
+ *   systemDarkMode: boolean,
+ *   utils: Object,
+ *   log: function(string): void
+ * }} SavedWallpaperContext
+ */
+
+/**
+ * @param {SavedWallpaperContext} ctx
+ * @returns {void}
+ */
 function saveCurrentWallpaper(ctx) {
     const currentUrl = ctx.currentUrl();
     if (!currentUrl || currentUrl === "" || currentUrl === "blackscreen.jpg") {
@@ -9,10 +53,14 @@ function saveCurrentWallpaper(ctx) {
         ctx.notify("Wallhaven Wallpaper", "Downloading wallpaper...", "download", false);
         ctx.downloadWallpaper(currentUrl, thumbnail, ctx.isDark);
     } else {
-        ctx.saveEntry(currentUrl, thumbnail, "", null);
+        ctx.notify("Wallhaven Wallpaper Error", "Only wallpapers downloaded from Wallhaven can be saved", "dialog-error", true);
     }
 }
 
+/**
+ * @param {SavedWallpaperContext} ctx
+ * @returns {void}
+ */
 function loadFromSavedWallpapers(ctx) {
     const config = ctx.config;
     const fullSavedList = config.SavedWallpapers || [];

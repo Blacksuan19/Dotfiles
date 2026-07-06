@@ -2,9 +2,10 @@
 annotationToolType=7
 blurStrength=0.63507080078125
 pixelateStrength=0.585205078125
-rectangleFillColor=39,27,14,0
+rectangleFillColor=255,255,255,0
 rectangleShadow=false
 rectangleStrokeColor=255,17,0
+rectangleStrokeWidth=1
 
 [General]
 launchAction=DoNotTakeScreenshot
@@ -13,7 +14,8 @@ launchAction=DoNotTakeScreenshot
 captureMode=5
 
 [ImageSave]
-lastImageSaveLocation=file:///home/blacksuan19/Pictures/Screenshots/Screenshot_20260415_234900.png
+lastImageSaveAsLocation=
+lastImageSaveLocation=file:///home/blacksuan19/Pictures/Screenshots/Screenshot_20260705_185036.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]

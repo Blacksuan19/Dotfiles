@@ -15,6 +15,7 @@ Version=202
 ViewPropsTimestamp=2024,7,16,22,21,24.772
 
 [IconsMode]
+IconSize=128
 PreviewSize=128
 
 [KFileDialog Settings]
@@ -26,6 +27,7 @@ MenuBar=Disabled
 
 [Notification Messages]
 ConfirmHide=true
+ConfirmRenameFileType=false
 
 [PlacesPanel]
 IconSize=32

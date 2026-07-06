@@ -1,3 +1,24 @@
+/**
+ * @typedef {{
+ *   fullUrl: string,
+ *   thumbUrl: string,
+ *   localPath: string,
+ *   isDark: (boolean|null)
+ * }} SavedWallpaperEntry
+ */
+
+/**
+ * @typedef {{
+ *   query: string,
+ *   nextIndex: number,
+ *   queryParam: string
+ * }} QueryBuildResult
+ */
+
+/**
+ * @param {string|{toString: function(): string}|null|undefined} path
+ * @returns {string}
+ */
 function normalizePath(path) {
     if (!path)
         return "";
@@ -6,6 +27,10 @@ function normalizePath(path) {
     return text.startsWith("file://") ? text.slice("file://".length) : text;
 }
 
+/**
+ * @param {string|{toString: function(): string}|null|undefined} url
+ * @returns {boolean}
+ */
 function isHttpUrl(url) {
     if (!url)
         return false;
@@ -13,11 +38,19 @@ function isHttpUrl(url) {
     return url.toString().startsWith("http");
 }
 
+/**
+ * @param {string} url
+ * @returns {string|null}
+ */
 function extractWallhavenId(url) {
-    const match = url.match(/wallhaven-([a-zA-Z0-9]+)/);
+    const match = url.match(/(?:wallhaven-)?([a-zA-Z0-9]{6})(?=\.[a-zA-Z0-9]+(?:$|[?#])|$)/);
     return match ? match[1] : null;
 }
 
+/**
+ * @param {string} entry
+ * @returns {SavedWallpaperEntry}
+ */
 function parseSavedEntry(entry) {
     const parts = entry.split("|||");
     const fullUrl = parts[0];
@@ -33,6 +66,12 @@ function parseSavedEntry(entry) {
     };
 }
 
+/**
+ * @param {Object.<string, any>} config
+ * @param {string} paramName
+ * @param {string[]} configKeys
+ * @returns {string}
+ */
 function buildBinaryParameter(config, paramName, configKeys) {
     let result = "";
     for (let i = 0; i < configKeys.length; i++) {
@@ -41,6 +80,10 @@ function buildBinaryParameter(config, paramName, configKeys) {
     return `${paramName}=${result}`;
 }
 
+/**
+ * @param {Object.<string, any>} config
+ * @returns {string}
+ */
 function buildRatioParameter(config) {
     if (config.RatioAny)
         return "";
@@ -58,6 +101,10 @@ function buildRatioParameter(config) {
     return ratios.length > 0 ? `ratios=${ratios.join(',')}&` : "";
 }
 
+/**
+ * @param {string} hex
+ * @returns {boolean}
+ */
 function isColorDark(hex) {
     hex = hex.replace('#', '');
     const r = parseInt(hex.substring(0, 2), 16);
@@ -68,6 +115,10 @@ function isColorDark(hex) {
     return brightness < 128;
 }
 
+/**
+ * @param {string[]|null|undefined} colors
+ * @returns {boolean|null}
+ */
 function isColorsArrayDark(colors) {
     if (!colors || colors.length === 0)
         return null; // unknown
@@ -75,6 +126,12 @@ function isColorsArrayDark(colors) {
     return darkCount > colors.length / 2;
 }
 
+/**
+ * @param {Object.<string, any>} config
+ * @param {boolean} systemDarkMode
+ * @param {number} currentSearchTermIndex
+ * @returns {QueryBuildResult}
+ */
 function buildQueryParameter(config, systemDarkMode, currentSearchTermIndex) {
     var userQuery = config.Query || "";
     let terms = userQuery.split(",");

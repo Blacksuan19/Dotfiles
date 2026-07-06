@@ -3,9 +3,16 @@ FreeFloating=true
 
 [Plugins]
 baloosearchEnabled=true
+krunner_powerdevilEnabled=true
+krunner_qalculatorEnabled=true
+krunner_sessionsEnabled=true
+krunner_translatorEnabled=false
+krunner_vscodeprojectsrunnerEnabled=false
+krunner_webshortcutsEnabled=false
+llmrunnerEnabled=true
 
 [Plugins][Favorites]
-plugins=krunner_services,krunner_systemsettings,krunner_sessions,krunner_powerdevil
+plugins=krunner_services,krunner_systemsettings,krunner_sessions,krunner_powerdevil,vscode_runner,locations
 
 [Runners][krunner_translator]
 baiduAPIKey=
