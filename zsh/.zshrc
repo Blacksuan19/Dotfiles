@@ -3,6 +3,7 @@ source ~/.zsh/exports.zsh
 source ~/.zsh/znap.zsh
 source ~/.zsh/config.zsh
 source ~/.zsh/aliases.zsh
+source ~/.zsh/func.zsh
 
 # safe options for cp, rm, mv
 zstyle ':prezto:module:utility' safe-ops 'yes'
